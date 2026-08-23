@@ -27,9 +27,24 @@ function NavLinks() {
   ));
 }
 
-function ActionLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
+type LinkTracking = {
+  event: "cta_click" | "booking_click";
+  location: string;
+  cta?: string;
+  offer?: string;
+};
+
+function ActionLink({ href, children, light = false, tracking }: { href: string; children: React.ReactNode; light?: boolean; tracking?: LinkTracking }) {
   return (
-    <a className={`${shell.textLink} ${light ? shell.textLinkLight : ""}`} href={href}>
+    <a
+      className={`${shell.textLink} ${light ? shell.textLinkLight : ""}`}
+      href={href}
+      data-umami-event={tracking?.event}
+      data-umami-event-cta={tracking?.cta}
+      data-umami-event-offer={tracking?.offer}
+      data-umami-event-location={tracking?.location}
+      data-umami-event-destination={tracking ? href : undefined}
+    >
       <span>{children}</span><span aria-hidden="true">↗</span>
     </a>
   );
@@ -50,12 +65,12 @@ export default function ClarityPage() {
             <strong>Petra Sailer</strong><span>Dem Eigenen folgen</span>
           </Link>
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={shell.headerCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+          <a className={shell.headerCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={shell.mobileMenu}>
             <summary><span>MENÜ</span><i aria-hidden="true" /></summary>
             <div className={shell.mobilePanel}>
               <nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav>
-              <a className={shell.mobileCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+              <a className={shell.mobileCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
             </div>
           </details>
         </div>
@@ -68,7 +83,7 @@ export default function ClarityPage() {
           <p className={styles.heroQuestion}>Und willst du klar sehen, was für dich stimmt und wie du weitergehen kannst?</p>
           <div className={styles.heroIntro}>
             <p>In der Klarheitssitzung hörst du auf, vom Problem aus nach einer Lösung zu suchen, und nimmst eine neue Perspektive ein. Du erlebst, was für dich wirklich stimmt, und erkennst, was du heute, morgen oder in den nächsten Tagen konkret tun kannst.</p>
-            <ActionLink href={BOOKING_URL} light>KLARHEITSSITZUNG BUCHEN</ActionLink>
+            <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>KLARHEITSSITZUNG BUCHEN</ActionLink>
           </div>
           <div className={styles.heroOrbit} aria-hidden="true"><span>?</span></div>
         </section>
@@ -119,7 +134,7 @@ export default function ClarityPage() {
               <p>Nach der Sitzung bekommst du eine persönliche Mitschrift mit deinen eigenen Worten. So kannst du später noch einmal nachlesen, was du erlebt und für dich erkannt hast, und dich leichter wieder damit verbinden.</p>
               <p>Die Klarheitssitzung ist in sich abgeschlossen. Danach kannst du mit deiner Klarheit und deinem nächsten Schritt selbstständig weitergehen.</p>
             </div>
-            <ActionLink href={BOOKING_URL}>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>
+            <ActionLink href={BOOKING_URL} tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_angebot" }}>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>
           </div>
         </section>
 
@@ -170,16 +185,16 @@ export default function ClarityPage() {
           <h2>Welches Thema soll nicht noch länger <em>im Hintergrund mitlaufen?</em></h2>
           <div className={styles.finalCopy}>
             <p>Wenn du spürst, dass es Zeit ist, bei diesem einen Thema weiterzukommen, dann bring es mit. Wir schauen gemeinsam, was für dich wirklich stimmt und was du als Nächstes konkret tun kannst.</p>
-            <ActionLink href={BOOKING_URL} light>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>
+            <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_abschluss" }}>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>
           </div>
-          <p className={styles.contact}>Du hast vor der Buchung noch eine Frage? Dann melde dich gerne persönlich:<br /><a href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a></p>
+          <p className={styles.contact}>Du hast vor der Buchung noch eine Frage? Dann melde dich gerne persönlich:<br /><a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="klarheitssitzung_abschluss">kontakt@petrasailer.com</a></p>
         </section>
       </main>
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
         <a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a>
         <nav aria-label="Footer-Navigation"><a href="/ueber-mich">ÜBER MICH</a><a href="#top">KLARHEITSSITZUNG</a><a href="/wirklich-deins">WIRKLICH DEINS.</a><a href="/kontakt">KONTAKT</a><a href="/arbeite-mit-mir">ARBEITE MIT MIR</a></nav>
-        <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a>
+        <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
       </footer>
     </div>

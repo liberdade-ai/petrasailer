@@ -21,8 +21,10 @@ function NavLinks() {
   return NAVIGATION.map((item) => <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>{item.label}</a>);
 }
 
-function ActionLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
-  return <a className={`${shell.textLink} ${light ? shell.textLinkLight : ""}`} href={href}><span>{children}</span><span aria-hidden="true">↗</span></a>;
+type CtaTracking = { cta: string; location: string };
+
+function ActionLink({ href, children, light = false, tracking }: { href: string; children: React.ReactNode; light?: boolean; tracking?: CtaTracking }) {
+  return <a className={`${shell.textLink} ${light ? shell.textLinkLight : ""}`} href={href} data-umami-event={tracking ? "cta_click" : undefined} data-umami-event-cta={tracking?.cta} data-umami-event-location={tracking?.location} data-umami-event-destination={tracking ? href : undefined}><span>{children}</span><span aria-hidden="true">↗</span></a>;
 }
 
 function Marker({ number, children, round = false }: { number: string; children: React.ReactNode; round?: boolean }) {
@@ -37,8 +39,8 @@ export default function ReallyYoursPage() {
         <div className={shell.headerInner}>
           <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></Link>
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={shell.headerCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
-          <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>
+          <a className={shell.headerCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+          <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>
         </div>
       </header>
 
@@ -47,7 +49,7 @@ export default function ReallyYoursPage() {
           <div className={styles.heroMeta}><Marker number="01" round>SECHS MONATE · 1:1-BEGLEITUNG</Marker></div>
           <h1>Was wäre, wenn du dich diesmal nicht zurückhältst – und <em>dein ganz Eigenes</em> verwirklichst?</h1>
           <div className={styles.heroQuestion}><h2>Was würde sich verändern?</h2><p>Genau das ist: Wirklich Deins.</p></div>
-          <div className={styles.heroIntro}><p>Wirklich Deins. ist für dich, wenn du etwas in deinem Leben verwirklichen willst und dich nicht immer wieder von Zweifeln oder alten Gedanken davon abbringen lassen möchtest.</p><p>Wie ich dich dabei begleite, erfährst du hier.</p><ActionLink href="#du-hast-etwas-vor">DIE BEGLEITUNG KENNENLERNEN</ActionLink></div>
+          <div className={styles.heroIntro}><p>Wirklich Deins. ist für dich, wenn du etwas in deinem Leben verwirklichen willst und dich nicht immer wieder von Zweifeln oder alten Gedanken davon abbringen lassen möchtest.</p><p>Wie ich dich dabei begleite, erfährst du hier.</p><ActionLink href="#du-hast-etwas-vor" tracking={{ cta: "wirklich_deins_kennenlernen", location: "wirklich_deins_hero" }}>DIE BEGLEITUNG KENNENLERNEN</ActionLink></div>
         </section>
 
         <section className={styles.recognition} id="du-hast-etwas-vor">
@@ -110,7 +112,7 @@ export default function ReallyYoursPage() {
         <section className={styles.offer} id="angebot">
           <div className={styles.offerTop}><Marker number="09">DER RAHMEN</Marker><div><h2>Wirklich <em>Deins.</em></h2><p>Deine sechsmonatige 1:1-Begleitung mit Petra Sailer.</p></div><p className={styles.price}>3.600 €<span>Gesamtpreis für sechs Monate</span></p></div>
           <div className={styles.offerFacts}><div><span>LAUFZEIT</span><strong>Sechs Monate</strong></div><div><span>SITZUNGEN</span><strong>Zwölf 1:1‑Sitzungen à 75 Minuten</strong></div><div><span>ABSCHLUSS</span><strong>Eine zusätzliche Abschlusssitzung à 75 Minuten</strong></div><div><span>DER KURZE DRAHT</span><strong>Messenger-Support zwischen den Sitzungen</strong></div><div><span>MITSCHRIFTEN</span><strong>Nach jeder Sitzung eine persönliche, fast wortgetreue Mitschrift</strong></div></div>
-          <div className={styles.offerAction}><ActionLink href="/kontakt">KENNENLERNGESPRÄCH ANFRAGEN</ActionLink><p>Wir schauen in Ruhe, ob die Begleitung zu dir und deinem Vorhaben passt.</p></div>
+          <div className={styles.offerAction}><ActionLink href="/kontakt" tracking={{ cta: "kennenlerngespraech_anfragen", location: "wirklich_deins_angebot" }}>KENNENLERNGESPRÄCH ANFRAGEN</ActionLink><p>Wir schauen in Ruhe, ob die Begleitung zu dir und deinem Vorhaben passt.</p></div>
         </section>
 
         <section className={styles.faq} id="faq">
@@ -125,10 +127,10 @@ export default function ReallyYoursPage() {
           </div>
         </section>
 
-        <section className={styles.finalCta}><Marker number="11" round>LASS UNS KENNENLERNEN</Marker><h2>Erzähl mir, <em>was du vorhast.</em></h2><div><p>Im Kennenlerngespräch sprechen wir über das, was du verändern, aufbauen oder verwirklichen möchtest. Du kannst deine Fragen stellen, und wir schauen in Ruhe, ob Wirklich Deins. auch wirklich deins ist.</p><ActionLink href="/kontakt" light>KENNENLERNGESPRÄCH ANFRAGEN</ActionLink></div><p className={styles.contact}>Du möchtest lieber direkt schreiben? <a href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a></p></section>
+        <section className={styles.finalCta}><Marker number="11" round>LASS UNS KENNENLERNEN</Marker><h2>Erzähl mir, <em>was du vorhast.</em></h2><div><p>Im Kennenlerngespräch sprechen wir über das, was du verändern, aufbauen oder verwirklichen möchtest. Du kannst deine Fragen stellen, und wir schauen in Ruhe, ob Wirklich Deins. auch wirklich deins ist.</p><ActionLink href="/kontakt" light tracking={{ cta: "kennenlerngespraech_anfragen", location: "wirklich_deins_abschluss" }}>KENNENLERNGESPRÄCH ANFRAGEN</ActionLink></div><p className={styles.contact}>Du möchtest lieber direkt schreiben? <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="wirklich_deins_abschluss">kontakt@petrasailer.com</a></p></section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich">ÜBER MICH</a><a href="/klarheitssitzung">KLARHEITSSITZUNG</a><a href="#top">WIRKLICH DEINS.</a><a href="/kontakt">KONTAKT</a><a href="/arbeite-mit-mir">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich">ÜBER MICH</a><a href="/klarheitssitzung">KLARHEITSSITZUNG</a><a href="#top">WIRKLICH DEINS.</a><a href="/kontakt">KONTAKT</a><a href="/arbeite-mit-mir">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
     </div>
   );
 }

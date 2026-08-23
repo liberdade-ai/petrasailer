@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { trackUmamiEvent } from "../../umami";
 import styles from "./page.module.css";
 
 type FieldErrors = Partial<Record<"name" | "email" | "message" | "privacy", string>>;
@@ -37,6 +38,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
     const subject = encodeURIComponent("Nachricht über petrasailer.com");
     const body = encodeURIComponent(`Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`);
+    trackUmamiEvent("contact_form_submit", { form: "kontakt", location: "kontakt_formular" });
     window.location.href = `mailto:kontakt@petrasailer.com?subject=${subject}&body=${body}`;
     setNotice("Dein E-Mail-Programm wurde geöffnet. Bitte prüfe die Nachricht dort und sende sie anschließend ab. Falls sich nichts öffnet, schreib mir bitte direkt an kontakt@petrasailer.com.");
     setIsSubmitting(false);
