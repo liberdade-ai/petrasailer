@@ -15,7 +15,6 @@
 
 # next.js
 /.next/
-/.vinext/
 /out/
 
 # misc
@@ -51,7 +50,5 @@ service-account*.json
 
 # typescript
 next-env.d.ts
-/dist/
-/.wrangler/
 /outputs/
 /work/

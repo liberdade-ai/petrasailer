@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import shell from "../base.module.css";
 import ContactForm from "./ContactForm";
 import styles from "./page.module.css";
@@ -14,6 +15,7 @@ const NAVIGATION = [
 export const metadata: Metadata = {
   title: "Kontakt",
   description: "Du hast eine Frage zu Petra Sailers Arbeit oder zu einem ihrer Angebote? Schreib ihr persönlich oder ruf sie direkt an.",
+  alternates: { canonical: "/kontakt/" },
 };
 
 function NavLinks() {
@@ -30,7 +32,7 @@ export default function ContactPage() {
       <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
       <header className={shell.header}>
         <div className={shell.headerInner}>
-          <a className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a>
+          <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></Link>
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={shell.headerCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>

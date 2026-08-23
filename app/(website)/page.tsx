@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Dem Eigenen folgen",
   description:
     "Petra Sailer begleitet eigenverantwortliche Menschen dabei, ihre eigenen Antworten wieder klar zu erleben, bewusst zu wählen und danach zu handeln.",
+  alternates: { canonical: "/" },
 };
 
 export default function HomePage() {

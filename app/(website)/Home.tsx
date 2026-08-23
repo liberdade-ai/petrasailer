@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import styles from "./base.module.css";
 
 const NAVIGATION = [
@@ -35,10 +36,10 @@ export default function HomeContent() {
 
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <a className={styles.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen">
+          <Link className={styles.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen">
             <strong>Petra Sailer</strong>
             <span>Dem Eigenen folgen</span>
-          </a>
+          </Link>
           <nav className={styles.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={styles.headerCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={styles.mobileMenu}>

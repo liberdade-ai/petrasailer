@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import shell from "../base.module.css";
 import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
@@ -13,6 +14,7 @@ const NAVIGATION = [
 export const metadata: Metadata = {
   title: "Über mich",
   description: "Lerne Petra Sailer, ihre Haltung und ihre klare, persönliche Art der Begleitung kennen.",
+  alternates: { canonical: "/ueber-mich/" },
 };
 
 function NavLinks() {
@@ -33,7 +35,7 @@ export default function AboutPage() {
       <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
       <header className={shell.header}>
         <div className={shell.headerInner}>
-          <a className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a>
+          <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></Link>
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={shell.headerCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>

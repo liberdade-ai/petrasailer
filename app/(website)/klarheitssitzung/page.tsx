@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import shell from "../base.module.css";
 import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   title: "Klarheitssitzung",
   description:
     "In der Klarheitssitzung schauen wir gemeinsam, was für dich wirklich stimmt, was dich im Moment noch zurückhält und welcher nächste Schritt daraus entsteht.",
+  alternates: { canonical: "/klarheitssitzung/" },
 };
 
 function NavLinks() {
@@ -44,9 +46,9 @@ export default function ClarityPage() {
 
       <header className={shell.header}>
         <div className={shell.headerInner}>
-          <a className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen">
+          <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen">
             <strong>Petra Sailer</strong><span>Dem Eigenen folgen</span>
-          </a>
+          </Link>
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={shell.headerCta} href="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={shell.mobileMenu}>
