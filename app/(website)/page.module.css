@@ -1,0 +1,284 @@
+.scope {
+  min-width: 0;
+  background: #fffdf8;
+}
+
+/* Hero, Erkennung und Angebotseinleitung bilden eine durchgehende helle Bühne. */
+.scope > div > main > section:nth-of-type(3) {
+  background: #fffdf8;
+}
+
+/* Der Orientierungshinweis wird zu einer ruhigen, eigenständigen Salbeifläche. */
+.scope > div > main > section:nth-of-type(3) > p:last-child {
+  padding: 38px 32px;
+  border: 1px solid rgba(255, 255, 255, .92);
+  background: #c9ded4;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .55);
+  color: #18201d;
+}
+
+.scope > div > main > section:nth-of-type(3) > p:last-child a {
+  border-bottom: 2px solid #ef6a57;
+  color: #ef6a57;
+  font-weight: 700;
+  text-underline-offset: 4px;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.scope > div > main > section:nth-of-type(3) > p:last-child a:hover {
+  color: #ef6a57;
+}
+
+/* Der Perspektivwechsel erhält einen einzigen, zentralen typografischen Fokus. */
+.scope > div > main > section:nth-of-type(4) > p {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 1240px;
+  margin: 38px auto 54px !important;
+  font-size: clamp(84px, 10.6vw, 155px) !important;
+  line-height: .7 !important;
+  text-align: center;
+}
+
+/* Die beiden Angebotstitel erhalten ihre gewünschte bewusste Wortinszenierung. */
+.scope > div > main > section:nth-of-type(3) article:first-of-type h3 {
+  font-size: 0;
+}
+
+.scope > div > main > section:nth-of-type(3) article:first-of-type h3::before {
+  content: "Klarheits-\A sitzung";
+  display: block;
+  color: inherit;
+  font-size: clamp(58px, 6vw, 94px);
+  line-height: .82;
+  white-space: pre-line;
+}
+
+.scope > div > main > section:nth-of-type(3) article:nth-of-type(2) h3 {
+  color: #fffdf8;
+}
+
+.scope > div > main > section:nth-of-type(3) article:nth-of-type(2) h3 em {
+  color: #f4e39c;
+}
+
+.scope > div > main > section:nth-of-type(4) > p em {
+  transform: none;
+}
+
+/* Philosophie und Arbeitsweise stehen auf demselben hellen Grund. */
+.scope > div > main > section:nth-of-type(6) {
+  background: #fffdf8;
+}
+
+.scope > div > main > section:nth-of-type(6) > div:nth-child(3) {
+  background: #c9ded4;
+}
+
+/* Haupt-CTAs: klar erkennbare Flächen mit kontrastfesten Zuständen. */
+.scope > div > main > section:nth-of-type(1) a,
+.scope > div > main > section:nth-of-type(3) article a,
+.scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a {
+  min-height: 58px;
+  padding: 17px 20px;
+  border: 1px solid #25304f;
+  background: #25304f;
+  color: #ffffff;
+}
+
+.scope > div > main > section:nth-of-type(1) a:first-of-type {
+  border-color: #ef6a57;
+  background: #ef6a57;
+  color: #18201d;
+}
+
+.scope > div > main > section:nth-of-type(1) a:first-of-type:hover {
+  border-color: #25304f;
+  background: #fffdf8;
+  color: #25304f;
+}
+
+.scope > div > main > section:nth-of-type(1) a:hover,
+.scope > div > main > section:nth-of-type(3) article:first-of-type a:hover {
+  border-color: #18201d;
+  background: #f4e39c;
+  color: #18201d;
+  gap: 32px;
+}
+
+.scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a {
+  border-color: #f4e39c;
+  background: #f4e39c;
+  color: #25304f;
+}
+
+.scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #25304f;
+  gap: 32px;
+}
+
+.scope > div > main > section:nth-of-type(7) > div:nth-of-type(2) p a {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid #25304f;
+  background: transparent;
+  color: #25304f;
+  font-weight: 600;
+}
+
+.scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:first-child {
+  border-color: #25304f;
+  background: #25304f;
+  color: #fffdf8;
+}
+
+.scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:first-child:hover {
+  border-color: #fffdf8;
+  background: #fffdf8;
+  color: #25304f;
+  gap: 32px;
+}
+
+.scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2) {
+  border-color: #f4e39c;
+  background: #f4e39c;
+  color: #25304f;
+}
+
+.scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2):hover {
+  border-color: #fffdf8;
+  background: #fffdf8;
+  color: #25304f;
+  gap: 32px;
+}
+
+/* Kompakter, horizontal geordneter Desktop-Footer. */
+@media (min-width: 701px) {
+  .scope > div > footer {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 42px;
+    align-items: start;
+    padding-top: 67px;
+    padding-bottom: 25px;
+  }
+
+  .scope > div > footer > nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 24px;
+    padding-top: 5px;
+  }
+
+  .scope > div > footer > a:nth-of-type(2) {
+    padding-top: 5px;
+  }
+
+  .scope > div > footer > div:last-child {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top-color: #f4e39c;
+  }
+}
+
+.scope > div > footer > div:last-child {
+  border-top: 1px solid #f4e39c;
+  opacity: 1;
+}
+
+/* Derselbe Footer für alle finalen Unterseiten. */
+.siteFooter > div:last-child {
+  border-top: 1px solid #f4e39c;
+  opacity: 1;
+}
+
+.scope > div > footer > div:last-child > p,
+.scope > div > footer > div:last-child > div,
+.siteFooter > div:last-child > p,
+.siteFooter > div:last-child > div {
+  opacity: .7;
+}
+
+@media (min-width: 701px) {
+  .siteFooter {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 42px;
+    align-items: start;
+    padding-top: 67px;
+    padding-bottom: 25px;
+  }
+
+  .siteFooter > nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 24px;
+    padding-top: 5px;
+  }
+
+  .siteFooter > a:nth-of-type(2) {
+    padding-top: 5px;
+  }
+
+  .siteFooter > div:last-child {
+    margin-top: 36px;
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scope > div > footer,
+  .siteFooter {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .scope > div > footer > nav,
+  .siteFooter > nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: clamp(12px, 1.4vw, 24px);
+    white-space: nowrap;
+  }
+}
+
+.scope > div > main > section:nth-of-type(1) a:focus-visible,
+.scope > div > main > section:nth-of-type(3) article a:focus-visible,
+.scope > div > main > section:nth-of-type(7) > div:nth-of-type(2) a:focus-visible {
+  outline: 3px solid #ef6a57;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .scope > div > main > section:nth-of-type(3) > p:last-child {
+    padding: 30px 18px;
+  }
+
+  .scope > div > main > section:nth-of-type(4) > p {
+    margin: 74px auto 82px !important;
+    font-size: clamp(67px, 19.5vw, 81px) !important;
+    line-height: .72 !important;
+  }
+
+  .scope > div > main > section:nth-of-type(3) article:first-of-type h3::before {
+    font-size: 65px;
+  }
+
+  .scope > div > main > section:nth-of-type(1) a,
+  .scope > div > main > section:nth-of-type(3) article a,
+  .scope > div > main > section:nth-of-type(7) > div:nth-of-type(2) a {
+    width: 100%;
+    min-height: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scope > div > main a {
+    transition: none !important;
+  }
+}

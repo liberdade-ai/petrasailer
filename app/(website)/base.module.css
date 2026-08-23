@@ -1,0 +1,279 @@
+.page {
+  --paper: #fffdf8;
+  --ink: #18201d;
+  --blue: #25304f;
+  --coral: #ef6a57;
+  --sun: #f4e39c;
+  --mint: #c9ded4;
+  --white: #ffffff;
+  min-width: 0;
+  overflow: clip;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.page * { box-sizing: border-box; }
+.page h1, .page h2, .page h3, .page p, .page figure, .page blockquote { margin: 0; }
+.page p { font-size: 18px; line-height: 1.6; }
+.page h1, .page h2, .page h3 { font-family: "DM Sans", Arial, sans-serif; font-weight: 500; letter-spacing: -.055em; }
+.page em { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; }
+.page a { color: inherit; text-decoration: none; }
+.page img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.page :focus-visible { outline: 3px solid var(--coral); outline-offset: 5px; }
+
+.skipLink { position: fixed; z-index: 1000; top: 12px; left: 12px; padding: 12px 16px; background: var(--blue); color: var(--white); transform: translateY(-150%); }
+.skipLink:focus { transform: translateY(0); }
+
+.header { position: relative; z-index: 50; border-bottom: 1px solid rgba(24,32,29,.2); background: rgba(255,253,248,.94); }
+.headerInner { display: grid; grid-template-columns: 220px 1fr auto; align-items: center; width: min(100% - 64px, 1376px); min-height: 90px; margin: 0 auto; }
+.brand { display: flex; flex-direction: column; gap: 1px; line-height: 1; }
+.brand strong { font-family: "Cormorant Garamond", Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -.03em; }
+.brand span { margin-left: 2px; color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.desktopNav { display: flex; justify-content: center; gap: clamp(18px, 2.5vw, 42px); }
+.desktopNav a { position: relative; padding: 36px 0 34px; font-size: 11px; font-weight: 600; letter-spacing: .11em; }
+.desktopNav a::after { content: ""; position: absolute; right: 0; bottom: 25px; left: 0; height: 2px; background: var(--coral); transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
+.desktopNav a:hover::after, .desktopNav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.headerCta { display: flex; align-items: center; gap: 18px; padding: 13px 0 13px 18px; border-left: 1px solid rgba(24,32,29,.3); font-size: 11px; font-weight: 600; letter-spacing: .11em; }
+.headerCta span { display: grid; place-items: center; width: 34px; aspect-ratio: 1; border-radius: 50%; background: var(--coral); color: var(--white); font-size: 15px; transition: transform .25s ease; }
+.headerCta:hover span { transform: rotate(45deg); }
+.mobileMenu { display: none; }
+
+.hero { padding: 66px 32px 0; }
+.heroTitle { width: min(100%, 1376px); margin: 0 auto; }
+.eyebrow { margin-bottom: 28px !important; color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .17em; }
+.hero h1 { max-width: 1280px; font-size: clamp(65px, 7.35vw, 106px); line-height: .88; }
+.hero h1 em { color: var(--coral); }
+.heroStage { position: relative; display: grid; grid-template-columns: minmax(360px, .85fr) minmax(410px, 1fr) minmax(150px, .4fr); min-height: 600px; width: min(100%, 1376px); margin: 62px auto 0; background: var(--sun); }
+.heroPortrait { min-height: 600px; overflow: hidden; }
+.heroPortrait img { object-position: 50% 28%; filter: saturate(.86) contrast(.98); }
+.heroNumber { position: absolute; top: -24px; left: calc(38% - 56px); z-index: 2; display: grid; place-items: center; width: 112px; height: 112px; border-radius: 50%; background: var(--coral); color: var(--white); font-size: 14px; }
+.heroIntro { align-self: center; max-width: 570px; padding: 72px 8vw 72px 7vw; }
+.heroIntro > p { max-width: 570px; font-size: 21px; line-height: 1.6; }
+.heroIntro > p + p { margin-top: 20px; }
+.heroActions { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 42px; }
+.heroAside { align-self: end; padding: 44px 34px; border-left: 1px solid rgba(24,32,29,.24); font: italic 500 27px/1.05 "Cormorant Garamond", Georgia, serif; }
+.textLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-width: 305px; padding: 11px 0; border-bottom: 1px solid currentColor; font-size: 11px; font-weight: 600; letter-spacing: .11em; transition: gap .2s ease, color .2s ease; }
+.textLink > span:last-child { font-size: 16px; }
+.textLink:hover { color: var(--coral); gap: 45px; }
+.textLinkLight { color: var(--white); }
+
+.sectionMarker { display: flex; align-items: center; gap: 18px; }
+.sectionMarker span { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid currentColor; border-radius: 50%; font-size: 11px; }
+.sectionMarker p { font-size: 11px; font-weight: 600; letter-spacing: .16em; }
+
+.recognition { display: grid; grid-template-columns: .75fr 1.05fr; gap: 80px 10vw; width: min(100% - 64px, 1280px); margin: 0 auto; padding: 150px 0 170px; }
+.recognition > .sectionMarker { grid-column: 1 / -1; }
+.recognitionTitle h2 { max-width: 600px; font-size: clamp(50px, 5vw, 75px); line-height: .93; }
+.recognitionTitle h2 em { color: var(--coral); }
+.recognitionTitle > p { max-width: 540px; margin-top: 36px; font-size: 21px; line-height: 1.6; }
+.recognitionBody { padding-top: 8px; }
+.recognitionBody .lead { margin-bottom: 25px; color: var(--coral); font-size: 14px; font-weight: 600; letter-spacing: .06em; }
+.recognitionBody ul { margin: 0; padding: 0; list-style: none; counter-reset: themes; }
+.recognitionBody li { display: grid; grid-template-columns: 35px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid rgba(24,32,29,.2); font: 500 clamp(20px, 2vw, 27px)/1.2 "Cormorant Garamond", Georgia, serif; }
+.recognitionBody li::before { content: ""; align-self: start; width: 18px; height: 3px; margin-top: 10px; background: var(--coral); }
+.recognitionAfter { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+.recognitionAfter p { max-width: 620px; font-size: 18px; line-height: 1.6; }
+.recognitionAfter .alt { color: var(--blue); font: italic 500 27px/1.1 "Cormorant Garamond", Georgia, serif; }
+.recognitionAfter .closing { grid-column: 2; padding-top: 18px; border-top: 5px solid var(--coral); font-weight: 600; }
+
+.offers { display: grid; grid-template-columns: 1fr 1fr; background: var(--white); }
+.offersIntro { grid-column: 1 / -1; display: grid; grid-template-columns: .55fr 1fr .8fr; gap: 7vw; padding: 110px max(32px, calc((100vw - 1376px) / 2 + 32px)) 90px; }
+.offersIntro h2 { font-size: clamp(55px, 6vw, 88px); line-height: .86; }
+.offersIntro h2 em { display: block; color: var(--coral); }
+.offersIntro > div:last-child { align-self: end; max-width: 420px; }
+.offersIntro > div:last-child p { max-width: 620px; font-size: 18px; line-height: 1.6; }
+.offersIntro > div:last-child p + p { margin-top: 15px; font-weight: 600; }
+.offersIntro > .sectionMarker span,
+.finalCta > .sectionMarker span { flex: 0 0 42px; width: 42px; min-width: 42px; height: 42px; aspect-ratio: 1; border-radius: 50%; }
+.offer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); grid-template-areas: "index index" "title title" "claim text" "link text"; gap: 22px 60px; min-height: 650px; padding: 70px clamp(34px, 5.5vw, 88px); }
+.offerOne { background: var(--mint); }
+.offerTwo { background: var(--blue); color: var(--white); }
+.offerIndex { grid-area: index; align-self: start; font-size: 11px; font-weight: 600; letter-spacing: .14em; }
+.offer h3 { grid-area: title; align-self: end; overflow-wrap: anywhere; padding: 46px 0 20px; font-size: clamp(58px, 6vw, 94px); line-height: .82; }
+.offer h3 em { color: var(--sun); }
+.offerClaim { grid-area: claim; font: 500 clamp(25px, 2.3vw, 34px)/1.08 "Cormorant Garamond", Georgia, serif; }
+.offerText { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
+.offer .textLink { grid-area: link; align-self: end; min-width: 0; }
+.offersClosing { grid-column: 1 / -1; padding: 34px 32px; background: var(--coral); color: var(--white); text-align: center; font-size: 16px; line-height: 1.6; }
+.offersClosing a { border-bottom: 1px solid currentColor; font-weight: 600; }
+
+.perspective { position: relative; display: grid; grid-template-columns: .7fr 1.3fr; gap: 55px 10vw; padding: 150px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); }
+.perspective > .sectionMarker { grid-column: 1 / -1; }
+.perspective h2 { grid-column: 1 / -1; max-width: 1100px; font-size: clamp(56px, 6.25vw, 90px); line-height: .9; }
+.perspectiveCopy, .perspectiveEnd { max-width: 470px; }
+.perspectiveCopy p, .perspectiveEnd p { font-size: 18px; line-height: 1.6; }
+.perspectiveCopy p + p, .perspectiveEnd p + p { margin-top: 20px; }
+.perspectiveStatement { align-self: center; color: var(--coral); font: 500 clamp(60px, 8vw, 118px)/.76 "DM Sans", Arial, sans-serif; letter-spacing: -.07em; }
+.perspectiveStatement em { display: inline-block; color: var(--blue); transform: translateX(14%); }
+.perspectiveEnd { grid-column: 2; justify-self: end; }
+.perspectiveEnd .closing { padding-top: 18px; border-top: 5px solid var(--blue); font-weight: 600; }
+
+.philosophy { padding: 140px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
+.philosophyTitle { display: grid; grid-template-columns: 1.1fr .65fr .65fr; gap: 5vw; margin: 74px 0 110px; }
+.philosophyTitle h2 { font-size: clamp(58px, 6vw, 88px); line-height: .88; }
+.philosophyTitle p { align-self: end; max-width: 620px; font-size: 18px; line-height: 1.6; }
+.philosophyStory { border-top: 1px solid rgba(24,32,29,.25); }
+.storyBlock { display: grid; grid-template-columns: 80px 1fr; padding: 48px 0; border-bottom: 1px solid rgba(24,32,29,.25); }
+.storyBlock > span { color: var(--coral); font: italic 500 42px/1 "Cormorant Garamond", Georgia, serif; }
+.storyBlock > p, .storyBlock > div { width: min(100%, 700px); justify-self: end; font-size: 18px; line-height: 1.6; }
+.storyBlock > div p + p { margin-top: 18px; }
+.philosophyResult { width: min(100%, 850px); margin: 110px auto 0; text-align: center; }
+.philosophyResult > p:first-child { font-size: 14px; font-weight: 600; letter-spacing: .06em; }
+.resultWords { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 20px; margin: 28px 0 22px !important; color: var(--blue); font: italic 500 clamp(44px, 6vw, 82px)/.92 "Cormorant Garamond", Georgia, serif; }
+.resultWords span:not(:last-child)::after { content: " /"; color: var(--coral); }
+.philosophyResult > p:nth-child(3) { font: italic 500 27px/1.15 "Cormorant Garamond", Georgia, serif; }
+.philosophyResult .closing { width: min(100%, 520px); margin: 55px auto 0; padding-top: 18px; border-top: 5px solid var(--coral); font-size: 18px; line-height: 1.6; font-weight: 600; }
+
+.approach { display: grid; grid-template-columns: .8fr 1.2fr; grid-template-areas: "portrait intro" "portrait testimonials"; background: var(--mint); }
+.approachPortrait { grid-area: portrait; min-height: 1050px; }
+.approachPortrait img { object-position: 48% 42%; filter: saturate(.82); }
+.approachIntro { grid-area: intro; padding: 100px clamp(45px, 7vw, 110px) 80px; }
+.approachIntro h2 { max-width: 780px; margin-top: 62px; font-size: clamp(55px, 6vw, 88px); line-height: .88; }
+.approachIntro > p { max-width: 620px; margin-top: 42px; font-size: 21px; line-height: 1.6; }
+.testimonials { grid-area: testimonials; display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-self: end; border-top: 1px solid rgba(24,32,29,.25); }
+.testimonialLabel { grid-column: 1 / -1; padding: 30px clamp(45px, 7vw, 110px); font-size: 11px; font-weight: 600; letter-spacing: .14em; }
+.testimonials blockquote { padding: 42px clamp(34px, 4.5vw, 70px) 54px; border-top: 1px solid rgba(24,32,29,.25); }
+.testimonials blockquote + blockquote { border-left: 1px solid rgba(24,32,29,.25); }
+.testimonials blockquote p { font: italic 500 clamp(24px, 2.3vw, 34px)/1.15 "Cormorant Garamond", Georgia, serif; }
+.testimonials blockquote footer { margin-top: 32px; font-size: 12px; line-height: 1.5; letter-spacing: .05em; }
+
+.finalCta { position: relative; padding: 120px max(32px, calc((100vw - 1280px) / 2)); background: var(--coral); color: var(--white); }
+.finalIndex { font-size: 11px; font-weight: 600; letter-spacing: .14em; }
+.finalCta h2 { max-width: 1050px; margin-top: 50px; font-size: clamp(66px, 8vw, 118px); line-height: .8; }
+.finalCta h2 em { color: var(--sun); }
+.finalCopy { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; width: min(100%, 820px); margin: 76px 0 65px auto; }
+.finalCopy p { max-width: 620px; font-size: 18px; line-height: 1.6; }
+.finalCopy a { border-bottom: 1px solid currentColor; font-weight: 600; }
+.finalActions { display: flex; flex-wrap: wrap; gap: 30px 55px; justify-content: flex-end; }
+.email { display: block; width: max-content; margin: 95px 0 0 auto; font: italic 500 clamp(28px, 3vw, 42px)/1 "Cormorant Garamond", Georgia, serif; border-bottom: 1px solid currentColor; }
+
+.footer { display: grid; grid-template-columns: .8fr 1.2fr 1fr; gap: 70px; padding: 80px max(32px, calc((100vw - 1280px) / 2)) 28px; background: var(--blue); color: var(--white); }
+.footerBrand { display: flex; flex-direction: column; gap: 2px; }
+.footerBrand strong { font: 600 30px/1 "Cormorant Garamond", Georgia, serif; }
+.footerBrand span { color: var(--sun); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.footer nav { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 30px; }
+.footer nav a, .footerEmail { font-size: 12px; letter-spacing: .05em; opacity: .85; }
+.footer nav a:hover, .footerEmail:hover { opacity: 1; color: var(--sun); }
+.footerEmail { justify-self: end; }
+.footerBottom { grid-column: 1 / -1; display: flex; justify-content: space-between; margin-top: 50px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.2); font-size: 11px; opacity: .7; }
+.footerBottom div { display: flex; gap: 26px; }
+
+@media (max-width: 1050px) {
+  .desktopNav { display: none; }
+  .headerInner { grid-template-columns: 1fr auto auto; }
+  .mobileMenu { display: block; position: static; margin-left: 25px; }
+  .mobileMenu summary { display: flex; align-items: center; gap: 12px; padding: 30px 0; cursor: pointer; list-style: none; font-size: 12px; font-weight: 600; letter-spacing: .12em; }
+  .mobileMenu summary::-webkit-details-marker { display: none; }
+  .mobileMenu summary i, .mobileMenu summary i::after { display: block; width: 22px; height: 1px; background: var(--ink); content: ""; transition: transform .2s ease; }
+  .mobileMenu summary i::after { transform: translateY(6px); }
+  .mobileMenu[open] summary i { transform: translateY(3px) rotate(45deg); }
+  .mobileMenu[open] summary i::after { transform: rotate(-90deg); }
+  .mobilePanel { position: absolute; top: 90px; right: -32px; left: -32px; padding: 30px 32px 38px; border-top: 1px solid rgba(24,32,29,.2); background: var(--paper); }
+  .mobilePanel nav { display: flex; flex-direction: column; }
+  .mobilePanel nav a { padding: 15px 0; border-bottom: 1px solid rgba(24,32,29,.17); font-size: 12px; font-weight: 600; letter-spacing: .08em; }
+  .mobileCta { display: flex; justify-content: space-between; margin-top: 24px; padding: 16px 18px; background: var(--coral); color: var(--white); font-size: 12px; font-weight: 600; letter-spacing: .08em; }
+  .heroStage { grid-template-columns: 1fr 1fr; }
+  .heroAside { display: none; }
+  .recognition { gap: 70px 6vw; }
+  .offer { grid-template-columns: 1fr; grid-template-areas: "index" "title" "claim" "text" "link"; min-height: 680px; }
+  .philosophyTitle { grid-template-columns: 1fr 1fr; }
+  .philosophyTitle h2 { grid-column: 1 / -1; }
+  .approach { grid-template-columns: .7fr 1.3fr; }
+}
+
+@media (max-width: 700px) {
+  .headerInner { grid-template-columns: 1fr auto; width: calc(100% - 36px); min-height: 72px; }
+  .brand strong { font-size: 23px; }
+  .brand span { font-size: 11px; }
+  .page p { font-size: 16px; line-height: 1.6; }
+  .headerCta { display: none; }
+  .mobileMenu { margin-left: 15px; }
+  .mobileMenu summary { padding: 22px 0; }
+  .mobilePanel { top: 72px; right: -18px; left: -18px; padding: 22px 18px 30px; }
+  .hero { padding: 42px 18px 0; }
+  .eyebrow { max-width: 230px; margin-bottom: 22px !important; line-height: 1.5; }
+  .hero h1 { font-size: clamp(49px, 14.2vw, 59px); line-height: .86; }
+  .hero h1 em { display: inline; }
+  .heroStage { display: flex; flex-direction: column; min-height: 0; margin-top: 38px; }
+  .heroPortrait { width: calc(100% - 42px); min-height: 0; aspect-ratio: .86; }
+  .heroNumber { top: 34px; right: 0; left: auto; width: 82px; height: 82px; }
+  .heroIntro { order: 3; max-width: none; padding: 40px 25px 46px; }
+  .heroIntro > p { font-size: 19px; line-height: 1.6; }
+  .heroActions { margin-top: 34px; }
+  .textLink { min-width: 0; width: 100%; gap: 15px; font-size: 11px; }
+  .sectionMarker { gap: 13px; }
+  .sectionMarker span { width: 36px; height: 36px; }
+  .sectionMarker p { max-width: 225px; line-height: 1.4; }
+  .recognition { display: block; width: calc(100% - 36px); padding: 92px 0 104px; }
+  .recognitionTitle { margin-top: 54px; }
+  .recognitionTitle h2 { font-size: 49px; }
+  .recognitionTitle > p { margin-top: 24px; font-size: 19px; }
+  .recognitionBody { margin-top: 55px; }
+  .recognitionBody li { grid-template-columns: 28px 1fr; font-size: 22px; }
+  .recognitionAfter { display: block; margin-top: 44px; }
+  .recognitionAfter p { font-size: 16px; }
+  .recognitionAfter .alt { margin-bottom: 24px; font-size: 25px; }
+  .recognitionAfter .closing { margin-top: 28px; }
+  .offers { display: block; }
+  .offersIntro { display: block; padding: 82px 18px 64px; }
+  .offersIntro h2 { margin-top: 55px; font-size: 57px; }
+  .offersIntro > div:last-child { margin-top: 38px; }
+  .offersIntro > div:last-child p { font-size: 16px; }
+  .offersIntro > .sectionMarker span,
+  .finalCta > .sectionMarker span { flex-basis: 36px; width: 36px; min-width: 36px; height: 36px; }
+  .offer { display: block; min-height: 0; padding: 52px 18px 62px; }
+  .offer h3 { padding: 82px 0 33px; font-size: 65px; }
+  .offerClaim { margin-bottom: 25px !important; font-size: 28px; }
+  .offerText { margin-bottom: 45px !important; }
+  .offerText { font-size: 16px; }
+  .offersClosing { padding: 28px 18px; line-height: 1.55; text-align: left; }
+  .perspective { display: block; padding: 90px 18px 100px; }
+  .perspective h2 { margin-top: 55px; font-size: 51px; }
+  .perspectiveCopy { margin-top: 45px; }
+  .perspectiveCopy p, .perspectiveEnd p { font-size: 16px; }
+  .perspectiveStatement { margin: 70px 0 75px !important; font-size: 65px; }
+  .perspectiveStatement em { transform: translateX(4%); }
+  .perspectiveEnd { margin-left: 34px; }
+  .philosophy { padding: 90px 18px 100px; }
+  .philosophyTitle { display: block; margin: 55px 0 75px; }
+  .philosophyTitle h2 { margin-bottom: 34px; font-size: 58px; }
+  .philosophyTitle p + p { margin-top: 18px; }
+  .philosophyTitle p { font-size: 16px; }
+  .storyBlock { grid-template-columns: 42px 1fr; padding: 34px 0; }
+  .storyBlock > span { font-size: 31px; }
+  .storyBlock > p, .storyBlock > div { font-size: 16px; line-height: 1.6; }
+  .philosophyResult { margin-top: 78px; }
+  .philosophyResult .closing { font-size: 16px; }
+  .resultWords { display: block; font-size: 53px; }
+  .resultWords span { display: block; }
+  .resultWords span:not(:last-child)::after { content: ""; }
+  .approach { display: flex; flex-direction: column; }
+  .approachPortrait { min-height: 0; aspect-ratio: .9; }
+  .approachPortrait img { object-position: 50% 38%; }
+  .approachIntro { padding: 70px 18px 62px; }
+  .approachIntro h2 { margin-top: 55px; font-size: 54px; }
+  .approachIntro > p { margin-top: 32px; font-size: 19px; }
+  .testimonials { display: block; }
+  .testimonialLabel { padding: 27px 18px; border-top: 1px solid rgba(24,32,29,.25); }
+  .testimonials blockquote { padding: 36px 18px 42px; }
+  .testimonials blockquote + blockquote { border-left: 0; }
+  .testimonials blockquote p { font-size: 28px; }
+  .finalCta { padding: 85px 18px 90px; }
+  .finalCta h2 { margin-top: 48px; font-size: 62px; }
+  .finalCopy { display: block; margin: 54px 0 48px; }
+  .finalCopy p + p { margin-top: 20px; }
+  .finalCopy p { font-size: 16px; }
+  .finalActions { display: block; }
+  .finalActions .textLink + .textLink { margin-top: 18px; }
+  .email { margin-top: 68px; font-size: 26px; }
+  .footer { display: block; padding: 62px 18px 24px; }
+  .footer nav { margin: 48px 0; }
+  .footerEmail { display: inline-block; }
+  .footerBottom { margin-top: 50px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroPortrait img { transition: transform .8s cubic-bezier(.2,.75,.25,1); }
+  .heroPortrait:hover img { transform: scale(1.025); }
+}

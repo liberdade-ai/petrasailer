@@ -1,0 +1,90 @@
+.contactPage { background: var(--paper); }
+.contactPage p { font-size: 18px; line-height: 1.6; }
+
+.hero { position: relative; min-height: calc(100vh - 90px); padding: 72px max(32px, calc((100vw - 1376px) / 2)) 80px; overflow: hidden; background: var(--blue); color: var(--white); }
+.heroMeta { color: var(--sun); }
+.heroMeta p { font-size: 11px !important; }
+.roundMarker span { flex: 0 0 42px; width: 42px; height: 42px; aspect-ratio: 1; }
+.hero h1 { position: relative; z-index: 2; max-width: 1120px; margin-top: 92px; color: var(--white); font-size: clamp(82px, 10vw, 146px); line-height: .75; }
+.hero h1 em { display: block; color: var(--sun); }
+.heroCopy { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 45px; width: min(100%, 940px); margin: 95px 0 0 auto; }
+.heroCopy p { max-width: 620px; font-size: 21px; line-height: 1.6; }
+.heroCopy p + p { margin-top: 20px; }
+.heroAction { align-self: end; }
+.heroAction :global(a) { width: 100%; min-width: 0; }
+.messageMark { position: absolute; right: -5vw; bottom: -18vw; width: 50vw; height: 50vw; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; }
+.messageMark::before { content: ""; position: absolute; inset: 13%; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; }
+.messageMark span { position: absolute; top: 12%; left: 11%; display: grid; place-items: center; width: 31%; aspect-ratio: 1; border-radius: 50%; background: var(--coral); color: var(--white); font: italic 500 clamp(70px, 10vw, 145px)/1 "Cormorant Garamond", Georgia, serif; }
+
+.formSection { display: grid; grid-template-columns: .72fr 1.28fr; background: var(--white); }
+.formIntro { padding: 120px 6vw 120px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); }
+.formIntroInner { position: sticky; top: 55px; }
+.formIntro h2 { margin-top: 70px; font-size: clamp(59px, 6.5vw, 94px); line-height: .84; }
+.formIntro h2 em { display: block; color: var(--coral); }
+.formLead { max-width: 520px; margin-top: 45px !important; }
+.direct { margin-top: 75px; padding-top: 26px; border-top: 6px solid var(--coral); }
+.directLabel { margin-bottom: 18px !important; font-size: 11px !important; font-weight: 600; letter-spacing: .12em; }
+.direct a { display: block; width: max-content; max-width: 100%; margin-top: 10px; border-bottom: 1px solid currentColor; color: var(--blue); font: 400 clamp(20px, 2.16vw, 31.2px)/1.12 "DM Sans", Arial, sans-serif; overflow-wrap: anywhere; }
+.formShell { padding: 120px max(32px, calc((100vw - 1280px) / 2)) 120px 8vw; }
+.formHeading { margin-bottom: 70px; color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .16em; }
+
+.form { display: grid; gap: 36px; width: min(100%, 760px); }
+.honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.field { display: grid; gap: 10px; }
+.field label { color: var(--blue); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.field input, .field textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(24,32,29,.4); border-radius: 0; background: transparent; color: var(--ink); font: 400 18px/1.55 "DM Sans", Arial, sans-serif; outline: 0; transition: border-color .2s ease, background .2s ease; }
+.field input { min-height: 60px; padding: 10px 0; }
+.field textarea { min-height: 210px; padding: 14px 0; resize: vertical; }
+.field input:hover, .field textarea:hover { border-color: var(--blue); }
+.field input:focus, .field textarea:focus { border-color: var(--coral); background: linear-gradient(to top, rgba(239,106,87,.045), transparent 65%); }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--coral); }
+.error { margin: 0 !important; color: #9d382f; font-size: 12px !important; }
+.privacyField { display: grid; grid-template-columns: 24px 1fr; gap: 14px; align-items: start; padding-top: 6px; }
+.privacyField input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--coral); }
+.privacyField label { max-width: 650px; color: rgba(24,32,29,.7); font-size: 13px; line-height: 1.6; }
+.privacyField a { border-bottom: 1px solid currentColor; color: var(--blue); }
+.submitButton { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 68px; margin-top: 5px; padding: 0 24px; border: 0; background: var(--coral); color: var(--white); font: 600 11px/1 "DM Sans", Arial, sans-serif; letter-spacing: .12em; cursor: pointer; transition: background .2s ease, padding .2s ease; }
+.submitButton:hover { padding-right: 18px; background: var(--blue); }
+.submitButton:disabled { opacity: .62; cursor: not-allowed; }
+.submitButton:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.submitButton span { font-size: 18px; }
+.deliveryNote { margin-top: -15px !important; color: rgba(24,32,29,.62); font-size: 12px !important; }
+.notice { padding: 18px 20px; border-left: 5px solid var(--coral); background: var(--sun); color: var(--blue); font-size: 13px !important; }
+
+.assurance { display: grid; grid-template-columns: 1fr 1fr; background: var(--mint); }
+.assurance > div { min-height: 320px; padding: 70px max(32px, calc((100vw - 1280px) / 2)); }
+.assurance > div + div { border-left: 1px solid rgba(24,32,29,.24); }
+.assurance span { color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .12em; }
+.assurance p { max-width: 570px; margin-top: 45px !important; font: italic 500 clamp(27px, 3vw, 43px)/1.07 "Cormorant Garamond", Georgia, serif !important; }
+
+@media (max-width: 1050px) {
+  .formSection { grid-template-columns: .85fr 1.15fr; }
+  .heroCopy { width: min(100%, 760px); }
+}
+
+@media (max-width: 700px) {
+  .contactPage p { font-size: 16px; line-height: 1.6; }
+  .roundMarker span { flex-basis: 36px; width: 36px; height: 36px; }
+  .hero { min-height: calc(100svh - 72px); padding: 45px 18px 65px; }
+  .hero h1 { margin-top: 60px; font-size: 66px; }
+  .heroCopy { display: block; margin-top: 70px; }
+  .heroCopy p { font-size: 19px; }
+  .heroAction { margin-top: 42px; }
+  .messageMark { right: -180px; bottom: 200px; width: 390px; height: 390px; }
+  .messageMark span { font-size: 94px; }
+  .formSection { display: block; }
+  .formIntro { padding: 88px 18px 82px; }
+  .formIntroInner { position: static; }
+  .formIntro h2 { margin-top: 55px; font-size: 56px; }
+  .direct { margin-top: 60px; }
+  .direct a { font-size: 23.2px; }
+  .formShell { padding: 82px 18px 95px; }
+  .formHeading { margin-bottom: 55px; }
+  .form { gap: 31px; }
+  .field input, .field textarea { font-size: 16px; }
+  .submitButton { min-height: 64px; }
+  .assurance { display: block; }
+  .assurance > div { min-height: 0; padding: 55px 18px; }
+  .assurance > div + div { border-top: 1px solid rgba(24,32,29,.24); border-left: 0; }
+  .assurance p { font-size: 30px !important; }
+}
