@@ -34,6 +34,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="de">
       <head>
+        <script
+          defer
+          src="https://analytics.christiansailer.com/script.js"
+          data-website-id="3c112496-17ee-40ac-af86-a304e9898464"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
