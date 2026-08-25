@@ -10,3 +10,102 @@
   to = "/wirklich-deins/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/dem-eigenen-folgen/"
+  to = "/wirklich-deins/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://petrasailer.com/*"
+  to = "https://petrasailer.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.petrasailer.com/*"
+  to = "https://petrasailer.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.petrasailer.com/*"
+  to = "https://petrasailer.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:route/index.html"
+  to = "/:route/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ueber-mich"
+  to = "/ueber-mich/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/klarheitssitzung"
+  to = "/klarheitssitzung/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wirklich-deins"
+  to = "/wirklich-deins/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/arbeite-mit-mir"
+  to = "/arbeite-mit-mir/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kontakt"
+  to = "/kontakt/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kennenlerngespraech"
+  to = "/kennenlerngespraech/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/danke-klarheitssitzung"
+  to = "/danke-klarheitssitzung/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/danke-kennenlerngespraech"
+  to = "/danke-kennenlerngespraech/"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

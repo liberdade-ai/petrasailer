@@ -1,21 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "../../JsonLd";
+import { pageGraph, pageMetadata } from "../../seo";
 import shell from "../base.module.css";
 import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
 
 const NAVIGATION = [
   { label: "ÜBER MICH", href: "#top", current: true },
-  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung" },
-  { label: "WIRKLICH DEINS.", href: "/wirklich-deins" },
-  { label: "KONTAKT", href: "/kontakt" },
+  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung/" },
+  { label: "WIRKLICH DEINS.", href: "/wirklich-deins/" },
+  { label: "KONTAKT", href: "/kontakt/" },
 ] as const;
 
-export const metadata: Metadata = {
+const PAGE_DESCRIPTION =
+  "Lerne Petra Sailer, ihre Haltung und ihre klare, persönliche Art der Begleitung kennen.";
+
+export const metadata: Metadata = pageMetadata({
   title: "Über mich",
-  description: "Lerne Petra Sailer, ihre Haltung und ihre klare, persönliche Art der Begleitung kennen.",
-  alternates: { canonical: "/ueber-mich/" },
-};
+  description: PAGE_DESCRIPTION,
+  path: "/ueber-mich/",
+});
 
 function NavLinks() {
   return NAVIGATION.map((item) => <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>{item.label}</a>);
@@ -34,13 +39,25 @@ function Marker({ number, children, round = false }: { number: string; children:
 export default function AboutPage() {
   return (
     <div className={`${shell.page} ${styles.aboutPage}`}>
+      <JsonLd
+        data={pageGraph({
+          path: "/ueber-mich/",
+          name: "Über Petra Sailer",
+          description: PAGE_DESCRIPTION,
+          type: "AboutPage",
+          breadcrumbs: [
+            { name: "Startseite", path: "/" },
+            { name: "Über mich", path: "/ueber-mich/" },
+          ],
+        })}
+      />
       <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
       <header className={shell.header}>
         <div className={shell.headerInner}>
           <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></Link>
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={shell.headerCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
-          <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>
+          <a className={shell.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+          <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>
         </div>
       </header>
 
@@ -127,11 +144,11 @@ export default function AboutPage() {
 
         <section className={styles.paths}>
           <div className={styles.pathsIntro}><Marker number="07" round>WENN MEINE ART ZU ARBEITEN ZU DIR PASST</Marker><h2>Zwei eigenständige Wege <em>der Zusammenarbeit.</em></h2><p>Vielleicht geht es bei dir um einen konkreten Punkt, an dem du gerade feststeckst. Oder du möchtest etwas über einen längeren Zeitraum verändern, aufbauen oder verwirklichen.</p></div>
-          <div className={styles.pathGrid}><article><p>01 · EIN KONKRETER PUNKT</p><h3><span>Klarheits-</span><span>sitzung</span></h3><span>Für ein konkretes Thema, bei dem du gerade feststeckst und jetzt weiterkommen willst. Du erkennst wieder, was für dich wirklich stimmig ist, und gehst mit einem nächsten Schritt aus der Sitzung, mit dem du selbstständig weitergehen kannst.</span><ActionLink href="/klarheitssitzung" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "ueber_mich_angebote" }}>ZUR KLARHEITSSITZUNG</ActionLink></article><article><p>02 · SECHS MONATE</p><h3><span className={styles.really}>Wirklich</span> <em>Deins.</em></h3><span>Für das, was du in deinem Leben verändern, aufbauen oder verwirklichen möchtest. Über sechs Monate richtest du dich immer wieder daran aus, triffst deine Entscheidungen von dort aus und gehst konkrete Schritte, die für dich stimmig sind.</span><ActionLink href="/wirklich-deins" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "ueber_mich_angebote" }}>WIRKLICH DEINS. ENTDECKEN</ActionLink></article></div>
+          <div className={styles.pathGrid}><article><p>01 · EIN KONKRETER PUNKT</p><h3><span>Klarheits-</span><span>sitzung</span></h3><span>Für ein konkretes Thema, bei dem du gerade feststeckst und jetzt weiterkommen willst. Du erkennst wieder, was für dich wirklich stimmig ist, und gehst mit einem nächsten Schritt aus der Sitzung, mit dem du selbstständig weitergehen kannst.</span><ActionLink href="/klarheitssitzung/" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "ueber_mich_angebote" }}>ZUR KLARHEITSSITZUNG</ActionLink></article><article><p>02 · SECHS MONATE</p><h3><span className={styles.really}>Wirklich</span> <em>Deins.</em></h3><span>Für das, was du in deinem Leben verändern, aufbauen oder verwirklichen möchtest. Über sechs Monate richtest du dich immer wieder daran aus, triffst deine Entscheidungen von dort aus und gehst konkrete Schritte, die für dich stimmig sind.</span><ActionLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "ueber_mich_angebote" }}>WIRKLICH DEINS. ENTDECKEN</ActionLink></article></div>
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a><nav aria-label="Footer-Navigation"><a href="#top">ÜBER MICH</a><a href="/klarheitssitzung">KLARHEITSSITZUNG</a><a href="/wirklich-deins">WIRKLICH DEINS.</a><a href="/kontakt">KONTAKT</a><a href="/arbeite-mit-mir">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a><nav aria-label="Footer-Navigation"><a href="#top">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
     </div>
   );
 }

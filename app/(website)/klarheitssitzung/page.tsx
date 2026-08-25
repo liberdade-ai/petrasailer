@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "../../JsonLd";
+import { pageMetadata, serviceGraph } from "../../seo";
 import shell from "../base.module.css";
 import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
 
 const BOOKING_URL = "https://www.digistore24.com/product/580151";
 const NAVIGATION = [
-  { label: "ÜBER MICH", href: "/ueber-mich" },
+  { label: "ÜBER MICH", href: "/ueber-mich/" },
   { label: "KLARHEITSSITZUNG", href: "#top", current: true },
-  { label: "WIRKLICH DEINS.", href: "/wirklich-deins" },
-  { label: "KONTAKT", href: "/kontakt" },
+  { label: "WIRKLICH DEINS.", href: "/wirklich-deins/" },
+  { label: "KONTAKT", href: "/kontakt/" },
 ] as const;
 
-export const metadata: Metadata = {
+const PAGE_DESCRIPTION =
+  "In der Klarheitssitzung schauen wir gemeinsam, was für dich wirklich stimmt, was dich im Moment noch zurückhält und welcher nächste Schritt daraus entsteht.";
+
+export const metadata: Metadata = pageMetadata({
   title: "Klarheitssitzung",
-  description:
-    "In der Klarheitssitzung schauen wir gemeinsam, was für dich wirklich stimmt, was dich im Moment noch zurückhält und welcher nächste Schritt daraus entsteht.",
-  alternates: { canonical: "/klarheitssitzung/" },
-};
+  description: PAGE_DESCRIPTION,
+  path: "/klarheitssitzung/",
+});
 
 function NavLinks() {
   return NAVIGATION.map((item) => (
@@ -57,6 +61,14 @@ function Marker({ number, children }: { number: string; children: React.ReactNod
 export default function ClarityPage() {
   return (
     <div className={`${shell.page} ${styles.clarityPage}`}>
+      <JsonLd
+        data={serviceGraph({
+          path: "/klarheitssitzung/",
+          name: "Klarheitssitzung",
+          description: PAGE_DESCRIPTION,
+          serviceType: "1:1 Online-Coaching",
+        })}
+      />
       <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
 
       <header className={shell.header}>
@@ -65,12 +77,12 @@ export default function ClarityPage() {
             <strong>Petra Sailer</strong><span>Dem Eigenen folgen</span>
           </Link>
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={shell.headerCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+          <a className={shell.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={shell.mobileMenu}>
             <summary><span>MENÜ</span><i aria-hidden="true" /></summary>
             <div className={shell.mobilePanel}>
               <nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav>
-              <a className={shell.mobileCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+              <a className={shell.mobileCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
             </div>
           </details>
         </div>
@@ -193,7 +205,7 @@ export default function ClarityPage() {
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
         <a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a>
-        <nav aria-label="Footer-Navigation"><a href="/ueber-mich">ÜBER MICH</a><a href="#top">KLARHEITSSITZUNG</a><a href="/wirklich-deins">WIRKLICH DEINS.</a><a href="/kontakt">KONTAKT</a><a href="/arbeite-mit-mir">ARBEITE MIT MIR</a></nav>
+        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="#top">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
       </footer>

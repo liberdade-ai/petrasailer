@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "../seo";
 import shell from "../(website)/base.module.css";
 import siteStyles from "../(website)/page.module.css";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Vielen Dank für deine Buchung",
   description: "Bestätigung deiner Buchung der Klarheitssitzung bei Petra Sailer.",
-  alternates: { canonical: "/danke-klarheitssitzung/" },
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
-  },
-};
+  path: "/danke-klarheitssitzung/",
+  noIndex: true,
+});
 
 export default function DankeKlarheitssitzung() {
   return (
@@ -57,7 +54,7 @@ export default function DankeKlarheitssitzung() {
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
         <Link className={shell.footerBrand} href="/"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></Link>
-        <nav aria-label="Footer-Navigation"><a href="/ueber-mich">ÜBER MICH</a><a href="/klarheitssitzung">KLARHEITSSITZUNG</a><a href="/wirklich-deins">WIRKLICH DEINS.</a><a href="/kontakt">KONTAKT</a><a href="/arbeite-mit-mir">ARBEITE MIT MIR</a></nav>
+        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
       </footer>

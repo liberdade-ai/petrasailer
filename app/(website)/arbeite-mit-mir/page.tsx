@@ -1,22 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "../../JsonLd";
+import { pageGraph, pageMetadata } from "../../seo";
 import shell from "../base.module.css";
 import ContactForm from "./ContactForm";
 import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
 
 const NAVIGATION = [
-  { label: "ÜBER MICH", href: "/ueber-mich" },
-  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung" },
-  { label: "WIRKLICH DEINS.", href: "/wirklich-deins" },
-  { label: "KONTAKT", href: "/kontakt" },
+  { label: "ÜBER MICH", href: "/ueber-mich/" },
+  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung/" },
+  { label: "WIRKLICH DEINS.", href: "/wirklich-deins/" },
+  { label: "KONTAKT", href: "/kontakt/" },
 ] as const;
 
-export const metadata: Metadata = {
+const PAGE_DESCRIPTION =
+  "Zwei Wege der Zusammenarbeit mit Petra Sailer: Klarheitssitzung für einen konkreten Punkt oder Wirklich Deins. für sechs Monate 1:1-Begleitung.";
+
+export const metadata: Metadata = pageMetadata({
   title: "Arbeite mit mir",
-  description: "Zwei Wege der Zusammenarbeit mit Petra Sailer: Klarheitssitzung für einen konkreten Punkt oder Wirklich Deins. für sechs Monate 1:1-Begleitung.",
-  alternates: { canonical: "/arbeite-mit-mir/" },
-};
+  description: PAGE_DESCRIPTION,
+  path: "/arbeite-mit-mir/",
+});
 
 function NavLinks() {
   return NAVIGATION.map((item) => <a key={item.label} href={item.href}>{item.label}</a>);
@@ -31,6 +36,18 @@ function ActionLink({ href, children, light = false, tracking }: { href: string;
 export default function WorkWithMePage() {
   return (
     <div className={`${shell.page} ${styles.workPage}`}>
+      <JsonLd
+        data={pageGraph({
+          path: "/arbeite-mit-mir/",
+          name: "Mit Petra Sailer arbeiten",
+          description: PAGE_DESCRIPTION,
+          type: "CollectionPage",
+          breadcrumbs: [
+            { name: "Startseite", path: "/" },
+            { name: "Arbeite mit mir", path: "/arbeite-mit-mir/" },
+          ],
+        })}
+      />
       <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
       <header className={shell.header}>
         <div className={shell.headerInner}>
@@ -59,13 +76,13 @@ export default function WorkWithMePage() {
               <p className={styles.pathIndex}>01 · EIN KONKRETER PUNKT</p>
               <h3>Klarheitssitzung</h3>
               <p className={styles.pathCopy}>Für ein konkretes Thema, bei dem du gerade feststeckst und jetzt weiterkommen willst. Du erkennst wieder, was für dich wirklich stimmig ist, und gehst mit einem nächsten Schritt aus der Sitzung, mit dem du selbstständig weitergehen kannst.</p>
-              <ActionLink href="/klarheitssitzung" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "arbeite_mit_mir_angebote" }}>ZUR KLARHEITSSITZUNG</ActionLink>
+              <ActionLink href="/klarheitssitzung/" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "arbeite_mit_mir_angebote" }}>ZUR KLARHEITSSITZUNG</ActionLink>
             </article>
             <article className={`${styles.path} ${styles.pathTwo}`}>
               <p className={styles.pathIndex}>02 · SECHS MONATE · 1:1</p>
               <h3>Wirklich <em>Deins.</em></h3>
               <p className={styles.pathCopy}>Für das, was du in deinem Leben verändern, aufbauen oder verwirklichen möchtest. Über sechs Monate verbindest du dich immer wieder mit dem, was du wirklich willst. Von dort aus triffst du deine Entscheidungen und gehst konkrete Schritte, die für dich stimmig sind.</p>
-              <ActionLink href="/wirklich-deins" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "arbeite_mit_mir_angebote" }}>WIRKLICH DEINS. ENTDECKEN</ActionLink>
+              <ActionLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "arbeite_mit_mir_angebote" }}>WIRKLICH DEINS. ENTDECKEN</ActionLink>
             </article>
           </div>
           <p className={styles.pathNote}>Beide Angebote stehen für sich. Du musst keine Klarheitssitzung buchen, um Wirklich Deins. anzufragen.</p>
@@ -83,7 +100,7 @@ export default function WorkWithMePage() {
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich">ÜBER MICH</a><a href="/klarheitssitzung">KLARHEITSSITZUNG</a><a href="/wirklich-deins">WIRKLICH DEINS.</a><a href="/kontakt">KONTAKT</a><a href="#top" aria-current="page">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="#top" aria-current="page">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
     </div>
   );
 }

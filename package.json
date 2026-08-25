@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
-    "lint": "eslint . --ignore-pattern out --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
+    "seo:check": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
     "next": "16.2.6",

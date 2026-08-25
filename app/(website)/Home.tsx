@@ -1,19 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./base.module.css";
 
 const NAVIGATION = [
-  { label: "ÜBER MICH", href: "/ueber-mich" },
-  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung" },
-  { label: "WIRKLICH DEINS.", href: "/wirklich-deins" },
-  { label: "KONTAKT", href: "/kontakt" },
+  { label: "ÜBER MICH", href: "/ueber-mich/" },
+  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung/" },
+  { label: "WIRKLICH DEINS.", href: "/wirklich-deins/" },
+  { label: "KONTAKT", href: "/kontakt/" },
 ] as const;
-
-export const metadata: Metadata = {
-  title: "Dem Eigenen folgen",
-  description:
-    "Petra Sailer begleitet eigenverantwortliche Menschen dabei, ihre eigenen Antworten wieder klar zu erleben, bewusst zu wählen und danach zu handeln.",
-};
 
 function NavLinks() {
   return NAVIGATION.map((item) => (
@@ -50,12 +43,12 @@ export default function HomeContent() {
             <span>Dem Eigenen folgen</span>
           </Link>
           <nav className={styles.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={styles.headerCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+          <a className={styles.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={styles.mobileMenu}>
             <summary><span>MENÜ</span><i aria-hidden="true" /></summary>
             <div className={styles.mobilePanel}>
               <nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav>
-              <a className={styles.mobileCta} href="/arbeite-mit-mir" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+              <a className={styles.mobileCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
             </div>
           </details>
         </div>
@@ -77,7 +70,7 @@ export default function HomeContent() {
               <p>Ich begleite dich dabei, wieder klar zu sehen, was für dich stimmt – und die Schritte zu gehen, mit denen es in deinem Leben konkret wird.</p>
               <div className={styles.heroActions}>
                 <TextLink href="#zusammenarbeit" tracking={{ cta: "welcher_weg_passt", location: "home_hero" }}>WELCHER WEG PASST ZU MIR?</TextLink>
-                <TextLink href="/ueber-mich" tracking={{ cta: "petra_kennenlernen", location: "home_hero" }}>PETRA KENNENLERNEN</TextLink>
+                <TextLink href="/ueber-mich/" tracking={{ cta: "petra_kennenlernen", location: "home_hero" }}>PETRA KENNENLERNEN</TextLink>
               </div>
             </div>
             <p className={styles.heroAside}>Eigene Antworten.<br />Bewusste Wahl.<br />Konkrete Schritte.</p>
@@ -122,14 +115,14 @@ export default function HomeContent() {
             <h3>Klarheitssitzung</h3>
             <p className={styles.offerClaim}>Wenn du bei einem konkreten Thema Klarheit brauchst.</p>
             <p className={styles.offerText}>Vielleicht geht es um eine Entscheidung, ein Gespräch oder ein Vorhaben. Du kommst mit diesem einen Thema, bei dem du gerade feststeckst. Und du gehst mit Klarheit darüber, was für dich stimmt – und mit deinem nächsten konkreten Schritt.</p>
-            <TextLink href="/klarheitssitzung" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "home_angebote" }}>KLARHEITSSITZUNG KENNENLERNEN</TextLink>
+            <TextLink href="/klarheitssitzung/" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "home_angebote" }}>KLARHEITSSITZUNG KENNENLERNEN</TextLink>
           </article>
           <article className={`${styles.offer} ${styles.offerTwo}`}>
             <p className={styles.offerIndex}>02 · SECHS MONATE</p>
             <h3>Wirklich <em>Deins.</em></h3>
             <p className={styles.offerClaim}>Wenn du etwas in deinem Leben verwirklichen willst.</p>
             <p className={styles.offerText}>Vielleicht möchtest du etwas verändern, neu aufbauen oder einen Wunsch verwirklichen, der dir wirklich wichtig ist. Über sechs Monate verbindest du dich immer wieder mit dem, was du willst. Du lernst, von dort aus deine Entscheidungen zu treffen und konkrete Schritte zu gehen, die stimmig für dich sind.</p>
-            <TextLink href="/wirklich-deins" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_angebote" }}>WIRKLICH DEINS. KENNENLERNEN</TextLink>
+            <TextLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_angebote" }}>WIRKLICH DEINS. KENNENLERNEN</TextLink>
           </article>
           <p className={styles.offersClosing}>Du weißt noch nicht, welches Angebot gerade zu dir passt? <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="home_angebote">Dann schreib mir</a> und lass es uns gemeinsam herausfinden.</p>
         </section>
@@ -211,8 +204,8 @@ export default function HomeContent() {
             <p>Wähle das Angebot, das zu deiner jetzigen Situation passt. Und wenn du dir noch unsicher bist, <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="home_abschluss">schreib mir</a>. Dann finden wir es gemeinsam heraus.</p>
           </div>
           <div className={styles.finalActions}>
-            <TextLink href="/klarheitssitzung" light tracking={{ cta: "klarheitssitzung_kennenlernen", location: "home_abschluss" }}>ZUR KLARHEITSSITZUNG</TextLink>
-            <TextLink href="/wirklich-deins" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_abschluss" }}>WIRKLICH DEINS. KENNENLERNEN</TextLink>
+            <TextLink href="/klarheitssitzung/" light tracking={{ cta: "klarheitssitzung_kennenlernen", location: "home_abschluss" }}>ZUR KLARHEITSSITZUNG</TextLink>
+            <TextLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_abschluss" }}>WIRKLICH DEINS. KENNENLERNEN</TextLink>
           </div>
           <a className={styles.email} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="home_abschluss">kontakt@petrasailer.com</a>
         </section>
@@ -220,7 +213,7 @@ export default function HomeContent() {
 
       <footer className={styles.footer}>
         <a className={styles.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a>
-        <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir">ARBEITE MIT MIR</a></nav>
+        <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={styles.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={styles.footerBottom}>
           <p>© Petra Sailer 2026</p>
