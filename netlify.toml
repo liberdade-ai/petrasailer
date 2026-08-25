@@ -47,54 +47,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/ueber-mich"
-  to = "/ueber-mich/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/klarheitssitzung"
-  to = "/klarheitssitzung/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/wirklich-deins"
-  to = "/wirklich-deins/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/arbeite-mit-mir"
-  to = "/arbeite-mit-mir/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/kontakt"
-  to = "/kontakt/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/kennenlerngespraech"
-  to = "/kennenlerngespraech/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/danke-klarheitssitzung"
-  to = "/danke-klarheitssitzung/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/danke-kennenlerngespraech"
-  to = "/danke-kennenlerngespraech/"
-  status = 301
-  force = true
-
 [[headers]]
   for = "/_next/static/*"
   [headers.values]
