@@ -5,12 +5,19 @@ export const SITE_NAME = "Petra Sailer – Dem Eigenen folgen";
 export const PERSON_ID = `${SITE_URL}/#petra-sailer`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const SOCIAL_IMAGE = `${SITE_URL}/og.png`;
+export const HOME_SOCIAL_IMAGE = `${SITE_URL}/home-og.png`;
 
 type PageMetadataOptions = {
   title: string;
   description: string;
   path: string;
   noIndex?: boolean;
+  socialImage?: {
+    url: string;
+    width: number;
+    height: number;
+    alt: string;
+  };
 };
 
 type Breadcrumb = {
@@ -27,6 +34,12 @@ export function pageMetadata({
   description,
   path,
   noIndex = false,
+  socialImage = {
+    url: SOCIAL_IMAGE,
+    width: 1536,
+    height: 1024,
+    alt: "Petra Sailer – Dem Eigenen folgen",
+  },
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
   const socialTitle = title === "Dem Eigenen folgen" ? SITE_NAME : `${title} | Petra Sailer`;
@@ -44,10 +57,7 @@ export function pageMetadata({
       description,
       images: [
         {
-          url: SOCIAL_IMAGE,
-          width: 1536,
-          height: 1024,
-          alt: "Petra Sailer – Dem Eigenen folgen",
+          ...socialImage,
         },
       ],
     },
@@ -55,7 +65,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title: socialTitle,
       description,
-      images: [SOCIAL_IMAGE],
+      images: [socialImage.url],
     },
     robots: noIndex
       ? {

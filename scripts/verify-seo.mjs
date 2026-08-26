@@ -12,6 +12,9 @@ const publicRoutes = [
   "/kennenlerngespraech/",
 ];
 const noIndexRoutes = ["/danke-klarheitssitzung/", "/danke-kennenlerngespraech/"];
+const socialImages = {
+  "/": `${siteUrl}/home-og.png`,
+};
 const out = resolve("out");
 const failures = [];
 
@@ -73,6 +76,7 @@ for (const route of publicRoutes) {
   const html = readOutput(route);
   if (!html) continue;
   const canonical = `${siteUrl}${route}`;
+  const socialImage = socialImages[route] ?? `${siteUrl}/og.png`;
 
   if (count(html, /<title>/g) !== 1) fail(`${route}: erwartet genau einen Titel`);
   if (count(html, /<meta name="description"/g) !== 1) fail(`${route}: erwartet genau eine Beschreibung`);
@@ -81,9 +85,9 @@ for (const route of publicRoutes) {
   if (tagValue(html, "property", "og:url") !== canonical) fail(`${route}: og:url stimmt nicht`);
   if (count(html, /<meta property="og:title"/g) !== 1) fail(`${route}: og:title fehlt oder ist doppelt`);
   if (count(html, /<meta property="og:description"/g) !== 1) fail(`${route}: og:description fehlt oder ist doppelt`);
-  if (tagValue(html, "property", "og:image") !== `${siteUrl}/og.png`) fail(`${route}: og:image stimmt nicht`);
+  if (tagValue(html, "property", "og:image") !== socialImage) fail(`${route}: og:image stimmt nicht`);
   if (count(html, /<meta name="twitter:card"/g) !== 1) fail(`${route}: Twitter-Card fehlt oder ist doppelt`);
-  if (tagValue(html, "name", "twitter:image") !== `${siteUrl}/og.png`) fail(`${route}: Twitter-Bild stimmt nicht`);
+  if (tagValue(html, "name", "twitter:image") !== socialImage) fail(`${route}: Twitter-Bild stimmt nicht`);
   if (!html.includes("<main")) fail(`${route}: crawlbarer Hauptinhalt fehlt`);
   if (count(html, /<h1(?:\s|>)/g) !== 1) fail(`${route}: erwartet genau eine H1`);
   if (html.includes('name="robots" content="noindex')) fail(`${route}: darf nicht auf noindex stehen`);
@@ -121,7 +125,9 @@ for (const route of noIndexRoutes) {
 const redirects = readFileSync(resolve("netlify.toml"), "utf8");
 for (const route of publicRoutes.slice(1)) {
   const withoutSlash = route.slice(0, -1);
-  if (!redirects.includes(`from = "${withoutSlash}"`)) fail(`Weiterleitung für ${withoutSlash} fehlt`);
+  if (redirects.includes(`from = "${withoutSlash}"\n  to = "${route}"`)) {
+    fail(`Weiterleitung für ${withoutSlash} erzeugt eine Slash-Redirect-Schleife`);
+  }
 }
 if (!redirects.includes('from = "/index.html"')) fail("Weiterleitung für /index.html fehlt");
 if (!redirects.includes('from = "/:route/index.html"')) fail("Weiterleitung für verschachtelte index.html-Dateien fehlt");

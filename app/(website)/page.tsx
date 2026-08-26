@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "../JsonLd";
-import { pageGraph, pageMetadata } from "../seo";
+import { HOME_SOCIAL_IMAGE, pageGraph, pageMetadata } from "../seo";
 import HomeContent from "./Home";
 import styles from "./page.module.css";
 
@@ -11,6 +11,12 @@ export const metadata: Metadata = pageMetadata({
   title: "Dem Eigenen folgen",
   description: PAGE_DESCRIPTION,
   path: "/",
+  socialImage: {
+    url: HOME_SOCIAL_IMAGE,
+    width: 1200,
+    height: 630,
+    alt: "Petra Sailer – Dem Eigenen folgen",
+  },
 });
 
 export default function HomePage() {
