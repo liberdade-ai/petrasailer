@@ -39,8 +39,7 @@ export default function HomeContent() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link className={styles.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen">
-            <strong>Petra Sailer</strong>
-            <span>Dem Eigenen folgen</span>
+            <img src="/petra-sailer-logo.svg" alt="" />
           </Link>
           <nav className={styles.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={styles.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>

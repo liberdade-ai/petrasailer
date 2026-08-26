@@ -20,8 +20,7 @@ export default function DankeKlarheitssitzung() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen">
-            <strong>Petra Sailer</strong>
-            <span>Dem Eigenen folgen</span>
+            <img src="/petra-sailer-logo.svg" alt="" />
           </Link>
           <Link className={styles.backLink} href="/">
             Zur Website

@@ -26,8 +26,7 @@ export default function DankeKennenlerngespraech() {
             href="/"
             aria-label="Petra Sailer – Dem Eigenen folgen"
           >
-            <strong>Petra Sailer</strong>
-            <span>Dem Eigenen folgen</span>
+            <img src="/petra-sailer-logo.svg" alt="" />
           </Link>
           <Link className={styles.backLink} href="/">
             Zur Website<span aria-hidden="true">↗</span>
