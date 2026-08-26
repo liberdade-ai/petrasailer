@@ -11,11 +11,13 @@ export const metadata: Metadata = pageMetadata({
   title: "Dem Eigenen folgen",
   description: PAGE_DESCRIPTION,
   path: "/",
+  socialDescription:
+    "Begleitung für Menschen, die etwas in ihrem Leben verändern, aufbauen oder verwirklichen wollen.",
   socialImage: {
     url: HOME_SOCIAL_IMAGE,
     width: 1200,
     height: 630,
-    alt: "Petra Sailer – Dem Eigenen folgen",
+    alt: "Petra Sailer vor hellem Hintergrund. Daneben steht: Wenn du das, was dir wirklich wichtig ist, auch leben willst.",
   },
 });
 

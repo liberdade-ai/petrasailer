@@ -12,6 +12,7 @@ type PageMetadataOptions = {
   description: string;
   path: string;
   noIndex?: boolean;
+  socialDescription?: string;
   socialImage?: {
     url: string;
     width: number;
@@ -34,6 +35,7 @@ export function pageMetadata({
   description,
   path,
   noIndex = false,
+  socialDescription,
   socialImage = {
     url: SOCIAL_IMAGE,
     width: 1536,
@@ -43,6 +45,7 @@ export function pageMetadata({
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
   const socialTitle = title === "Dem Eigenen folgen" ? SITE_NAME : `${title} | Petra Sailer`;
+  const resolvedSocialDescription = socialDescription ?? description;
 
   return {
     title,
@@ -54,7 +57,7 @@ export function pageMetadata({
       url,
       siteName: SITE_NAME,
       title: socialTitle,
-      description,
+      description: resolvedSocialDescription,
       images: [
         {
           ...socialImage,
@@ -64,8 +67,8 @@ export function pageMetadata({
     twitter: {
       card: "summary_large_image",
       title: socialTitle,
-      description,
-      images: [socialImage.url],
+      description: resolvedSocialDescription,
+      images: [{ url: socialImage.url, alt: socialImage.alt }],
     },
     robots: noIndex
       ? {
