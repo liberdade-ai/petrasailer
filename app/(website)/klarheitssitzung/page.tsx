@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "../../JsonLd";
-import { pageMetadata, serviceGraph } from "../../seo";
+import { CLARITY_SOCIAL_IMAGE, pageMetadata, serviceGraph } from "../../seo";
 import shell from "../base.module.css";
 import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
@@ -21,6 +21,12 @@ export const metadata: Metadata = pageMetadata({
   title: "Klarheitssitzung",
   description: PAGE_DESCRIPTION,
   path: "/klarheitssitzung/",
+  socialImage: {
+    url: CLARITY_SOCIAL_IMAGE,
+    width: 1200,
+    height: 630,
+    alt: "Klarheitssitzung – Petra Sailer vor hellem Hintergrund.",
+  },
 });
 
 function NavLinks() {
