@@ -76,7 +76,11 @@
 .paths { border-bottom: 1px solid #fffdf8; background: var(--white); }
 .pathsIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; padding: 125px max(32px, calc((100vw - 1376px) / 2)) 95px; }
 .pathsIntro h2 { font-size: clamp(57px, 6.1vw, 88px); line-height: .86; }
-.pathsIntro h2 em { display: block; color: var(--coral); }
+.pathsTitleLead { display: block; }
+.pathsTitleRow { display: grid; grid-template-columns: max-content max-content; column-gap: .12em; align-items: start; }
+.pathsTitleRow > span { white-space: nowrap; }
+.pathsTitleRow em { display: block; color: var(--coral); }
+.pathsTitleRow em span { display: block; white-space: nowrap; }
 .pathsIntro > p { align-self: end; }
 .pathGrid { display: grid; grid-template-columns: 1fr 1fr; }
 .pathGrid article { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); grid-template-areas: "meta meta" "title title" "link text"; gap: 35px 60px; min-height: 650px; padding: 70px clamp(35px, 6vw, 95px); }
@@ -88,7 +92,7 @@
 .pathGrid h3 .really { color: #fffdf8; }
 .pathGrid h3 em { color: var(--sun); }
 .pathGrid article > span { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
-.pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 58px; padding: 17px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; }
+.pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 75px; padding: 17px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; }
 .pathGrid article:first-child :global(a:hover) { border-color: #18201d; background: #f4e39c; color: #18201d; gap: 32px; }
 .pathGrid article:last-child :global(a) { border-color: #f4e39c; background: #f4e39c; color: #25304f; }
 .pathGrid article:last-child :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; gap: 32px; }
@@ -145,9 +149,11 @@
   .privateBody { order: 3; }
   .pathsIntro { display: block; padding: 88px 18px 75px; }
   .pathsIntro h2 { margin-top: 55px; font-size: 52px; }
+  .pathsTitleRow { display: block; }
   .pathsIntro > p { margin-top: 40px; }
   .pathGrid { display: block; }
   .pathGrid article { display: block; min-height: 0; padding: 52px 18px 65px; }
   .pathGrid h3 { margin: 80px 0 35px; font-size: 64px; }
   .pathGrid article > span { display: block; margin-bottom: 45px; }
+  .pathGrid article :global(a) { min-height: 58px; }
 }
