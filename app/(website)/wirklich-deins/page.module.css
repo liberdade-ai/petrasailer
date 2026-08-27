@@ -53,7 +53,7 @@
 .processIntro h2 em { color: var(--coral); }
 .processIntro > div:last-child { align-self: end; }
 .processIntro > div:last-child p + p { margin-top: 20px; font-weight: 600; }
-.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; border: 1px solid rgba(24,32,29,.25); background: var(--sun); color: var(--ink); }
+.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; border: 1px solid rgba(24,32,29,.25); background: var(--sun); color: #2e4a43; }
 .processList li { display: grid; grid-template-columns: 90px 1fr .7fr; gap: 6vw; align-items: center; min-height: 230px; padding: 40px max(32px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid rgba(24,32,29,.25); transition: background .25s ease, color .25s ease; }
 .processList li:last-child { border-bottom: 0; }
 .processList li:hover { background: var(--sun); }
