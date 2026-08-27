@@ -8,7 +8,7 @@
 .hero h1 { grid-area: title; align-self: end; max-width: 880px; font-size: clamp(70px, 8.4vw, 122px); line-height: .78; }
 .hero h1 em { display: block; color: var(--coral); }
 .heroPortrait { grid-area: portrait; min-height: 760px; overflow: hidden; }
-.heroPortrait img { object-position: 50% 28%; filter: saturate(.84); }
+.heroPortrait img { object-position: 50% 28%; }
 .heroCopy { grid-area: copy; max-width: 680px; padding: 35px 0 75px 9vw; border-top: 1px solid rgba(24,32,29,.28); }
 .heroCopy p { font-size: 21px; line-height: 1.6; }
 .heroCopy strong { display: block; margin-top: 32px; font: italic 500 clamp(27px, 2.8vw, 40px)/1.06 "Cormorant Garamond", Georgia, serif; }

@@ -65,7 +65,7 @@ export default function AboutPage() {
         <section className={styles.hero} id="top">
           <div className={styles.heroMeta}><Marker number="01" round>ÜBER MICH</Marker></div>
           <h1>Ich bin Petra. <em>Mich interessiert, was du wirklich willst.</em></h1>
-          <figure className={styles.heroPortrait}><img src="/petra-sailer-ueber-mich-hero.jpg" alt="Porträt von Petra Sailer" width="1100" height="1334" fetchPriority="high" /></figure>
+          <figure className={styles.heroPortrait}><img src="/petra-sailer-ueber-mich-hero-warm.jpg" alt="Porträt von Petra Sailer" width="1100" height="1334" fetchPriority="high" /></figure>
           <div className={styles.heroCopy}><p>Als Coach für Lebensgestaltung begleite ich dich, wenn du etwas in deinem Leben verändern, aufbauen oder verwirklichen willst. Dabei höre ich dir genau zu, frage nach und führe dich durch einen klaren, nachvollziehbaren Prozess, der dich tief mit deinen inneren Antworten verbindet und dir immer wieder zeigt, was dein nächster Schritt ist.</p><strong>Alles ist schon da, ich helfe dir, es wieder zu hören.</strong></div>
         </section>
 
