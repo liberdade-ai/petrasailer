@@ -119,9 +119,10 @@
 .storyBlock > div p + p { margin-top: 18px; }
 .philosophyResult { width: min(100%, 850px); margin: 110px auto 0; text-align: center; }
 .philosophyResult > p:first-child { font-size: 14px; font-weight: 600; letter-spacing: .06em; }
-.resultWords { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 20px; margin: 28px 0 22px !important; color: var(--blue); font: italic 500 clamp(44px, 6vw, 82px)/.92 "Cormorant Garamond", Georgia, serif; }
-.resultWords span:not(:last-child)::after { content: " /"; color: var(--coral); }
-.philosophyResult > p:nth-child(3) { font: italic 500 27px/1.15 "Cormorant Garamond", Georgia, serif; }
+.philosophyResult .resultWords { display: flex; flex-wrap: wrap; justify-content: center; margin: 28px 0 0 !important; color: var(--ink); font: italic 500 clamp(48px, 4.5vw, 58px)/.92 "Cormorant Garamond", Georgia, serif; }
+.resultWords span { display: inline-block; white-space: nowrap; }
+.resultWords span:not(:last-child)::after { content: " · "; color: var(--coral); }
+.philosophyResult .resultExplanation { max-width: 620px; margin: 38px auto 0 !important; font-size: 20px; line-height: 1.6; }
 .philosophyResult .closing { width: min(100%, 520px); margin: 55px auto 0; padding-top: 18px; border-top: 5px solid var(--coral); font-size: 18px; line-height: 1.6; font-weight: 600; }
 
 .approach { display: grid; grid-template-columns: .8fr 1.2fr; grid-template-areas: "portrait intro" "portrait testimonials"; background: var(--mint); }
@@ -243,9 +244,8 @@
   .storyBlock > p, .storyBlock > div { font-size: 16px; line-height: 1.6; }
   .philosophyResult { margin-top: 78px; }
   .philosophyResult .closing { font-size: 16px; }
-  .resultWords { display: block; font-size: 53px; }
-  .resultWords span { display: block; }
-  .resultWords span:not(:last-child)::after { content: ""; }
+  .philosophyResult .resultWords { font-size: clamp(40px, 11.8vw, 46px); }
+  .philosophyResult .resultExplanation { font-size: 16px; }
   .approach { display: flex; flex-direction: column; }
   .approachPortrait { min-height: 0; aspect-ratio: .9; }
   .approachPortrait img { object-position: 50% 38%; }

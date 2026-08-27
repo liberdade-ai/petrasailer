@@ -166,9 +166,9 @@ export default function HomeContent() {
             </div>
           </div>
           <div className={styles.philosophyResult}>
-            <p>Das ist im Grunde DEM EIGENEN FOLGEN:</p>
+            <p>DEM EIGENEN FOLGEN heißt im Grunde:</p>
             <p className={styles.resultWords}><span>Perspektivwechsel</span><span>echte Wahl</span><span>Handeln</span></p>
-            <p>aus dem bereits gelebten Endergebnis heraus.</p>
+            <p className={styles.resultExplanation}>Du schaust nicht länger nur vom Problem auf dein Leben, sondern von dem aus, was du wirklich leben willst.</p>
             <p className={styles.closing}>Wie das genau geht, zeige ich dir in unserer Zusammenarbeit.</p>
           </div>
         </section>
