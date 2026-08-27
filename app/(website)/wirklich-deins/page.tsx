@@ -89,7 +89,7 @@ export default function ReallyYoursPage() {
         </section>
 
         <section className={styles.process} id="prozess">
-          <div className={styles.processIntro}><Marker number="04">WIE WIR ARBEITEN</Marker><h2>Sechs Monate – um <em>dem Neuen</em> Raum zu geben</h2><div><p>Zu Beginn haben wir gemeinsam herausgefunden, welche Wünsche du in diesen sechs Monaten verwirklichen möchtest. Mit ihnen verbindest du dich immer wieder. Du erlebst, wie du denkst, fühlst und handelst, wenn das Gewünschte bereits Teil deines Lebens ist, und bringst diese neue Perspektive Schritt für Schritt in deinen Alltag.</p><p>Dafür arbeiten wir mit einem klaren Prozess:</p></div></div>
+          <div className={styles.processIntro}><Marker number="04">WIE WIR ARBEITEN</Marker><h2><span>Sechs</span><span>Monate —</span><span>um <em>dem</em></span><span><em>Neuen</em> Raum</span><span>zu geben</span></h2><div><p>Zu Beginn haben wir gemeinsam herausgefunden, welche Wünsche du in diesen sechs Monaten verwirklichen möchtest. Mit ihnen verbindest du dich immer wieder. Du erlebst, wie du denkst, fühlst und handelst, wenn das Gewünschte bereits Teil deines Lebens ist, und bringst diese neue Perspektive Schritt für Schritt in deinen Alltag.</p><p>Dafür arbeiten wir mit einem klaren Prozess:</p></div></div>
           <ol className={styles.processList}>
             <li><span>01</span><h3>In die Stille kommen</h3><p>Wir nehmen uns einen Moment der Stille. Dein alltäglicher Gedankenstrom darf ruhiger werden, und du richtest deine Aufmerksamkeit nach innen.</p></li>
             <li><span>02</span><h3>Das gewünschte Ergebnis erleben</h3><p>Du erlebst innerlich, wie es ist, wenn das, was du dir wünschst, bereits Wirklichkeit ist.</p></li>
