@@ -14,7 +14,7 @@ const publicRoutes = [
 const noIndexRoutes = ["/danke-klarheitssitzung/", "/danke-kennenlerngespraech/"];
 const socialImages = {
   "/": `${siteUrl}/home-og.png`,
-  "/klarheitssitzung/": `${siteUrl}/klarheitssitzung-og.png`,
+  "/klarheitssitzung/": `${siteUrl}/klarheitssitzung-og-v2.png`,
   "/wirklich-deins/": `${siteUrl}/wirklich-deins-og.png`,
 };
 const out = resolve("out");

@@ -6,7 +6,7 @@ export const PERSON_ID = `${SITE_URL}/#petra-sailer`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const SOCIAL_IMAGE = `${SITE_URL}/og.png`;
 export const HOME_SOCIAL_IMAGE = `${SITE_URL}/home-og.png`;
-export const CLARITY_SOCIAL_IMAGE = `${SITE_URL}/klarheitssitzung-og.png`;
+export const CLARITY_SOCIAL_IMAGE = `${SITE_URL}/klarheitssitzung-og-v2.png`;
 export const REALLY_YOURS_SOCIAL_IMAGE = `${SITE_URL}/wirklich-deins-og.png`;
 
 type PageMetadataOptions = {
