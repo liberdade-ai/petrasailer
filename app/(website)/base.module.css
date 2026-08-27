@@ -52,7 +52,7 @@
 .heroIntro > p + p { margin-top: 20px; }
 .heroActions { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 42px; }
 .heroAside { align-self: end; padding: 44px 34px; border-left: 1px solid rgba(24,32,29,.24); font: italic 500 27px/1.05 "Cormorant Garamond", Georgia, serif; }
-.textLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-width: 305px; padding: 11px 0; border-bottom: 1px solid currentColor; font-size: 11px; font-weight: 600; letter-spacing: .11em; transition: gap .2s ease, color .2s ease; }
+.textLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-width: 305px; padding: 11px 0; border-bottom: 1px solid currentColor; font-size: 18px; font-weight: 600; letter-spacing: .11em; transition: gap .2s ease, color .2s ease; }
 .textLink > span:last-child { font-size: 16px; }
 .textLink:hover { color: var(--coral); gap: 45px; }
 .textLinkLight { color: var(--white); }
@@ -93,7 +93,7 @@
 .offer h3 em { color: var(--sun); }
 .offerClaim { grid-area: claim; font: 500 clamp(25px, 2.3vw, 34px)/1.08 "Cormorant Garamond", Georgia, serif; }
 .offerText { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
-.offer .textLink { grid-area: link; align-self: end; min-width: 0; }
+.offer .textLink { grid-area: link; align-self: end; min-width: 0; gap: 15px; }
 .offersClosing { grid-column: 1 / -1; padding: 34px 32px; background: var(--coral); color: var(--white); text-align: center; font-size: 16px; line-height: 1.6; }
 .offersClosing a { border-bottom: 1px solid currentColor; font-weight: 600; }
 
@@ -200,7 +200,7 @@
   .heroIntro { order: 3; max-width: none; padding: 40px 25px 46px; }
   .heroIntro > p { font-size: 19px; line-height: 1.6; }
   .heroActions { margin-top: 34px; }
-  .textLink { min-width: 0; width: 100%; gap: 15px; font-size: 11px; }
+  .textLink { min-width: 0; width: 100%; gap: 15px; font-size: 16px; }
   .sectionMarker { gap: 13px; }
   .sectionMarker span { width: 36px; height: 36px; }
   .sectionMarker p { max-width: 225px; line-height: 1.4; }
