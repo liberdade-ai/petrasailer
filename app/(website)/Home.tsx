@@ -211,7 +211,7 @@ export default function HomeContent() {
       </main>
 
       <footer className={styles.footer}>
-        <a className={styles.footerBrand} href="#top"><strong>Petra Sailer</strong><span>Dem Eigenen folgen</span></a>
+        <a className={styles.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a>
         <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={styles.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={styles.footerBottom}>

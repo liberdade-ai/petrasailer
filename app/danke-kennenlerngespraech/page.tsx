@@ -72,8 +72,7 @@ export default function DankeKennenlerngespraech() {
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
         <Link className={shell.footerBrand} href="/">
-          <strong>Petra Sailer</strong>
-          <span>Dem Eigenen folgen</span>
+          <img src="/petra-sailer-footer-logo.svg" alt="" />
         </Link>
         <nav aria-label="Footer-Navigation">
           <a href="/ueber-mich/">ÜBER MICH</a>
