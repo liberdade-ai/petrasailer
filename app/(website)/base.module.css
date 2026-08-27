@@ -121,7 +121,7 @@
 .philosophyResult > p:first-child { font-size: 14px; font-weight: 600; letter-spacing: .06em; }
 .philosophyResult .resultWords { display: flex; flex-wrap: wrap; justify-content: center; margin: 28px 0 0 !important; color: var(--ink); font: italic 500 clamp(48px, 4.5vw, 58px)/.92 "Cormorant Garamond", Georgia, serif; }
 .resultWords span { display: inline-block; white-space: nowrap; }
-.resultWords span:not(:last-child)::after { content: " · "; color: var(--coral); }
+.resultWords span:not(:last-child)::after { content: "·"; margin: 0 .18em; color: var(--coral); }
 .philosophyResult .resultExplanation { max-width: 620px; margin: 38px auto 0 !important; font-size: 20px; line-height: 1.6; }
 .philosophyResult .closing { width: min(100%, 520px); margin: 55px auto 0; padding-top: 18px; border-top: 5px solid var(--coral); font-size: 18px; line-height: 1.6; font-weight: 600; }
 
