@@ -40,7 +40,13 @@
 .visionCopy p + p, .visionCopy strong + p { margin-top: 22px; }
 .visionCopy strong { display: block; margin: 45px 0 20px; color: var(--sun); font: italic 500 clamp(30px, 3vw, 44px)/1.05 "Cormorant Garamond", Georgia, serif; }
 
+.introCta { padding: 100px 32px; background: var(--paper); text-align: center; }
+.introCta p { max-width: 650px; margin: 0 auto; color: var(--ink); font-size: 18px; line-height: 1.6; }
+.introCta :global(a) { width: min(100%, 500px); min-width: 0; margin-top: 28px; padding: 18px 20px; border: 1px solid var(--coral); background: var(--coral); color: #fffdf8; font-size: 18px; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.introCta :global(a:hover) { border-color: var(--blue); background: var(--blue); color: #fffdf8; }
+
 .process { background: var(--paper); }
+.introCta + .process .processIntro { padding-top: 0; }
 .processIntro { display: grid; grid-template-columns: .55fr 1fr .75fr; gap: 6vw; padding: 130px max(32px, calc((100vw - 1376px) / 2)) 100px; }
 .processIntro h2 { font-size: clamp(58px, 6.5vw, 94px); line-height: .84; }
 .processIntro h2 > span { display: block; }
@@ -176,6 +182,10 @@
   .directionIntro, .processIntro, .journeyIntro, .voicesHeading, .fitIntro, .offerTop { display: block; padding: 88px 18px 78px; }
   .directionIntro h2, .processIntro h2, .journeyIntro h2, .voicesHeading h2, .fitIntro h2, .offerTop h2 { margin-top: 55px; font-size: 52px; }
   .directionIntro > div:last-child, .processIntro > div:last-child, .journeyIntro > p, .voicesHeading > p, .fitIntro > p { margin-top: 45px; }
+  .introCta { padding: 75px 18px; }
+  .introCta p { font-size: 16px; }
+  .introCta :global(a) { width: 100%; margin-top: 28px; font-size: 16px; }
+  .introCta + .process .processIntro { padding-top: 0; }
   .vision { display: block; }
   .visionPrompt { min-height: 610px; padding: 70px 18px; }
   .visionPrompt strong { margin-top: 65px; font-size: 52px; }

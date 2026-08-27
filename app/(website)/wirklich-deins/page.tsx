@@ -88,6 +88,11 @@ export default function ReallyYoursPage() {
           </div>
         </section>
 
+        <section className={styles.introCta}>
+          <p>Wenn du herausfinden möchtest, ob „Wirklich Deins.“ zu dir und deinem Anliegen passt, lass uns kennenlernen.</p>
+          <ActionLink href="/kennenlerngespraech/" tracking={{ cta: "kennenlerngespraech_buchen", location: "wirklich_deins_einfuehrung" }}>Kennenlerngespräch buchen</ActionLink>
+        </section>
+
         <section className={styles.process} id="prozess">
           <div className={styles.processIntro}><Marker number="04">WIE WIR ARBEITEN</Marker><h2><span>Sechs</span><span>Monate —</span><span>um <em>dem</em></span><span><em>Neuen</em> Raum</span><span>zu geben</span></h2><div><p>Zu Beginn haben wir gemeinsam herausgefunden, welche Wünsche du in diesen sechs Monaten verwirklichen möchtest. Mit ihnen verbindest du dich immer wieder. Du erlebst, wie du denkst, fühlst und handelst, wenn das Gewünschte bereits Teil deines Lebens ist, und bringst diese neue Perspektive Schritt für Schritt in deinen Alltag.</p><p>Dafür arbeiten wir mit einem klaren Prozess:</p></div></div>
           <ol className={styles.processList}>
