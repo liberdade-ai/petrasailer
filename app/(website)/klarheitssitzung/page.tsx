@@ -21,6 +21,8 @@ export const metadata: Metadata = pageMetadata({
   title: "Klarheitssitzung",
   description: PAGE_DESCRIPTION,
   path: "/klarheitssitzung/",
+  socialDescription:
+    "Eine 1:1-Online-Sitzung für ein konkretes Thema, bei dem du gerade nicht weiterkommst.",
   socialImage: {
     url: CLARITY_SOCIAL_IMAGE,
     width: 1200,
