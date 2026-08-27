@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "../../JsonLd";
-import { pageMetadata, serviceGraph } from "../../seo";
+import { pageMetadata, REALLY_YOURS_SOCIAL_IMAGE, serviceGraph } from "../../seo";
 import shell from "../base.module.css";
 import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
@@ -20,6 +20,14 @@ export const metadata: Metadata = pageMetadata({
   title: "Wirklich Deins.",
   description: PAGE_DESCRIPTION,
   path: "/wirklich-deins/",
+  socialDescription:
+    "Eine sechsmonatige 1:1-Begleitung für Menschen, die etwas Eigenes in ihrem Leben verwirklichen möchten.",
+  socialImage: {
+    url: REALLY_YOURS_SOCIAL_IMAGE,
+    width: 1200,
+    height: 630,
+    alt: "Petra Sailer und die sechsmonatige 1:1-Begleitung Wirklich Deins. Für das, was du in deinem Leben wirklich verwirklichen möchtest.",
+  },
 });
 
 function NavLinks() {
