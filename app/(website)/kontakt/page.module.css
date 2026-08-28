@@ -43,7 +43,7 @@
 .privacyField input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--coral); }
 .privacyField label { max-width: 650px; color: rgba(24,32,29,.7); font-size: 13px; line-height: 1.6; }
 .privacyField a { border-bottom: 1px solid currentColor; color: var(--blue); }
-.submitButton { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 68px; margin-top: 5px; padding: 0 24px; border: 0; background: var(--coral); color: var(--white); font: 600 18px/1 "DM Sans", Arial, sans-serif; letter-spacing: .12em; cursor: pointer; transition: background .2s ease, padding .2s ease; }
+.submitButton { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 60px; margin-top: 5px; padding: 0 24px; border: 0; background: var(--coral); color: var(--white); font: 600 16px/1.22 "DM Sans", Arial, sans-serif; letter-spacing: .12em; cursor: pointer; transition: background .2s ease, padding .2s ease; }
 .submitButton:hover { padding-right: 18px; background: var(--blue); }
 .submitButton:disabled { opacity: .62; cursor: not-allowed; }
 .submitButton:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
@@ -82,7 +82,7 @@
   .formHeading { margin-bottom: 55px; }
   .form { gap: 31px; }
   .field input, .field textarea { font-size: 16px; }
-  .submitButton { min-height: 64px; font-size: 16px; }
+  .submitButton { min-height: 60px; font-size: 16px; }
   .assurance { display: block; }
   .assurance > div { min-height: 0; padding: 55px 18px; }
   .assurance > div + div { border-top: 1px solid rgba(24,32,29,.24); border-left: 0; }

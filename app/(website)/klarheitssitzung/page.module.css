@@ -21,7 +21,7 @@
 .heroQuestion { grid-area: question; position: relative; z-index: 2; align-self: end; max-width: 680px; padding-left: 10vw; color: var(--mint); font: italic 500 clamp(29px, 3.3vw, 48px)/1.04 "Cormorant Garamond", Georgia, serif !important; }
 .heroIntro { grid-area: intro; position: relative; z-index: 2; align-self: end; justify-self: end; width: 100%; max-width: 480px; }
 .heroIntro > p { margin-bottom: 34px; color: rgba(255,255,255,.85); font-size: 21px; line-height: 1.6; transform: translateY(-60px); }
-.heroIntro :global(a), .finalCopy :global(a) { width: 100%; min-width: 0; padding: 18px 20px; border: 1px solid var(--coral); background: var(--coral); color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.heroIntro :global(a), .finalCopy :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .heroIntro :global(a:hover), .finalCopy :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; }
 .heroOrbit { position: absolute; right: -6vw; bottom: -22vw; width: 54vw; height: 54vw; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; }
 .heroOrbit::before { content: ""; position: absolute; inset: 12%; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; }
@@ -62,7 +62,7 @@
 .offerBottom { display: grid; grid-template-columns: 1fr .8fr; gap: 9vw; align-items: end; margin-top: 65px; }
 .offerBottom > div { max-width: 620px; }
 .offerBottom p + p { margin-top: 20px; }
-.offerBottom :global(a) { width: 100%; min-width: 0; padding: 18px 20px; border: 1px solid #ef6a57; background: #ef6a57; color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.offerBottom :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid #ef6a57; background: #ef6a57; color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .offerBottom :global(a:hover) { border-color: #25304f; background: #25304f; color: #fffdf8; }
 
 .practice { position: relative; display: grid; grid-template-columns: .8fr 1.2fr; grid-template-areas: "photo story" "closing closing"; width: min(100% - 64px, 1280px); margin: 0 auto 130px; background: var(--paper); }

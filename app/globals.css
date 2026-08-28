@@ -573,7 +573,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
   border-radius: 4px 14px 4px 14px;
   background: var(--terracotta);
   color: var(--white);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.12em;
   line-height: 1.25;

@@ -92,7 +92,7 @@
 .pathGrid h3 .really { color: #fffdf8; }
 .pathGrid h3 em { color: var(--sun); }
 .pathGrid article > span { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
-.pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 75px; padding: 17px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; gap: 15px; }
+.pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 12px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; gap: 15px; }
 .pathGrid article:first-child :global(a:hover) { border-color: #18201d; background: #f4e39c; color: #18201d; gap: 15px; }
 .pathGrid article:last-child :global(a) { border-color: #f4e39c; background: #f4e39c; color: #25304f; }
 .pathGrid article:last-child :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; gap: 15px; }
