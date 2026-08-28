@@ -40,10 +40,11 @@
 .visionCopy p + p, .visionCopy strong + p { margin-top: 22px; }
 .visionCopy strong { display: block; margin: 45px 0 20px; color: var(--sun); font: italic 500 clamp(30px, 3vw, 44px)/1.05 "Cormorant Garamond", Georgia, serif; }
 
-.introCta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 500px); align-items: center; gap: clamp(48px, 8vw, 150px); min-height: 200px; padding: 60px max(32px, calc((100vw - 1376px) / 2)); background: #ef6957; }
-.introCta p { max-width: 650px; margin: 0; color: #f8f3ed; font-size: clamp(23px, 2.1vw, 30px); line-height: 1.25; }
+.introCta { --hero-grid-inset: max(32px, calc((100vw - 1376px) / 2)); --vision-grid-inset: max(45px, calc((100vw - 1280px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8vw; min-height: 200px; padding: 60px var(--hero-grid-inset); background: #ef6957; }
+.introCta p { max-width: 650px; margin: 0 0 0 calc(var(--vision-grid-inset) - var(--hero-grid-inset)); color: #f8f3ed; font-size: clamp(23px, 2.1vw, 30px); line-height: 1.25; }
+.introCta p span { display: block; }
 .heroIntro :global(a), .introCta :global(a) { width: min(100%, 431px); }
-.introCta :global(a) { justify-self: end; }
+.introCta :global(a) { justify-self: start; }
 
 .process { background: var(--paper); }
 .introCta + .process .processIntro { padding-top: 50px; }
@@ -153,6 +154,11 @@
 .contact { max-width: 600px; margin: 90px 0 0 auto !important; padding-top: 25px; border-top: 1px solid rgba(255,255,255,.4); }
 .contact a { border-bottom: 1px solid currentColor; color: var(--sun); }
 
+@media (min-width: 1200px) {
+  .introCta p { width: calc(100% + 80px); max-width: none; }
+  .introCta p span { white-space: nowrap; }
+}
+
 @media (max-width: 1050px) {
   .hero { grid-template-columns: 1fr 1fr; }
   .directionIntro, .processIntro, .journeyIntro, .voicesHeading, .fitIntro, .offerTop { grid-template-columns: 1fr 1fr; }
@@ -184,7 +190,7 @@
   .directionIntro h2, .processIntro h2, .journeyIntro h2, .voicesHeading h2, .fitIntro h2, .offerTop h2 { margin-top: 55px; font-size: 52px; }
   .directionIntro > div:last-child, .processIntro > div:last-child, .journeyIntro > p, .voicesHeading > p, .fitIntro > p { margin-top: 45px; }
   .introCta { display: flex; flex-direction: column; gap: 28px; min-height: 0; padding: 42px 18px; text-align: center; }
-  .introCta p { max-width: 650px; font-size: 23px; }
+  .introCta p { max-width: 650px; margin-left: 0; font-size: 23px; }
   .introCta + .process .processIntro { padding-top: 55px; }
   .vision { display: block; }
   .visionPrompt { min-height: 610px; padding: 70px 18px; }

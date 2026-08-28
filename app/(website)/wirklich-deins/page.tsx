@@ -89,7 +89,7 @@ export default function ReallyYoursPage() {
         </section>
 
         <section className={styles.introCta}>
-          <p>Du möchtest herausfinden, ob „Wirklich Deins.“ zu dir passt?</p>
+          <p><span>Du möchtest herausfinden, ob „Wirklich Deins.“</span><span>zu dir passt?</span></p>
           <ActionLink href="/kennenlerngespraech/" tracking={{ cta: "kennenlerngespraech_buchen", location: "wirklich_deins_einfuehrung" }}>Kennenlerngespräch buchen</ActionLink>
         </section>
 
