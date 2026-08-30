@@ -62,13 +62,13 @@ export default function ContactPage() {
           <h1>Was möchtest du <em>noch wissen?</em></h1>
           <div className={styles.heroCopy}>
             <div><p>Vielleicht hast du eine Frage zu meiner Arbeit oder zu einem der beiden Angebote. Oder es gibt etwas, das dir vor deiner Entscheidung noch wichtig ist.</p><p>Dann schreib mir. Ich antworte dir persönlich innerhalb von zwei Werktagen.</p></div>
-            <div className={styles.heroAction}><ActionLink href="#kontaktformular">NACHRICHT SCHREIBEN</ActionLink></div>
+            <div className={styles.heroAction}><ActionLink href="#kontaktformular">Nachricht schreiben</ActionLink></div>
           </div>
           <div className={styles.messageMark} aria-hidden="true"><span>?</span></div>
         </section>
 
         <section className={styles.formSection} id="kontaktformular">
-          <div className={styles.formIntro}><div className={styles.formIntroInner}><div className={shell.sectionMarker}><span>02</span><p>DEINE NACHRICHT</p></div><h2>Schreib mir, <em>worum es geht.</em></h2><p className={styles.formLead}>Du brauchst dafür keine lange Nachricht. Ein paar Sätze genügen. Wenn du dich bereits für eines der Angebote interessierst, schreib es gerne dazu.</p><div className={styles.direct}><p className={styles.directLabel}>DU MÖCHTEST LIEBER DIREKT SCHREIBEN ODER ANRUFEN?</p><a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="kontakt_direktkontakt">kontakt@petrasailer.com</a><a href="tel:+4915155348727" data-umami-event="contact_click" data-umami-event-method="phone" data-umami-event-location="kontakt_direktkontakt">+49 1515 5348727</a></div></div></div>
+          <div className={styles.formIntro}><div className={styles.formIntroInner}><div className={shell.sectionMarker}><span>02</span><p>DEINE NACHRICHT</p></div><h2><span>Schreib</span><span>mir, <em>worum</em></span><span><em>es geht.</em></span></h2><p className={styles.formLead}>Du brauchst dafür keine lange Nachricht. Ein paar Sätze genügen. Wenn du dich bereits für eines der Angebote interessierst, schreib es gerne dazu.</p><div className={styles.direct}><p className={styles.directLabel}>DU MÖCHTEST LIEBER DIREKT SCHREIBEN ODER ANRUFEN?</p><a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="kontakt_direktkontakt">kontakt@petrasailer.com</a><a href="tel:+4915155348727" data-umami-event="contact_click" data-umami-event-method="phone" data-umami-event-location="kontakt_direktkontakt">+49 1515 5348727</a></div></div></div>
           <div className={styles.formShell}><ContactForm /></div>
         </section>
       </main>
