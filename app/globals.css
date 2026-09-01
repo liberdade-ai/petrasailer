@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/CormorantGaramond-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/CormorantGaramond-Italic-Variable.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 500 600;
+  font-display: swap;
+}
+
 :root {
   --white: #ffffff;
   --off-white: #f8f3ed;

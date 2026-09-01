@@ -49,10 +49,6 @@ export default function ImprintPage() {
         </section>
 
         <section className={styles.content} aria-label="Impressum Angaben">
-          <div className={styles.intro}>
-            <span>01</span>
-            <p>Angaben gemäß § 5 DDG</p>
-          </div>
           <div className={styles.entries}>
             <section>
               <h2>Angaben gemäß § 5 DDG</h2>

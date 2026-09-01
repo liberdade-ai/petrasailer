@@ -5,6 +5,7 @@ import { pageGraph, pageMetadata } from "../../seo";
 import shell from "../base.module.css";
 import siteStyles from "../page.module.css";
 import styles from "./page.module.css";
+import TidyCalCalendar from "./TidyCalCalendar";
 
 const PAGE_DESCRIPTION =
   "Kennenlerngespräch zu Wirklich Deins. – kostenfrei und unverbindlich.";
@@ -54,9 +55,7 @@ export default function IntroCallPage() {
             <span className={styles.noteAccent} aria-hidden="true" />
             <p>Das Gespräch dauert 30 Minuten, ist kostenfrei und unverbindlich. Wähle einfach einen Termin, der für dich passt.</p>
           </div>
-          <div className={styles.calendar}>
-            <iframe src="https://tidycal.com/petrasailer/30-min" title="TidyCal" loading="lazy" />
-          </div>
+          <TidyCalCalendar />
         </section>
 
         <section className={styles.closing}>
