@@ -15,7 +15,7 @@ export default function TidyCalConsentRevocation() {
   return (
     <>
       <button type="button" onClick={revokeConsent}>TidyCal-Einwilligung widerrufen</button>
-      {revoked && <p role="status">Die Einwilligung wurde für dieses Gerät widerrufen.</p>}
+      {revoked && <span role="status">Die Einwilligung wurde für dieses Gerät widerrufen.</span>}
     </>
   );
 }

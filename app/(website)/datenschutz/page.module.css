@@ -3,17 +3,31 @@
 .content { width: min(calc(100% - 64px), 720px); margin: 0 auto; padding: 120px 0 150px; }
 .eyebrow { margin: 0; color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .15em; }
 .content h1 { margin: 34px 0 0; color: var(--blue); font-size: clamp(64px, 8vw, 104px); line-height: .86; }
-.settings { margin-top: 76px; padding: 45px 0 50px; border-top: 1px solid rgba(24, 32, 29, .24); border-bottom: 1px solid rgba(24, 32, 29, .24); }
-.settings h2 { color: var(--blue); font-size: 18px; font-weight: 600; letter-spacing: -.03em; }
-.settings > p, .settings > div p { max-width: 640px; margin: 21px 0 0; color: var(--ink); font-size: 18px; line-height: 1.6; }
-.settings button { margin-top: 34px; padding: 15px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--white); font: 600 13px/1.2 "DM Sans", Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
-.settings button:hover { border-color: var(--blue); background: var(--blue); }
-.settings button:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+.updated { margin: 28px 0 0; color: rgba(24, 32, 29, .7); font-size: 15px; line-height: 1.5; }
+.policy { margin-top: 76px; }
+.policy section { padding: 45px 0 50px; border-top: 1px solid rgba(24, 32, 29, .24); }
+.policy section:last-child { border-bottom: 1px solid rgba(24, 32, 29, .24); }
+.policy h2 { color: var(--blue); font-size: 20px; font-weight: 600; letter-spacing: -.03em; line-height: 1.2; }
+.policy p, .policy address, .policy li { max-width: 690px; color: var(--ink); font-size: 18px; font-style: normal; line-height: 1.65; }
+.policy p, .policy address { margin: 21px 0 0; }
+.policy p + p { margin-top: 17px; }
+.policy ul { margin: 19px 0 0; padding-left: 22px; }
+.policy li + li { margin-top: 9px; }
+.policy a { border-bottom: 1px solid currentColor; color: var(--blue); text-decoration: none; }
+.policy a:hover { color: var(--coral); }
+.policy code { font: 500 .9em/1.5 "DM Sans", Arial, sans-serif; overflow-wrap: anywhere; }
+.revocation { display: inline; }
+.revocation button { padding: 0; border: 0; border-bottom: 1px solid currentColor; background: transparent; color: var(--blue); font: 600 1em/1.65 "DM Sans", Arial, sans-serif; cursor: pointer; }
+.revocation button:hover { color: var(--coral); }
+.revocation button:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+.revocation span { display: block; margin-top: 13px; color: var(--blue); font-size: 15px; }
 
 @media (max-width: 700px) {
   .content { width: calc(100% - 36px); padding: 78px 0 96px; }
   .content h1 { margin-top: 29px; font-size: 64px; }
-  .settings { margin-top: 55px; padding: 34px 0 40px; }
-  .settings > p, .settings > div p { font-size: 16px; }
-  .settings button { width: 100%; }
+  .updated { margin-top: 22px; font-size: 14px; }
+  .policy { margin-top: 55px; }
+  .policy section { padding: 34px 0 40px; }
+  .policy h2 { font-size: 18px; }
+  .policy p, .policy address, .policy li { font-size: 16px; }
 }
