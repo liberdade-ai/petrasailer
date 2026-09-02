@@ -64,15 +64,15 @@
 }
 
 .sender strong {
-  color: #f4e39c;
+  color: #f4e39b;
   font: inherit;
 }
 
 .hero h1 {
   max-width: 820px;
   margin: clamp(54px, 7vw, 88px) 0 0;
-  color: #25304f;
-  font-family: var(--font-display), Georgia, serif;
+  color: #2e4a43;
+  font-family: "Cormorant Garamond";
   font-size: clamp(58px, 7.2vw, 104px);
   font-weight: 500;
   letter-spacing: -0.055em;
@@ -82,8 +82,8 @@
 .hero h2 {
   max-width: 700px;
   margin: clamp(40px, 5vw, 62px) 0 0;
-  color: #25304f;
-  font-family: var(--font-display), Georgia, serif;
+  color: #2e4a43;
+  font-family: "Cormorant Garamond";
   font-size: clamp(34px, 3.6vw, 52px);
   font-weight: 500;
   letter-spacing: -0.035em;
@@ -94,7 +94,7 @@
   max-width: 720px;
   padding-top: 28px;
   border-top: 4px solid #ef6a57;
-  color: #18201d;
+  color: #25304f;
   font-size: 19px !important;
   line-height: 1.62 !important;
 }
@@ -104,7 +104,8 @@
 }
 
 .preparation {
-  background: #f4e39c;
+  background: #f4e39b;
+  color: #2e4a43;
   padding: clamp(88px, 11vw, 150px) 32px;
 }
 
@@ -119,8 +120,8 @@
 .preparation h2 {
   max-width: 460px;
   margin: 0;
-  color: #25304f;
-  font-family: var(--font-display), Georgia, serif;
+  color: #2e4a43;
+  font-family: "Cormorant Garamond";
   font-size: clamp(46px, 5.4vw, 78px);
   font-weight: 500;
   letter-spacing: -0.05em;
@@ -133,7 +134,7 @@
 
 .preparationCopy > p {
   margin: 0;
-  color: #18201d;
+  color: #2e4a43;
   font-size: 18px !important;
   line-height: 1.65 !important;
 }
@@ -141,7 +142,7 @@
 .preparationCopy .closing {
   margin-top: 34px;
   color: #ef6a57;
-  font-family: var(--font-display), Georgia, serif;
+  font-family: "Cormorant Garamond";
   font-size: clamp(28px, 2.5vw, 38px) !important;
   font-weight: 500;
   letter-spacing: -0.025em;
@@ -150,8 +151,8 @@
 
 .preparationCopy .signature {
   margin-top: 24px;
-  color: #25304f;
-  font-family: var(--font-display), Georgia, serif;
+  color: #2e4a43;
+  font-family: "Cormorant Garamond";
   font-size: 26px !important;
   font-weight: 500;
   line-height: 1 !important;

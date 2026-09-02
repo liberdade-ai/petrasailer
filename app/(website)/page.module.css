@@ -11,10 +11,10 @@
 /* Der Orientierungshinweis wird zu einer ruhigen, eigenständigen Salbeifläche. */
 .scope > div > main > section:nth-of-type(3) > p:last-child {
   padding: 38px 32px;
-  border: 1px solid rgba(255, 255, 255, .92);
-  background: #c9ded4;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .55);
-  color: #18201d;
+  border: 1px solid rgba(255,253,248, .92);
+  background: #c9ded5;
+  box-shadow: inset 0 0 0 1px rgba(255,253,248, .55);
+  color: #25304f;
 }
 
 .scope > div > main > section:nth-of-type(3) > p:last-child a {
@@ -59,7 +59,7 @@
 }
 
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) h3 em {
-  color: #f4e39c;
+  color: #f4e39b;
 }
 
 .scope > div > main > section:nth-of-type(4) > p em {
@@ -72,7 +72,7 @@
 }
 
 .scope > div > main > section:nth-of-type(6) > div:nth-child(3) {
-  background: #c9ded4;
+  background: #c9ded5;
 }
 
 /* Haupt-CTAs: klar erkennbare Flächen mit kontrastfesten Zuständen. */
@@ -83,13 +83,13 @@
   padding: 13px 20px;
   border: 1px solid #25304f;
   background: #25304f;
-  color: #ffffff;
+  color: #fffdf8;
 }
 
 .scope > div > main > section:nth-of-type(1) a:first-of-type {
   border-color: #ef6a57;
   background: #ef6a57;
-  color: #18201d;
+  color: #25304f;
 }
 
 .scope > div > main > section:nth-of-type(1) a:first-of-type:hover {
@@ -100,21 +100,21 @@
 
 .scope > div > main > section:nth-of-type(1) a:hover,
 .scope > div > main > section:nth-of-type(3) article:first-of-type a:hover {
-  border-color: #18201d;
-  background: #f4e39c;
-  color: #18201d;
+  border-color: #25304f;
+  background: #f4e39b;
+  color: #2e4a43;
   gap: 32px;
 }
 
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a {
-  border-color: #f4e39c;
-  background: #f4e39c;
-  color: #25304f;
+  border-color: #f4e39b;
+  background: #f4e39b;
+  color: #2e4a43;
 }
 
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a:hover {
-  border-color: #ffffff;
-  background: #ffffff;
+  border-color: #fffdf8;
+  background: #fffdf8;
   color: #25304f;
   gap: 32px;
 }
@@ -143,9 +143,9 @@
 }
 
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2) {
-  border-color: #f4e39c;
-  background: #f4e39c;
-  color: #25304f;
+  border-color: #f4e39b;
+  background: #f4e39b;
+  color: #2e4a43;
 }
 
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2):hover {
@@ -180,18 +180,18 @@
   .scope > div > footer > div:last-child {
     margin-top: 36px;
     padding-top: 18px;
-    border-top-color: #f4e39c;
+    border-top-color: #f4e39b;
   }
 }
 
 .scope > div > footer > div:last-child {
-  border-top: 1px solid #f4e39c;
+  border-top: 1px solid #f4e39b;
   opacity: 1;
 }
 
 /* Derselbe Footer für alle finalen Unterseiten. */
 .siteFooter > div:last-child {
-  border-top: 1px solid #f4e39c;
+  border-top: 1px solid #f4e39b;
   opacity: 1;
 }
 

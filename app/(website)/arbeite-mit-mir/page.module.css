@@ -6,7 +6,7 @@
 .hero h1 { position: relative; z-index: 2; max-width: 1280px; margin-top: 58px; font-size: clamp(72px, 8.4vw, 122px); line-height: .8; }
 .hero h1 em { color: var(--coral); }
 .heroLower { position: relative; z-index: 2; display: grid; grid-template-columns: .62fr 1fr .72fr; gap: 6vw; align-items: end; margin-top: 72px; padding: 0 0 72px; }
-.heroLead { color: var(--blue); font: italic 500 clamp(26px, 2.45vw, 37px)/1.08 "Cormorant Garamond", Georgia, serif !important; }
+.heroLead { color: var(--blue); font: italic 500 clamp(26px, 2.45vw, 37px)/1.08 "Cormorant Garamond" !important; }
 .heroBody { max-width: 620px; }
 .heroBody p + p { margin-top: 18px; }
 .heroAction { align-self: end; }
@@ -20,33 +20,33 @@
 .pathGrid { display: grid; grid-template-columns: 1fr 1fr; }
 .path { display: grid; grid-template-rows: auto auto 1fr auto; min-height: 690px; padding: 68px clamp(34px, 6.2vw, 98px); }
 .pathOne { background: var(--mint); }
-.pathTwo { background: var(--blue); color: var(--white); }
+.pathTwo { background: var(--blue); color: var(--paper); }
 .pathIndex { font-size: 11px !important; font-weight: 600; letter-spacing: .14em; }
 .path h3 { align-self: end; padding: 105px 0 38px; font-size: clamp(58px, 6.2vw, 93px); line-height: .8; overflow-wrap: anywhere; }
 .pathOne h3 { font-size: 0; }
 .pathOne h3::before { content: "Klarheits-\A sitzung"; display: block; color: inherit; font-size: clamp(58px, 6.2vw, 93px); line-height: .8; white-space: pre-line; }
 .pathTwo h3 { color: #fffdf8; }
-.pathTwo h3 em { color: #f4e39c; }
+.pathTwo h3 em { color: #f4e39b; }
 .pathCopy { max-width: 620px; font-size: 18px !important; line-height: 1.6 !important; }
-.path :global(a) { align-self: end; min-width: 0; width: 100%; min-height: 56px; margin-top: 62px; padding: 13px 20px; border: 1px solid #25304f; background: #25304f; color: #ffffff; }
-.pathOne :global(a:hover) { border-color: #18201d; background: #f4e39c; color: #18201d; gap: 32px; }
-.pathTwo :global(a) { border-color: #f4e39c; background: #f4e39c; color: #25304f; }
-.pathTwo :global(a:hover) { border-color: #ffffff; background: #ffffff; color: #25304f; gap: 32px; }
+.path :global(a) { align-self: end; min-width: 0; width: 100%; min-height: 56px; margin-top: 62px; padding: 13px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; }
+.pathOne :global(a:hover) { border-color: #25304f; background: #f4e39b; color: #2e4a43; gap: 32px; }
+.pathTwo :global(a) { border-color: #f4e39b; background: #f4e39b; color: #2e4a43; }
+.pathTwo :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; gap: 32px; }
 .pathNote { padding: 28px 32px; background: #ef6a57; color: #fffdf8; text-align: center; font-weight: 600; }
 
-.contactSection { display: grid; grid-template-columns: .64fr 1.36fr; background: var(--sun); }
+.contactSection { display: grid; grid-template-columns: .64fr 1.36fr; background: var(--sun); color: #2e4a43; }
 .portrait { position: relative; min-height: 980px; overflow: hidden; }
 .portrait img { object-fit: cover; object-position: 50% 20%; filter: saturate(.84) contrast(.98); }
-.portraitCaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 22px 28px; background: rgba(37,48,79,.92); color: var(--white); font-size: 11px !important; font-weight: 600; letter-spacing: .13em; }
+.portraitCaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 22px 28px; background: rgba(37,48,79,.92); color: var(--paper); font-size: 11px !important; font-weight: 600; letter-spacing: .13em; }
 .contactContent { padding: 112px max(32px, calc((100vw - 1280px) / 2)) 0 7vw; }
-.contactIntro { display: grid; grid-template-columns: 1fr .8fr; gap: 5vw; padding-bottom: 82px; border-bottom: 1px solid rgba(24,32,29,.25); }
+.contactIntro { display: grid; grid-template-columns: 1fr .8fr; gap: 5vw; padding-bottom: 82px; border-bottom: 1px solid rgba(46,74,67,.25); }
 .contactIntro h2 { max-width: 700px; margin-top: 62px; font-size: clamp(58px, 6vw, 88px); line-height: .84; }
 .contactIntro h2 em { color: var(--coral); }
 .contactCopy { align-self: end; max-width: 620px; }
 .contactCopy p + p { margin-top: 18px; }
 .direct { margin-top: 46px; padding-top: 20px; border-top: 5px solid var(--coral); }
 .directLabel { margin-bottom: 14px !important; font-size: 11px !important; font-weight: 600; letter-spacing: .12em; }
-.direct a { color: var(--blue); border-bottom: 1px solid currentColor; font: italic 500 clamp(25px, 2.5vw, 37px)/1.1 "Cormorant Garamond", Georgia, serif; overflow-wrap: anywhere; }
+.direct a { color: #2e4a43; border-bottom: 1px solid currentColor; font: italic 500 clamp(25px, 2.5vw, 37px)/1.1 "Cormorant Garamond"; overflow-wrap: anywhere; }
 .formWrap { margin-right: calc(-1 * max(32px, calc((100vw - 1280px) / 2))); margin-left: -7vw; padding: 78px max(32px, calc((100vw - 1280px) / 2)) 120px 7vw; background: var(--paper); }
 .formTitle { margin-bottom: 55px !important; color: var(--coral); font-size: 11px !important; font-weight: 600; letter-spacing: .16em; }
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 38px; width: min(100%, 860px); }
@@ -54,25 +54,25 @@
 .field { display: grid; gap: 9px; }
 .field:nth-of-type(4) { grid-column: 1 / -1; }
 .field label { color: var(--blue); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-.field input, .field textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(24,32,29,.48); border-radius: 0; background: transparent; color: var(--ink); font: 400 17px/1.55 "DM Sans", Arial, sans-serif; outline: 0; transition: border-color .2s ease, background .2s ease; }
+.field input, .field textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(46,74,67,.48); border-radius: 0; background: transparent; color: var(--blue); font: 400 17px/1.55 "DM Sans"; outline: 0; transition: border-color .2s ease, background .2s ease; }
 .field input { min-height: 58px; padding: 10px 0; }
 .field textarea { min-height: 190px; padding: 14px 0; resize: vertical; }
 .field input:hover, .field textarea:hover { border-color: var(--blue); }
 .field input:focus, .field textarea:focus { border-color: var(--coral); background: linear-gradient(to top, rgba(239,106,87,.055), transparent 65%); }
 .field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--coral); }
-.fieldHint { margin-top: 2px !important; color: rgba(24,32,29,.62); font-size: 12px !important; }
-.error { margin: 0 !important; color: #87352e; font-size: 12px !important; }
+.fieldHint { margin-top: 2px !important; color: var(--blue); font-size: 12px !important; }
+.error { margin: 0 !important; color: #ef6a57; font-size: 12px !important; }
 .privacyField { grid-column: 1 / -1; display: grid; grid-template-columns: 24px 1fr; gap: 14px; align-items: start; }
 .privacyField input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--coral); }
-.privacyField label { max-width: 720px; color: rgba(24,32,29,.72); font-size: 13px; line-height: 1.6; }
+.privacyField label { max-width: 720px; color: var(--blue); font-size: 13px; line-height: 1.6; }
 .privacyField a { border-bottom: 1px solid currentColor; color: var(--blue); }
-.submitButton { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; min-height: 60px; padding: 0 24px; border: 0; background: var(--coral); color: var(--white); font: 600 16px/1.22 "DM Sans", Arial, sans-serif; letter-spacing: .12em; cursor: pointer; transition: background .2s ease, padding .2s ease; }
+.submitButton { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; min-height: 60px; padding: 0 24px; border: 0; background: var(--coral); color: var(--white); font: 600 16px/1.2 "DM Sans"; letter-spacing: .07em; cursor: pointer; transition: background .2s ease, padding .2s ease; }
 .submitButton:hover { padding-right: 18px; background: var(--blue); }
 .submitButton:disabled { opacity: .62; cursor: not-allowed; }
 .submitButton:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
 .submitButton span { font-size: 18px; }
 .deliveryNote, .notice { grid-column: 1 / -1; }
-.deliveryNote { margin-top: -14px !important; color: rgba(24,32,29,.62); font-size: 12px !important; }
+.deliveryNote { margin-top: -14px !important; color: var(--blue); font-size: 12px !important; }
 .notice { padding: 17px 19px; border-left: 5px solid var(--coral); background: var(--paper); color: var(--blue); font-size: 13px !important; }
 
 @media (max-width: 1050px) {
@@ -115,7 +115,7 @@
   .form { display: grid; grid-template-columns: 1fr; gap: 30px; }
   .field:nth-of-type(4), .privacyField, .submitButton, .deliveryNote, .notice { grid-column: auto; }
   .field input, .field textarea { font-size: 16px; }
-  .submitButton { min-height: 60px; font-size: 16px; }
+  .submitButton { min-height: 60px; font-size: 15px; }
 }
 
 @media (prefers-reduced-motion: no-preference) {

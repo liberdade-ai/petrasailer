@@ -1,7 +1,7 @@
 .aboutPage { background: var(--paper); }
 .aboutPage p { font-size: 18px; line-height: 1.6; }
 
-.hero { display: grid; grid-template-columns: 1.2fr .8fr; grid-template-areas: "meta meta" "title portrait" "copy portrait"; gap: 45px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 0; background: var(--sun); }
+.hero { display: grid; grid-template-columns: 1.2fr .8fr; grid-template-areas: "meta meta" "title portrait" "copy portrait"; gap: 45px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 0; background: var(--sun); color: #2e4a43; }
 .heroMeta { grid-area: meta; color: var(--coral); }
 .heroMeta p { font-size: 11px !important; }
 .roundMarker span { flex: 0 0 42px; width: 42px; height: 42px; aspect-ratio: 1; }
@@ -9,42 +9,42 @@
 .hero h1 em { display: block; color: var(--coral); }
 .heroPortrait { grid-area: portrait; min-height: 760px; overflow: hidden; }
 .heroPortrait img { object-position: 50% 28%; }
-.heroCopy { grid-area: copy; max-width: 680px; padding: 35px 0 75px 9vw; border-top: 1px solid rgba(24,32,29,.28); }
+.heroCopy { grid-area: copy; max-width: 680px; padding: 35px 0 75px 9vw; border-top: 1px solid rgba(46,74,67,.28); }
 .heroCopy p { font-size: 21px; line-height: 1.6; }
-.heroCopy strong { display: block; margin-top: 32px; font: italic 500 clamp(27px, 2.8vw, 40px)/1.06 "Cormorant Garamond", Georgia, serif; }
+.heroCopy strong { display: block; margin-top: 32px; font: italic 500 clamp(27px, 2.8vw, 40px)/1.06 "Cormorant Garamond"; }
 
 .story { background: var(--paper); }
 .storyIntro { display: grid; grid-template-columns: .55fr 1.45fr; gap: 8vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)) 45px; background: var(--paper); color: var(--ink); }
 .storyIntro > div:first-child { align-self: start; }
-.storyIntro h2 { color: var(--ink); font-size: clamp(61px, 7vw, 100px); line-height: .82; }
+.storyIntro h2 { color: #2e4a43; font-size: clamp(61px, 7vw, 100px); line-height: .82; }
 .storyIntro h2 em { display: block; color: var(--coral); }
 .storyBody { width: min(100% - 64px, 1120px); margin: 0 auto; padding: 48px 0 140px; }
 .storyChapter { width: min(100%, 700px); margin-left: auto; }
 .storyChapter p + p { margin-top: 27px; }
 .storyPortrait { display: grid; grid-template-columns: .8fr .45fr; gap: 40px; align-items: center; margin: 0; padding: 88px 0; }
 .storyPortrait img { height: auto; aspect-ratio: 3 / 4; object-position: 50% 35%; }
-.storyPortrait figcaption { padding: 25px 0; border-top: 5px solid var(--coral); font: italic 500 33px/1.08 "Cormorant Garamond", Georgia, serif; }
-.turning { margin: 80px 0 112px !important; color: var(--coral); font: italic 500 clamp(82px, 12vw, 170px)/.75 "Cormorant Garamond", Georgia, serif !important; text-align: center; }
-.storyChapter blockquote { margin: 55px 0; padding: 55px max(25px, 5vw); background: var(--sun); color: var(--blue); font: italic 500 clamp(35px, 4.3vw, 62px)/1 "Cormorant Garamond", Georgia, serif; }
-.storyClosing { margin-top: 65px !important; padding-top: 25px; border-top: 6px solid var(--coral); font: italic 500 clamp(30px, 3.2vw, 46px)/1.03 "Cormorant Garamond", Georgia, serif !important; }
+.storyPortrait figcaption { padding: 25px 0; border-top: 5px solid var(--coral); font: italic 500 33px/1.08 "Cormorant Garamond"; }
+.turning { margin: 80px 0 112px !important; color: var(--coral); font: italic 500 clamp(82px, 12vw, 170px)/.75 "Cormorant Garamond" !important; text-align: center; }
+.storyChapter blockquote { margin: 55px 0; padding: 55px max(25px, 5vw); background: var(--sun); color: #2e4a43; font: italic 500 clamp(35px, 4.3vw, 62px)/1 "Cormorant Garamond"; }
+.storyClosing { margin-top: 65px !important; padding-top: 25px; border-top: 6px solid var(--coral); font: italic 500 clamp(30px, 3.2vw, 46px)/1.03 "Cormorant Garamond" !important; }
 
-.work { display: grid; grid-template-columns: .75fr 1.25fr; background: var(--coral); color: var(--white); }
+.work { display: grid; grid-template-columns: .75fr 1.25fr; background: var(--coral); color: var(--paper); }
 .workIntro { padding: 115px 6vw 100px max(32px, calc((100vw - 1280px) / 2)); }
-.workIntro h2 { position: sticky; top: 55px; margin-top: 75px; color: var(--white); font-size: clamp(64px, 7vw, 100px); line-height: .8; }
+.workIntro h2 { position: sticky; top: 55px; margin-top: 75px; color: var(--paper); font-size: clamp(64px, 7vw, 100px); line-height: .8; }
 .workIntro h2 em { color: var(--sun); }
-.workBody { padding: 120px max(32px, calc((100vw - 1280px) / 2)) 120px 7vw; border-left: 1px solid rgba(255,255,255,.28); }
+.workBody { padding: 120px max(32px, calc((100vw - 1280px) / 2)) 120px 7vw; border-left: 1px solid rgba(255,253,248,.28); }
 .workBody p { max-width: 710px; }
 .workBody p + p { margin-top: 28px; }
-.workBody strong { color: var(--sun); font: italic 500 30px/1 "Cormorant Garamond", Georgia, serif; }
-.workClosing { margin-top: 65px !important; padding-top: 26px; border-top: 6px solid var(--sun); font: italic 500 clamp(32px, 3.3vw, 48px)/1.03 "Cormorant Garamond", Georgia, serif !important; }
+.workBody strong { color: var(--sun); font: italic 500 30px/1 "Cormorant Garamond"; }
+.workClosing { margin-top: 65px !important; padding-top: 26px; border-top: 6px solid var(--sun); font: italic 500 clamp(32px, 3.3vw, 48px)/1.03 "Cormorant Garamond" !important; }
 
 .voices { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
 .voicesHeading { display: grid; grid-template-columns: .55fr 1.45fr; gap: 7vw; }
 .voicesHeading h2 { font-size: clamp(60px, 6.7vw, 96px); line-height: .84; }
 .voicesHeading h2 em { display: block; color: var(--coral); }
-.voiceList { margin-top: 105px; padding: 0 clamp(30px, 5vw, 72px); border: 1px solid rgba(24,32,29,.18); background: var(--mint); }
-.voiceList blockquote { display: grid; grid-template-columns: 1fr 210px; gap: 7vw; padding: 65px 0; border-bottom: 1px solid rgba(24,32,29,.28); }
-.voiceList blockquote p { grid-column: 1; max-width: 880px; font: italic 500 clamp(25px, 2.5vw, 36px)/1.22 "Cormorant Garamond", Georgia, serif; }
+.voiceList { margin-top: 105px; padding: 0 clamp(30px, 5vw, 72px); border: 1px solid rgba(46,74,67,.18); background: var(--mint); }
+.voiceList blockquote { display: grid; grid-template-columns: 1fr 210px; gap: 7vw; padding: 65px 0; border-bottom: 1px solid rgba(46,74,67,.28); }
+.voiceList blockquote p { grid-column: 1; max-width: 880px; font: italic 500 clamp(25px, 2.5vw, 36px)/1.22 "Cormorant Garamond"; }
 .voiceList blockquote p + p { margin-top: 23px; }
 .voiceList blockquote:first-child { row-gap: 0; }
 .voiceList blockquote:first-child p + p { margin-top: 14px; }
@@ -54,15 +54,15 @@
 .foundationIntro { display: grid; grid-template-columns: .55fr 1fr .72fr; gap: 6vw; align-items: end; }
 .foundationIntro h2 { font-size: clamp(57px, 6.1vw, 88px); line-height: .86; }
 .foundationIntro h2 em { display: block; color: var(--coral); }
-.foundationGrid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 100px; border-top: 1px solid rgba(24,32,29,.28); border-bottom: 1px solid rgba(24,32,29,.28); }
+.foundationGrid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 100px; border-top: 1px solid rgba(46,74,67,.28); border-bottom: 1px solid rgba(46,74,67,.28); }
 .foundationGrid article { min-height: 350px; padding: 35px; }
-.foundationGrid article + article { border-left: 1px solid rgba(24,32,29,.28); }
+.foundationGrid article + article { border-left: 1px solid rgba(46,74,67,.28); }
 .foundationGrid article > span { color: var(--coral); font-size: 11px; }
 .foundationGrid h3 { margin-top: 75px; font-size: clamp(33px, 3.1vw, 45px); line-height: .92; }
 .foundationGrid p { margin-top: 34px !important; }
 .boundary { max-width: 720px; margin: 70px 0 0 auto !important; padding-top: 24px; border-top: 6px solid var(--blue); font-weight: 600; }
 
-.private { display: grid; grid-template-columns: .65fr 1fr .75fr; grid-template-areas: "heading photos body"; gap: 6vw; padding: 130px max(32px, calc((100vw - 1376px) / 2)); background: var(--sun); }
+.private { display: grid; grid-template-columns: .65fr 1fr .75fr; grid-template-areas: "heading photos body"; gap: 6vw; padding: 130px max(32px, calc((100vw - 1376px) / 2)); background: var(--sun); color: #2e4a43; }
 .privateHeading { grid-area: heading; }
 .privateHeading h2 { margin-top: 75px; font-size: clamp(65px, 7vw, 102px); line-height: .8; }
 .privateHeading h2 em { color: var(--coral); }
@@ -85,7 +85,8 @@
 .pathGrid { display: grid; grid-template-columns: 1fr 1fr; }
 .pathGrid article { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); grid-template-areas: "meta meta" "title title" "link text"; gap: 35px 60px; min-height: 650px; padding: 70px clamp(35px, 6vw, 95px); }
 .pathGrid article:first-child { background: var(--mint); }
-.pathGrid article:last-child { background: var(--blue); color: var(--white); }
+.pathGrid article:last-child { background: var(--blue); color: var(--paper); }
+.pathGrid article:last-child h3 { color: var(--paper); }
 .pathGrid article > p { grid-area: meta; font-size: 11px; font-weight: 600; letter-spacing: .12em; }
 .pathGrid h3 { grid-area: title; align-self: end; font-size: clamp(60px, 6.4vw, 94px); line-height: .8; }
 .pathGrid article:first-child h3 span { display: block; }
@@ -93,8 +94,8 @@
 .pathGrid h3 em { color: var(--sun); }
 .pathGrid article > span { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
 .pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 12px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; gap: 15px; }
-.pathGrid article:first-child :global(a:hover) { border-color: #18201d; background: #f4e39c; color: #18201d; gap: 15px; }
-.pathGrid article:last-child :global(a) { border-color: #f4e39c; background: #f4e39c; color: #25304f; }
+.pathGrid article:first-child :global(a:hover) { border-color: #25304f; background: #f4e39b; color: #2e4a43; gap: 15px; }
+.pathGrid article:last-child :global(a) { border-color: #f4e39b; background: #f4e39b; color: #2e4a43; }
 .pathGrid article:last-child :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; gap: 15px; }
 
 @media (max-width: 1050px) {
@@ -141,7 +142,7 @@
   .foundationIntro > p { margin-top: 42px; }
   .foundationGrid { display: block; margin-top: 70px; }
   .foundationGrid article { min-height: 0; padding: 35px 0 45px; }
-  .foundationGrid article + article { border-top: 1px solid rgba(24,32,29,.28); border-left: 0; }
+  .foundationGrid article + article { border-top: 1px solid rgba(46,74,67,.28); border-left: 0; }
   .foundationGrid h3 { margin-top: 42px; font-size: 39px; }
   .private { display: flex; flex-direction: column; padding: 88px 18px 95px; }
   .privateHeading h2 { margin-top: 55px; font-size: 61px; }

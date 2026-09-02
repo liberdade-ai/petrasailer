@@ -56,7 +56,7 @@ export default function HomeContent() {
       <main id="inhalt">
         <section className={styles.hero} id="top">
           <div className={styles.heroTitle}>
-            <p className={styles.eyebrow}>PETRA SAILER · COACH FÜR LEBENSGESTALTUNG</p>
+            <p className={styles.eyebrow}>PERSPEKTIVWECHSEL · ECHTE WAHL · HANDELN</p>
             <h1>Du hast etwas vor. <em>Und du willst es wirklich</em> in dein Leben bringen.</h1>
           </div>
           <div className={styles.heroStage}>

@@ -58,7 +58,7 @@ export default function ImprintPage() {
 
             <section>
               <h2>Kontakt</h2>
-              <p>Telefon: <a href="tel:+4915155348727">+49 1515 534 8727</a><br />E-Mail: <a href="mailto:office@liberdade.ltd">office@liberdade.ltd</a></p>
+              <p>E-Mail: <a href="mailto:office@liberdade.ltd">office@liberdade.ltd</a></p>
             </section>
 
             <section>

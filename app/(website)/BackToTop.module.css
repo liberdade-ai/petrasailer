@@ -8,12 +8,12 @@
   width: 52px;
   height: 52px;
   padding: 0;
-  border: 2px solid #f4e39c;
+  border: 2px solid #f4e39b;
   border-radius: 50%;
   background: #25304f;
-  box-shadow: 0 8px 24px rgba(24, 32, 29, .22);
+  box-shadow: 0 8px 24px rgba(46,74,67, .22);
   color: #fffdf8;
-  font: 500 23px/1 "DM Sans", Arial, sans-serif;
+  font: 500 23px/1 "DM Sans";
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

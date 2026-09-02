@@ -6,7 +6,7 @@
 .header {
   position: relative;
   z-index: 50;
-  border-bottom: 1px solid rgba(24, 32, 29, .2);
+  border-bottom: 1px solid rgba(46,74,67, .2);
   background: rgba(255, 253, 248, .97);
 }
 
@@ -24,7 +24,7 @@
   align-items: center;
   gap: 18px;
   padding: 13px 0 13px 18px;
-  border-left: 1px solid rgba(24, 32, 29, .3);
+  border-left: 1px solid rgba(46,74,67, .3);
   color: var(--ink);
   font-size: 11px;
   font-weight: 600;
@@ -69,21 +69,21 @@
 .intro h1 {
   max-width: 850px;
   margin-top: 56px;
-  color: var(--blue);
+  color: #2e4a43;
   font-size: clamp(52px, 6.6vw, 92px);
   line-height: .88;
 }
 
 .intro h1 em {
-  color: var(--blue);
-  font-family: "DM Sans", Arial, sans-serif;
+  color: #2e4a43;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 600;
 }
 
 .intro h1 span {
   color: var(--sun);
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond";
   font-style: italic;
   font-weight: 500;
 }
@@ -96,7 +96,7 @@
   margin-top: clamp(48px, 6vw, 75px);
 }
 
-.introCopy p { color: var(--ink); font-size: 18px; line-height: 1.68; }
+.introCopy p { color: var(--blue); font-size: 18px; line-height: 1.68; }
 
 .booking {
   position: relative;
@@ -167,7 +167,7 @@
 .calendarConsent h2 {
   max-width: 560px;
   margin: 34px 0 0;
-  color: var(--blue);
+  color: #2e4a43;
   font-size: clamp(42px, 5vw, 62px);
   font-weight: 500;
   letter-spacing: -.055em;
@@ -177,7 +177,7 @@
 .calendarConsent > p:not(.calendarLabel) {
   max-width: 510px;
   margin: 30px 0 0;
-  color: var(--ink);
+  color: var(--blue);
   font-size: 18px;
   line-height: 1.6;
 }
@@ -203,8 +203,8 @@
   border: 1px solid var(--coral);
   background: var(--coral);
   color: var(--white);
-  font: 600 13px/1.2 "DM Sans", Arial, sans-serif;
-  letter-spacing: .12em;
+  font: 600 16px/1.2 "DM Sans";
+  letter-spacing: .07em;
   text-transform: uppercase;
   cursor: pointer;
   transition: background .2s ease, border-color .2s ease, gap .2s ease;
@@ -216,7 +216,7 @@
 .closing {
   padding: clamp(72px, 8vw, 104px) 32px;
   background: var(--paper);
-  color: var(--ink);
+  color: var(--blue);
 }
 
 .closingInner {
@@ -229,7 +229,7 @@
 .contactClosing {
   margin: 0;
   color: var(--blue);
-  font-family: "DM Sans", Arial, sans-serif;
+  font-family: "DM Sans";
   font-size: clamp(20px, 2.1vw, 27px);
   font-style: normal;
   font-weight: 600;
@@ -275,7 +275,7 @@
   .calendarConsent { min-height: 680px; padding: 54px 26px; }
   .calendarConsent h2 { margin-top: 28px; font-size: 43px; }
   .calendarConsent > p:not(.calendarLabel) { margin-top: 25px; font-size: 16px; }
-  .loadCalendarButton { width: 100%; margin-top: 36px; }
+  .loadCalendarButton { width: 100%; margin-top: 36px; font-size: 15px; }
   .closing { padding: 68px 18px 72px; }
   .closingInner p { font-size: 20px; }
   .contactClosing { font-size: 20px; }

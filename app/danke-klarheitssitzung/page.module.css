@@ -1,28 +1,28 @@
 /* Lokale Gestaltung der Dankeseite im finalen Designsystem. */
 .thanksPage { background: #fffdf8; }
 
-.header { position: relative; z-index: 50; border-bottom: 1px solid rgba(24,32,29,.2); background: rgba(255,253,248,.97); }
+.header { position: relative; z-index: 50; border-bottom: 1px solid rgba(46,74,67,.2); background: rgba(255,253,248,.97); }
 .headerInner { display: flex; align-items: center; justify-content: space-between; width: min(100% - 64px, 1376px); min-height: 74px; margin: 0 auto; }
-.backLink { display: inline-flex; align-items: center; gap: 18px; padding: 13px 0 13px 18px; border-left: 1px solid rgba(24,32,29,.3); color: #18201d; font-size: 11px; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; }
+.backLink { display: inline-flex; align-items: center; gap: 18px; padding: 13px 0 13px 18px; border-left: 1px solid rgba(46,74,67,.3); color: #25304f; font-size: 11px; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; }
 .backLink > span { display: grid; place-items: center; width: 34px; aspect-ratio: 1; border-radius: 50%; background: #ef6a57; color: #fffdf8; font-size: 15px; transition: transform .25s ease; }
-.backLink:hover { color: #18201d; }
+.backLink:hover { color: #25304f; }
 .backLink:hover > span { transform: rotate(45deg); }
 .backLink:focus-visible { outline: 3px solid #ef6a57; outline-offset: 4px; }
 
 .hero { background: #fffdf8; }
 .heroInner { width: min(100% - 64px, 1180px); margin: 0 auto; padding: 78px 0 94px; }
-.heroMeta { display: inline-block; padding: 18px 22px; background: #c9ded4; color: #25304f; font-size: 13px !important; font-weight: 600; letter-spacing: .15em; }
+.heroMeta { display: inline-block; padding: 18px 22px; background: #c9ded5; color: #25304f; font-size: 13px !important; font-weight: 600; letter-spacing: .15em; }
 .heroMain { display: grid; grid-template-columns: 1.08fr .92fr; gap: 8vw; align-items: end; margin-top: 34px; }
-.hero h1 { max-width: 650px; color: #25304f; font-size: clamp(48px, 5.4vw, 76px); line-height: .9; }
+.hero h1 { max-width: 650px; color: #2e4a43; font-size: clamp(48px, 5.4vw, 76px); line-height: .9; }
 .confirmation { align-self: end; max-width: 560px; }
-.lead { padding-top: 24px; border-top: 5px solid #ef6a57; color: #18201d; font-size: 19px !important; line-height: 1.6 !important; }
+.lead { padding-top: 24px; border-top: 5px solid #ef6a57; color: #25304f; font-size: 19px !important; line-height: 1.6 !important; }
 
-.nextStep { display: grid; grid-template-columns: .9fr 1.1fr; gap: 6vw; margin-top: 58px; padding: 48px clamp(28px, 4.5vw, 62px); background: #f4e39c; }
-.subheading { max-width: 550px; color: #25304f; font-size: clamp(39px, 4.4vw, 60px); line-height: .9; }
+.nextStep { display: grid; grid-template-columns: .9fr 1.1fr; gap: 6vw; margin-top: 58px; padding: 48px clamp(28px, 4.5vw, 62px); background: #f4e39b; color: #2e4a43; }
+.subheading { max-width: 550px; color: #2e4a43; font-size: clamp(39px, 4.4vw, 60px); line-height: .9; }
 .nextCopy { align-self: end; }
 .subText { color: #2e4a43; font-size: 18px !important; line-height: 1.6 !important; }
-.closing { margin-top: 28px !important; padding-top: 24px; border-top: 1px solid rgba(37,48,79,.28); color: #ef6a57; font: italic 500 clamp(27px, 2.7vw, 38px)/1.08 "Cormorant Garamond", Georgia, serif !important; }
-.legalNote { margin-top: 34px !important; color: rgba(46,74,67,.88); font-size: 12px !important; line-height: 1.5 !important; }
+.closing { margin-top: 28px !important; padding-top: 24px; border-top: 1px solid rgba(37,48,79,.28); color: #ef6a57; font: italic 500 clamp(27px, 2.7vw, 38px)/1.08 "Cormorant Garamond" !important; }
+.legalNote { margin-top: 34px !important; color: #2e4a43; font-size: 12px !important; line-height: 1.5 !important; }
 
 @media (max-width: 850px) {
   .heroMain { grid-template-columns: 1fr 1fr; gap: 6vw; }
