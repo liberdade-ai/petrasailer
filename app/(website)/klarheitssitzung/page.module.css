@@ -25,7 +25,7 @@
 .heroIntro :global(a:hover), .finalCopy :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; }
 .heroOrbit { position: absolute; right: -6vw; bottom: -22vw; width: 54vw; height: 54vw; border: 1px solid rgba(255,253,248,.18); border-radius: 50%; }
 .heroOrbit::before { content: ""; position: absolute; inset: 12%; border: 1px solid rgba(255,253,248,.12); border-radius: 50%; }
-.heroOrbit span { position: absolute; top: 12%; left: 15%; color: var(--coral); font: 500 25vw/.75 "DM Sans"; letter-spacing: -.1em; opacity: .85; transform: translateY(-60px); }
+.heroOrbit span { position: absolute; top: 12%; left: 15%; color: var(--coral); font: 500 25vw/.75 "DM Sans"; letter-spacing: -.1em; transform: translateY(-60px); }
 
 .recognition { display: grid; grid-template-columns: .9fr 1.1fr; gap: 76px 10vw; width: min(100% - 64px, 1280px); margin: 0 auto; padding: 145px 0 160px; }
 .recognition > :first-child { grid-column: 1 / -1; }

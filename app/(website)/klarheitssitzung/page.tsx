@@ -102,7 +102,7 @@ export default function ClarityPage() {
           <h1>Drehst du dich gerade <em>im Kreis?</em></h1>
           <p className={styles.heroQuestion}>Und willst du klarer sehen, was für dich stimmt und wie du weitergehen kannst? Oder was vielleicht noch möglich ist?</p>
           <div className={styles.heroIntro}>
-            <p>In der Klarheitssitzung hörst du auf, vom Problem aus nach einer Lösung zu suchen, und nimmst eine neue Perspektive ein. Du erlebst, was für dich wirklich stimmt, und erkennst, was du heute, morgen oder in den nächsten Tagen konkret tun kannst.</p>
+            <p>In der Klarheitssitzung hörst du auf, vom Problem aus nach einer Lösung zu suchen, und nimmst eine neue Perspektive ein. Du erlebst, was für dich wirklich stimmt, was vielleicht noch möglich ist und erkennst, was du heute, morgen oder in den nächsten Tagen konkret tun kannst.</p>
             <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>KLARHEITSSITZUNG BUCHEN</ActionLink>
           </div>
           <div className={styles.heroOrbit} aria-hidden="true"><span>?</span></div>
