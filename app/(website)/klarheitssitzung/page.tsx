@@ -113,6 +113,7 @@ export default function ClarityPage() {
           <h2>Es geht um diesen <em>einen Punkt,</em> an dem du jetzt weiterkommen möchtest.</h2>
           <div className={styles.recognitionCopy}>
             <p>Vielleicht weißt du nicht, ob du den neuen Job annehmen sollst. Vielleicht geht es um deine Beziehung und um etwas, das du ansprechen, verändern oder entscheiden möchtest. Vielleicht kommst du mit deinem Business, deinen Website-Texten oder einem anderen Vorhaben nicht voran.</p>
+            <p>Vielleicht siehst du auch mehrere Möglichkeiten und weißt nicht, welche wirklich zu dir passt. Oder du spürst, dass es für dein Thema noch einen anderen Weg geben könnte, kannst ihn aber gerade nicht klar sehen.</p>
             <p>Oder du stehst eigentlich schon kurz vor dem nächsten Schritt. Und irgendetwas hält dich trotzdem zurück.</p>
             <p className={styles.recognitionClosing}>Es geht nicht darum, in einer Sitzung dein ganzes Leben zu verändern. Es geht um diesen einen Punkt, der im Hintergrund immer wieder auftaucht und Kraft kostet. Du bringst genau dieses eine Thema mit. Und damit arbeiten wir.</p>
           </div>
@@ -124,7 +125,9 @@ export default function ClarityPage() {
             <h2>Wir verändern den <em>Ausgangspunkt,</em> von dem aus du auf dein Thema schaust.</h2>
             <div className={styles.processLead}>
               <p>Solange du innerhalb deines Problems denkst, suchst du auch dort nach einer Lösung. Dabei entstehen häufig immer wieder ähnliche Gedanken, weil der Ausgangspunkt derselbe bleibt.</p>
-              <p>In der Klarheitssitzung verändern wir diesen Ausgangspunkt. Du schaust nicht mehr vom Problem auf die Lösung, sondern vom gewünschten Leben auf das Problem. Von dort aus wird klarer, was für dich stimmt, was dich bisher zurückgehalten hat und was jetzt möglich ist.</p>
+              <p>In der Klarheitssitzung verändern wir diesen Ausgangspunkt. Du schaust nicht mehr vom Problem auf die Lösung, sondern vom gewünschten Leben auf das Problem.</p>
+              <p>Von dort aus wird klarer, was für dich stimmt, was dich bisher zurückgehalten hat und was jetzt möglich ist. Und manchmal wird von dort sogar eine Möglichkeit sichtbar, die du vorher überhaupt nicht im Blick hattest.</p>
+              <p>Ich begleite dich durch den Prozess, greife auf, was du sagst, frage dort genauer nach, wo etwas noch offen ist, und fasse zusammen, was sich zeigt. Denn deine Antworten sind schon da. Ich helfe dir, sie wieder hörbar zu machen.</p>
               <p>Um deiner eigenen Klarheit näherzukommen, arbeiten wir in vier Schritten:</p>
             </div>
           </div>
@@ -179,7 +182,7 @@ export default function ClarityPage() {
             <Marker number="06">WAS DU MITNIMMST</Marker>
             <h2>Du gehst mit Klarheit über dein Thema – und mit deinem nächsten konkreten Schritt.</h2>
             <div>
-              <p>Du nimmst eine neue Perspektive auf dein Thema ein. Dadurch kann klarer werden, was dich bisher zurückgehalten hat, was du wirklich willst und was für dich stimmt.</p>
+              <p>Du nimmst eine neue Perspektive auf dein Thema ein. Dadurch kann klarer werden, was dich bisher zurückgehalten hat, was du wirklich willst und was für dich stimmt. Vielleicht wird auch eine Möglichkeit sichtbar, die du vorher noch gar nicht im Blick hattest.</p>
               <p>Und du erkennst, was du heute, morgen oder in den nächsten Tagen konkret tun kannst.</p>
             </div>
           </div>
@@ -204,7 +207,11 @@ export default function ClarityPage() {
           <p className={styles.finalIndex}>08 · DEIN NÄCHSTER SCHRITT</p>
           <h2>Welches Thema soll nicht noch länger <em>im Hintergrund mitlaufen?</em></h2>
           <div className={styles.finalCopy}>
-            <p>Wenn du spürst, dass es Zeit ist, bei diesem einen Thema weiterzukommen, dann bring es mit. Wir schauen gemeinsam, was für dich wirklich stimmt und was du als Nächstes konkret tun kannst.</p>
+            <div className={styles.finalCopyText}>
+              <p>Vielleicht weißt du gerade nicht, was für dich stimmt. Vielleicht siehst du mehrere Möglichkeiten. Oder du drehst dich mit derselben Frage immer wieder im Kreis.</p>
+              <p>Wenn du spürst, dass es Zeit ist, bei diesem einen Thema weiterzukommen, dann bring es mit.</p>
+              <p>Wir schauen gemeinsam, was für dich wirklich stimmt, was vielleicht noch möglich ist und was du als Nächstes konkret tun kannst.</p>
+            </div>
             <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_abschluss" }}>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>
           </div>
           <p className={styles.contact}>Du hast vor der Buchung noch eine Frage? Dann melde dich gerne persönlich:<br /><a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="klarheitssitzung_abschluss">kontakt@petrasailer.com</a></p>

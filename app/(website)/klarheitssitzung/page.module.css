@@ -33,7 +33,7 @@
 .recognition h2 em { color: var(--coral); }
 .recognitionCopy { max-width: 590px; }
 .recognitionCopy p + p { margin-top: 25px; }
-.recognitionClosing { margin-top: 45px !important; padding-top: 22px; border-top: 6px solid var(--coral); font-weight: 600; }
+.recognitionClosing { margin-top: 45px !important; padding-top: 22px; border-top: 3px solid var(--coral); font-weight: 600; }
 
 .process { padding-bottom: 130px; background: var(--paper); }
 .processIntro { display: grid; grid-template-columns: .55fr 1fr .8fr; gap: 7vw; padding: 120px max(32px, calc((100vw - 1376px) / 2)) 105px; }
@@ -102,7 +102,8 @@
 .finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--paper); font-size: clamp(68px, 8vw, 116px); line-height: .8; }
 .finalCta h2 em { color: var(--coral); }
 .finalCopy { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: end; max-width: 900px; margin: 120px 0 0 auto; }
-.finalCopy > p { color: var(--paper); }
+.finalCopyText { color: var(--paper); }
+.finalCopyText p + p { margin-top: 20px; }
 .contact { max-width: 570px; margin: 130px 0 0 auto !important; padding-top: 28px; border-top: 1px solid rgba(255,253,248,.35); color: var(--paper); }
 .contact a { display: inline-block; border-bottom: 1px solid currentColor; color: var(--sun); }
 
