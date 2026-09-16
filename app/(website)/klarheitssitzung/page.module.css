@@ -20,7 +20,7 @@
 .hero h1 em { color: var(--sun); white-space: nowrap; }
 .heroQuestion { grid-area: question; position: relative; z-index: 2; align-self: end; max-width: 680px; padding-left: 10vw; color: var(--mint); font: italic 500 clamp(29px, 3.3vw, 48px)/1.04 "Cormorant Garamond" !important; }
 .heroIntro { grid-area: intro; position: relative; z-index: 2; align-self: end; justify-self: end; width: 100%; max-width: 480px; }
-.heroIntro > p { margin-bottom: 34px; color: var(--paper); font-size: 21px; line-height: 1.6; transform: translateY(-60px); }
+.heroIntro > p { margin-bottom: 50px; color: var(--paper); font-size: 21px; line-height: 1.6; transform: translateY(-60px); }
 .heroIntro :global(a), .finalCopy :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .heroIntro :global(a:hover), .finalCopy :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; }
 .heroOrbit { position: absolute; right: -6vw; bottom: -22vw; width: 54vw; height: 54vw; border: 1px solid rgba(255,253,248,.18); border-radius: 50%; }
@@ -37,10 +37,14 @@
 
 .process { padding-bottom: 130px; background: var(--paper); }
 .processIntro { display: grid; grid-template-columns: .55fr 1fr .8fr; gap: 7vw; padding: 120px max(32px, calc((100vw - 1376px) / 2)) 105px; }
+.processContent { display: contents; }
 .processIntro h2 { font-size: clamp(56px, 6.3vw, 92px); line-height: .86; }
 .processIntro h2 em { display: block; color: var(--coral); }
+.processHeadingDesktop { display: none; }
 .processLead { align-self: end; }
 .processLead p + p { margin-top: 20px; }
+.processPivot { margin: 44px 0 !important; color: #2e4a43; font: italic 500 clamp(30px, 2.8vw, 42px)/1.06 "Cormorant Garamond" !important; }
+.processRole { max-width: 32ch; margin: 48px 0 !important; }
 .processLead p:last-child { font-weight: 600; }
 .processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; counter-reset: none; border: 1px solid rgba(46,74,67,.28); background: var(--sun); color: #2e4a43; }
 .processList li { display: grid; grid-template-columns: 90px minmax(300px, 1fr) minmax(280px, .72fr); gap: 6vw; align-items: center; min-height: 245px; padding: 45px max(32px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid rgba(46,74,67,.28); }
@@ -48,6 +52,20 @@
 .processList li > span { font: italic 500 45px/1 "Cormorant Garamond"; color: var(--coral); }
 .processList h3 { max-width: 720px; color: inherit; font-size: clamp(39px, 4.2vw, 62px); line-height: .92; }
 .processList p { max-width: 460px; }
+
+@media (min-width: 1051px) {
+  .processIntro > :first-child { align-self: start; margin-top: 78px; }
+  .processIntro > :first-child p { white-space: nowrap; }
+  .processIntro h2 { grid-column: 2; grid-row: 1; }
+  .processLead { display: grid; grid-column: 2 / -1; grid-row: 2; grid-template-columns: 25% minmax(560px, 620px) minmax(0, 1fr); align-self: start; }
+  .processLead > .processCopy { grid-column: 2; }
+  .processLead > .processPivot { grid-column: 1 / -1; width: calc((100% - 7vw) / 1.8); }
+  .processHeadingDesktop { display: block; }
+  .processHeadingDesktop > span { display: block; }
+  .processHeadingDefault { display: none; }
+  .processIntro h2 .processHeadingDesktop em { display: inline; }
+  .processHeadingNoBreak { white-space: nowrap; }
+}
 
 .offer { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
 .offerTop { display: grid; grid-template-columns: .55fr 1.2fr .55fr; gap: 5vw; align-items: end; }
@@ -96,9 +114,12 @@
 .faqList summary span { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid currentColor; border-radius: 50%; font: 400 19px/1 "DM Sans"; transition: transform .2s ease; }
 .faqList details[open] summary span { transform: rotate(45deg); background: var(--coral); border-color: var(--coral); color: var(--white); }
 .faqList details > p { max-width: 680px; padding: 0 65px 32px 0; }
+.faqList details > p:not(:last-child) { padding-bottom: 0; }
+.faqList details > p + p { margin-top: 20px; }
 
 .finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)) 149px; border-bottom: 1px solid #fffdf8; background: var(--blue); color: var(--paper); }
-.finalIndex { color: var(--sun); font-size: 11px !important; font-weight: 600; letter-spacing: .14em; }
+.finalMarker { color: var(--sun); }
+.finalCta .finalMarker + h2 { margin-top: 55px; }
 .finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--paper); font-size: clamp(68px, 8vw, 116px); line-height: .8; }
 .finalCta h2 em { color: var(--coral); }
 .finalCopy { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: end; max-width: 900px; margin: 120px 0 0 auto; }
@@ -131,7 +152,7 @@
   .hero h1 { margin-top: 46px; font-size: 63px; line-height: .76; }
   .hero h1 em { display: block; white-space: normal; color: var(--sun); }
   .heroQuestion { max-width: 330px; margin: 53px 0 0 35px !important; padding: 0; font-size: 30px !important; }
-  .heroIntro { margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,253,248,.3); }
+  .heroIntro { margin-top: 76px; padding-top: 30px; border-top: 1px solid rgba(255,253,248,.3); }
   .heroIntro > p { font-size: 19px; transform: none; }
   .heroOrbit { right: -180px; bottom: 180px; width: 390px; height: 390px; }
   .heroOrbit span { top: 13%; left: 16%; font-size: 170px; transform: none; }
@@ -143,6 +164,8 @@
   .processIntro h2 { margin-top: 55px; font-size: 52px; }
   .processIntro h2 em { display: inline; }
   .processLead { margin-top: 48px; }
+  .processPivot { margin: 36px 0 !important; font-size: 30px !important; }
+  .processRole { max-width: none; margin: 36px 0 !important; }
   .processList { width: calc(100% - 36px); }
   .processList li { display: block; min-height: 0; padding: 45px 18px 52px; }
   .processList li > span { display: block; margin-bottom: 50px; font-size: 34px; }
@@ -180,6 +203,7 @@
   .faqList summary { grid-template-columns: 1fr 36px; gap: 15px; padding: 23px 0; font-size: 24px; }
   .faqList details > p { padding: 0 0 28px; }
   .finalCta { padding: 90px 18px 111px; }
+  .finalCta .finalMarker + h2 { margin-top: 31px; }
   .finalCta h2 { margin-top: 50px; font-size: 61px; }
   .finalCopy { display: block; margin-top: 82px; }
   .finalCopy :global(a) { margin-top: 42px; }

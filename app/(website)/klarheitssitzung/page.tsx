@@ -122,13 +122,29 @@ export default function ClarityPage() {
         <section className={styles.process} id="prozess">
           <div className={styles.processIntro}>
             <Marker number="03">WIE WIR ARBEITEN</Marker>
-            <h2>Wir verändern den <em>Ausgangspunkt,</em> von dem aus du auf dein Thema schaust.</h2>
-            <div className={styles.processLead}>
-              <p>Solange du innerhalb deines Problems denkst, suchst du auch dort nach einer Lösung. Dabei entstehen häufig immer wieder ähnliche Gedanken, weil der Ausgangspunkt derselbe bleibt.</p>
-              <p>In der Klarheitssitzung verändern wir diesen Ausgangspunkt. Du schaust nicht mehr vom Problem auf die Lösung, sondern vom gewünschten Leben auf das Problem.</p>
-              <p>Von dort aus wird klarer, was für dich stimmt, was dich bisher zurückgehalten hat und was jetzt möglich ist. Und manchmal wird von dort sogar eine Möglichkeit sichtbar, die du vorher überhaupt nicht im Blick hattest.</p>
-              <p>Ich begleite dich durch den Prozess, greife auf, was du sagst, frage dort genauer nach, wo etwas noch offen ist, und fasse zusammen, was sich zeigt. Denn deine Antworten sind schon da. Ich helfe dir, sie wieder hörbar zu machen.</p>
-              <p>Um deiner eigenen Klarheit näherzukommen, arbeiten wir in vier Schritten:</p>
+            <div className={styles.processContent}>
+              <h2>
+                <span className={styles.processHeadingDesktop}>
+                  <span>Wir verändern</span>
+                  <span className={styles.processHeadingNoBreak}>den <em>Ausgangspunkt,</em></span>
+                  <span>von dem aus</span>
+                  <span>du auf dein</span>
+                  <span>Thema schaust.</span>
+                </span>
+                <span className={styles.processHeadingDefault}>Wir verändern den <em>Ausgangspunkt,</em> von dem aus du auf dein Thema schaust.</span>
+              </h2>
+              <div className={styles.processLead}>
+                <div className={styles.processCopy}>
+                  <p>Solange du innerhalb deines Problems denkst, suchst du auch dort nach einer Lösung. Dabei entstehen häufig immer wieder ähnliche Gedanken, weil der Ausgangspunkt derselbe bleibt.</p>
+                  <p>In der Klarheitssitzung verändern wir diesen Ausgangspunkt.</p>
+                </div>
+                <p className={styles.processPivot}>Du suchst nicht mehr vom Problem aus nach der Lösung, sondern gehst zuerst in das gewünschte Ergebnis hinein und lässt von dort die Antwort oder den nächsten Schritt entstehen.</p>
+                <div className={styles.processCopy}>
+                  <p>Von dort aus wird klarer, was für dich stimmt, was dich bisher zurückgehalten hat und was jetzt möglich ist. Und manchmal wird von dort sogar eine Möglichkeit sichtbar, die du vorher überhaupt nicht im Blick hattest.</p>
+                  <p className={styles.processRole}>Ich begleite dich durch den Prozess, greife auf, was du sagst, frage dort genauer nach, wo etwas noch offen ist, und fasse zusammen, was sich zeigt. Denn deine Antworten sind schon da. Ich helfe dir, sie wieder hörbar zu machen.</p>
+                  <p>Um deiner eigenen Klarheit näherzukommen, arbeiten wir in vier Schritten:</p>
+                </div>
+              </div>
             </div>
           </div>
           <ol className={styles.processList}>
@@ -195,16 +211,16 @@ export default function ClarityPage() {
         <section className={styles.faq} id="faq">
           <div className={styles.faqHeading}><Marker number="07">NOCH FRAGEN?</Marker><h2>Häufige <em>Fragen</em></h2></div>
           <div className={styles.faqList}>
-            <details><summary>Was ist, wenn ich schon eine Ahnung habe – aber trotzdem nicht weiterkomme?<span aria-hidden="true">+</span></summary><p>Genau dann kann die Klarheitssitzung passend sein. Vielleicht hast du längst eine Ahnung, was du willst, und trotzdem hält dich etwas zurück. In der Sitzung wird klarer, was für dich stimmt und welcher konkrete nächste Schritt jetzt möglich ist.</p></details>
-            <details><summary>Ist die Klarheitssitzung nur für berufliche Themen?<span aria-hidden="true">+</span></summary><p>Du kannst mit einem beruflichen, persönlichen oder zwischenmenschlichen Thema kommen. Entscheidend ist nicht der Lebensbereich, sondern dass es um einen konkreten Punkt geht, an dem du feststeckst und weiterkommen möchtest.</p></details>
-            <details><summary>Muss ich mich auf die Sitzung vorbereiten?<span aria-hidden="true">+</span></summary><p>Vorbereiten musst du nichts. Es reicht, wenn du den einen Punkt mitbringst, bei dem du gerade nicht weiterkommst. Wie die Lösung aussieht, musst du vorher noch nicht wissen.</p></details>
+            <details><summary>Was ist, wenn ich schon eine Ahnung habe, aber trotzdem nicht weiterkomme?<span aria-hidden="true">+</span></summary><p>Genau dann kann die Klarheitssitzung passend sein. Vielleicht hast du längst eine Ahnung, was du willst, und kommst trotzdem nicht weiter. Vielleicht hält dich etwas zurück – oder du siehst gerade noch nicht klar, welche Möglichkeiten du eigentlich hast.</p><p>In der Sitzung kann klarer werden, was für dich stimmt und was dein nächster konkreter Schritt sein kann.</p></details>
+            <details><summary>Ist die Klarheitssitzung nur für berufliche Themen?<span aria-hidden="true">+</span></summary><p>Du kannst mit einem beruflichen, persönlichen oder zwischenmenschlichen Thema kommen. Entscheidend ist nicht der Lebensbereich, sondern dass es um einen konkreten Punkt geht, bei dem du klarer sehen möchtest, was für dich stimmt, welche Möglichkeiten du hast oder wie du weitergehen willst.</p></details>
+            <details><summary>Muss ich mich auf die Sitzung vorbereiten?<span aria-hidden="true">+</span></summary><p>Vorbereiten musst du nichts. Es reicht, wenn du den einen Punkt mitbringst, bei dem du gerade klarer sehen möchtest. Alles Weitere zeigt sich in unserer Sitzung.</p></details>
             <details><summary>Wie geht es nach der Buchung weiter?<span aria-hidden="true">+</span></summary><p>Nach der Buchung über Digistore24 melde ich mich innerhalb eines Werktages persönlich bei dir, damit wir einen Termin für deine Klarheitssitzung vereinbaren. Den Link für unsere Online-Sitzung erhältst du anschließend per E-Mail.</p></details>
-            <details><summary>Muss ich danach weiter mit dir arbeiten?<span aria-hidden="true">+</span></summary><p>Die Klarheitssitzung ist ein eigenständiges, vollständiges Angebot. Du musst danach nichts weiter bei mir buchen. In dieser Sitzung geht es ausschließlich um dein konkretes Thema.</p></details>
+            <details><summary>Muss ich danach weiter mit dir arbeiten?<span aria-hidden="true">+</span></summary><p>Nein. Die Klarheitssitzung ist in sich abgeschlossen. Du musst danach nichts weiter bei mir buchen. In der Sitzung geht es um dein konkretes Thema – und darum, dass du damit selbstständig weitergehen kannst.</p></details>
           </div>
         </section>
 
         <section className={styles.finalCta}>
-          <p className={styles.finalIndex}>08 · DEIN NÄCHSTER SCHRITT</p>
+          <div className={styles.finalMarker}><Marker number="08">DEIN NÄCHSTER SCHRITT</Marker></div>
           <h2>Welches Thema soll nicht noch länger <em>im Hintergrund mitlaufen?</em></h2>
           <div className={styles.finalCopy}>
             <div className={styles.finalCopyText}>
