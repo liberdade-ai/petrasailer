@@ -101,7 +101,7 @@
 .resultsCopy h2 { max-width: 860px; margin-top: 70px; font-size: clamp(55px, 6vw, 86px); line-height: .88; }
 .resultsCopy > div:last-child { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; max-width: 750px; margin-top: 65px; }
 .resultQuote { display: flex; flex-direction: column; justify-content: center; padding: 90px clamp(40px, 5vw, 75px); background: var(--coral); color: var(--paper); }
-.resultQuote > p { font-size: 11px; font-weight: 600; letter-spacing: .08em; }
+.resultQuote > p { font-size: 20px; font-weight: 600; letter-spacing: .08em; }
 .resultQuote strong { margin-top: 45px; font: 500 clamp(63px, 7.4vw, 108px)/.72 "DM Sans"; letter-spacing: -.07em; }
 .resultQuote em { color: var(--sun); white-space: nowrap; }
 
@@ -205,6 +205,7 @@
   .resultsCopy > div:last-child { display: block; margin-top: 45px; }
   .resultsCopy > div:last-child p + p { margin-top: 20px; }
   .resultQuote { min-height: 0; margin: 0 18px; padding: 56px 24px 62px; }
+  .resultQuote > p { font-size: 16px; line-height: 1.6; }
   .resultQuote strong { font-size: 60px; }
   .faq { display: block; padding: 90px 18px 100px; }
   .faqHeading h2 { margin-top: 55px; font-size: 63px; }

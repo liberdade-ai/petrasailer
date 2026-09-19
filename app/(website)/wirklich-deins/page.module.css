@@ -150,8 +150,8 @@
 .heroIntro :global(a), .introCta :global(a), .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--navy); background: var(--navy); color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .finalCta > h2 + div :global(a) { width: 100%; }
 .finalCta > h2 + div :global(a) { font-size: 16px; }
-.heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: #f4e39b; background: #f4e39b; color: #2e4a43; }
-.introCta :global(a:hover) { border-color: #f4e39b; background: #f4e39b; color: #2e4a43; }
+.heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: var(--gold); background: var(--gold); color: #2e4a43; }
+.introCta :global(a:hover) { border-color: var(--gold); background: var(--gold); color: #2e4a43; }
 .contact { max-width: 600px; margin: 90px 0 0 auto !important; padding-top: 25px; border-top: 1px solid rgba(255,253,248,.4); }
 .contact a { border-bottom: 1px solid currentColor; color: var(--sun); }
 

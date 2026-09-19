@@ -64,7 +64,7 @@
 }
 
 .sender strong {
-  color: #f4e39b;
+  color: var(--gold);
   font: inherit;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .preparation {
-  background: #f4e39b;
+  background: var(--gold);
   color: #2e4a43;
   padding: clamp(88px, 11vw, 150px) 32px;
 }

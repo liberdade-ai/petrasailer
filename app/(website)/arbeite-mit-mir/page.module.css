@@ -26,11 +26,11 @@
 .pathOne h3 { font-size: 0; }
 .pathOne h3::before { content: "Klarheits-\A sitzung"; display: block; color: inherit; font-size: clamp(58px, 6.2vw, 93px); line-height: .8; white-space: pre-line; }
 .pathTwo h3 { color: #fffdf8; }
-.pathTwo h3 em { color: #f4e39b; }
+.pathTwo h3 em { color: var(--gold); }
 .pathCopy { max-width: 620px; font-size: 18px !important; line-height: 1.6 !important; }
 .path :global(a) { align-self: end; min-width: 0; width: 100%; min-height: 56px; margin-top: 62px; padding: 13px 20px; border: 1px solid var(--navy); background: var(--navy); color: #fffdf8; }
-.pathOne :global(a:hover) { border-color: var(--navy); background: #f4e39b; color: #2e4a43; gap: 32px; }
-.pathTwo :global(a) { border-color: #f4e39b; background: #f4e39b; color: #2e4a43; }
+.pathOne :global(a:hover) { border-color: var(--navy); background: var(--gold); color: #2e4a43; gap: 32px; }
+.pathTwo :global(a) { border-color: var(--gold); background: var(--gold); color: #2e4a43; }
 .pathTwo :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: var(--navy); gap: 32px; }
 .pathNote { padding: 28px 32px; background: #ef6a57; color: #fffdf8; text-align: center; font-weight: 600; }
 

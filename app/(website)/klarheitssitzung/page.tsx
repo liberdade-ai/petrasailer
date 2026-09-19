@@ -165,12 +165,12 @@ export default function ClarityPage() {
             <div><span>FORMAT</span><strong>1:1 online</strong></div>
             <div><span>DAUER</span><strong>90 bis 120 Minuten</strong></div>
             <div><span>FOKUS</span><strong>Ein konkretes Thema</strong></div>
-            <div><span>INKLUSIVE</span><strong>Persönliche Mitschrift</strong></div>
+            <div><span>INKLUSIVE</span><strong>Zusammenfassung</strong></div>
             <div><span>ERGEBNIS</span><strong>Dein konkreter nächster Schritt</strong></div>
           </div>
           <div className={styles.offerBottom}>
             <div>
-              <p>Nach der Sitzung bekommst du eine persönliche Mitschrift mit deinen eigenen Worten. So kannst du später noch einmal nachlesen, was du erlebt und für dich erkannt hast, und dich leichter wieder damit verbinden.</p>
+              <p>Nach der Sitzung bekommst du eine Zusammenfassung mit dem, was für dich klar geworden ist.</p>
               <p>Die Klarheitssitzung ist in sich abgeschlossen. Danach kannst du mit deiner Klarheit und deinem nächsten Schritt selbstständig weitergehen.</p>
             </div>
             <ActionLink href={BOOKING_URL} tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_angebot" }}>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>

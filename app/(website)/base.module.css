@@ -3,7 +3,7 @@
   --ink: var(--navy);
   --blue: var(--navy);
   --coral: #ef6a57;
-  --sun: #f4e39b;
+  --sun: var(--gold);
   --mint: var(--sage);
   --white: #fffdf8;
   min-width: 0;

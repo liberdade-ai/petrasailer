@@ -59,7 +59,7 @@
 }
 
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) h3 em {
-  color: #f4e39b;
+  color: var(--gold);
 }
 
 .scope > div > main > section:nth-of-type(4) > p em {
@@ -101,14 +101,14 @@
 .scope > div > main > section:nth-of-type(1) a:hover,
 .scope > div > main > section:nth-of-type(3) article:first-of-type a:hover {
   border-color: var(--navy);
-  background: #f4e39b;
+  background: var(--gold);
   color: #2e4a43;
   gap: 32px;
 }
 
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a {
-  border-color: #f4e39b;
-  background: #f4e39b;
+  border-color: var(--gold);
+  background: var(--gold);
   color: #2e4a43;
 }
 
@@ -143,8 +143,8 @@
 }
 
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2) {
-  border-color: #f4e39b;
-  background: #f4e39b;
+  border-color: var(--gold);
+  background: var(--gold);
   color: #2e4a43;
 }
 
@@ -180,18 +180,18 @@
   .scope > div > footer > div:last-child {
     margin-top: 36px;
     padding-top: 18px;
-    border-top-color: #f4e39b;
+    border-top-color: var(--gold);
   }
 }
 
 .scope > div > footer > div:last-child {
-  border-top: 1px solid #f4e39b;
+  border-top: 1px solid var(--gold);
   opacity: 1;
 }
 
 /* Derselbe Footer für alle finalen Unterseiten. */
 .siteFooter > div:last-child {
-  border-top: 1px solid #f4e39b;
+  border-top: 1px solid var(--gold);
   opacity: 1;
 }
 
