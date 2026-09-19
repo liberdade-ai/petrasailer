@@ -102,7 +102,7 @@ export default function ClarityPage() {
           <h1>Drehst du dich gerade <em>im Kreis?</em></h1>
           <p className={styles.heroQuestion}>Und willst du klarer sehen, was für dich stimmt und wie du weitergehen kannst? Oder was vielleicht noch möglich ist?</p>
           <div className={styles.heroIntro}>
-            <p>In der Klarheitssitzung hörst du auf, vom Problem aus nach einer Lösung zu suchen, und nimmst eine neue Perspektive ein. Du erlebst, was für dich wirklich stimmt, was vielleicht noch möglich ist und erkennst, was du heute, morgen oder in den nächsten Tagen konkret tun kannst.</p>
+            <p>Du bringst einen konkreten Punkt mit, bei dem du gerade feststeckst. Gemeinsam schauen wir aus einer neuen Perspektive darauf. So kann klarer werden, was für dich wirklich stimmt, welche Möglichkeiten du hast und was du als Nächstes konkret tun kannst.</p>
             <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>KLARHEITSSITZUNG BUCHEN</ActionLink>
           </div>
           <div className={styles.heroOrbit} aria-hidden="true"><span>?</span></div>
@@ -142,7 +142,7 @@ export default function ClarityPage() {
                 <div className={styles.processCopy}>
                   <p>Von dort aus wird klarer, was für dich stimmt, was dich bisher zurückgehalten hat und was jetzt möglich ist. Und manchmal wird von dort sogar eine Möglichkeit sichtbar, die du vorher überhaupt nicht im Blick hattest.</p>
                   <p className={styles.processRole}>Ich begleite dich durch den Prozess, greife auf, was du sagst, frage dort genauer nach, wo etwas noch offen ist, und fasse zusammen, was sich zeigt. Denn deine Antworten sind schon da. Ich helfe dir, sie wieder hörbar zu machen.</p>
-                  <p>Um deiner eigenen Klarheit näherzukommen, arbeiten wir in vier Schritten:</p>
+                  <p>Dafür arbeiten wir mit meinem Klarheitsprozess – vier Schritte vom gewünschten Ergebnis zu einer klareren Entscheidung und deinem nächsten konkreten Schritt.</p>
                 </div>
               </div>
             </div>
@@ -150,8 +150,8 @@ export default function ClarityPage() {
           <ol className={styles.processList}>
             <li><span>01</span><h3>In die Stille kommen</h3><p>Wir nehmen uns einen Moment der Stille. Dein alltäglicher Gedankenstrom darf ruhiger werden, und du richtest deine Aufmerksamkeit nach innen.</p></li>
             <li><span>02</span><h3>Das gewünschte Ergebnis erleben</h3><p>Du erlebst innerlich, wie es ist, wenn das, was du dir wünschst, bereits Wirklichkeit ist.</p></li>
-            <li><span>03</span><h3>Zurück in die Jetzt-Realität</h3><p>Du schaust klar, was heute da ist und was dich bisher zurückgehalten hat.</p></li>
-            <li><span>04</span><h3>Den nächsten Schritt erkennen</h3><p>Du verbindest dich noch einmal mit dem gewünschten Ergebnis. Von dort wird klarer, welche Entscheidung oder welcher konkrete Schritt jetzt in deiner Hand liegt.</p></li>
+            <li><span>03</span><h3>Zurück in die Jetzt-Realität</h3><p>Du schaust von dieser neuen Perspektive auf das, was heute da ist und erkennst klarer, was dich bisher zurückgehalten hat oder was gerade noch zwischen dir und deinem gewünschten Ergebnis steht.</p></li>
+            <li><span>04</span><h3>Den nächsten Schritt erkennen</h3><p>Du verbindest dich noch einmal mit dem gewünschten Ergebnis. Von dort wird klarer, welche Entscheidung oder welcher konkrete Schritt jetzt wirklich stimmig ist und in deiner Hand liegt.</p></li>
           </ol>
         </section>
 

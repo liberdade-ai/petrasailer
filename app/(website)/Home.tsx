@@ -65,8 +65,8 @@ export default function HomeContent() {
             </figure>
             <div className={styles.heroNumber} aria-hidden="true">01</div>
             <div className={styles.heroIntro}>
-              <p>Vielleicht geht es um eine Entscheidung, bei der du dich im Kreis drehst. Vielleicht um etwas, das du verändern, aufbauen oder verwirklichen möchtest.</p>
-              <p>Ich begleite dich dabei, wieder klar zu sehen, was für dich stimmt – und die Schritte zu gehen, mit denen es in deinem Leben konkret wird.</p>
+              <p>Vielleicht geht es um eine Frage, bei der du dich im Kreis drehst. Vielleicht um dein Business. Oder um etwas, das du in deinem Leben verändern, aufbauen oder verwirklichen möchtest.</p>
+              <p>Ich begleite dich dabei, klar zu sehen, was für dich stimmt, neue Möglichkeiten zu erkennen und die nächsten Schritte zu gehen, mit denen es konkret wird.</p>
               <div className={styles.heroActions}>
                 <TextLink href="#zusammenarbeit" tracking={{ cta: "welcher_weg_passt", location: "home_hero" }}>WELCHER WEG PASST ZU MIR?</TextLink>
                 <TextLink href="/ueber-mich/" tracking={{ cta: "petra_kennenlernen", location: "home_hero" }}>PETRA KENNENLERNEN</TextLink>

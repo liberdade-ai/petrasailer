@@ -3,7 +3,7 @@
 }
 
 .header {
-  border-bottom: 1px solid rgba(37, 48, 79, 0.18);
+  border-bottom: 1px solid rgb(var(--navy-rgb) / .18);
   background: #fffdf8;
 }
 
@@ -21,7 +21,7 @@
   min-height: 42px;
   align-items: center;
   gap: 18px;
-  color: #25304f;
+  color: var(--navy);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -55,7 +55,7 @@
   display: inline-block;
   margin: 0;
   padding: 18px 22px;
-  background: #25304f;
+  background: var(--navy);
   color: #fffdf8;
   font-size: 13px !important;
   font-weight: 600;
@@ -94,7 +94,7 @@
   max-width: 720px;
   padding-top: 28px;
   border-top: 4px solid #ef6a57;
-  color: #25304f;
+  color: var(--navy);
   font-size: 19px !important;
   line-height: 1.62 !important;
 }

@@ -31,9 +31,11 @@
   --terracotta: #ef6a57;
   --terracotta-dark: #ef6a57;
   --gold: #f4e39b;
-  --ink: #25304f;
-  --sage: #c9ded5;
-  --muted: #25304f;
+  --navy: #0B4663;
+  --navy-rgb: 11 70 99;
+  --ink: var(--navy);
+  --sage: #C9DED5;
+  --muted: var(--navy);
   --line: rgba(46, 74, 67, 0.2);
   --display: "Cormorant Garamond";
   --sans: "DM Sans";

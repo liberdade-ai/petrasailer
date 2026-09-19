@@ -12,9 +12,9 @@
 .scope > div > main > section:nth-of-type(3) > p:last-child {
   padding: 38px 32px;
   border: 1px solid rgba(255,253,248, .92);
-  background: #c9ded5;
+  background: var(--sage);
   box-shadow: inset 0 0 0 1px rgba(255,253,248, .55);
-  color: #25304f;
+  color: var(--navy);
 }
 
 .scope > div > main > section:nth-of-type(3) > p:last-child a {
@@ -72,7 +72,7 @@
 }
 
 .scope > div > main > section:nth-of-type(6) > div:nth-child(3) {
-  background: #c9ded5;
+  background: var(--sage);
 }
 
 /* Haupt-CTAs: klar erkennbare Flächen mit kontrastfesten Zuständen. */
@@ -81,26 +81,26 @@
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a {
   min-height: 56px;
   padding: 13px 20px;
-  border: 1px solid #25304f;
-  background: #25304f;
+  border: 1px solid var(--navy);
+  background: var(--navy);
   color: #fffdf8;
 }
 
 .scope > div > main > section:nth-of-type(1) a:first-of-type {
   border-color: #ef6a57;
   background: #ef6a57;
-  color: #25304f;
+  color: var(--navy);
 }
 
 .scope > div > main > section:nth-of-type(1) a:first-of-type:hover {
-  border-color: #25304f;
+  border-color: var(--navy);
   background: #fffdf8;
-  color: #25304f;
+  color: var(--navy);
 }
 
 .scope > div > main > section:nth-of-type(1) a:hover,
 .scope > div > main > section:nth-of-type(3) article:first-of-type a:hover {
-  border-color: #25304f;
+  border-color: var(--navy);
   background: #f4e39b;
   color: #2e4a43;
   gap: 32px;
@@ -115,7 +115,7 @@
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a:hover {
   border-color: #fffdf8;
   background: #fffdf8;
-  color: #25304f;
+  color: var(--navy);
   gap: 32px;
 }
 
@@ -123,22 +123,22 @@
   min-height: 0;
   padding: 0;
   border: 0;
-  border-bottom: 2px solid #25304f;
+  border-bottom: 2px solid var(--navy);
   background: transparent;
-  color: #25304f;
+  color: var(--navy);
   font-weight: 600;
 }
 
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:first-child {
-  border-color: #25304f;
-  background: #25304f;
+  border-color: var(--navy);
+  background: var(--navy);
   color: #fffdf8;
 }
 
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:first-child:hover {
   border-color: #fffdf8;
   background: #fffdf8;
-  color: #25304f;
+  color: var(--navy);
   gap: 32px;
 }
 
@@ -151,7 +151,7 @@
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2):hover {
   border-color: #fffdf8;
   background: #fffdf8;
-  color: #25304f;
+  color: var(--navy);
   gap: 32px;
 }
 

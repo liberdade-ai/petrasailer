@@ -1,10 +1,10 @@
 .page {
   --paper: #fffdf8;
-  --ink: #25304f;
-  --blue: #25304f;
+  --ink: var(--navy);
+  --blue: var(--navy);
   --coral: #ef6a57;
   --sun: #f4e39b;
-  --mint: #c9ded5;
+  --mint: var(--sage);
   --white: #fffdf8;
   min-width: 0;
   overflow: clip;

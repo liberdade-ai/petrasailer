@@ -11,7 +11,7 @@
 .heroBody p + p { margin-top: 18px; }
 .heroAction { align-self: end; }
 .heroAction :global(a) { min-width: 0; width: 100%; min-height: 56px; padding: 13px 20px; border: 1px solid #ef6a57; background: #ef6a57; color: #fffdf8; }
-.heroAction :global(a:hover) { border-color: #25304f; background: #25304f; color: #fffdf8; gap: 32px; }
+.heroAction :global(a:hover) { border-color: var(--navy); background: var(--navy); color: #fffdf8; gap: 32px; }
 
 .paths { background: var(--paper); }
 .pathsHeading { display: grid; grid-template-columns: .55fr 1fr; gap: 7vw; padding: 120px max(32px, calc((100vw - 1280px) / 2)) 90px; }
@@ -28,16 +28,16 @@
 .pathTwo h3 { color: #fffdf8; }
 .pathTwo h3 em { color: #f4e39b; }
 .pathCopy { max-width: 620px; font-size: 18px !important; line-height: 1.6 !important; }
-.path :global(a) { align-self: end; min-width: 0; width: 100%; min-height: 56px; margin-top: 62px; padding: 13px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; }
-.pathOne :global(a:hover) { border-color: #25304f; background: #f4e39b; color: #2e4a43; gap: 32px; }
+.path :global(a) { align-self: end; min-width: 0; width: 100%; min-height: 56px; margin-top: 62px; padding: 13px 20px; border: 1px solid var(--navy); background: var(--navy); color: #fffdf8; }
+.pathOne :global(a:hover) { border-color: var(--navy); background: #f4e39b; color: #2e4a43; gap: 32px; }
 .pathTwo :global(a) { border-color: #f4e39b; background: #f4e39b; color: #2e4a43; }
-.pathTwo :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: #25304f; gap: 32px; }
+.pathTwo :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: var(--navy); gap: 32px; }
 .pathNote { padding: 28px 32px; background: #ef6a57; color: #fffdf8; text-align: center; font-weight: 600; }
 
 .contactSection { display: grid; grid-template-columns: .64fr 1.36fr; background: var(--sun); color: #2e4a43; }
 .portrait { position: relative; min-height: 980px; overflow: hidden; }
 .portrait img { object-fit: cover; object-position: 50% 20%; filter: saturate(.84) contrast(.98); }
-.portraitCaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 22px 28px; background: rgba(37,48,79,.92); color: var(--paper); font-size: 11px !important; font-weight: 600; letter-spacing: .13em; }
+.portraitCaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 22px 28px; background: rgb(var(--navy-rgb) / .92); color: var(--paper); font-size: 11px !important; font-weight: 600; letter-spacing: .13em; }
 .contactContent { padding: 112px max(32px, calc((100vw - 1280px) / 2)) 0 7vw; }
 .contactIntro { display: grid; grid-template-columns: 1fr .8fr; gap: 5vw; padding-bottom: 82px; border-bottom: 1px solid rgba(46,74,67,.25); }
 .contactIntro h2 { max-width: 700px; margin-top: 62px; font-size: clamp(58px, 6vw, 88px); line-height: .84; }

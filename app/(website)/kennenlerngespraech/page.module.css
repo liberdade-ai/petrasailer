@@ -132,7 +132,7 @@
 .calendar {
   overflow: hidden;
   min-height: 760px;
-  border: 1px solid rgba(37, 48, 79, .2);
+  border: 1px solid rgb(var(--navy-rgb) / .2);
   background: var(--white);
   box-shadow: 18px 18px 0 var(--coral);
 }

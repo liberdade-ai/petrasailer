@@ -147,7 +147,7 @@
 .finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--paper); font-size: clamp(70px, 8.4vw, 122px); line-height: .78; }
 .finalCta h2 em { color: var(--sun); }
 .finalCta > h2 + div { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: end; max-width: 900px; margin: 80px 0 0 auto; }
-.heroIntro :global(a), .introCta :global(a), .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid #25304f; background: #25304f; color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.heroIntro :global(a), .introCta :global(a), .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--navy); background: var(--navy); color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .finalCta > h2 + div :global(a) { width: 100%; }
 .finalCta > h2 + div :global(a) { font-size: 16px; }
 .heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: #f4e39b; background: #f4e39b; color: #2e4a43; }

@@ -10,7 +10,7 @@
   padding: 0;
   border: 2px solid #f4e39b;
   border-radius: 50%;
-  background: #25304f;
+  background: var(--navy);
   box-shadow: 0 8px 24px rgba(46,74,67, .22);
   color: #fffdf8;
   font: 500 23px/1 "DM Sans";
