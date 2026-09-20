@@ -34,7 +34,7 @@
   height: 42px;
   place-items: center;
   border-radius: 50%;
-  background: #ef6a57;
+  background: var(--terracotta);
   color: #fffdf8;
   font-size: 20px;
   font-weight: 400;
@@ -93,7 +93,7 @@
 .confirmation {
   max-width: 720px;
   padding-top: 28px;
-  border-top: 4px solid #ef6a57;
+  border-top: 4px solid var(--terracotta);
   color: var(--navy);
   font-size: 19px !important;
   line-height: 1.62 !important;
@@ -141,7 +141,7 @@
 
 .preparationCopy .closing {
   margin-top: 34px;
-  color: #ef6a57;
+  color: var(--terracotta);
   font-family: "Cormorant Garamond";
   font-size: clamp(28px, 2.5vw, 38px) !important;
   font-weight: 500;

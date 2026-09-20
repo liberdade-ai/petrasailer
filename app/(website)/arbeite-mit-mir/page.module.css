@@ -10,7 +10,7 @@
 .heroBody { max-width: 620px; }
 .heroBody p + p { margin-top: 18px; }
 .heroAction { align-self: end; }
-.heroAction :global(a) { min-width: 0; width: 100%; min-height: 56px; padding: 13px 20px; border: 1px solid #ef6a57; background: #ef6a57; color: #fffdf8; }
+.heroAction :global(a) { min-width: 0; width: 100%; min-height: 56px; padding: 13px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: #fffdf8; }
 .heroAction :global(a:hover) { border-color: var(--navy); background: var(--navy); color: #fffdf8; gap: 32px; }
 
 .paths { background: var(--paper); }
@@ -32,7 +32,7 @@
 .pathOne :global(a:hover) { border-color: var(--navy); background: var(--gold); color: #2e4a43; gap: 32px; }
 .pathTwo :global(a) { border-color: var(--gold); background: var(--gold); color: #2e4a43; }
 .pathTwo :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: var(--navy); gap: 32px; }
-.pathNote { padding: 28px 32px; background: #ef6a57; color: #fffdf8; text-align: center; font-weight: 600; }
+.pathNote { padding: 28px 32px; background: var(--terracotta); color: #fffdf8; text-align: center; font-weight: 600; }
 
 .contactSection { display: grid; grid-template-columns: .64fr 1.36fr; background: var(--sun); color: #2e4a43; }
 .portrait { position: relative; min-height: 980px; overflow: hidden; }
@@ -58,10 +58,10 @@
 .field input { min-height: 58px; padding: 10px 0; }
 .field textarea { min-height: 190px; padding: 14px 0; resize: vertical; }
 .field input:hover, .field textarea:hover { border-color: var(--blue); }
-.field input:focus, .field textarea:focus { border-color: var(--coral); background: linear-gradient(to top, rgba(239,106,87,.055), transparent 65%); }
+.field input:focus, .field textarea:focus { border-color: var(--coral); background: linear-gradient(to top, rgb(var(--terracotta-rgb) / .055), transparent 65%); }
 .field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--coral); }
 .fieldHint { margin-top: 2px !important; color: var(--blue); font-size: 12px !important; }
-.error { margin: 0 !important; color: #ef6a57; font-size: 12px !important; }
+.error { margin: 0 !important; color: var(--terracotta); font-size: 12px !important; }
 .privacyField { grid-column: 1 / -1; display: grid; grid-template-columns: 24px 1fr; gap: 14px; align-items: start; }
 .privacyField input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--coral); }
 .privacyField label { max-width: 720px; color: var(--blue); font-size: 13px; line-height: 1.6; }

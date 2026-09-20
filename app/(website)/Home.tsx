@@ -85,17 +85,19 @@ export default function HomeContent() {
           <div className={styles.recognitionBody}>
             <p className={styles.lead}>Vielleicht willst du …</p>
             <ul>
-              <li>dich selbstständig machen oder dein Business weiterentwickeln,</li>
-              <li>beruflich etwas verändern,</li>
-              <li>ein Buch schreiben oder ein eigenes Projekt verwirklichen,</li>
-              <li>in deiner Beziehung etwas ansprechen, verändern oder entscheiden,</li>
-              <li>einen neuen Lebensort finden oder einen Umzug angehen,</li>
-              <li>dich an bestimmten Stellen nicht immer wieder selbst zurückhalten.</li>
+              <li>dich selbstständig machen oder dein Business weiterentwickeln</li>
+              <li>ein Angebot entwickeln oder in deinem Business etwas neu ausrichten</li>
+              <li>beruflich etwas verändern</li>
+              <li>ein Buch schreiben oder ein eigenes Projekt verwirklichen</li>
+              <li>in deiner Beziehung etwas ansprechen, verändern oder entscheiden</li>
+              <li>einen neuen Lebensort finden oder einen Umzug angehen</li>
+              <li>eine Entscheidung treffen, bei der du dich schon länger im Kreis drehst</li>
+              <li>oder endlich einen Schritt gehen, den du eigentlich längst gehen möchtest</li>
             </ul>
             <div className={styles.recognitionAfter}>
               <p className={styles.alt}>Oder es geht bei dir um etwas ganz anderes.</p>
               <p>Vielleicht weißt du schon ziemlich genau, was du willst. Vielleicht merkst du im Moment vor allem, dass etwas nicht mehr stimmt. Oder du drehst dich bei einem Thema immer wieder im Kreis und erlebst an bestimmten Stellen in deinem Leben immer wieder das Gleiche.</p>
-              <p className={styles.closing}>Meine Arbeit ist genau für solche Themen da.</p>
+              <p className={styles.closing}>Genau dafür ist meine Arbeit da.</p>
             </div>
           </div>
         </section>

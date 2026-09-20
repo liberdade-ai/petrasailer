@@ -20,8 +20,8 @@
   cursor: pointer;
 }
 
-.button:hover { background: #ef6a57; }
-.button:focus-visible { outline: 3px solid #ef6a57; outline-offset: 4px; }
+.button:hover { background: var(--terracotta); }
+.button:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 4px; }
 .visible { opacity: 1; visibility: visible; pointer-events: auto; }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -18,15 +18,15 @@
 }
 
 .scope > div > main > section:nth-of-type(3) > p:last-child a {
-  border-bottom: 2px solid #ef6a57;
-  color: #ef6a57;
+  border-bottom: 2px solid var(--terracotta);
+  color: var(--terracotta);
   font-weight: 700;
   text-underline-offset: 4px;
   transition: background-color .2s ease, color .2s ease;
 }
 
 .scope > div > main > section:nth-of-type(3) > p:last-child a:hover {
-  color: #ef6a57;
+  color: var(--terracotta);
 }
 
 /* Der Perspektivwechsel erhält einen einzigen, zentralen typografischen Fokus. */
@@ -87,8 +87,8 @@
 }
 
 .scope > div > main > section:nth-of-type(1) a:first-of-type {
-  border-color: #ef6a57;
-  background: #ef6a57;
+  border-color: var(--terracotta);
+  background: var(--terracotta);
   color: var(--navy);
 }
 
@@ -250,7 +250,7 @@
 .scope > div > main > section:nth-of-type(1) a:focus-visible,
 .scope > div > main > section:nth-of-type(3) article a:focus-visible,
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(2) a:focus-visible {
-  outline: 3px solid #ef6a57;
+  outline: 3px solid var(--terracotta);
   outline-offset: 4px;
 }
 

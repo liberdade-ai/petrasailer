@@ -12,7 +12,7 @@
 .heroCopy p + p { margin-top: 20px; }
 .heroAction { align-self: end; }
 .heroAction :global(a) { width: 100%; min-width: 0; min-height: 56px; padding: 16px 20px; border: 1px solid var(--gold); background: var(--gold); color: #2e4a43; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.heroAction :global(a:hover) { border-color: #ef6a57; background: #ef6a57; color: #fffdf8; }
+.heroAction :global(a:hover) { border-color: var(--terracotta); background: var(--terracotta); color: #fffdf8; }
 .messageMark { position: absolute; right: -5vw; bottom: -18vw; width: 50vw; height: 50vw; border: 1px solid rgba(255,253,248,.16); border-radius: 50%; }
 .messageMark::before { content: ""; position: absolute; inset: 13%; border: 1px solid rgba(255,253,248,.13); border-radius: 50%; }
 .messageMark span { position: absolute; top: 12%; left: 11%; display: grid; place-items: center; width: 31%; aspect-ratio: 1; border-radius: 50%; background: var(--coral); color: var(--white); font: italic 500 clamp(70px, 10vw, 145px)/1 "Cormorant Garamond"; }
@@ -23,7 +23,7 @@
 .formIntro h2 { margin-top: 70px; color: #2e4a43; font-size: clamp(59px, 6.5vw, 94px); line-height: .84; }
 .formIntro h2 > span { display: block; }
 .formIntro h2 > span:nth-child(2) { white-space: nowrap; }
-.formIntro h2 em { color: #ef6a57; }
+.formIntro h2 em { color: var(--terracotta); }
 .formLead { max-width: 520px; margin-top: 45px !important; }
 .direct { margin-top: 75px; padding-top: 26px; border-top: 6px solid var(--coral); }
 .directLabel { margin-bottom: 18px !important; font-size: 11px !important; font-weight: 600; letter-spacing: .12em; }
@@ -39,9 +39,9 @@
 .field input { min-height: 60px; padding: 10px 0; }
 .field textarea { min-height: 210px; padding: 14px 0; resize: vertical; }
 .field input:hover, .field textarea:hover { border-color: var(--blue); }
-.field input:focus, .field textarea:focus { border-color: var(--coral); background: linear-gradient(to top, rgba(239,106,87,.045), transparent 65%); }
+.field input:focus, .field textarea:focus { border-color: var(--coral); background: linear-gradient(to top, rgb(var(--terracotta-rgb) / .045), transparent 65%); }
 .field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--coral); }
-.error { margin: 0 !important; color: #ef6a57; font-size: 12px !important; }
+.error { margin: 0 !important; color: var(--terracotta); font-size: 12px !important; }
 .privacyField { display: grid; grid-template-columns: 24px 1fr; gap: 14px; align-items: start; padding-top: 6px; }
 .privacyField input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--coral); }
 .privacyField label { max-width: 650px; color: var(--blue); font-size: 13px; line-height: 1.6; }
