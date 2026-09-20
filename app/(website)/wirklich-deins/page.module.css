@@ -55,8 +55,8 @@
 .processIntro h2 em { color: var(--coral); }
 .processIntro > div:last-child { align-self: end; }
 .processIntro > div:last-child p + p { margin-top: 20px; font-weight: 600; }
-.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; border: 1px solid rgba(46,74,67,.25); background: var(--sun); color: #2e4a43; }
-.processList li { display: grid; grid-template-columns: 90px 1fr .7fr; gap: 6vw; align-items: center; min-height: 230px; padding: 40px max(32px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid rgba(46,74,67,.25); transition: background .25s ease, color .25s ease; }
+.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; border: 1px solid rgb(var(--green-rgb) / .25); background: var(--sun); color: var(--green); }
+.processList li { display: grid; grid-template-columns: 90px 1fr .7fr; gap: 6vw; align-items: center; min-height: 230px; padding: 40px max(32px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid rgb(var(--green-rgb) / .25); transition: background .25s ease, color .25s ease; }
 .processList li:last-child { border-bottom: 0; }
 .processList li:hover { background: var(--sun); }
 .processList li > span { color: var(--coral); font: italic 500 43px/1 "Cormorant Garamond"; }
@@ -74,7 +74,7 @@
 .journeyIntro h2 { font-size: clamp(58px, 6.2vw, 90px); line-height: .86; }
 .journeyIntro h2 em { display: block; color: var(--coral); }
 .journeyList { position: relative; width: min(100% - 64px, 980px); margin: 120px max(32px, calc((100vw - 1280px) / 2)) 0 auto; padding: 0; list-style: none; }
-.journeyList::before { content: ""; position: absolute; top: 34px; bottom: 50px; left: 34px; width: 1px; background: rgba(46,74,67,.25); }
+.journeyList::before { content: ""; position: absolute; top: 34px; bottom: 50px; left: 34px; width: 1px; background: rgb(var(--green-rgb) / .25); }
 .journeyList li { position: relative; display: grid; grid-template-columns: 70px 1fr; gap: 55px; padding-bottom: 105px; }
 .journeyList li > span { position: relative; z-index: 1; display: grid; place-items: center; width: 70px; height: 70px; border-radius: 50%; background: var(--coral); color: var(--white); font-size: 11px; }
 .journeyList li > div { padding-top: 9px; }
@@ -92,12 +92,12 @@
 
 .voices { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--mint); color: var(--ink); }
 .voicesHeading { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; align-items: end; }
-.voicesHeading h2 { color: #2e4a43; font-size: clamp(57px, 6vw, 87px); line-height: .86; }
+.voicesHeading h2 { color: var(--green); font-size: clamp(57px, 6vw, 87px); line-height: .86; }
 .voicesHeading h2 em { color: var(--coral); }
 .voicesHeading > p { color: var(--blue); }
-.voiceList { display: grid; grid-template-columns: 1fr 1fr; margin-top: 85px; border-top: 1px solid rgba(46,74,67,.25); }
-.voiceList figure { display: flex; flex-direction: column; gap: 34px; padding: 55px clamp(28px, 4vw, 58px) 62px; border-bottom: 1px solid rgba(46,74,67,.25); }
-.voiceList figure:nth-child(2) { border-left: 1px solid rgba(46,74,67,.25); }
+.voiceList { display: grid; grid-template-columns: 1fr 1fr; margin-top: 85px; border-top: 1px solid rgb(var(--green-rgb) / .25); }
+.voiceList figure { display: flex; flex-direction: column; gap: 34px; padding: 55px clamp(28px, 4vw, 58px) 62px; border-bottom: 1px solid rgb(var(--green-rgb) / .25); }
+.voiceList figure:nth-child(2) { border-left: 1px solid rgb(var(--green-rgb) / .25); }
 .voiceList figure:last-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 180px; gap: 7vw; padding-right: 0; padding-left: 0; }
 .voiceList blockquote { max-width: 970px; }
 .voiceList blockquote p { font: italic 500 clamp(24px, 2.4vw, 34px)/1.25 "Cormorant Garamond"; }
@@ -106,12 +106,12 @@
 .voiceList figure:last-child figcaption { order: 0; }
 .voiceList figcaption span { color: var(--blue); }
 
-.fit { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); color: #2e4a43; }
+.fit { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); color: var(--green); }
 .fitIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; align-items: end; }
 .fitIntro h2 { font-size: clamp(59px, 6.3vw, 91px); line-height: .84; }
 .fitIntro h2 em { display: block; color: var(--coral); }
-.fitStatements { width: min(100%, 990px); margin: 100px 0 0 auto; border-top: 1px solid rgba(46,74,67,.25); }
-.fitStatements p { padding: 32px 0; border-bottom: 1px solid rgba(46,74,67,.25); font: italic 500 clamp(27px, 2.8vw, 40px)/1.1 "Cormorant Garamond"; }
+.fitStatements { width: min(100%, 990px); margin: 100px 0 0 auto; border-top: 1px solid rgb(var(--green-rgb) / .25); }
+.fitStatements p { padding: 32px 0; border-bottom: 1px solid rgb(var(--green-rgb) / .25); font: italic 500 clamp(27px, 2.8vw, 40px)/1.1 "Cormorant Garamond"; }
 .fitStatements strong { color: var(--coral); font-weight: 500; }
 .fitClosing { max-width: 670px; margin: 75px 0 0 auto !important; padding-top: 24px; border-top: 6px solid var(--blue); font-weight: 600; }
 
@@ -122,9 +122,9 @@
 .offerTop > div > p { margin-top: 25px; }
 .price { color: var(--coral); font: 500 clamp(50px, 5.5vw, 78px)/.88 "DM Sans" !important; letter-spacing: -.06em; text-align: right; }
 .price span { display: block; margin-top: 13px; color: var(--ink); font: 500 11px/1.4 "DM Sans"; letter-spacing: .04em; }
-.offerFacts { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 90px; border-top: 1px solid rgba(46,74,67,.25); border-bottom: 1px solid rgba(46,74,67,.25); }
+.offerFacts { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 90px; border-top: 1px solid rgb(var(--green-rgb) / .25); border-bottom: 1px solid rgb(var(--green-rgb) / .25); }
 .offerFacts > div { min-height: 190px; padding: 29px 24px; }
-.offerFacts > div + div { border-left: 1px solid rgba(46,74,67,.25); }
+.offerFacts > div + div { border-left: 1px solid rgb(var(--green-rgb) / .25); }
 .offerFacts span { color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .12em; }
 .offerFacts strong { display: block; margin-top: 42px; font: italic 500 clamp(20px, 1.8vw, 27px)/1.08 "Cormorant Garamond"; }
 .offerAction { display: grid; grid-template-columns: 1fr .6fr; gap: 7vw; align-items: end; max-width: 900px; margin: 70px 0 0 auto; }
@@ -134,8 +134,8 @@
 .faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 9vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
 .faqHeading h2 { margin-top: 62px; font-size: clamp(60px, 6.5vw, 94px); line-height: .84; }
 .faqHeading h2 em { display: block; color: var(--coral); }
-.faqList { border-top: 1px solid rgba(46,74,67,.28); }
-.faqList details { border-bottom: 1px solid rgba(46,74,67,.28); }
+.faqList { border-top: 1px solid rgb(var(--green-rgb) / .28); }
+.faqList details { border-bottom: 1px solid rgb(var(--green-rgb) / .28); }
 .faqList summary { display: grid; grid-template-columns: 1fr 40px; gap: 25px; align-items: center; padding: 28px 0; cursor: pointer; list-style: none; font: 500 clamp(22px, 2.2vw, 30px)/1.15 "Cormorant Garamond"; }
 .faqList summary::-webkit-details-marker { display: none; }
 .faqList summary span { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid currentColor; border-radius: 50%; font: 400 19px/1 "DM Sans"; transition: transform .2s ease; }
@@ -150,8 +150,8 @@
 .heroIntro :global(a), .introCta :global(a), .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--navy); background: var(--navy); color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .finalCta > h2 + div :global(a) { width: 100%; }
 .finalCta > h2 + div :global(a) { font-size: 16px; }
-.heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: var(--gold); background: var(--gold); color: #2e4a43; }
-.introCta :global(a:hover) { border-color: var(--gold); background: var(--gold); color: #2e4a43; }
+.heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: var(--gold); background: var(--gold); color: var(--green); }
+.introCta :global(a:hover) { border-color: var(--gold); background: var(--gold); color: var(--green); }
 .contact { max-width: 600px; margin: 90px 0 0 auto !important; padding-top: 25px; border-top: 1px solid rgba(255,253,248,.4); }
 .contact a { border-bottom: 1px solid currentColor; color: var(--sun); }
 
@@ -167,8 +167,8 @@
   .processList li { grid-template-columns: 60px 1fr; }
   .processList li p { grid-column: 2; }
   .offerFacts { grid-template-columns: repeat(3, 1fr); }
-  .offerFacts > div:nth-child(4) { border-top: 1px solid rgba(46,74,67,.25); border-left: 0; }
-  .offerFacts > div:nth-child(5) { border-top: 1px solid rgba(46,74,67,.25); }
+  .offerFacts > div:nth-child(4) { border-top: 1px solid rgb(var(--green-rgb) / .25); border-left: 0; }
+  .offerFacts > div:nth-child(5) { border-top: 1px solid rgb(var(--green-rgb) / .25); }
 }
 
 @media (max-width: 700px) {
@@ -236,7 +236,7 @@
   .price { margin-top: 45px !important; text-align: left; }
   .offerFacts { display: block; margin-top: 5px; }
   .offerFacts > div { min-height: 0; padding: 25px 0; }
-  .offerFacts > div + div, .offerFacts > div:nth-child(4), .offerFacts > div:nth-child(5) { border-top: 1px solid rgba(46,74,67,.25); border-left: 0; }
+  .offerFacts > div + div, .offerFacts > div:nth-child(4), .offerFacts > div:nth-child(5) { border-top: 1px solid rgb(var(--green-rgb) / .25); border-left: 0; }
   .offerFacts strong { margin-top: 15px; font-size: 25px; }
   .offerAction { display: block; margin-top: 55px; }
   .offerAction :global(a) { font-size: 15px; }

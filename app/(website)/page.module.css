@@ -102,14 +102,14 @@
 .scope > div > main > section:nth-of-type(3) article:first-of-type a:hover {
   border-color: var(--navy);
   background: var(--gold);
-  color: #2e4a43;
+  color: var(--green);
   gap: 32px;
 }
 
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a {
   border-color: var(--gold);
   background: var(--gold);
-  color: #2e4a43;
+  color: var(--green);
 }
 
 .scope > div > main > section:nth-of-type(3) article:nth-of-type(2) a:hover {
@@ -145,7 +145,7 @@
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2) {
   border-color: var(--gold);
   background: var(--gold);
-  color: #2e4a43;
+  color: var(--green);
 }
 
 .scope > div > main > section:nth-of-type(7) > div:nth-of-type(3) a:nth-child(2):hover {

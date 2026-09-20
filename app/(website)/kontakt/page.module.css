@@ -11,23 +11,23 @@
 .heroCopy p { max-width: 620px; font-size: 21px; line-height: 1.6; }
 .heroCopy p + p { margin-top: 20px; }
 .heroAction { align-self: end; }
-.heroAction :global(a) { width: 100%; min-width: 0; min-height: 56px; padding: 16px 20px; border: 1px solid var(--gold); background: var(--gold); color: #2e4a43; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.heroAction :global(a) { width: 100%; min-width: 0; min-height: 56px; padding: 16px 20px; border: 1px solid var(--gold); background: var(--gold); color: var(--green); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .heroAction :global(a:hover) { border-color: var(--terracotta); background: var(--terracotta); color: #fffdf8; }
 .messageMark { position: absolute; right: -5vw; bottom: -18vw; width: 50vw; height: 50vw; border: 1px solid rgba(255,253,248,.16); border-radius: 50%; }
 .messageMark::before { content: ""; position: absolute; inset: 13%; border: 1px solid rgba(255,253,248,.13); border-radius: 50%; }
 .messageMark span { position: absolute; top: 12%; left: 11%; display: grid; place-items: center; width: 31%; aspect-ratio: 1; border-radius: 50%; background: var(--coral); color: var(--white); font: italic 500 clamp(70px, 10vw, 145px)/1 "Cormorant Garamond"; }
 
 .formSection { display: grid; grid-template-columns: .72fr 1.28fr; background: var(--white); }
-.formIntro { padding: 120px 6vw 120px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); color: #2e4a43; }
+.formIntro { padding: 120px 6vw 120px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); color: var(--green); }
 .formIntroInner { position: sticky; top: 55px; }
-.formIntro h2 { margin-top: 70px; color: #2e4a43; font-size: clamp(59px, 6.5vw, 94px); line-height: .84; }
+.formIntro h2 { margin-top: 70px; color: var(--green); font-size: clamp(59px, 6.5vw, 94px); line-height: .84; }
 .formIntro h2 > span { display: block; }
 .formIntro h2 > span:nth-child(2) { white-space: nowrap; }
 .formIntro h2 em { color: var(--terracotta); }
 .formLead { max-width: 520px; margin-top: 45px !important; }
 .direct { margin-top: 75px; padding-top: 26px; border-top: 6px solid var(--coral); }
 .directLabel { margin-bottom: 18px !important; font-size: 11px !important; font-weight: 600; letter-spacing: .12em; }
-.direct a { display: block; width: max-content; max-width: 100%; margin-top: 10px; border-bottom: 1px solid currentColor; color: #2e4a43; font: 400 clamp(20px, 2.16vw, 31.2px)/1.12 "DM Sans"; overflow-wrap: anywhere; }
+.direct a { display: block; width: max-content; max-width: 100%; margin-top: 10px; border-bottom: 1px solid currentColor; color: var(--green); font: 400 clamp(20px, 2.16vw, 31.2px)/1.12 "DM Sans"; overflow-wrap: anywhere; }
 .formShell { padding: 120px max(32px, calc((100vw - 1280px) / 2)) 120px 8vw; }
 .formHeading { margin-bottom: 70px; color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .16em; }
 
@@ -35,7 +35,7 @@
 .honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .field { display: grid; gap: 10px; }
 .field label { color: var(--blue); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-.field input, .field textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(46,74,67,.4); border-radius: 0; background: transparent; color: var(--ink); font: 400 18px/1.55 "DM Sans"; outline: 0; transition: border-color .2s ease, background .2s ease; }
+.field input, .field textarea { width: 100%; border: 0; border-bottom: 1px solid rgb(var(--green-rgb) / .4); border-radius: 0; background: transparent; color: var(--ink); font: 400 18px/1.55 "DM Sans"; outline: 0; transition: border-color .2s ease, background .2s ease; }
 .field input { min-height: 60px; padding: 10px 0; }
 .field textarea { min-height: 210px; padding: 14px 0; resize: vertical; }
 .field input:hover, .field textarea:hover { border-color: var(--blue); }
@@ -52,11 +52,11 @@
 .submitButton:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
 .submitButton span { font-size: 18px; }
 .deliveryNote { margin-top: -15px !important; color: var(--blue); font-size: 12px !important; }
-.notice { padding: 18px 20px; border-left: 5px solid var(--coral); background: var(--sun); color: #2e4a43; font-size: 13px !important; }
+.notice { padding: 18px 20px; border-left: 5px solid var(--coral); background: var(--sun); color: var(--green); font-size: 13px !important; }
 
 .assurance { display: grid; grid-template-columns: 1fr 1fr; background: var(--mint); }
 .assurance > div { min-height: 320px; padding: 70px max(32px, calc((100vw - 1280px) / 2)); }
-.assurance > div + div { border-left: 1px solid rgba(46,74,67,.24); }
+.assurance > div + div { border-left: 1px solid rgb(var(--green-rgb) / .24); }
 .assurance span { color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .12em; }
 .assurance p { max-width: 570px; margin-top: 45px !important; font: italic 500 clamp(27px, 3vw, 43px)/1.07 "Cormorant Garamond" !important; }
 
@@ -88,6 +88,6 @@
   .submitButton { min-height: 60px; font-size: 15px; }
   .assurance { display: block; }
   .assurance > div { min-height: 0; padding: 55px 18px; }
-  .assurance > div + div { border-top: 1px solid rgba(46,74,67,.24); border-left: 0; }
+  .assurance > div + div { border-top: 1px solid rgb(var(--green-rgb) / .24); border-left: 0; }
   .assurance p { font-size: 30px !important; }
 }
