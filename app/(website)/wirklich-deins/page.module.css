@@ -1,18 +1,18 @@
-.followPage { background: var(--paper); }
+.followPage { background: var(--offwhite); }
 .followPage p { font-size: 18px; line-height: 1.6; }
 .roundMarker span { flex: 0 0 42px; width: 42px; height: 42px; aspect-ratio: 1; }
 
-.hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "meta meta" "title title" "question intro"; gap: 52px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 90px; overflow: hidden; background: var(--coral); color: var(--paper); }
+.hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "meta meta" "title title" "question intro"; gap: 52px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 90px; overflow: hidden; background: var(--coral); color: var(--offwhite); }
 .heroMeta { grid-area: meta; }
 .heroMeta p { font-size: 11px !important; }
-.hero h1 { grid-area: title; position: relative; z-index: 2; max-width: 1280px; color: var(--paper); font-size: clamp(67px, 8.2vw, 118px); line-height: .8; }
+.hero h1 { grid-area: title; position: relative; z-index: 2; max-width: 1280px; color: var(--offwhite); font-size: clamp(67px, 8.2vw, 118px); line-height: .8; }
 .hero h1 em { color: var(--sun); }
 .heroQuestion { grid-area: question; align-self: end; max-width: 630px; padding-left: 7vw; }
-.heroQuestion h2 { color: var(--paper); font: italic 500 clamp(36px, 4.3vw, 62px)/.95 "Cormorant Garamond"; letter-spacing: -.035em; }
+.heroQuestion h2 { color: var(--offwhite); font: italic 500 clamp(36px, 4.3vw, 62px)/.95 "Cormorant Garamond"; letter-spacing: -.035em; }
 .heroQuestion p { margin-top: 16px; color: var(--sun); font-weight: 600; }
 .heroPortrait { grid-area: portrait; align-self: end; min-height: 660px; margin-top: -50px !important; overflow: hidden; background: var(--sun); }
 .heroPortrait img { object-position: 50% 35%; filter: saturate(.84); }
-.heroIntro { grid-area: intro; align-self: end; justify-self: end; width: 100%; max-width: 650px; padding: 45px 0 0; border-top: 1px solid rgba(255,253,248,.35); }
+.heroIntro { grid-area: intro; align-self: end; justify-self: end; width: 100%; max-width: 650px; padding: 45px 0 0; border-top: 1px solid rgb(from var(--offwhite) r g b / .35); }
 .heroIntro > p:first-child { max-width: 620px; font-size: 21px; line-height: 1.6; }
 .heroIntro > p:nth-child(2) { margin-top: 18px; font-weight: 600; }
 .heroIntro :global(a) { margin-top: 35px; }
@@ -32,22 +32,22 @@
 .directionIntro > div:last-child { align-self: end; }
 .directionIntro > div:last-child p + p { margin-top: 20px; }
 .vision { display: grid; grid-template-columns: 1fr 1fr; background: var(--blue); }
-.visionPrompt { min-height: 690px; padding: 90px max(45px, calc((100vw - 1280px) / 2)); border-right: 1px solid rgba(255,253,248,.22); background: var(--blue); color: #fffdf8; }
+.visionPrompt { min-height: 690px; padding: 90px max(45px, calc((100vw - 1280px) / 2)); border-right: 1px solid rgb(from var(--offwhite) r g b / .22); background: var(--blue); color: var(--offwhite); }
 .visionPrompt > p:first-child { color: var(--sun); font-weight: 600; letter-spacing: .08em; }
 .visionPrompt strong { display: block; max-width: 620px; margin-top: 80px; font: italic 500 clamp(49px, 5.5vw, 80px)/.87 "Cormorant Garamond"; }
 .visionPrompt > p:last-child { margin-top: 75px; color: var(--mint); font: italic 500 clamp(25px, 2.5vw, 36px)/1.17 "Cormorant Garamond"; }
-.visionCopy { display: flex; flex-direction: column; justify-content: center; padding: 90px clamp(45px, 7vw, 110px); background: var(--blue); color: #fffdf8; }
+.visionCopy { display: flex; flex-direction: column; justify-content: center; padding: 90px clamp(45px, 7vw, 110px); background: var(--blue); color: var(--offwhite); }
 .visionCopy p + p, .visionCopy strong + p { margin-top: 22px; }
 .visionCopy strong { display: block; margin: 45px 0 20px; color: var(--sun); font: italic 500 clamp(30px, 3vw, 44px)/1.05 "Cormorant Garamond"; }
 
-.introCtaSpacer { width: 100%; height: 48px; background: #fffdf8; }
+.introCtaSpacer { width: 100%; height: 48px; background: var(--offwhite); }
 .introCta { --hero-grid-inset: max(32px, calc((100vw - 1376px) / 2)); --vision-grid-inset: max(45px, calc((100vw - 1280px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8vw; min-height: 200px; padding: 60px var(--hero-grid-inset); background: var(--terracotta); }
-.introCta p { max-width: 650px; margin: 0 0 0 calc(var(--vision-grid-inset) - var(--hero-grid-inset)); color: #fffdf8; font-size: clamp(23px, 2.1vw, 30px); line-height: 1.25; }
+.introCta p { max-width: 650px; margin: 0 0 0 calc(var(--vision-grid-inset) - var(--hero-grid-inset)); color: var(--offwhite); font-size: clamp(23px, 2.1vw, 30px); line-height: 1.25; }
 .introCta p span { display: block; }
 .heroIntro :global(a), .introCta :global(a) { width: min(100%, 431px); }
 .introCta :global(a) { justify-self: start; }
 
-.process { background: var(--paper); }
+.process { background: var(--offwhite); }
 .introCta + .process .processIntro { padding-top: 50px; }
 .processIntro { display: grid; grid-template-columns: .55fr 1fr .75fr; gap: 6vw; padding: 130px max(32px, calc((100vw - 1376px) / 2)) 100px; }
 .processIntro h2 { font-size: clamp(58px, 6.5vw, 94px); line-height: .84; }
@@ -61,31 +61,31 @@
 .processList li:hover { background: var(--sun); }
 .processList li > span { color: var(--coral); font: italic 500 43px/1 "Cormorant Garamond"; }
 .processList h3 { color: inherit; font-size: clamp(40px, 4.5vw, 65px); line-height: .9; }
-.processClosing { display: grid; grid-template-columns: .8fr 1.2fr; background: var(--blue); color: var(--paper); }
+.processClosing { display: grid; grid-template-columns: .8fr 1.2fr; background: var(--blue); color: var(--offwhite); }
 .processClosing > div { min-height: 610px; padding: 80px max(45px, calc((100vw - 1280px) / 2)); }
-.processClosing > div:first-child { background: var(--blue); border-right: 1px solid rgba(255,253,248,.22); }
-.processClosing > div:last-child { background: var(--blue); color: var(--paper); }
+.processClosing > div:first-child { background: var(--blue); border-right: 1px solid rgb(from var(--offwhite) r g b / .22); }
+.processClosing > div:last-child { background: var(--blue); color: var(--offwhite); }
 .processClosing p + p { margin-top: 23px; }
 .processClosing strong { display: block; margin-bottom: 50px; padding: 0; background: transparent; color: var(--coral); font: italic 500 clamp(32px, 3.5vw, 49px)/1.03 "Cormorant Garamond"; }
 .processClosing > div:last-child p:last-child { margin-top: 50px; padding-top: 23px; border-top: 5px solid var(--coral); font-weight: 600; }
 
-.journey { padding: 0 0 130px; background: var(--paper); }
+.journey { padding: 0 0 130px; background: var(--offwhite); }
 .journeyIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; align-items: end; padding: 125px max(32px, calc((100vw - 1280px) / 2)); background: var(--mint); }
 .journeyIntro h2 { font-size: clamp(58px, 6.2vw, 90px); line-height: .86; }
 .journeyIntro h2 em { display: block; color: var(--coral); }
 .journeyList { position: relative; width: min(100% - 64px, 980px); margin: 120px max(32px, calc((100vw - 1280px) / 2)) 0 auto; padding: 0; list-style: none; }
 .journeyList::before { content: ""; position: absolute; top: 34px; bottom: 50px; left: 34px; width: 1px; background: rgb(var(--green-rgb) / .25); }
 .journeyList li { position: relative; display: grid; grid-template-columns: 70px 1fr; gap: 55px; padding-bottom: 105px; }
-.journeyList li > span { position: relative; z-index: 1; display: grid; place-items: center; width: 70px; height: 70px; border-radius: 50%; background: var(--coral); color: var(--white); font-size: 11px; }
+.journeyList li > span { position: relative; z-index: 1; display: grid; place-items: center; width: 70px; height: 70px; border-radius: 50%; background: var(--coral); color: var(--offwhite); font-size: 11px; }
 .journeyList li > div { padding-top: 9px; }
 .journeyList h3 { font-size: clamp(39px, 4.2vw, 60px); line-height: .92; }
 .journeyList p { max-width: 730px; margin-top: 26px !important; }
 
-.about { display: grid; grid-template-columns: .75fr 1.25fr; background: var(--blue); color: var(--paper); }
+.about { display: grid; grid-template-columns: .75fr 1.25fr; background: var(--blue); color: var(--offwhite); }
 .about figure { min-height: 1250px; }
 .about figure img { object-position: 50% 32%; filter: saturate(.84); }
 .about > div { padding: 105px clamp(45px, 7vw, 110px); }
-.about h2 { margin-top: 65px; color: var(--paper); font-size: clamp(59px, 6.4vw, 92px); line-height: .86; }
+.about h2 { margin-top: 65px; color: var(--offwhite); font-size: clamp(59px, 6.4vw, 92px); line-height: .86; }
 .about h2 em { color: var(--coral); }
 .about > div > p { max-width: 710px; margin-top: 34px !important; }
 .about > div > strong { display: block; margin-top: 60px; padding-top: 24px; border-top: 6px solid var(--coral); font: italic 500 clamp(34px, 3.5vw, 50px)/1 "Cormorant Garamond"; }
@@ -115,7 +115,7 @@
 .fitStatements strong { color: var(--coral); font-weight: 500; }
 .fitClosing { max-width: 670px; margin: 75px 0 0 auto !important; padding-top: 24px; border-top: 6px solid var(--blue); font-weight: 600; }
 
-.offer { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
+.offer { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
 .offerTop { display: grid; grid-template-columns: .55fr 1fr .55fr; gap: 6vw; align-items: end; }
 .offerTop h2 { font-size: clamp(63px, 7vw, 102px); line-height: .82; }
 .offerTop h2 em { color: var(--coral); }
@@ -128,10 +128,10 @@
 .offerFacts span { color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .12em; }
 .offerFacts strong { display: block; margin-top: 42px; font: italic 500 clamp(20px, 1.8vw, 27px)/1.08 "Cormorant Garamond"; }
 .offerAction { display: grid; grid-template-columns: 1fr .6fr; gap: 7vw; align-items: end; max-width: 900px; margin: 70px 0 0 auto; }
-.offerAction :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: #fffdf8; font-size: 16px; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.offerAction :global(a:hover) { border-color: var(--blue); background: var(--blue); color: #fffdf8; }
+.offerAction :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); font-size: 16px; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.offerAction :global(a:hover) { border-color: var(--blue); background: var(--blue); color: var(--offwhite); }
 
-.faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 9vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
+.faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 9vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
 .faqHeading h2 { margin-top: 62px; font-size: clamp(60px, 6.5vw, 94px); line-height: .84; }
 .faqHeading h2 em { display: block; color: var(--coral); }
 .faqList { border-top: 1px solid rgb(var(--green-rgb) / .28); }
@@ -139,20 +139,20 @@
 .faqList summary { display: grid; grid-template-columns: 1fr 40px; gap: 25px; align-items: center; padding: 28px 0; cursor: pointer; list-style: none; font: 500 clamp(22px, 2.2vw, 30px)/1.15 "Cormorant Garamond"; }
 .faqList summary::-webkit-details-marker { display: none; }
 .faqList summary span { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid currentColor; border-radius: 50%; font: 400 19px/1 "DM Sans"; transition: transform .2s ease; }
-.faqList details[open] summary span { transform: rotate(45deg); background: var(--coral); border-color: var(--coral); color: var(--white); }
+.faqList details[open] summary span { transform: rotate(45deg); background: var(--coral); border-color: var(--coral); color: var(--offwhite); }
 .faqList details > p, .faqList details > div { max-width: 690px; padding: 0 65px 32px 0; }
 .faqList details > div p + p { margin-top: 20px; }
 
-.finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)); background: var(--coral); color: var(--paper); }
-.finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--paper); font-size: clamp(70px, 8.4vw, 122px); line-height: .78; }
+.finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)); background: var(--coral); color: var(--offwhite); }
+.finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--offwhite); font-size: clamp(70px, 8.4vw, 122px); line-height: .78; }
 .finalCta h2 em { color: var(--sun); }
 .finalCta > h2 + div { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: end; max-width: 900px; margin: 80px 0 0 auto; }
-.heroIntro :global(a), .introCta :global(a), .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--navy); background: var(--navy); color: #fffdf8; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.heroIntro :global(a), .introCta :global(a), .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--navy); background: var(--navy); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .finalCta > h2 + div :global(a) { width: 100%; }
 .finalCta > h2 + div :global(a) { font-size: 16px; }
 .heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: var(--gold); background: var(--gold); color: var(--green); }
 .introCta :global(a:hover) { border-color: var(--gold); background: var(--gold); color: var(--green); }
-.contact { max-width: 600px; margin: 90px 0 0 auto !important; padding-top: 25px; border-top: 1px solid rgba(255,253,248,.4); }
+.contact { max-width: 600px; margin: 90px 0 0 auto !important; padding-top: 25px; border-top: 1px solid rgb(from var(--offwhite) r g b / .4); }
 .contact a { border-bottom: 1px solid currentColor; color: var(--sun); }
 
 @media (min-width: 1200px) {

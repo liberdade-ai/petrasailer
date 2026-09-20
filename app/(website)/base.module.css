@@ -1,14 +1,12 @@
 .page {
-  --paper: #fffdf8;
   --ink: var(--navy);
   --blue: var(--navy);
   --coral: var(--terracotta);
   --sun: var(--gold);
   --mint: var(--sage);
-  --white: #fffdf8;
   min-width: 0;
   overflow: clip;
-  background: var(--paper);
+  background: var(--offwhite);
   color: var(--ink);
   font-family: "DM Sans";
 }
@@ -22,10 +20,10 @@
 .page img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .page :focus-visible { outline: 3px solid var(--coral); outline-offset: 5px; }
 
-.skipLink { position: fixed; z-index: 1000; top: 12px; left: 12px; padding: 12px 16px; background: var(--blue); color: var(--white); transform: translateY(-150%); }
+.skipLink { position: fixed; z-index: 1000; top: 12px; left: 12px; padding: 12px 16px; background: var(--blue); color: var(--offwhite); transform: translateY(-150%); }
 .skipLink:focus { transform: translateY(0); }
 
-.header { position: relative; z-index: 50; border-bottom: 1px solid rgb(var(--green-rgb) / .2); background: rgba(255,253,248,.94); }
+.header { position: relative; z-index: 50; border-bottom: 1px solid rgb(var(--green-rgb) / .2); background: rgb(from var(--offwhite) r g b / .94); }
 .headerInner { display: grid; grid-template-columns: 220px 1fr auto; align-items: center; width: min(100% - 64px, 1376px); min-height: 90px; margin: 0 auto; }
 .brand { display: block; height: 38px; overflow: hidden; line-height: 1; }
 .brand img { display: block; width: 178px; max-width: none; height: auto; }
@@ -34,7 +32,7 @@
 .desktopNav a::after { content: ""; position: absolute; right: 0; bottom: 25px; left: 0; height: 2px; background: var(--coral); transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
 .desktopNav a:hover::after, .desktopNav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
 .headerCta { display: flex; align-items: center; gap: 18px; padding: 13px 0 13px 18px; border-left: 1px solid rgb(var(--green-rgb) / .3); font-size: 16px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; }
-.headerCta span { display: grid; place-items: center; width: 34px; aspect-ratio: 1; border-radius: 50%; background: var(--coral); color: var(--white); font-size: 15px; transition: transform .25s ease; }
+.headerCta span { display: grid; place-items: center; width: 34px; aspect-ratio: 1; border-radius: 50%; background: var(--coral); color: var(--offwhite); font-size: 15px; transition: transform .25s ease; }
 .headerCta:hover span { transform: rotate(45deg); }
 .mobileMenu { display: none; }
 
@@ -46,7 +44,7 @@
 .heroStage { position: relative; display: grid; grid-template-columns: minmax(360px, .85fr) minmax(410px, 1fr) minmax(150px, .4fr); min-height: 600px; width: min(100%, 1376px); margin: 62px auto 0; background: var(--sun); color: var(--green); }
 .heroPortrait { min-height: 600px; overflow: hidden; }
 .heroPortrait img { object-position: 50% 28%; filter: saturate(.86) contrast(.98); }
-.heroNumber { position: absolute; top: -24px; left: calc(38% - 56px); z-index: 2; display: grid; place-items: center; width: 112px; height: 112px; border-radius: 50%; background: var(--coral); color: var(--white); font-size: 14px; }
+.heroNumber { position: absolute; top: -24px; left: calc(38% - 56px); z-index: 2; display: grid; place-items: center; width: 112px; height: 112px; border-radius: 50%; background: var(--coral); color: var(--offwhite); font-size: 14px; }
 .heroIntro { align-self: center; max-width: 570px; padding: 72px 8vw 72px 7vw; }
 .heroIntro > p { max-width: 570px; font-size: 21px; line-height: 1.6; }
 .heroIntro > p + p { margin-top: 20px; }
@@ -56,7 +54,7 @@
 .textLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-width: 305px; padding: 11px 0; border-bottom: 1px solid currentColor; font-size: 16px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; transition: gap .2s ease, color .2s ease; }
 .textLink > span:last-child { font-size: 16px; }
 .textLink:hover { color: var(--coral); gap: 45px; }
-.textLinkLight { color: var(--white); }
+.textLinkLight { color: var(--offwhite); }
 
 .sectionMarker { display: flex; align-items: center; gap: 18px; }
 .sectionMarker span { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid currentColor; border-radius: 50%; font-size: 11px; }
@@ -77,7 +75,7 @@
 .recognitionAfter .alt { color: var(--green); font: italic 500 27px/1.1 "Cormorant Garamond"; }
 .recognitionAfter .closing { grid-column: 2; padding-top: 18px; border-top: 5px solid var(--coral); font-weight: 600; }
 
-.offers { display: grid; grid-template-columns: 1fr 1fr; background: var(--white); }
+.offers { display: grid; grid-template-columns: 1fr 1fr; background: var(--offwhite); }
 .offersIntro { grid-column: 1 / -1; display: grid; grid-template-columns: .55fr 1fr .8fr; gap: 7vw; padding: 110px max(32px, calc((100vw - 1376px) / 2 + 32px)) 90px; }
 .offersIntro h2 { font-size: clamp(55px, 6vw, 88px); line-height: .86; }
 .offersIntro h2 em { display: block; color: var(--coral); }
@@ -88,15 +86,15 @@
 .finalCta > .sectionMarker span { flex: 0 0 42px; width: 42px; min-width: 42px; height: 42px; aspect-ratio: 1; border-radius: 50%; }
 .offer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); grid-template-areas: "index index" "title title" "claim text" "link text"; gap: 22px 60px; min-height: 650px; padding: 70px clamp(34px, 5.5vw, 88px); }
 .offerOne { background: var(--mint); }
-.offerTwo { background: var(--blue); color: var(--paper); }
-.offerTwo h3 { color: var(--paper); }
+.offerTwo { background: var(--blue); color: var(--offwhite); }
+.offerTwo h3 { color: var(--offwhite); }
 .offerIndex { grid-area: index; align-self: start; font-size: 11px; font-weight: 600; letter-spacing: .14em; }
 .offer h3 { grid-area: title; align-self: end; overflow-wrap: anywhere; padding: 46px 0 20px; font-size: clamp(58px, 6vw, 94px); line-height: .82; }
 .offer h3 em { color: var(--sun); }
 .offerClaim { grid-area: claim; font: 500 clamp(25px, 2.3vw, 34px)/1.08 "Cormorant Garamond"; }
 .offerText { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
 .offer .textLink { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 13px 20px; gap: 15px; }
-.offersClosing { grid-column: 1 / -1; padding: 34px 32px; background: var(--coral); color: var(--paper); text-align: center; font-size: 16px; line-height: 1.6; }
+.offersClosing { grid-column: 1 / -1; padding: 34px 32px; background: var(--coral); color: var(--offwhite); text-align: center; font-size: 16px; line-height: 1.6; }
 .offersClosing a { border-bottom: 1px solid currentColor; font-weight: 600; }
 
 .perspective { position: relative; display: grid; grid-template-columns: .7fr 1.3fr; gap: 55px 10vw; padding: 150px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); color: var(--green); }
@@ -110,7 +108,7 @@
 .perspectiveEnd { grid-column: 2; justify-self: end; }
 .perspectiveEnd .closing { padding-top: 18px; border-top: 5px solid var(--blue); font-weight: 600; }
 
-.philosophy { padding: 140px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
+.philosophy { padding: 140px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
 .philosophyTitle { display: grid; grid-template-columns: 1.1fr .65fr .65fr; gap: 5vw; margin: 74px 0 110px; }
 .philosophyTitle h2 { font-size: clamp(58px, 6vw, 88px); line-height: .88; }
 .philosophyTitle p { align-self: end; max-width: 620px; font-size: 18px; line-height: 1.6; }
@@ -140,9 +138,9 @@
 .testimonials blockquote p { font: italic 500 clamp(24px, 2.3vw, 34px)/1.15 "Cormorant Garamond"; }
 .testimonials blockquote footer { margin-top: 32px; font-size: 12px; line-height: 1.5; letter-spacing: .05em; }
 
-.finalCta { position: relative; padding: 120px max(32px, calc((100vw - 1280px) / 2)); background: var(--coral); color: var(--paper); }
+.finalCta { position: relative; padding: 120px max(32px, calc((100vw - 1280px) / 2)); background: var(--coral); color: var(--offwhite); }
 .finalIndex { font-size: 11px; font-weight: 600; letter-spacing: .14em; }
-.finalCta h2 { max-width: 1050px; margin-top: 50px; color: var(--paper); font-size: clamp(66px, 8vw, 118px); line-height: .8; }
+.finalCta h2 { max-width: 1050px; margin-top: 50px; color: var(--offwhite); font-size: clamp(66px, 8vw, 118px); line-height: .8; }
 .finalCta h2 em { color: var(--sun); }
 .finalCopy { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; width: min(100%, 820px); margin: 76px 0 65px auto; }
 .finalCopy p { max-width: 620px; font-size: 18px; line-height: 1.6; }
@@ -150,14 +148,14 @@
 .finalActions { display: flex; flex-wrap: wrap; gap: 30px 55px; justify-content: flex-end; }
 .email { display: block; width: max-content; margin: 95px 0 0 auto; font: italic 500 clamp(28px, 3vw, 42px)/1 "Cormorant Garamond"; border-bottom: 1px solid currentColor; }
 
-.footer { display: grid; grid-template-columns: .8fr 1.2fr 1fr; gap: 70px; padding: 80px max(32px, calc((100vw - 1280px) / 2)) 28px; background: var(--blue); color: var(--paper); }
+.footer { display: grid; grid-template-columns: .8fr 1.2fr 1fr; gap: 70px; padding: 80px max(32px, calc((100vw - 1280px) / 2)) 28px; background: var(--blue); color: var(--offwhite); }
 .footerBrand { display: block; height: 43px; overflow: hidden; }
 .footerBrand img { display: block; width: 205px; max-width: none; height: auto; }
 .footer nav { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 30px; }
 .footer nav a, .footerEmail { font-size: 12px; letter-spacing: .05em; opacity: .85; }
 .footer nav a:hover, .footerEmail:hover { opacity: 1; color: var(--sun); }
 .footerEmail { justify-self: end; }
-.footerBottom { grid-column: 1 / -1; display: flex; justify-content: space-between; margin-top: 50px; padding-top: 22px; border-top: 1px solid rgba(255,253,248,.2); font-size: 11px; opacity: .7; }
+.footerBottom { grid-column: 1 / -1; display: flex; justify-content: space-between; margin-top: 50px; padding-top: 22px; border-top: 1px solid rgb(from var(--offwhite) r g b / .2); font-size: 11px; opacity: .7; }
 .footerBottom div { display: flex; gap: 26px; }
 
 @media (max-width: 1050px) {
@@ -170,10 +168,10 @@
   .mobileMenu summary i::after { transform: translateY(6px); }
   .mobileMenu[open] summary i { transform: translateY(3px) rotate(45deg); }
   .mobileMenu[open] summary i::after { transform: rotate(-90deg); }
-  .mobilePanel { position: absolute; top: 90px; right: -32px; left: -32px; padding: 30px 32px 38px; border-top: 1px solid rgb(var(--green-rgb) / .2); background: var(--paper); }
+  .mobilePanel { position: absolute; top: 90px; right: -32px; left: -32px; padding: 30px 32px 38px; border-top: 1px solid rgb(var(--green-rgb) / .2); background: var(--offwhite); }
   .mobilePanel nav { display: flex; flex-direction: column; }
   .mobilePanel nav a { padding: 15px 0; border-bottom: 1px solid rgb(var(--green-rgb) / .17); font-size: 12px; font-weight: 600; letter-spacing: .08em; }
-  .mobileCta { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; padding: 16px 18px; background: var(--coral); color: var(--white); font-size: 15px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; }
+  .mobileCta { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; padding: 16px 18px; background: var(--coral); color: var(--offwhite); font-size: 15px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; }
   .heroStage { grid-template-columns: 1fr 1fr; }
   .heroAside { display: none; }
   .recognition { gap: 70px 6vw; }

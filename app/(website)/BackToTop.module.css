@@ -12,7 +12,7 @@
   border-radius: 50%;
   background: var(--navy);
   box-shadow: 0 8px 24px rgb(var(--green-rgb) / .22);
-  color: #fffdf8;
+  color: var(--offwhite);
   font: 500 23px/1 "DM Sans";
   opacity: 0;
   visibility: hidden;

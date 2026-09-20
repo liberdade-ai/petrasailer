@@ -1,10 +1,10 @@
 .thanksPage {
-  background: #fffdf8;
+  background: var(--offwhite);
 }
 
 .header {
   border-bottom: 1px solid rgb(var(--navy-rgb) / .18);
-  background: #fffdf8;
+  background: var(--offwhite);
 }
 
 .headerInner {
@@ -35,14 +35,14 @@
   place-items: center;
   border-radius: 50%;
   background: var(--terracotta);
-  color: #fffdf8;
+  color: var(--offwhite);
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0;
 }
 
 .hero {
-  background: #fffdf8;
+  background: var(--offwhite);
 }
 
 .heroInner {
@@ -56,7 +56,7 @@
   margin: 0;
   padding: 18px 22px;
   background: var(--navy);
-  color: #fffdf8;
+  color: var(--offwhite);
   font-size: 13px !important;
   font-weight: 600;
   letter-spacing: 0.15em;

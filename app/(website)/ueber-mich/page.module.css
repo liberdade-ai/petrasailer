@@ -1,4 +1,4 @@
-.aboutPage { background: var(--paper); }
+.aboutPage { background: var(--offwhite); }
 .aboutPage p { font-size: 18px; line-height: 1.6; }
 
 .hero { display: grid; grid-template-columns: 1.2fr .8fr; grid-template-areas: "meta meta" "title portrait" "copy portrait"; gap: 45px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 0; background: var(--sun); color: var(--green); }
@@ -13,8 +13,8 @@
 .heroCopy p { font-size: 21px; line-height: 1.6; }
 .heroCopy strong { display: block; margin-top: 32px; font: italic 500 clamp(27px, 2.8vw, 40px)/1.06 "Cormorant Garamond"; }
 
-.story { background: var(--paper); }
-.storyIntro { display: grid; grid-template-columns: .55fr 1.45fr; gap: 8vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)) 45px; background: var(--paper); color: var(--ink); }
+.story { background: var(--offwhite); }
+.storyIntro { display: grid; grid-template-columns: .55fr 1.45fr; gap: 8vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)) 45px; background: var(--offwhite); color: var(--ink); }
 .storyIntro > div:first-child { align-self: start; }
 .storyIntro h2 { color: var(--green); font-size: clamp(61px, 7vw, 100px); line-height: .82; }
 .storyIntro h2 em { display: block; color: var(--coral); }
@@ -28,17 +28,17 @@
 .storyChapter blockquote { margin: 55px 0; padding: 55px max(25px, 5vw); background: var(--sun); color: var(--green); font: italic 500 clamp(35px, 4.3vw, 62px)/1 "Cormorant Garamond"; }
 .storyClosing { margin-top: 65px !important; padding-top: 25px; border-top: 6px solid var(--coral); font: italic 500 clamp(30px, 3.2vw, 46px)/1.03 "Cormorant Garamond" !important; }
 
-.work { display: grid; grid-template-columns: .75fr 1.25fr; background: var(--coral); color: var(--paper); }
+.work { display: grid; grid-template-columns: .75fr 1.25fr; background: var(--coral); color: var(--offwhite); }
 .workIntro { padding: 115px 6vw 100px max(32px, calc((100vw - 1280px) / 2)); }
-.workIntro h2 { position: sticky; top: 55px; margin-top: 75px; color: var(--paper); font-size: clamp(64px, 7vw, 100px); line-height: .8; }
+.workIntro h2 { position: sticky; top: 55px; margin-top: 75px; color: var(--offwhite); font-size: clamp(64px, 7vw, 100px); line-height: .8; }
 .workIntro h2 em { color: var(--sun); }
-.workBody { padding: 120px max(32px, calc((100vw - 1280px) / 2)) 120px 7vw; border-left: 1px solid rgba(255,253,248,.28); }
+.workBody { padding: 120px max(32px, calc((100vw - 1280px) / 2)) 120px 7vw; border-left: 1px solid rgb(from var(--offwhite) r g b / .28); }
 .workBody p { max-width: 710px; }
 .workBody p + p { margin-top: 28px; }
 .workBody strong { color: var(--sun); font: italic 500 30px/1 "Cormorant Garamond"; }
 .workClosing { margin-top: 65px !important; padding-top: 26px; border-top: 6px solid var(--sun); font: italic 500 clamp(32px, 3.3vw, 48px)/1.03 "Cormorant Garamond" !important; }
 
-.voices { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
+.voices { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
 .voicesHeading { display: grid; grid-template-columns: .55fr 1.45fr; gap: 7vw; }
 .voicesHeading h2 { font-size: clamp(60px, 6.7vw, 96px); line-height: .84; }
 .voicesHeading h2 em { display: block; color: var(--coral); }
@@ -50,7 +50,7 @@
 .voiceList blockquote:first-child p + p { margin-top: 14px; }
 .voiceList blockquote footer { grid-column: 2; grid-row: 1; color: var(--coral); font-size: 12px; font-weight: 600; letter-spacing: .06em; }
 
-.foundation { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--paper); }
+.foundation { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
 .foundationIntro { display: grid; grid-template-columns: .55fr 1fr .72fr; gap: 6vw; align-items: end; }
 .foundationIntro h2 { font-size: clamp(57px, 6.1vw, 88px); line-height: .86; }
 .foundationIntro h2 em { display: block; color: var(--coral); }
@@ -73,7 +73,7 @@
 .privateBody { grid-area: body; align-self: center; }
 .privateBody p + p { margin-top: 24px; }
 
-.paths { border-bottom: 1px solid #fffdf8; background: var(--white); }
+.paths { border-bottom: 1px solid var(--offwhite); background: var(--offwhite); }
 .pathsIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; padding: 125px max(32px, calc((100vw - 1376px) / 2)) 95px; }
 .pathsIntro h2 { font-size: clamp(57px, 6.1vw, 88px); line-height: .86; }
 .pathsTitleLead { display: block; }
@@ -85,18 +85,18 @@
 .pathGrid { display: grid; grid-template-columns: 1fr 1fr; }
 .pathGrid article { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); grid-template-areas: "meta meta" "title title" "link text"; gap: 35px 60px; min-height: 650px; padding: 70px clamp(35px, 6vw, 95px); }
 .pathGrid article:first-child { background: var(--mint); }
-.pathGrid article:last-child { background: var(--blue); color: var(--paper); }
-.pathGrid article:last-child h3 { color: var(--paper); }
+.pathGrid article:last-child { background: var(--blue); color: var(--offwhite); }
+.pathGrid article:last-child h3 { color: var(--offwhite); }
 .pathGrid article > p { grid-area: meta; font-size: 11px; font-weight: 600; letter-spacing: .12em; }
 .pathGrid h3 { grid-area: title; align-self: end; font-size: clamp(60px, 6.4vw, 94px); line-height: .8; }
 .pathGrid article:first-child h3 span { display: block; }
-.pathGrid h3 .really { color: #fffdf8; }
+.pathGrid h3 .really { color: var(--offwhite); }
 .pathGrid h3 em { color: var(--sun); }
 .pathGrid article > span { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
-.pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 12px 20px; border: 1px solid var(--navy); background: var(--navy); color: #fffdf8; gap: 15px; }
+.pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 12px 20px; border: 1px solid var(--navy); background: var(--navy); color: var(--offwhite); gap: 15px; }
 .pathGrid article:first-child :global(a:hover) { border-color: var(--navy); background: var(--gold); color: var(--green); gap: 15px; }
 .pathGrid article:last-child :global(a) { border-color: var(--gold); background: var(--gold); color: var(--green); }
-.pathGrid article:last-child :global(a:hover) { border-color: #fffdf8; background: #fffdf8; color: var(--navy); gap: 15px; }
+.pathGrid article:last-child :global(a:hover) { border-color: var(--offwhite); background: var(--offwhite); color: var(--navy); gap: 15px; }
 
 @media (max-width: 1050px) {
   .hero { grid-template-columns: 1fr 1fr; }

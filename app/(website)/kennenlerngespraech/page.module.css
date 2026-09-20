@@ -1,13 +1,13 @@
 .introCallPage {
   min-height: 100vh;
-  background: var(--paper);
+  background: var(--offwhite);
 }
 
 .header {
   position: relative;
   z-index: 50;
   border-bottom: 1px solid rgb(var(--green-rgb) / .2);
-  background: rgba(255, 253, 248, .97);
+  background: rgb(from var(--offwhite) r g b / .97);
 }
 
 .headerInner {
@@ -40,7 +40,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--coral);
-  color: var(--paper);
+  color: var(--offwhite);
   font-size: 15px;
   transition: transform .25s ease;
 }
@@ -58,7 +58,7 @@
   display: inline-block;
   padding: 18px 22px;
   background: var(--blue);
-  color: var(--paper);
+  color: var(--offwhite);
   font-size: 13px !important;
   font-weight: 600;
   letter-spacing: .15em;
@@ -116,7 +116,7 @@
   width: min(100%, 820px);
   margin: 0 auto clamp(46px, 6vw, 74px);
   padding: 30px 34px;
-  background: var(--paper);
+  background: var(--offwhite);
 }
 
 .noteAccent {
@@ -133,7 +133,7 @@
   overflow: hidden;
   min-height: 760px;
   border: 1px solid rgb(var(--navy-rgb) / .2);
-  background: var(--white);
+  background: var(--offwhite);
   box-shadow: 18px 18px 0 var(--coral);
 }
 
@@ -202,7 +202,7 @@
   padding: 16px 20px;
   border: 1px solid var(--coral);
   background: var(--coral);
-  color: var(--white);
+  color: var(--offwhite);
   font: 600 16px/1.2 "DM Sans";
   letter-spacing: .07em;
   text-transform: uppercase;
@@ -215,7 +215,7 @@
 
 .closing {
   padding: clamp(72px, 8vw, 104px) 32px;
-  background: var(--paper);
+  background: var(--offwhite);
   color: var(--blue);
 }
 
