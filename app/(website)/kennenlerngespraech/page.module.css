@@ -64,7 +64,6 @@
   letter-spacing: .15em;
 }
 
-.eyebrow strong { color: var(--sun); font: inherit; }
 
 .intro h1 {
   max-width: 850px;
@@ -74,19 +73,6 @@
   line-height: .88;
 }
 
-.intro h1 em {
-  color: var(--green);
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 600;
-}
-
-.intro h1 span {
-  color: var(--sun);
-  font-family: "Cormorant Garamond";
-  font-style: italic;
-  font-weight: 500;
-}
 
 .introCopy {
   display: grid;

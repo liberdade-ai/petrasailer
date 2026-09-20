@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import OfferName from "../(website)/OfferName";
 import { pageMetadata } from "../seo";
 import shell from "../(website)/base.module.css";
 import siteStyles from "../(website)/page.module.css";
@@ -38,7 +39,7 @@ export default function DankeKennenlerngespraech() {
         <section className={styles.hero}>
           <div className={styles.heroInner}>
             <p className={styles.sender}>
-              WIRKLICH <strong>DEINS.</strong> · KENNENLERNGESPRÄCH
+              <OfferName tone="dark" uppercase /> · KENNENLERNGESPRÄCH
             </p>
             <h1>Dein Termin steht.</h1>
             <h2>Ich freue mich, dich kennenzulernen.</h2>
@@ -58,7 +59,7 @@ export default function DankeKennenlerngespraech() {
               <p>
                 Was du verwirklichen möchtest, ist unser Ausgangspunkt. Und
                 auch das, was dich gerade dazu beschäftigt, hat im Gespräch
-                Platz. Gemeinsam schauen wir, ob Wirklich Deins. zu dir passt
+                Platz. Gemeinsam schauen wir, ob <OfferName tone="light" /> zu dir passt
                 und ob wir miteinander arbeiten möchten.
               </p>
               <p className={styles.closing}>
@@ -77,7 +78,7 @@ export default function DankeKennenlerngespraech() {
         <nav aria-label="Footer-Navigation">
           <a href="/ueber-mich/">ÜBER MICH</a>
           <a href="/klarheitssitzung/">KLARHEITSSITZUNG</a>
-          <a href="/wirklich-deins/">WIRKLICH DEINS.</a>
+          <a href="/wirklich-deins/"><OfferName tone="dark" /></a>
           <a href="/kontakt/">KONTAKT</a>
           <a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a>
         </nav>

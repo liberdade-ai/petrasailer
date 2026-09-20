@@ -50,6 +50,29 @@
   --heading-section-leading: 1.05;
 }
 
+.offer-name {
+  display: inline;
+  white-space: nowrap;
+}
+
+.offer-name__wirklich {
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: inherit;
+}
+
+.offer-name__deins {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.offer-name--light .offer-name__wirklich,
+.offer-name--light .offer-name__deins { color: var(--green) !important; }
+.offer-name--dark .offer-name__wirklich { color: var(--offwhite) !important; }
+.offer-name--dark .offer-name__deins { color: var(--gold) !important; }
+.offer-name--uppercase { text-transform: uppercase; }
+
 /* NEW DIRECTION — OFFENES GEGENÜBER */
 .prototype-page {
   --rail-width: 224px;

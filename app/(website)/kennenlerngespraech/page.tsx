@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import OfferName from "../OfferName";
 import JsonLd from "../../JsonLd";
 import { pageGraph, pageMetadata } from "../../seo";
 import shell from "../base.module.css";
@@ -42,8 +43,8 @@ export default function IntroCallPage() {
 
       <main id="inhalt">
         <section className={styles.intro} id="top">
-          <p className={styles.eyebrow}><span>WIRKLICH</span><strong> DEINS.</strong> · KENNENLERNGESPRÄCH</p>
-          <h1>Lass uns schauen, ob <em>Wirklich</em><span> Deins.</span> zu dir passt.</h1>
+          <p className={styles.eyebrow}><OfferName tone="dark" uppercase /> · KENNENLERNGESPRÄCH</p>
+          <h1>Lass uns schauen, ob <OfferName tone="light" /> zu dir passt.</h1>
           <div className={styles.introCopy}>
             <p>Du hast etwas vor und möchtest herausfinden, ob ich die Richtige bin, um dich dabei über sechs Monate zu begleiten? Dann lass uns kennenlernen.</p>
             <p>In unserem Gespräch erzählst du mir, was du verwirklichen möchtest und wo du gerade stehst. Du kannst mir deine Fragen zur Begleitung stellen, und wir schauen gemeinsam, ob eine Zusammenarbeit für uns beide stimmt.</p>
@@ -68,7 +69,7 @@ export default function IntroCallPage() {
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
         <a className={shell.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a>
-        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
+        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/"><OfferName tone="dark" /></a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
       </footer>

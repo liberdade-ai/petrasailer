@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import OfferName from "../OfferName";
 import JsonLd from "../../JsonLd";
 import { pageGraph, pageMetadata } from "../../seo";
 import shell from "../base.module.css";
@@ -24,7 +25,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 function NavLinks() {
-  return NAVIGATION.map((item) => <a key={item.label} href={item.href}>{item.label}</a>);
+  return NAVIGATION.map((item) => <a key={item.label} href={item.href}>{item.href === "/wirklich-deins/" ? <OfferName tone="light" uppercase /> : item.label}</a>);
 }
 
 type CtaTracking = { cta: string; location: string };
@@ -80,12 +81,12 @@ export default function WorkWithMePage() {
             </article>
             <article className={`${styles.path} ${styles.pathTwo}`}>
               <p className={styles.pathIndex}>02 · SECHS MONATE · 1:1</p>
-              <h3>Wirklich <em>Deins.</em></h3>
+              <h3><OfferName tone="dark" /></h3>
               <p className={styles.pathCopy}>Für das, was du in deinem Leben verändern, aufbauen oder verwirklichen möchtest. Über sechs Monate verbindest du dich immer wieder mit dem, was du wirklich willst. Von dort aus triffst du deine Entscheidungen und gehst konkrete Schritte, die für dich stimmig sind.</p>
-              <ActionLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "arbeite_mit_mir_angebote" }}>WIRKLICH DEINS. ENTDECKEN</ActionLink>
+              <ActionLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "arbeite_mit_mir_angebote" }}><OfferName tone="dark" uppercase /> ENTDECKEN</ActionLink>
             </article>
           </div>
-          <p className={styles.pathNote}>Beide Angebote stehen für sich. Du musst keine Klarheitssitzung buchen, um Wirklich Deins. anzufragen.</p>
+          <p className={styles.pathNote}>Beide Angebote stehen für sich. Du musst keine Klarheitssitzung buchen, um <OfferName tone="light" /> anzufragen.</p>
         </section>
 
         <section className={styles.contactSection} id="kontaktformular">
@@ -100,7 +101,7 @@ export default function WorkWithMePage() {
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="#top" aria-current="page">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/"><OfferName tone="dark" /></a><a href="/kontakt/">KONTAKT</a><a href="#top" aria-current="page">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
     </div>
   );
 }
