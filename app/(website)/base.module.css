@@ -92,6 +92,15 @@
 .offerClaim { grid-area: claim; font: 500 clamp(25px, 2.3vw, 34px)/1.08 "Cormorant Garamond"; }
 .offerText { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
 .offer .textLink { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 13px 20px; gap: 15px; }
+.offerActions { grid-area: link; align-self: end; }
+.offerActions .textLink { width: 100%; }
+.offerPackage { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgb(var(--green-rgb) / .28); }
+.offerPackage > p:first-child { max-width: 360px; font-size: 15px; line-height: 1.55; }
+.offerPackage > p:first-child strong { font-weight: 600; }
+.offerPackagePrice { display: flex; flex-direction: column; gap: 3px; margin-top: 16px; color: var(--green); font-size: 13px; line-height: 1.45; }
+.offerPackagePrice strong { font-size: 15px; font-weight: 600; }
+.offerPackageLink { display: inline-flex; align-items: center; gap: 14px; margin-top: 20px; padding-bottom: 4px; border-bottom: 1px solid currentColor; color: var(--green); font-size: 11px; font-weight: 600; letter-spacing: .11em; line-height: 1.2; text-decoration: none; transition: color .2s ease, gap .2s ease; }
+.offerPackageLink:hover { gap: 22px; color: var(--coral); }
 .offersClosing { grid-column: 1 / -1; padding: 34px 32px; background: var(--coral); color: var(--offwhite); text-align: center; font-size: 16px; line-height: 1.6; }
 .offersClosing a { border-bottom: 1px solid currentColor; font-weight: 600; }
 
@@ -223,6 +232,8 @@
   .offerClaim { margin-bottom: 25px !important; font-size: 28px; }
   .offerText { margin-bottom: 45px !important; }
   .offerText { font-size: 16px; }
+  .offerPackage { margin-top: 26px; padding-top: 22px; }
+  .offerPackage > p:first-child { font-size: 15px; }
   .offersClosing { padding: 28px 18px; line-height: 1.55; text-align: left; }
   .perspective { display: block; padding: 90px 18px 100px; }
   .perspective h2 { margin-top: 55px; font-size: 51px; }

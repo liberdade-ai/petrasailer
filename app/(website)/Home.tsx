@@ -117,7 +117,14 @@ export default function HomeContent() {
             <h3>Klarheitssitzung</h3>
             <p className={styles.offerClaim}>Wenn du bei einem konkreten Thema Klarheit brauchst.</p>
             <p className={styles.offerText}>Vielleicht geht es um eine Entscheidung, ein Gespräch oder ein Vorhaben. Du kommst mit diesem einen Thema, bei dem du gerade feststeckst. Und du gehst mit Klarheit darüber, was für dich stimmt – und mit deinem nächsten konkreten Schritt.</p>
-            <TextLink href="/klarheitssitzung/" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "home_angebote" }}>KLARHEITSSITZUNG KENNENLERNEN</TextLink>
+            <div className={styles.offerActions}>
+              <TextLink href="/klarheitssitzung/" tracking={{ cta: "klarheitssitzung_kennenlernen", location: "home_angebote" }}>KLARHEITSSITZUNG KENNENLERNEN</TextLink>
+              <div className={styles.offerPackage}>
+                <p>Du möchtest dir für dein Thema mehr Raum nehmen?<br />Dann kannst du auch <strong>5 Sitzungen im Paket</strong> buchen.</p>
+                <p className={styles.offerPackagePrice}><strong>5 Sitzungen · 997 €</strong><span>statt 1.200 € bei Einzelbuchung</span></p>
+                <a className={styles.offerPackageLink} href="/klarheitssitzung/#5-sitzungen" data-umami-event="cta_click" data-umami-event-cta="fuenf_sitzungen_mehr_dazu" data-umami-event-location="home_angebote" data-umami-event-destination="/klarheitssitzung/#5-sitzungen">MEHR DAZU <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
           </article>
           <article className={`${styles.offer} ${styles.offerTwo}`}>
             <p className={styles.offerIndex}>02 · SECHS MONATE</p>
@@ -134,12 +141,12 @@ export default function HomeContent() {
           <h2>Erlebe, was möglich wird, wenn du nicht länger von der Herausforderung aus nach einer Lösung suchst</h2>
           <div className={styles.perspectiveCopy}>
             <p>Wenn du mit einem Thema oder Vorhaben zu mir kommst, hast du wahrscheinlich schon eine ganze Weile darüber nachgedacht. Du hast versucht, eine Lösung zu finden – ausgehend von dem, was gerade schwierig ist oder nicht funktioniert.</p>
-            <p>Ich zeige dir, wie du eine vollkommen andere Perspektive einnimmst. Eine, aus der das, was du wirklich willst, bereits da ist.</p>
+            <p>Ich zeige dir, wie du eine vollkommen andere Perspektive einnimmst. Eine, aus der das, was du wirklich willst, bereits da ist. Genau dafür nutze ich meinen Klarheitsprozess: vier Schritte vom gewünschten Ergebnis zurück in deine heutige Situation – bis klarer wird, was für dich stimmt und was dein nächster konkreter Schritt ist.</p>
           </div>
           <p className={styles.perspectiveStatement}>Du hast es.<br /><em>Es ist erledigt.</em></p>
           <div className={styles.perspectiveEnd}>
             <p>Und du wirst sehen: Von dort entstehen auf einmal andere Gedanken, neue Ideen und Möglichkeiten, die du vorher nicht sehen konntest. Du erkennst, was für dich stimmt und was du als Nächstes konkret tun kannst.</p>
-            <p className={styles.closing}>Du hast einen neuen Ausgangspunkt, von dem aus du dich bewegen und endlich handeln kannst.</p>
+            <p className={styles.closing}>Du hast einen neuen Ausgangspunkt, von dem aus du entscheiden und konkret weitergehen kannst.</p>
           </div>
         </section>
 
@@ -153,18 +160,18 @@ export default function HomeContent() {
           <div className={styles.philosophyStory}>
             <div className={styles.storyBlock}>
               <span aria-hidden="true">A</span>
-              <p>Meine Arbeit lebt davon, dass du lernst, eine neue Perspektive einzunehmen. Und zwar die, von der aus dein Wunsch bereits gelebtes Endergebnis ist. In meiner Arbeit wirst du dich immer wieder mit deinen Wünschen verbinden und sie innerlich so real erleben, als wären sie bereits Wirklichkeit. Was dadurch passiert, ist, dass du beginnst, es tatsächlich für möglich zu halten.</p>
+              <div>
+                <p>Meine Arbeit lebt davon, dass du lernst, eine neue Perspektive einzunehmen. Du verbindest dich mit dem, was du am Ende wirklich willst – mit deinem gewünschten Ergebnis – und erlebst es innerlich so, als wäre es bereits Wirklichkeit.<br />Aus dieser Perspektive können andere Gedanken entstehen, neue Ideen und neue Möglichkeiten. Dinge, die du vorher vielleicht noch gar nicht sehen konntest.</p>
+              </div>
             </div>
             <div className={styles.storyBlock}>
               <span aria-hidden="true">B</span>
-              <p>Doch wir machen noch mehr. In Bezug auf deine Wünsche werden wir auch ganz genau hinschauen, was dich im Hier und Jetzt davon abhält, in Richtung deiner Wünsche zu gehen. Wir tun das auf eine ganz bestimmte Art und Weise, sodass du gut erkennen kannst, was dich oft unbewusst steuert.</p>
+              <p>Gleichzeitig schauen wir genau darauf, was dich im Hier und Jetzt davon abhält, in diese Richtung zu gehen. So wird sichtbarer, was dich zurückhält, wo du dich vielleicht selbst begrenzt – und was du stattdessen wählen möchtest.</p>
             </div>
             <div className={styles.storyBlock}>
               <span aria-hidden="true">C</span>
               <div>
-                <p>Und genau dadurch bekommst du eine echte Wahl. Denn jetzt liegt beides auf dem Tisch: das Leben, das du innerlich bereits erlebt hast, und dein Jetzt.</p>
-                <p>Hier kannst du jetzt wirklich entscheiden, was du leben willst.</p>
-                <p>Und meiner Erfahrung nach geht es immer in Richtung Wunsch.</p>
+                <p>Und genau dadurch bekommst du eine echte Wahl. Denn jetzt liegt beides auf dem Tisch: das, was du wirklich willst, und das, was heute da ist.<br />Von hier aus kannst du bewusster entscheiden, was für dich stimmt – und welchen Schritt du tatsächlich gehen möchtest.</p>
               </div>
             </div>
           </div>
@@ -172,7 +179,7 @@ export default function HomeContent() {
             <p>DEM EIGENEN FOLGEN heißt im Grunde:</p>
             <p className={styles.resultWords}><span>Perspektivwechsel</span><span>echte Wahl</span><span>Handeln</span></p>
             <p className={styles.resultExplanation}>Du schaust nicht länger nur vom Problem auf dein Leben, sondern von dem aus, was du wirklich leben willst.</p>
-            <p className={styles.closing}>Wie das genau geht, zeige ich dir in unserer Zusammenarbeit.</p>
+            <p className={styles.closing}>Genau dabei begleite ich dich.</p>
           </div>
         </section>
 
@@ -183,7 +190,7 @@ export default function HomeContent() {
           <div className={styles.approachIntro}>
             <div className={styles.sectionMarker}><span>06</span><p>WENN WIR MITEINANDER ARBEITEN</p></div>
             <h2>Klar geführt. Persönlich. Und immer zurück zu dir.</h2>
-            <p>Ich führe dich mit klaren Fragen durch den Prozess und immer wieder zurück zu dem, was du wirklich willst. Damit du selbst erkennst, was für dich stimmt und was du als Nächstes tun kannst.</p>
+            <p>Ich begleite dich mit klaren Fragen durch den Prozess, greife auf, was du sagst, frage dort genauer nach, wo etwas noch offen ist, und bringe dich immer wieder zurück zu dem, was du wirklich willst. So wird klarer, was für dich stimmt und was du als Nächstes tun kannst.</p>
           </div>
           <div className={styles.testimonials}>
             <p className={styles.testimonialLabel}>So haben Menschen meine Begleitung erlebt</p>
@@ -202,7 +209,7 @@ export default function HomeContent() {
           <div className={styles.sectionMarker}><span>07</span><p>DEIN NÄCHSTER SCHRITT</p></div>
           <h2>Womit möchtest du jetzt <em>weitergehen?</em></h2>
           <div className={styles.finalCopy}>
-            <p>Vielleicht gibt es einen konkreten Punkt, bei dem du Klarheit brauchst. Oder du möchtest etwas über längere Zeit verändern, aufbauen oder verwirklichen.</p>
+            <p>Vielleicht gibt es einen konkreten Punkt, bei dem du Klarheit brauchst. Vielleicht möchtest du dir für dieses Thema mehr Raum nehmen. Oder du möchtest etwas über längere Zeit verändern, aufbauen oder verwirklichen.</p>
             <p>Wähle das Angebot, das zu deiner jetzigen Situation passt. Und wenn du dir noch unsicher bist, <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="home_abschluss">schreib mir</a>. Dann finden wir es gemeinsam heraus.</p>
           </div>
           <div className={styles.finalActions}>

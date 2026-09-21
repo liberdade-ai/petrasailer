@@ -86,6 +86,24 @@
 .offerBottom :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .offerBottom :global(a:hover) { border-color: var(--navy); background: var(--navy); color: var(--offwhite); }
 
+.sessionPackage { padding: 124px max(32px, calc((100vw - 1280px) / 2)) 132px; background: var(--gold); color: var(--green); }
+.sessionPackageIntro { display: grid; grid-template-columns: .55fr 1.45fr; gap: 7vw; align-items: end; margin-top: 68px; }
+.sessionPackageIntro h2 { font-size: clamp(54px, 6vw, 78px); line-height: .88; }
+.sessionPackageIntro p { max-width: 510px; margin: 0; color: var(--green); font: italic 500 clamp(27px, 2.8vw, 40px)/1.08 "Cormorant Garamond" !important; }
+.sessionPackageContent { display: grid; grid-template-columns: 1.1fr .9fr; gap: 10vw; align-items: start; max-width: 1120px; margin: 76px 0 0 auto; }
+.sessionPackageCopy { max-width: 590px; }
+.sessionPackageCopy p + p { margin-top: 22px; }
+.sessionPackageInfo { padding: 38px 40px 42px; background: var(--offwhite); box-shadow: 14px 14px 0 var(--coral); }
+.sessionPackagePrice strong { display: block; color: var(--coral); font-size: clamp(31px, 3.1vw, 42px); font-weight: 500; letter-spacing: -.05em; line-height: .98; }
+.sessionPackagePrice span { display: block; margin-top: 12px; font-size: 16px; line-height: 1.45; }
+.sessionPackageInstallments { margin-top: 28px; padding-top: 25px; border-top: 1px solid rgb(var(--green-rgb) / .28); }
+.sessionPackageInstallments p { font-size: 17px; line-height: 1.5; }
+.sessionPackageInstallments p + p { margin-top: 8px; }
+.sessionPackageValidity { margin-top: 28px !important; padding-top: 25px; border-top: 1px solid rgb(var(--green-rgb) / .28); font-size: 17px !important; line-height: 1.5 !important; }
+.sessionPackageInfo :global(a) { width: 100%; min-width: 0; margin-top: 34px; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.sessionPackageInfo :global(a:hover) { border-color: var(--navy); background: var(--navy); color: var(--offwhite); }
+.sessionPackageNote { max-width: 760px; margin: 72px auto 0; padding-top: 22px; border-top: 1px solid rgb(var(--green-rgb) / .35); font: italic 500 clamp(22px, 2.2vw, 30px)/1.14 "Cormorant Garamond" !important; }
+
 .practice { position: relative; display: grid; grid-template-columns: .8fr 1.2fr; grid-template-areas: "photo story" "closing closing"; width: min(100% - 64px, 1280px); margin: 0 auto 130px; background: var(--offwhite); }
 .practicePortrait { grid-area: photo; min-height: 900px; }
 .practicePortrait img { object-position: 50% 30%; filter: saturate(.86); }
@@ -192,6 +210,17 @@
   .offerFacts strong { margin-top: 15px; font-size: 25px; }
   .offerBottom { display: block; margin-top: 50px; }
   .offerBottom :global(a) { margin-top: 42px; }
+  .sessionPackage { padding: 90px 18px 100px; }
+  .sessionPackageIntro { display: block; margin-top: 55px; }
+  .sessionPackageIntro h2 { font-size: 58px; }
+  .sessionPackageIntro p { margin-top: 28px; font-size: 30px !important; }
+  .sessionPackageContent { display: block; margin-top: 48px; }
+  .sessionPackageCopy p + p { margin-top: 20px; }
+  .sessionPackageInfo { margin-top: 45px; padding: 28px 22px 32px; box-shadow: 10px 10px 0 var(--coral); }
+  .sessionPackagePrice strong { font-size: 34px; }
+  .sessionPackagePrice span, .sessionPackageInstallments p, .sessionPackageValidity { font-size: 16px !important; }
+  .sessionPackageInfo :global(a) { margin-top: 30px; }
+  .sessionPackageNote { margin-top: 56px; font-size: 25px !important; }
   .practice { display: flex; flex-direction: column; width: calc(100% - 36px); margin-bottom: 90px; }
   .practicePortrait { min-height: 0; aspect-ratio: .88; }
   .practiceStory { padding: 78px 18px 80px; }

@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 import siteStyles from "../page.module.css";
 
 const BOOKING_URL = "https://www.digistore24.com/product/580151";
+const FIVE_SESSIONS_BOOKING_URL = "https://www.digistore24.com/product/735633";
 const NAVIGATION = [
   { label: "ÜBER MICH", href: "/ueber-mich/" },
   { label: "KLARHEITSSITZUNG", href: "#top", current: true },
@@ -180,12 +181,34 @@ export default function ClarityPage() {
           </div>
         </section>
 
+        <section className={styles.sessionPackage} id="5-sitzungen">
+          <Marker number="05">MEHR RAUM</Marker>
+          <div className={styles.sessionPackageIntro}>
+            <h2>5 Sitzungen</h2>
+            <p><em>Wenn du bei einem Thema nicht nur einmal hinschauen möchtest.</em></p>
+          </div>
+          <div className={styles.sessionPackageContent}>
+            <div className={styles.sessionPackageCopy}>
+              <p>Vielleicht gibt es nicht nur diesen einen Punkt. Vielleicht möchtest du dich über einen gewissen Zeitraum begleiten lassen, immer wieder auf das schauen, was gerade ansteht, Entscheidungen klären und deine nächsten Schritte konkret machen.</p>
+              <p>Dann kannst du fünf Sitzungen im Paket buchen.</p>
+              <p>In jeder Sitzung arbeiten wir mit dem Thema, das gerade wichtig ist. Du musst vorher keinen festen Ablauf oder Plan festlegen. Was wir anschauen, ergibt sich aus dem, was du mitbringst und wo du gerade weiterkommen möchtest.</p>
+            </div>
+            <div className={styles.sessionPackageInfo}>
+              <div className={styles.sessionPackagePrice}><strong>5 Sitzungen · 997 €</strong><span>statt 1.200 € bei Einzelbuchung</span></div>
+              <div className={styles.sessionPackageInstallments}><p>Oder in <strong>3 Raten à 333 €</strong></p><p><strong>Gesamtpreis bei Ratenzahlung: 999 €</strong></p></div>
+              <p className={styles.sessionPackageValidity}>Die fünf Sitzungen kannst du innerhalb von <strong>drei Monaten ab Kauf</strong> einlösen.</p>
+              <ActionLink href={FIVE_SESSIONS_BOOKING_URL} tracking={{ event: "booking_click", offer: "fuenf_sitzungen", location: "klarheitssitzung_fuenf_sitzungen" }}>5 SITZUNGEN BUCHEN</ActionLink>
+            </div>
+          </div>
+          <p className={styles.sessionPackageNote}>Die fünf Sitzungen kannst du für ein größeres Thema, mehrere zusammenhängende Fragen oder unterschiedliche Punkte nutzen, bei denen du immer wieder klarer sehen und weiterkommen möchtest.</p>
+        </section>
+
         <section className={styles.practice}>
           <figure className={styles.practicePortrait}>
             <img src="/petra-sailer-hero.jpg" alt="Petra Sailer lächelt freundlich in die Kamera" width="1024" height="1024" loading="lazy" />
           </figure>
           <div className={styles.practiceStory}>
-            <Marker number="05">AUS DER PRAXIS</Marker>
+            <Marker number="06">AUS DER PRAXIS</Marker>
             <h2>Als die Verbindung wieder da war, kamen auch <em>die Worte.</em></h2>
             <div>
               <p>Simona kam zu mir, weil sie beim Schreiben ihrer Website-Texte feststeckte. Sie wusste, was sie anbietet – aber die Worte wollten einfach nicht kommen.</p>
@@ -198,7 +221,7 @@ export default function ClarityPage() {
 
         <section className={styles.results}>
           <div className={styles.resultsCopy}>
-            <Marker number="06">WAS DU MITNIMMST</Marker>
+            <Marker number="07">WAS DU MITNIMMST</Marker>
             <h2>Du gehst mit Klarheit über dein Thema – und mit deinem nächsten konkreten Schritt.</h2>
             <div>
               <p>Du nimmst eine neue Perspektive auf dein Thema ein. Dadurch kann klarer werden, was dich bisher zurückgehalten hat, was du wirklich willst und was für dich stimmt. Vielleicht wird auch eine Möglichkeit sichtbar, die du vorher noch gar nicht im Blick hattest.</p>
@@ -212,7 +235,7 @@ export default function ClarityPage() {
         </section>
 
         <section className={styles.faq} id="faq">
-          <div className={styles.faqHeading}><Marker number="07">NOCH FRAGEN?</Marker><h2>Häufige <em>Fragen</em></h2></div>
+          <div className={styles.faqHeading}><Marker number="08">NOCH FRAGEN?</Marker><h2>Häufige <em>Fragen</em></h2></div>
           <div className={styles.faqList}>
             <details><summary>Was ist, wenn ich schon eine Ahnung habe, aber trotzdem nicht weiterkomme?<span aria-hidden="true">+</span></summary><p>Genau dann kann die Klarheitssitzung passend sein. Vielleicht hast du längst eine Ahnung, was du willst, und kommst trotzdem nicht weiter. Vielleicht hält dich etwas zurück – oder du siehst gerade noch nicht klar, welche Möglichkeiten du eigentlich hast.</p><p>In der Sitzung kann klarer werden, was für dich stimmt und was dein nächster konkreter Schritt sein kann.</p></details>
             <details><summary>Ist die Klarheitssitzung nur für berufliche Themen?<span aria-hidden="true">+</span></summary><p>Du kannst mit einem beruflichen, persönlichen oder zwischenmenschlichen Thema kommen. Entscheidend ist nicht der Lebensbereich, sondern dass es um einen konkreten Punkt geht, bei dem du klarer sehen möchtest, was für dich stimmt, welche Möglichkeiten du hast oder wie du weitergehen willst.</p></details>
@@ -223,7 +246,7 @@ export default function ClarityPage() {
         </section>
 
         <section className={styles.finalCta}>
-          <div className={styles.finalMarker}><Marker number="08">DEIN NÄCHSTER SCHRITT</Marker></div>
+          <div className={styles.finalMarker}><Marker number="09">DEIN NÄCHSTER SCHRITT</Marker></div>
           <h2>Welches Thema soll nicht noch länger <em>im Hintergrund mitlaufen?</em></h2>
           <div className={styles.finalCopy}>
             <div className={styles.finalCopyText}>
