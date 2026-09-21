@@ -51,8 +51,9 @@
 }
 
 .offer-name {
-  display: inline;
+  display: inline-block;
   white-space: nowrap;
+  text-transform: none;
 }
 
 .offer-name__wirklich {
@@ -62,16 +63,34 @@
 }
 
 .offer-name__deins {
+  display: inline !important;
   font-family: var(--display);
   font-style: italic;
   font-weight: 500;
+  font-size: 1.13em;
+  line-height: .8;
+  /* Cormorant's glyphs sit optically lower than DM Sans at the same baseline. */
+  vertical-align: .045em;
 }
+
+.offer-name--large .offer-name__deins { font-size: 1.23em; }
 
 .offer-name--light .offer-name__wirklich,
 .offer-name--light .offer-name__deins { color: var(--green) !important; }
 .offer-name--dark .offer-name__wirklich { color: var(--offwhite) !important; }
 .offer-name--dark .offer-name__deins { color: var(--gold) !important; }
+.offer-name--terracotta .offer-name__wirklich,
+.offer-name--terracotta .offer-name__deins,
+.offer-name--offwhite .offer-name__wirklich,
+.offer-name--offwhite .offer-name__deins { color: var(--offwhite) !important; }
 .offer-name--uppercase { text-transform: uppercase; }
+footer .offer-name--uppercase .offer-name__deins { color: var(--offwhite) !important; }
+header nav .offer-name,
+footer nav .offer-name,
+header nav .offer-name__wirklich,
+footer nav .offer-name__wirklich { font-size: inherit !important; line-height: inherit !important; letter-spacing: inherit !important; }
+header nav .offer-name__deins,
+footer nav .offer-name__deins { font-family: var(--sans) !important; font-size: 1em !important; font-style: normal !important; font-weight: inherit !important; line-height: inherit !important; vertical-align: 0 !important; }
 
 /* NEW DIRECTION — OFFENES GEGENÜBER */
 .prototype-page {

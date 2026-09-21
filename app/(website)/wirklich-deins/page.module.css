@@ -1,6 +1,5 @@
 .followPage { background: var(--offwhite); }
 .followPage p { font-size: 18px; line-height: 1.6; }
-.roundMarker span { flex: 0 0 42px; width: 42px; height: 42px; aspect-ratio: 1; }
 
 .hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "meta meta" "title title" "question intro"; gap: 52px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 90px; overflow: hidden; background: var(--coral); color: var(--offwhite); }
 .heroMeta { grid-area: meta; }
@@ -43,7 +42,7 @@
 .introCtaSpacer { width: 100%; height: 48px; background: var(--offwhite); }
 .introCta { --hero-grid-inset: max(32px, calc((100vw - 1376px) / 2)); --vision-grid-inset: max(45px, calc((100vw - 1280px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8vw; min-height: 200px; padding: 60px var(--hero-grid-inset); background: var(--terracotta); }
 .introCta p { max-width: 650px; margin: 0 0 0 calc(var(--vision-grid-inset) - var(--hero-grid-inset)); color: var(--offwhite); font-size: clamp(23px, 2.1vw, 30px); line-height: 1.25; }
-.introCta p span { display: block; }
+.introCta p > span { display: block; }
 .heroIntro :global(a), .introCta :global(a) { width: min(100%, 431px); }
 .introCta :global(a) { justify-self: start; }
 
@@ -72,7 +71,7 @@
 .journey { padding: 0 0 130px; background: var(--offwhite); }
 .journeyIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; align-items: end; padding: 125px max(32px, calc((100vw - 1280px) / 2)); background: var(--mint); }
 .journeyIntro h2 { font-size: clamp(58px, 6.2vw, 90px); line-height: .86; }
-.journeyIntro h2 em { display: block; color: var(--coral); }
+.journeyIntro h2 > em { display: block; color: var(--coral); }
 .journeyList { position: relative; width: min(100% - 64px, 980px); margin: 120px max(32px, calc((100vw - 1280px) / 2)) 0 auto; padding: 0; list-style: none; }
 .journeyList::before { content: ""; position: absolute; top: 34px; bottom: 50px; left: 34px; width: 1px; background: rgb(var(--green-rgb) / .25); }
 .journeyList li { position: relative; display: grid; grid-template-columns: 70px 1fr; gap: 55px; padding-bottom: 105px; }
@@ -109,7 +108,7 @@
 .fit { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); color: var(--green); }
 .fitIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; align-items: end; }
 .fitIntro h2 { font-size: clamp(59px, 6.3vw, 91px); line-height: .84; }
-.fitIntro h2 em { display: block; color: var(--coral); }
+.fitIntro h2 > em { display: block; color: var(--coral); }
 .fitStatements { width: min(100%, 990px); margin: 100px 0 0 auto; border-top: 1px solid rgb(var(--green-rgb) / .25); }
 .fitStatements p { padding: 32px 0; border-bottom: 1px solid rgb(var(--green-rgb) / .25); font: italic 500 clamp(27px, 2.8vw, 40px)/1.1 "Cormorant Garamond"; }
 .fitStatements strong { color: var(--coral); font-weight: 500; }
@@ -119,6 +118,7 @@
 .offerTop { display: grid; grid-template-columns: .55fr 1fr .55fr; gap: 6vw; align-items: end; }
 .offerTop h2 { font-size: clamp(63px, 7vw, 102px); line-height: .82; }
 .offerTop h2 em { color: var(--coral); }
+.offerTop h2 :global(.offer-name__deins) { vertical-align: 0; }
 .offerTop > div > p { margin-top: 25px; }
 .price { color: var(--coral); font: 500 clamp(50px, 5.5vw, 78px)/.88 "DM Sans" !important; letter-spacing: -.06em; text-align: right; }
 .price span { display: block; margin-top: 13px; color: var(--ink); font: 500 11px/1.4 "DM Sans"; letter-spacing: .04em; }
@@ -157,7 +157,7 @@
 
 @media (min-width: 1200px) {
   .introCta p { width: calc(100% + 80px); max-width: none; }
-  .introCta p span { white-space: nowrap; }
+  .introCta p > span { white-space: nowrap; }
 }
 
 @media (max-width: 1050px) {
@@ -173,7 +173,6 @@
 
 @media (max-width: 700px) {
   .followPage p { font-size: 16px; line-height: 1.6; }
-  .roundMarker span { flex-basis: 36px; width: 36px; height: 36px; }
   .hero { display: flex; flex-direction: column; padding: 45px 18px 0; }
   .heroMeta { line-height: 1.5 !important; }
   .hero h1 { margin-top: 38px; font-size: 59px; line-height: .76; }

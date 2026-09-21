@@ -9,9 +9,9 @@ const NAVIGATION = [
   { label: "KONTAKT", href: "/kontakt/" },
 ] as const;
 
-function NavLinks({ tone = "light", uppercase = true }: { tone?: "light" | "dark"; uppercase?: boolean }) {
+function NavLinks() {
   return NAVIGATION.map((item) => (
-    <a key={item.label} href={item.href}>{item.href === "/wirklich-deins/" ? <OfferName tone={tone} uppercase={uppercase} /> : item.label}</a>
+    <a key={item.label} href={item.href}>{item.label}</a>
   ));
 }
 
@@ -108,7 +108,7 @@ export default function HomeContent() {
             <div className={styles.sectionMarker}><span>03</span><p>ZWEI WEGE DER ZUSAMMENARBEIT</p></div>
             <h2>Was brauchst du <em>jetzt?</em></h2>
             <div>
-              <p>Manchmal geht es um einen konkreten Punkt, an dem du nicht weiterkommst. Manchmal möchtest du etwas über längere Zeit verändern, aufbauen oder verwirklichen.</p>
+              <p>Manchmal geht es um einen konkreten Punkt, an dem du gerade nicht weiterkommst. Manchmal möchtest du etwas über längere Zeit verändern, aufbauen oder verwirklichen.</p>
               <p>Für beides gibt es eine eigene Form der Zusammenarbeit.</p>
             </div>
           </div>
@@ -121,10 +121,10 @@ export default function HomeContent() {
           </article>
           <article className={`${styles.offer} ${styles.offerTwo}`}>
             <p className={styles.offerIndex}>02 · SECHS MONATE</p>
-            <h3><OfferName tone="dark" /></h3>
+            <h3><OfferName tone="dark" size="large" /></h3>
             <p className={styles.offerClaim}>Wenn du etwas in deinem Leben verwirklichen willst.</p>
             <p className={styles.offerText}>Vielleicht möchtest du etwas verändern, neu aufbauen oder einen Wunsch verwirklichen, der dir wirklich wichtig ist. Über sechs Monate verbindest du dich immer wieder mit dem, was du willst. Du lernst, von dort aus deine Entscheidungen zu treffen und konkrete Schritte zu gehen, die stimmig für dich sind.</p>
-            <TextLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_angebote" }}><OfferName tone="dark" uppercase /> KENNENLERNEN</TextLink>
+            <TextLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_angebote" }}><OfferName tone="light" uppercase withPeriod={false} /> KENNENLERNEN</TextLink>
           </article>
           <p className={styles.offersClosing}>Du weißt noch nicht, welches Angebot gerade zu dir passt? <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="home_angebote">Dann schreib mir</a> und lass es uns gemeinsam herausfinden.</p>
         </section>
@@ -207,15 +207,15 @@ export default function HomeContent() {
           </div>
           <div className={styles.finalActions}>
             <TextLink href="/klarheitssitzung/" light tracking={{ cta: "klarheitssitzung_kennenlernen", location: "home_abschluss" }}>ZUR KLARHEITSSITZUNG</TextLink>
-            <TextLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_abschluss" }}><OfferName tone="light" /> · Kennenlernen</TextLink>
+            <TextLink href="/wirklich-deins/" light tracking={{ cta: "wirklich_deins_kennenlernen", location: "home_abschluss" }}><OfferName tone="light" uppercase withPeriod={false} /> KENNENLERNEN</TextLink>
           </div>
           <a className={styles.email} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="home_abschluss">kontakt@petrasailer.com</a>
         </section>
       </main>
 
       <footer className={styles.footer}>
-        <a className={styles.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a>
-        <nav aria-label="Footer-Navigation"><NavLinks tone="dark" uppercase={false} /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
+        <Link className={styles.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link>
+        <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={styles.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={styles.footerBottom}>
           <p>© Petra Sailer 2026</p>

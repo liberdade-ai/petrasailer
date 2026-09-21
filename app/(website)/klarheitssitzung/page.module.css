@@ -14,15 +14,17 @@
   color: var(--offwhite);
 }
 .heroMeta { grid-area: meta; align-self: start; color: var(--sun); }
-.heroMeta span { flex: 0 0 42px; width: 42px; min-width: 42px; height: 42px; aspect-ratio: 1; }
 .heroMeta p { font-size: 11px !important; }
 .hero h1 { grid-area: title; position: relative; z-index: 2; max-width: 1120px; color: var(--offwhite); font-size: clamp(76px, 9vw, 132px); line-height: .78; }
 .hero h1 em { color: var(--sun); white-space: nowrap; }
 .heroQuestion { grid-area: question; position: relative; z-index: 2; align-self: end; max-width: 680px; padding-left: 10vw; color: var(--mint); font: italic 500 clamp(29px, 3.3vw, 48px)/1.04 "Cormorant Garamond" !important; }
 .heroIntro { grid-area: intro; position: relative; z-index: 2; align-self: end; justify-self: end; width: 100%; max-width: 480px; }
 .heroIntro > p { margin-bottom: 50px; color: var(--offwhite); font-size: 21px; line-height: 1.6; transform: translateY(-60px); }
+.heroActions { display: grid; gap: 14px; }
 .heroIntro :global(a), .finalCopy :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .heroIntro :global(a:hover), .finalCopy :global(a:hover) { border-color: var(--offwhite); background: var(--offwhite); color: var(--navy); }
+.heroIntro :global(a).secondaryAction { border-color: rgb(from var(--offwhite) r g b / .55); background: transparent; color: var(--offwhite); }
+.heroIntro :global(a).secondaryAction:hover { border-color: var(--offwhite); background: rgb(from var(--offwhite) r g b / .12); color: var(--offwhite); }
 .finalCopy :global(a:hover) { gap: 32px; transform: none; scale: none; }
 .heroOrbit { position: absolute; right: -6vw; bottom: -22vw; width: 54vw; height: 54vw; border: 1px solid rgb(from var(--offwhite) r g b / .18); border-radius: 50%; }
 .heroOrbit::before { content: ""; position: absolute; inset: 12%; border: 1px solid rgb(from var(--offwhite) r g b / .12); border-radius: 50%; }
@@ -157,7 +159,6 @@
   .clarityPage p { font-size: 16px; line-height: 1.6; }
   .hero { display: block; min-height: calc(100svh - 72px); padding: 46px 18px 58px; }
   .heroMeta { max-width: 250px; line-height: 1.5 !important; }
-  .heroMeta span { flex-basis: 36px; width: 36px; min-width: 36px; height: 36px; }
   .hero h1 { margin-top: 46px; font-size: 63px; line-height: .76; }
   .hero h1 em { display: block; white-space: normal; color: var(--sun); }
   .heroQuestion { max-width: 330px; margin: 53px 0 0 35px !important; padding: 0; font-size: 30px !important; }

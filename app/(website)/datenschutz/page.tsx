@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import OfferName from "../OfferName";
 import shell from "../base.module.css";
 import siteStyles from "../page.module.css";
 import { pageMetadata } from "../../seo";
@@ -21,8 +20,8 @@ export const metadata: Metadata = pageMetadata({
   noIndex: true,
 });
 
-function NavLinks({ tone = "light", uppercase = true }: { tone?: "light" | "dark"; uppercase?: boolean }) {
-  return NAVIGATION.map((item) => <a key={item.label} href={item.href}>{item.href === "/wirklich-deins/" ? <OfferName tone={tone} uppercase={uppercase} /> : item.label}</a>);
+function NavLinks() {
+  return NAVIGATION.map((item) => <a key={item.label} href={item.href}>{item.label}</a>);
 }
 
 export default function PrivacyPage() {
@@ -171,8 +170,8 @@ export default function PrivacyPage() {
       </main>
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <a className={shell.footerBrand} href="#inhalt"><img src="/petra-sailer-footer-logo.svg" alt="" /></a>
-        <nav aria-label="Footer-Navigation"><NavLinks tone="dark" uppercase={false} /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
+        <Link className={shell.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link>
+        <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a>
         <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="/impressum/">Impressum</a><a href="/datenschutz/" aria-current="page">Datenschutz</a></div></div>
       </footer>

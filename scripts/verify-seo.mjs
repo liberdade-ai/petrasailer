@@ -9,7 +9,7 @@ const publicRoutes = [
   "/wirklich-deins/",
   "/arbeite-mit-mir/",
   "/kontakt/",
-  "/kennenlerngespraech/",
+  "/kennenlerngespraech/wirklich_deins/",
 ];
 const noIndexRoutes = ["/danke-klarheitssitzung/", "/danke-kennenlerngespraech/"];
 const socialImages = {

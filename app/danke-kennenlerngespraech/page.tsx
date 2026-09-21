@@ -39,7 +39,7 @@ export default function DankeKennenlerngespraech() {
         <section className={styles.hero}>
           <div className={styles.heroInner}>
             <p className={styles.sender}>
-              <OfferName tone="dark" uppercase /> · KENNENLERNGESPRÄCH
+              <OfferName tone="dark" /> · KENNENLERNGESPRÄCH
             </p>
             <h1>Dein Termin steht.</h1>
             <h2>Ich freue mich, dich kennenzulernen.</h2>
@@ -59,7 +59,7 @@ export default function DankeKennenlerngespraech() {
               <p>
                 Was du verwirklichen möchtest, ist unser Ausgangspunkt. Und
                 auch das, was dich gerade dazu beschäftigt, hat im Gespräch
-                Platz. Gemeinsam schauen wir, ob <OfferName tone="light" /> zu dir passt
+                Platz. Gemeinsam schauen wir, ob <OfferName tone="light" quoted /> zu dir passt
                 und ob wir miteinander arbeiten möchten.
               </p>
               <p className={styles.closing}>
@@ -78,7 +78,7 @@ export default function DankeKennenlerngespraech() {
         <nav aria-label="Footer-Navigation">
           <a href="/ueber-mich/">ÜBER MICH</a>
           <a href="/klarheitssitzung/">KLARHEITSSITZUNG</a>
-          <a href="/wirklich-deins/"><OfferName tone="dark" /></a>
+          <a href="/wirklich-deins/">WIRKLICH DEINS.</a>
           <a href="/kontakt/">KONTAKT</a>
           <a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a>
         </nav>

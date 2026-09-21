@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import OfferName from "../OfferName";
 import JsonLd from "../../JsonLd";
 import { CLARITY_SOCIAL_IMAGE, pageMetadata, serviceGraph } from "../../seo";
 import shell from "../base.module.css";
@@ -35,7 +34,7 @@ export const metadata: Metadata = pageMetadata({
 function NavLinks() {
   return NAVIGATION.map((item) => (
     <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>
-      {item.label === "WIRKLICH DEINS." ? <OfferName tone="light" uppercase /> : item.label}
+      {item.label}
     </a>
   ));
 }
@@ -47,10 +46,10 @@ type LinkTracking = {
   offer?: string;
 };
 
-function ActionLink({ href, children, light = false, tracking }: { href: string; children: React.ReactNode; light?: boolean; tracking?: LinkTracking }) {
+function ActionLink({ href, children, light = false, secondary = false, tracking }: { href: string; children: React.ReactNode; light?: boolean; secondary?: boolean; tracking?: LinkTracking }) {
   return (
     <a
-      className={`${shell.textLink} ${light ? shell.textLinkLight : ""}`}
+      className={`${shell.textLink} ${light ? shell.textLinkLight : ""} ${secondary ? styles.secondaryAction : ""}`}
       href={href}
       data-umami-event={tracking?.event}
       data-umami-event-cta={tracking?.cta}
@@ -104,7 +103,10 @@ export default function ClarityPage() {
           <p className={styles.heroQuestion}>Und willst du klarer sehen, was für dich stimmt und wie du weitergehen kannst? Oder was vielleicht noch möglich ist?</p>
           <div className={styles.heroIntro}>
             <p>Du bringst einen konkreten Punkt mit, bei dem du gerade feststeckst. Gemeinsam schauen wir aus einer neuen Perspektive darauf. So kann klarer werden, was für dich wirklich stimmt, welche Möglichkeiten du hast und was du als Nächstes konkret tun kannst.</p>
-            <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>KLARHEITSSITZUNG BUCHEN</ActionLink>
+            <div className={styles.heroActions}>
+              <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>KLARHEITSSITZUNG BUCHEN</ActionLink>
+              <ActionLink href="/kennenlerngespraech/klarheitssitzung/" light secondary tracking={{ event: "cta_click", cta: "kennenlerngespraech", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>15-MINUTIGES KENNENLERNGESPRÄCH</ActionLink>
+            </div>
           </div>
           <div className={styles.heroOrbit} aria-hidden="true"><span>?</span></div>
         </section>
@@ -236,8 +238,8 @@ export default function ClarityPage() {
       </main>
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <a className={shell.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a>
-        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="#top">KLARHEITSSITZUNG</a><a href="/wirklich-deins/"><OfferName tone="dark" /></a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
+        <Link className={shell.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link>
+        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="#top">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
       </footer>

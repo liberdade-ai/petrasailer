@@ -1,0 +1,68 @@
+.heroHeadline {
+  max-width: 900px;
+  color: var(--green) !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(46px, 5.4vw, 74px) !important;
+  font-weight: 400 !important;
+  letter-spacing: -.055em;
+  line-height: .94;
+}
+
+.heroHeadline > span { display: block; }
+
+.offerName :global(.offer-name) {
+  color: var(--terracotta);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.offerName :global(.offer-name__wirklich) {
+  color: var(--terracotta) !important;
+  font-family: var(--sans);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: inherit;
+}
+
+.offerName :global(.offer-name__deins) {
+  color: var(--terracotta) !important;
+  font-family: var(--display);
+  font-size: 1.23em;
+  font-style: italic;
+  font-weight: 500;
+  vertical-align: .045em;
+}
+
+.contactClosing {
+  margin: 0;
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.35vw, 19px) !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+  line-height: 1.55 !important;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.contactLinks a {
+  color: var(--blue);
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.contactLinks a:hover { color: var(--coral); }
+
+@media (max-width: 700px) {
+  .heroHeadline { font-size: clamp(38px, 10.5vw, 44px) !important; line-height: .96; }
+  .contactClosing, .contactLinks a { font-size: 16px !important; }
+}

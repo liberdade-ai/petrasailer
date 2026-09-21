@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { permanentRedirect } from "next/navigation";
-import OfferName from "../OfferName";
-import JsonLd from "../../JsonLd";
-import { pageGraph, pageMetadata } from "../../seo";
-import shell from "../base.module.css";
-import siteStyles from "../page.module.css";
-import styles from "./page.module.css";
-import TidyCalCalendar from "./TidyCalCalendar";
+import OfferName from "../../OfferName";
+import JsonLd from "../../../JsonLd";
+import { pageGraph, pageMetadata } from "../../../seo";
+import shell from "../../base.module.css";
+import siteStyles from "../../page.module.css";
+import styles from "../page.module.css";
+import reallyYoursStyles from "./page.module.css";
+import TidyCalCalendar from "../TidyCalCalendar";
 
 const PAGE_DESCRIPTION =
   "Kennenlerngespräch zu Wirklich Deins. – kostenfrei und unverbindlich.";
@@ -15,23 +15,21 @@ const PAGE_DESCRIPTION =
 export const metadata: Metadata = pageMetadata({
   title: "Kennenlerngespräch",
   description: PAGE_DESCRIPTION,
-  path: "/kennenlerngespraech/",
+  path: "/kennenlerngespraech/wirklich_deins/",
 });
 
-export default function IntroCallPage() {
-  permanentRedirect("/kennenlerngespraech/wirklich_deins/");
-
+export default function ReallyYoursIntroCallPage() {
   return (
     <div className={`${shell.page} ${styles.introCallPage}`}>
       <JsonLd
         data={pageGraph({
-          path: "/kennenlerngespraech/",
+          path: "/kennenlerngespraech/wirklich_deins/",
           name: "Kennenlerngespräch zu Wirklich Deins.",
           description: PAGE_DESCRIPTION,
           breadcrumbs: [
             { name: "Startseite", path: "/" },
             { name: "Wirklich Deins.", path: "/wirklich-deins/" },
-            { name: "Kennenlerngespräch", path: "/kennenlerngespraech/" },
+            { name: "Kennenlerngespräch", path: "/kennenlerngespraech/wirklich_deins/" },
           ],
         })}
       />
@@ -39,15 +37,19 @@ export default function IntroCallPage() {
 
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><img src="/petra-sailer-logo.svg" alt="" /></Link>
+          <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><img src="/petra-sailer-logo-dark.svg" alt="" /></Link>
           <Link className={styles.backLink} href="/">Zur Website<span aria-hidden="true">↗</span></Link>
         </div>
       </header>
 
       <main id="inhalt">
         <section className={styles.intro} id="top">
-          <p className={styles.eyebrow}><OfferName tone="dark" /> · KENNENLERNGESPRÄCH</p>
-          <h1>Lass uns schauen, ob <OfferName tone="light" size="large" quoted /> zu dir passt.</h1>
+          <p className={styles.eyebrow}>WIRKLICH DEINS. · KENNENLERNGESPRÄCH</p>
+          <h1 className={reallyYoursStyles.heroHeadline}>
+            <span>Lass uns schauen, ob</span>
+            <span className={reallyYoursStyles.offerName}><OfferName tone="light" size="large" /></span>
+            <span>zu dir passt.</span>
+          </h1>
           <div className={styles.introCopy}>
             <p>Du hast etwas vor und möchtest herausfinden, ob ich die Richtige bin, um dich dabei über sechs Monate zu begleiten? Dann lass uns kennenlernen.</p>
             <p>In unserem Gespräch erzählst du mir, was du verwirklichen möchtest und wo du gerade stehst. Du kannst mir deine Fragen zur Begleitung stellen, und wir schauen gemeinsam, ob eine Zusammenarbeit für uns beide stimmt.</p>
@@ -64,8 +66,8 @@ export default function IntroCallPage() {
 
         <section className={styles.closing}>
           <div className={styles.closingInner}>
-            <p className={styles.contactClosing}>Du findest keinen passenden Termin? Dann schreib mir gerne persönlich oder ruf mich an.</p>
-            <div className={styles.contactLinks}><a href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a><a href="tel:+4915155348727">0049 15155 34 8727</a></div>
+            <p className={reallyYoursStyles.contactClosing}>Du findest keinen passenden Termin?<br />Dann schreib mir gerne persönlich oder ruf mich direkt an.</p>
+            <div className={reallyYoursStyles.contactLinks}><a href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a><a href="tel:+4915155348727">+49 (0)151 5534 8727</a></div>
           </div>
         </section>
       </main>

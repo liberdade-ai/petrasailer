@@ -31,6 +31,7 @@
 .path :global(a) { align-self: end; min-width: 0; width: 100%; min-height: 56px; margin-top: 62px; padding: 13px 20px; border: 1px solid var(--navy); background: var(--navy); color: var(--offwhite); }
 .pathOne :global(a:hover) { border-color: var(--navy); background: var(--gold); color: var(--green); gap: 32px; }
 .pathTwo :global(a) { border-color: var(--gold); background: var(--gold); color: var(--green); }
+.pathTwo :global(a) :global(.offer-name__deins) { font-family: var(--sans); font-size: 1em; font-style: normal; font-weight: inherit; line-height: inherit; vertical-align: 0; }
 .pathTwo :global(a:hover) { border-color: var(--offwhite); background: var(--offwhite); color: var(--navy); gap: 32px; }
 .pathNote { padding: 28px 32px; background: var(--terracotta); color: var(--offwhite); text-align: center; font-weight: 600; }
 

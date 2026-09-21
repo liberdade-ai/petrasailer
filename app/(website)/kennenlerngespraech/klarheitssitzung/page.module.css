@@ -1,0 +1,78 @@
+.heroHeadline {
+  max-width: 900px;
+  color: var(--green) !important;
+  font-family: var(--sans) !important;
+  font-size: clamp(46px, 5.4vw, 74px) !important;
+  font-weight: 400 !important;
+  letter-spacing: -.055em;
+  line-height: .94;
+}
+
+.heroHeadline span { display: block; }
+.heroHeadline span + span { color: var(--terracotta); }
+
+.introCopy {
+  display: block;
+  max-width: 660px;
+}
+
+.contactClosing {
+  margin: 0;
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.35vw, 19px) !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+  line-height: 1.55 !important;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.contactLinks a {
+  color: var(--blue);
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.contactLinks a:hover { color: var(--coral); }
+
+.bookingHeading {
+  width: min(100%, 820px);
+  margin: 0 auto clamp(46px, 6vw, 74px);
+  padding: 30px 34px;
+  background: var(--offwhite);
+}
+
+.bookingHeading p {
+  color: var(--coral);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  line-height: 1.4;
+}
+
+.bookingHeading h2 {
+  max-width: 620px;
+  margin-top: 26px;
+  color: var(--green);
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: .9;
+}
+
+@media (max-width: 700px) {
+  .heroHeadline { font-size: clamp(42px, 12vw, 52px) !important; line-height: .96; }
+  .contactClosing, .contactLinks a { font-size: 16px !important; }
+  .bookingHeading { margin-bottom: 48px; padding: 24px 20px; }
+  .bookingHeading h2 { margin-top: 22px; font-size: 43px; }
+}

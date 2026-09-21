@@ -21,7 +21,17 @@ function getServerSnapshot() {
   return false;
 }
 
-export default function TidyCalCalendar() {
+type TidyCalCalendarProps = {
+  tidyCalUrl?: string;
+  label?: string;
+  showHeading?: boolean;
+};
+
+export default function TidyCalCalendar({
+  tidyCalUrl = "https://tidycal.com/petrasailer/30-min",
+  label = "KENNENLERNGESPRÄCH",
+  showHeading = true,
+}: TidyCalCalendarProps) {
   const hasConsent = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   function loadCalendar() {
@@ -32,11 +42,10 @@ export default function TidyCalCalendar() {
   return (
     <div className={styles.calendar}>
       {hasConsent ? (
-        <iframe src="https://tidycal.com/petrasailer/30-min" title="TidyCal" loading="lazy" />
+        <iframe src={tidyCalUrl} title={label} loading="lazy" />
       ) : (
         <div className={styles.calendarConsent}>
-          <p className={styles.calendarLabel}>KENNENLERNGESPRÄCH</p>
-          <h2>Finde einen Termin, der für dich passt.</h2>
+          {showHeading ? <><p className={styles.calendarLabel}>{label}</p><h2>Finde einen Termin, der für dich passt.</h2></> : null}
           <p>Mit dem Laden des Kalenders willigst du in die Datenverarbeitung durch TidyCal ein.</p>
           <a href="/datenschutz/">Mehr in der Datenschutzerklärung</a>
           <button className={styles.loadCalendarButton} type="button" onClick={loadCalendar}>Kalender laden <span aria-hidden="true">↗</span></button>

@@ -32,7 +32,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 function NavLinks() {
-  return NAVIGATION.map((item) => <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>{item.label === "WIRKLICH DEINS." ? <OfferName tone="light" uppercase /> : item.label}</a>);
+  return NAVIGATION.map((item) => <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>{item.label}</a>);
 }
 
 type CtaTracking = { cta: string; location: string };
@@ -70,8 +70,8 @@ export default function ReallyYoursPage() {
         <section className={styles.hero} id="top">
           <div className={styles.heroMeta}><Marker number="01" round>SECHS MONATE · 1:1-BEGLEITUNG</Marker></div>
           <h1>Was wäre, wenn du dich diesmal nicht zurückhältst – und <em>dein ganz Eigenes</em> verwirklichst?</h1>
-          <div className={styles.heroQuestion}><h2>Was würde sich verändern?</h2><p>Genau das ist: <OfferName tone="dark" /></p></div>
-          <div className={styles.heroIntro}><p><OfferName tone="dark" /> ist für dich, wenn du etwas in deinem Leben verwirklichen willst und dich nicht immer wieder von Zweifeln oder alten Gedanken davon abbringen lassen möchtest.</p><p>Wie ich dich dabei begleite, erfährst du hier.</p><ActionLink href="#du-hast-etwas-vor" tracking={{ cta: "wirklich_deins_kennenlernen", location: "wirklich_deins_hero" }}>DIE BEGLEITUNG KENNENLERNEN</ActionLink></div>
+          <div className={styles.heroQuestion}><h2>Was würde sich verändern?</h2><p>Genau das ist: <OfferName tone="terracotta" /></p></div>
+          <div className={styles.heroIntro}><p><OfferName tone="terracotta" quoted /> ist für dich, wenn du etwas in deinem Leben verwirklichen willst und dich nicht immer wieder von Zweifeln oder alten Gedanken davon abbringen lassen möchtest.</p><p>Wie ich dich dabei begleite, erfährst du hier.</p><ActionLink href="#du-hast-etwas-vor" tracking={{ cta: "wirklich_deins_kennenlernen", location: "wirklich_deins_hero" }}>DIE BEGLEITUNG KENNENLERNEN</ActionLink></div>
         </section>
 
         <section className={styles.recognition} id="du-hast-etwas-vor">
@@ -82,18 +82,21 @@ export default function ReallyYoursPage() {
         </section>
 
         <section className={styles.direction}>
-          <div className={styles.directionIntro}><Marker number="03"><OfferName tone="light" uppercase /></Marker><h2>Nicht gegen das Alte. <em>Für das, was du wirklich leben willst.</em></h2><div><p>Es geht hier nicht darum, dich zu reparieren oder irgendwie besser zu werden. Auch deine Wünsche sollen keinen Mangel, den du vielleicht in dir spürst, beheben. Du wählst sie, weil sie deinem Eigenen entsprechen und du sie leben willst.</p><p>Die Veränderung beginnt nicht dort, wo das Problem sichtbar wird. Sie beginnt dort, wo sich ein Mensch auf das ausrichtet, was er wirklich will.</p></div></div>
+          <div className={styles.directionIntro}><Marker number="03">WIRKLICH DEINS</Marker><h2>Nicht gegen das Alte. <em>Für das, was du wirklich leben willst.</em></h2><div><p>Es geht hier nicht darum, dich zu reparieren oder irgendwie besser zu werden. Auch deine Wünsche sollen keinen Mangel, den du vielleicht in dir spürst, beheben. Du wählst sie, weil sie deinem Eigenen entsprechen und du sie leben willst.</p><p>Die Veränderung beginnt nicht dort, wo das Problem sichtbar wird. Sie beginnt dort, wo sich ein Mensch auf das ausrichtet, was er wirklich will.</p></div></div>
           <div className={styles.vision}>
             <div className={styles.visionPrompt}><p>Stell dir mal vor …</p><strong>Das, was du dir wünschst, ist bereits Teil deines Lebens.</strong><p>Wer bist du dann? Wie bist du?<br />Was denkst und fühlst du?<br />Und wie handelst du?</p></div>
-            <div className={styles.visionCopy}><p>Für einen Moment schaust du nicht mehr nur von dem aus auf dein Leben, was heute schwierig erscheint oder dich bisher zurückgehalten hat. Du erlebst deinen Wunsch so, als wäre er bereits Wirklichkeit, und nimmst eine andere Perspektive ein.</p><p>Von dort aus können Möglichkeiten sichtbar werden, die du vorher vielleicht noch gar nicht sehen konntest. Du bekommst ein klareres Gefühl dafür, was für dich stimmt. Und aus dieser Perspektive kannst du dich fragen:</p><strong>Was will ich? Und was kann ich jetzt dafür tun?</strong><p>Genau mit diesem veränderten Blick arbeiten wir in „<OfferName tone="dark" />“.</p></div>
+            <div className={styles.visionCopy}><p>Für einen Moment schaust du nicht mehr nur von dem aus auf dein Leben, was heute schwierig erscheint oder dich bisher zurückgehalten hat. Du erlebst deinen Wunsch so, als wäre er bereits Wirklichkeit, und nimmst eine andere Perspektive ein.</p><p>Von dort aus können Möglichkeiten sichtbar werden, die du vorher vielleicht noch gar nicht sehen konntest. Du bekommst ein klareres Gefühl dafür, was für dich stimmt. Und aus dieser Perspektive kannst du dich fragen:</p><strong>Was will ich? Und was kann ich jetzt dafür tun?</strong><p>Genau mit diesem veränderten Blick arbeiten wir in <OfferName tone="offwhite" quoted /></p></div>
           </div>
         </section>
 
         <div className={styles.introCtaSpacer} aria-hidden="true" />
 
         <section className={styles.introCta}>
-          <p><span>Du möchtest herausfinden, ob „<OfferName tone="dark" />“</span><span>zu dir passt?</span></p>
-          <ActionLink href="/kennenlerngespraech/" tracking={{ cta: "kennenlerngespraech_buchen", location: "wirklich_deins_einfuehrung" }}>Kennenlerngespräch buchen</ActionLink>
+          <p>
+            <span>Du möchtest herausfinden, ob</span>
+            <span><OfferName tone="terracotta" quoted /> zu dir passt?</span>
+          </p>
+          <ActionLink href="/kennenlerngespraech/wirklich_deins/" tracking={{ cta: "kennenlerngespraech_buchen", location: "wirklich_deins_einfuehrung" }}>Kennenlerngespräch buchen</ActionLink>
         </section>
 
         <section className={styles.process} id="prozess">
@@ -108,7 +111,7 @@ export default function ReallyYoursPage() {
         </section>
 
         <section className={styles.journey}>
-          <div className={styles.journeyIntro}><Marker number="05">DEINE BEGLEITUNG</Marker><h2>So sieht „<OfferName tone="light" />“ <em>konkret aus.</em></h2><p>Die sechs Monate folgen keinem starren Programm. Wir arbeiten mit dem, was du wirklich verändern, aufbauen oder verwirklichen möchtest – und mit dem, was in deinem Leben gerade geschieht.</p></div>
+          <div className={styles.journeyIntro}><Marker number="05">DEINE BEGLEITUNG</Marker><h2>So sieht <OfferName tone="light" size="large" quoted /> <em>konkret aus.</em></h2><p>Die sechs Monate folgen keinem starren Programm. Wir arbeiten mit dem, was du wirklich verändern, aufbauen oder verwirklichen möchtest – und mit dem, was in deinem Leben gerade geschieht.</p></div>
           <ol className={styles.journeyList}>
             <li><span>01</span><div><h3>Der gemeinsame Beginn</h3><p>Zu Beginn schauen wir gemeinsam, was du in deinem Leben verändern, aufbauen oder verwirklichen möchtest. In einer inneren „Reise ins Land der Fülle“ öffnest du den Raum für Wünsche, die du vielleicht schon länger in dir trägst und für das, was neu auftaucht.</p><p>Anschließend wählst du vier bis fünf Wünsche aus, denen du in den kommenden sechs Monaten besondere Aufmerksamkeit schenken willst. Sie müssen keinen gemeinsamen roten Faden haben. Die Auswahl hilft dir, dich nicht um alles gleichzeitig kümmern zu müssen und dennoch mehreren Seiten deines Lebens Raum zu geben.</p></div></li>
             <li><span>02</span><div><h3>Zwei Sitzungen pro Monat</h3><p>Wir treffen uns zweimal im Monat für jeweils 75 Minuten – insgesamt zu zwölf regulären Sitzungen. In jeder Sitzung beginnen wir mit dem, was gerade da ist: was dich bewegt, was sich gezeigt oder bereits verändert hat. Von dort verbinden wir das, was im Moment geschieht, mit dem, was du wirklich verwirklichen möchtest, und arbeiten konkret damit.</p><p>Am Ende der sechs Monate nehmen wir uns in einer zusätzlichen Abschlusssitzung von 75 Minuten Zeit, gemeinsam zurückzuschauen: Was hast du erkannt, entschieden und tatsächlich getan? Was hat sich verändert? Und was möchtest du für dich weiterführen?</p></div></li>
@@ -133,15 +136,15 @@ export default function ReallyYoursPage() {
         </section>
 
         <section className={styles.fit}>
-          <div className={styles.fitIntro}><Marker number="08" round>FÜR WEN DIE BEGLEITUNG IST</Marker><h2>Passt „<OfferName tone="light" />“ <em>zu dir?</em></h2><p>„<OfferName tone="light" />“ passt zu dir, wenn du einen Wunsch, eine Idee oder ein Vorhaben wirklich in dein Leben bringen möchtest.</p></div>
+          <div className={styles.fitIntro}><Marker number="08" round>FÜR WEN DIE BEGLEITUNG IST</Marker><h2>Passt <OfferName tone="light" size="large" quoted /> <em>zu dir?</em></h2><p><OfferName tone="light" quoted /> passt zu dir, wenn du einen Wunsch, eine Idee oder ein Vorhaben wirklich in dein Leben bringen möchtest.</p></div>
           <div className={styles.fitStatements}><p><strong>Wenn du etwas vorhast</strong> und gleichzeitig merkst, dass du an bestimmten Punkten immer wieder nicht weiterkommst.</p><p><strong>Wenn du nicht länger nur darüber nachdenken möchtest</strong>, sondern bereit bist, Entscheidungen zu treffen, Neues auszuprobieren und konkrete Schritte zu gehen.</p><p><strong>Wenn du keine fertigen Antworten von außen übernehmen möchtest</strong>, sondern herausfinden willst, was für dich wirklich stimmt.</p><p><strong>Und wenn du lernen möchtest, früher zu erkennen</strong>, wann alte Gedanken, Zweifel oder vertraute Muster gerade die Führung übernehmen – damit du wieder bewusst wählen kannst, wie du weitergehen willst.</p></div>
           <p className={styles.fitClosing}>Diese Begleitung passt zu dir, wenn du bereit bist, dir über sechs Monate wirklich Zeit für das zu nehmen, was dir wichtig ist.</p>
         </section>
 
         <section className={styles.offer} id="angebot">
-          <div className={styles.offerTop}><Marker number="09">DER RAHMEN</Marker><div><h2><OfferName tone="light" /></h2><p>Deine sechsmonatige 1:1-Begleitung mit Petra Sailer.</p></div><p className={styles.price}>3.600 €<span>Gesamtpreis für sechs Monate</span></p></div>
+          <div className={styles.offerTop}><Marker number="09">DER RAHMEN</Marker><div><h2><OfferName tone="light" size="large" /></h2><p>Deine sechsmonatige 1:1-Begleitung mit Petra Sailer.</p></div><p className={styles.price}>3.600 €<span>Gesamtpreis für sechs Monate</span></p></div>
           <div className={styles.offerFacts}><div><span>LAUFZEIT</span><strong>Sechs Monate</strong></div><div><span>SITZUNGEN</span><strong>Zwölf 1:1‑Sitzungen à 75 Minuten</strong></div><div><span>ABSCHLUSS</span><strong>Eine zusätzliche Abschlusssitzung à 75 Minuten</strong></div><div><span>DER KURZE DRAHT</span><strong>Messenger-Support zwischen den Sitzungen</strong></div><div><span>MITSCHRIFTEN</span><strong>Nach jeder Sitzung eine persönliche, fast wortgetreue Mitschrift</strong></div></div>
-          <div className={styles.offerAction}><ActionLink href="/kennenlerngespraech/" tracking={{ cta: "kennenlerngespraech_anfragen", location: "wirklich_deins_angebot" }}>Kennenlerngespräch buchen</ActionLink><p>Wir schauen in Ruhe, ob die Begleitung zu dir und deinem Vorhaben passt.</p></div>
+          <div className={styles.offerAction}><ActionLink href="/kennenlerngespraech/wirklich_deins/" tracking={{ cta: "kennenlerngespraech_anfragen", location: "wirklich_deins_angebot" }}>Kennenlerngespräch buchen</ActionLink><p>Wir schauen in Ruhe, ob die Begleitung zu dir und deinem Vorhaben passt.</p></div>
         </section>
 
         <section className={styles.faq} id="faq">
@@ -152,14 +155,14 @@ export default function ReallyYoursPage() {
             <details><summary>Was ist, wenn alte Muster wieder auftauchen?<span>+</span></summary><p>Alte Gedanken und Reaktionen können wieder auftauchen. Sie müssen weder bekämpft noch vollständig beseitigt werden. In der Begleitung lernst du, früher zu erkennen, wann sie gerade die Führung übernehmen, und dir wieder beide Seiten bewusst zu machen: das, was du wirklich willst, und das, was dich bisher zurückgehalten hat. Dann kannst du neu wählen und deinen nächsten Schritt gehen.</p></details>
             <details><summary>Wofür ist der Kurze Draht gedacht?<span>+</span></summary><p>Der Kurze Draht verbindet die Sitzungen mit deinem Alltag. Du kannst mir schreiben, wenn du festhängst, zweifelst, eine neue Einsicht hast oder eine Entscheidung ansteht. So können wir auf das schauen, was gerade geschieht, und du findest wieder zu dem zurück, was für dich stimmt. Wie wir den Kurzen Draht konkret gestalten, besprechen wir vor Beginn persönlich.</p></details>
             <details><summary>Ist die Begleitung eine Therapie?<span>+</span></summary><p>Die Begleitung ist ein Coaching für Menschen, die etwas verändern, aufbauen oder verwirklichen möchten und bereit sind, dafür selbst aktiv zu werden. Sie ersetzt keine Psychotherapie, psychiatrische oder medizinische Behandlung und keine Unterstützung in einer akuten Krise.</p></details>
-            <details><summary>Was unterscheidet die sechsmonatige Begleitung von der Klarheitssitzung?<span>+</span></summary><div><p>In der Klarheitssitzung arbeiten wir einmalig an einem konkreten Thema oder einer Entscheidung und leiten daraus einen nächsten Schritt ab.</p><p>„<OfferName tone="light" />“ beginnt grundsätzlicher bei der Frage, was du wirklich leben möchtest. Du kannst mehrere Wünsche über sechs Monate hinweg in deinen Alltag bringen. Dabei durchläufst du den Prozess aus Wunsch, Jetzt-Realität, bewusster Wahl und konkreter Handlung immer wieder. So sammelst du eigene Erfahrungen und lernst zunehmend, den Prozess selbst für dich zu nutzen.</p></div></details>
+            <details><summary>Was unterscheidet die sechsmonatige Begleitung von der Klarheitssitzung?<span>+</span></summary><div><p>In der Klarheitssitzung arbeiten wir einmalig an einem konkreten Thema oder einer Entscheidung und leiten daraus einen nächsten Schritt ab.</p><p><OfferName tone="light" quoted /> beginnt grundsätzlicher bei der Frage, was du wirklich leben möchtest. Du kannst mehrere Wünsche über sechs Monate hinweg in deinen Alltag bringen. Dabei durchläufst du den Prozess aus Wunsch, Jetzt-Realität, bewusster Wahl und konkreter Handlung immer wieder. So sammelst du eigene Erfahrungen und lernst zunehmend, den Prozess selbst für dich zu nutzen.</p></div></details>
           </div>
         </section>
 
-        <section className={styles.finalCta}><Marker number="11" round>LASS UNS KENNENLERNEN</Marker><h2>Erzähl mir, <em>was du vorhast.</em></h2><div><p>Im Kennenlerngespräch sprechen wir über das, was du verändern, aufbauen oder verwirklichen möchtest. Du kannst deine Fragen stellen, und wir schauen in Ruhe, ob <OfferName tone="dark" /> auch wirklich deins ist.</p><ActionLink href="/kennenlerngespraech/" light tracking={{ cta: "kennenlerngespraech_anfragen", location: "wirklich_deins_abschluss" }}>Kennenlerngespräch buchen</ActionLink></div><p className={styles.contact}>Du möchtest lieber direkt schreiben? <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="wirklich_deins_abschluss">kontakt@petrasailer.com</a></p></section>
+        <section className={styles.finalCta}><Marker number="11" round>LASS UNS KENNENLERNEN</Marker><h2>Erzähl mir, <em>was du vorhast.</em></h2><div><p>Im Kennenlerngespräch sprechen wir über das, was du verändern, aufbauen oder verwirklichen möchtest. Du kannst deine Fragen stellen, und wir schauen in Ruhe, ob <OfferName tone="terracotta" quoted /> auch wirklich deins ist.</p><ActionLink href="/kennenlerngespraech/wirklich_deins/" light tracking={{ cta: "kennenlerngespraech_anfragen", location: "wirklich_deins_abschluss" }}>Kennenlerngespräch buchen</ActionLink></div><p className={styles.contact}>Du möchtest lieber direkt schreiben? <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="wirklich_deins_abschluss">kontakt@petrasailer.com</a></p></section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="#top"><OfferName tone="dark" /></a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><Link className={shell.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="#top">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
     </div>
   );
 }

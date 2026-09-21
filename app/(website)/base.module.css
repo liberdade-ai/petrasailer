@@ -56,9 +56,9 @@
 .textLink:hover { color: var(--coral); gap: 45px; }
 .textLinkLight { color: var(--offwhite); }
 
-.sectionMarker { display: flex; align-items: center; gap: 18px; }
-.sectionMarker span { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid currentColor; border-radius: 50%; font-size: 11px; }
-.sectionMarker p { font-size: 11px; font-weight: 600; letter-spacing: .16em; }
+.sectionMarker { --section-marker-size: 42px; --section-marker-gap: 18px; --section-marker-title-leading: 1.76; display: flex; align-items: center; gap: var(--section-marker-gap); }
+.sectionMarker > span { display: grid; flex: 0 0 var(--section-marker-size); place-items: center; width: var(--section-marker-size); min-width: var(--section-marker-size); height: var(--section-marker-size); border: 1px solid currentColor; border-radius: 50%; font-size: 11px; line-height: 1; }
+.sectionMarker p { font-size: 11px !important; font-weight: 600 !important; letter-spacing: .16em !important; line-height: var(--section-marker-title-leading) !important; }
 
 .recognition { display: grid; grid-template-columns: .75fr 1.05fr; gap: 80px 10vw; width: min(100% - 64px, 1280px); margin: 0 auto; padding: 150px 0 170px; }
 .recognition > .sectionMarker { grid-column: 1 / -1; }
@@ -82,8 +82,6 @@
 .offersIntro > div:last-child { align-self: end; max-width: 420px; }
 .offersIntro > div:last-child p { max-width: 620px; font-size: 18px; line-height: 1.6; }
 .offersIntro > div:last-child p + p { margin-top: 15px; font-weight: 600; }
-.offersIntro > .sectionMarker span,
-.finalCta > .sectionMarker span { flex: 0 0 42px; width: 42px; min-width: 42px; height: 42px; aspect-ratio: 1; border-radius: 50%; }
 .offer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); grid-template-areas: "index index" "title title" "claim text" "link text"; gap: 22px 60px; min-height: 650px; padding: 70px clamp(34px, 5.5vw, 88px); }
 .offerOne { background: var(--mint); }
 .offerTwo { background: var(--blue); color: var(--offwhite); }
@@ -146,6 +144,8 @@
 .finalCopy p { max-width: 620px; font-size: 18px; line-height: 1.6; }
 .finalCopy a { border-bottom: 1px solid currentColor; font-weight: 600; }
 .finalActions { display: flex; flex-wrap: wrap; gap: 30px 55px; justify-content: flex-end; }
+.offerTwo :global(a) :global(.offer-name__deins),
+.finalActions :global(a) :global(.offer-name__deins) { font-family: var(--sans); font-size: 1em; font-style: normal; font-weight: inherit; line-height: inherit; vertical-align: 0; }
 .email { display: block; width: max-content; margin: 95px 0 0 auto; font: italic 500 clamp(28px, 3vw, 42px)/1 "Cormorant Garamond"; border-bottom: 1px solid currentColor; }
 
 .footer { display: grid; grid-template-columns: .8fr 1.2fr 1fr; gap: 70px; padding: 80px max(32px, calc((100vw - 1280px) / 2)) 28px; background: var(--blue); color: var(--offwhite); }
@@ -201,9 +201,8 @@
   .heroIntro > p { font-size: 19px; line-height: 1.6; }
   .heroActions { margin-top: 34px; }
   .textLink { min-width: 0; width: 100%; gap: 15px; font-size: 15px; }
-  .sectionMarker { gap: 13px; }
-  .sectionMarker span { width: 36px; height: 36px; }
-  .sectionMarker p { max-width: 225px; line-height: 1.4; }
+  .sectionMarker { --section-marker-size: 36px; --section-marker-gap: 13px; --section-marker-title-leading: 1.4; }
+  .sectionMarker p { max-width: 225px; }
   .recognition { display: block; width: calc(100% - 36px); padding: 92px 0 104px; }
   .recognitionTitle { margin-top: 54px; }
   .recognitionTitle h2 { font-size: 49px; }
@@ -219,8 +218,6 @@
   .offersIntro h2 { margin-top: 55px; font-size: 57px; }
   .offersIntro > div:last-child { margin-top: 38px; }
   .offersIntro > div:last-child p { font-size: 16px; }
-  .offersIntro > .sectionMarker span,
-  .finalCta > .sectionMarker span { flex-basis: 36px; width: 36px; min-width: 36px; height: 36px; }
   .offer { display: block; min-height: 0; padding: 52px 18px 62px; }
   .offer h3 { padding: 82px 0 33px; font-size: 65px; }
   .offerClaim { margin-bottom: 25px !important; font-size: 28px; }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import OfferName from "../OfferName";
 import JsonLd from "../../JsonLd";
 import { pageGraph, pageMetadata } from "../../seo";
 import shell from "../base.module.css";
@@ -25,7 +24,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 function NavLinks() {
-  return NAVIGATION.map((item) => <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>{item.href === "/wirklich-deins/" ? <OfferName tone="light" uppercase /> : item.label}</a>);
+  return NAVIGATION.map((item) => <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>{item.label}</a>);
 }
 
 function ActionLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -74,7 +73,7 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><a className={shell.footerBrand} href="#top"><img src="/petra-sailer-footer-logo.svg" alt="" /></a><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/"><OfferName tone="dark" /></a><a href="#top">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><Link className={shell.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="#top">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
     </div>
   );
 }
