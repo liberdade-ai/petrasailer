@@ -92,6 +92,12 @@
   color: var(--offwhite);
 }
 
+.scope > div > main > section:nth-of-type(3) article:first-of-type a {
+  border-color: var(--terracotta);
+  background: var(--terracotta);
+  color: var(--offwhite);
+}
+
 .scope > div > main > section:nth-of-type(1) a:first-of-type:hover {
   border-color: var(--green);
   background: var(--offwhite);
@@ -100,9 +106,9 @@
 
 .scope > div > main > section:nth-of-type(1) a:hover,
 .scope > div > main > section:nth-of-type(3) article:first-of-type a:hover {
-  border-color: var(--green);
-  background: var(--gold);
-  color: var(--green);
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--offwhite);
   gap: 32px;
 }
 

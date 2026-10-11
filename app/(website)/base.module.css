@@ -88,13 +88,13 @@
 .offerIndex { grid-area: index; align-self: start; font-size: 11px; font-weight: 600; letter-spacing: .14em; }
 .offer h3 { grid-area: title; align-self: end; overflow-wrap: anywhere; padding: 46px 0 20px; font-size: clamp(58px, 6vw, 94px); line-height: .82; }
 .offer h3 em { color: var(--sun); }
-.offerClaim { grid-area: claim; font: 500 clamp(25px, 2.3vw, 34px)/1.08 "Cormorant Garamond"; }
+.offerClaim { grid-area: claim; font-size: 18px; line-height: 1.6; }
 .offerText { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
 .offer .textLink { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 13px 20px; gap: 15px; }
 .offerActions { grid-area: link; align-self: end; }
 .offerActions .textLink { width: 100%; }
 .offerPackage { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgb(var(--green-rgb) / .28); }
-.offerPackage > p:first-child { max-width: 360px; font-size: 15px; line-height: 1.55; }
+.offerPackage > p:first-child { max-width: 360px; font-size: 18px; line-height: 1.6; }
 .offerPackage > p:first-child strong { font-weight: 600; }
 .offerPackagePrice { display: flex; flex-direction: column; gap: 3px; margin-top: 16px; color: var(--green); font-size: 13px; line-height: 1.45; }
 .offerPackagePrice strong { font-size: 15px; font-weight: 600; }
@@ -227,11 +227,11 @@
   .offersIntro > div:last-child p { font-size: 16px; }
   .offer { display: block; min-height: 0; padding: 52px 18px 62px; }
   .offer h3 { padding: 82px 0 33px; font-size: 65px; }
-  .offerClaim { margin-bottom: 25px !important; font-size: 28px; }
+  .offerClaim { margin-bottom: 25px !important; }
   .offerText { margin-bottom: 45px !important; }
   .offerText { font-size: 16px; }
   .offerPackage { margin-top: 26px; padding-top: 22px; }
-  .offerPackage > p:first-child { font-size: 15px; }
+  .offerPackage > p:first-child { font-size: 16px; }
   .offersClosing { padding: 28px 18px; line-height: 1.55; text-align: left; }
   .perspective { display: block; padding: 90px 18px 100px; }
   .perspective h2 { margin-top: 55px; font-size: 51px; }

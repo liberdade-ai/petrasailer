@@ -10,7 +10,7 @@
 .heroBody { max-width: 620px; }
 .heroBody p + p { margin-top: 18px; }
 .heroAction { align-self: end; }
-.heroAction :global(a) { min-width: 0; width: 100%; min-height: 56px; padding: 13px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite); }
+.heroAction :global(a) { min-width: 0; width: 100%; min-height: 56px; padding: 13px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite) !important; }
 .heroAction :global(a:hover) { border-color: var(--green); background: var(--navy); color: var(--offwhite); gap: 32px; }
 
 .paths { background: var(--offwhite); }
