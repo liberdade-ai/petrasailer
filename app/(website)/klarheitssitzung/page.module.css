@@ -22,7 +22,7 @@
 .heroIntro > p { margin-bottom: 50px; color: var(--offwhite); font-size: 21px; line-height: 1.6; transform: translateY(-60px); }
 .heroActions { display: grid; gap: 14px; }
 .heroIntro :global(a), .finalCopy :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.heroIntro :global(a:hover), .finalCopy :global(a:hover) { border-color: var(--offwhite); background: var(--offwhite); color: var(--navy); }
+.heroIntro :global(a:hover), .finalCopy :global(a:hover) { border-color: var(--offwhite); background: var(--offwhite); color: var(--green); }
 .heroIntro :global(a).secondaryAction { border-color: rgb(from var(--offwhite) r g b / .55); background: transparent; color: var(--offwhite); }
 .heroIntro :global(a).secondaryAction:hover { border-color: var(--offwhite); background: rgb(from var(--offwhite) r g b / .12); color: var(--offwhite); }
 .finalCopy :global(a:hover) { gap: 32px; transform: none; scale: none; }
@@ -49,7 +49,7 @@
 .processPivot { margin: 44px 0 !important; color: var(--green); font: italic 500 clamp(30px, 2.8vw, 42px)/1.06 "Cormorant Garamond" !important; }
 .processRole { max-width: 32ch; margin: 48px 0 !important; }
 .processLead p:last-child { font-weight: 600; }
-.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; counter-reset: none; border: 1px solid rgb(var(--green-rgb) / .28); background: var(--sun); color: var(--green); }
+.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; counter-reset: none; border: 1px solid rgb(var(--green-rgb) / .28); background: var(--sage); color: var(--green); }
 .processList li { display: grid; grid-template-columns: 90px minmax(300px, 1fr) minmax(280px, .72fr); gap: 6vw; align-items: center; min-height: 245px; padding: 45px max(32px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid rgb(var(--green-rgb) / .28); }
 .processList li:last-child { border-bottom: 0; }
 .processList li > span { font: italic 500 45px/1 "Cormorant Garamond"; color: var(--coral); }
@@ -84,9 +84,9 @@
 .offerBottom > div { max-width: 620px; }
 .offerBottom p + p { margin-top: 20px; }
 .offerBottom :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.offerBottom :global(a:hover) { border-color: var(--navy); background: var(--navy); color: var(--offwhite); }
+.offerBottom :global(a:hover) { border-color: var(--green); background: var(--navy); color: var(--offwhite); }
 
-.sessionPackage { padding: 124px max(32px, calc((100vw - 1280px) / 2)) 132px; background: var(--gold); color: var(--green); }
+.sessionPackage { padding: 124px max(32px, calc((100vw - 1280px) / 2)) 132px; background: var(--sage); color: var(--green); }
 .sessionPackageIntro { display: grid; grid-template-columns: .55fr 1.45fr; gap: 7vw; align-items: end; margin-top: 68px; }
 .sessionPackageIntro h2 { font-size: clamp(54px, 6vw, 78px); line-height: .88; }
 .sessionPackageIntro p { max-width: 510px; margin: 0; color: var(--green); font: italic 500 clamp(27px, 2.8vw, 40px)/1.08 "Cormorant Garamond" !important; }
@@ -101,7 +101,7 @@
 .sessionPackageInstallments p + p { margin-top: 8px; }
 .sessionPackageValidity { margin-top: 28px !important; padding-top: 25px; border-top: 1px solid rgb(var(--green-rgb) / .28); font-size: 17px !important; line-height: 1.5 !important; }
 .sessionPackageInfo :global(a) { width: 100%; min-width: 0; margin-top: 34px; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.sessionPackageInfo :global(a:hover) { border-color: var(--navy); background: var(--navy); color: var(--offwhite); }
+.sessionPackageInfo :global(a:hover) { border-color: var(--green); background: var(--navy); color: var(--offwhite); }
 .sessionPackageNote { max-width: 760px; margin: 72px auto 0; padding-top: 22px; border-top: 1px solid rgb(var(--green-rgb) / .35); font: italic 500 clamp(22px, 2.2vw, 30px)/1.14 "Cormorant Garamond" !important; }
 
 .practice { position: relative; display: grid; grid-template-columns: .8fr 1.2fr; grid-template-areas: "photo story" "closing closing"; width: min(100% - 64px, 1280px); margin: 0 auto 130px; background: var(--offwhite); }
@@ -120,7 +120,7 @@
 .resultsCopy { padding: 125px clamp(45px, 8vw, 125px); }
 .resultsCopy h2 { max-width: 860px; margin-top: 70px; font-size: clamp(55px, 6vw, 86px); line-height: .88; }
 .resultsCopy > div:last-child { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; max-width: 750px; margin-top: 65px; }
-.resultQuote { display: flex; flex-direction: column; justify-content: center; padding: 90px clamp(40px, 5vw, 75px); background: var(--coral); color: var(--offwhite); }
+.resultQuote { display: flex; flex-direction: column; justify-content: center; padding: 90px clamp(40px, 5vw, 75px); background: var(--navy); color: var(--offwhite); }
 .resultQuote > p { font-size: 20px; font-weight: 600; letter-spacing: .08em; }
 .resultQuote strong { margin-top: 45px; font: 500 clamp(63px, 7.4vw, 108px)/.72 "DM Sans"; letter-spacing: -.07em; }
 .resultQuote em { color: var(--sun); white-space: nowrap; }
@@ -138,7 +138,7 @@
 .faqList details > p:not(:last-child) { padding-bottom: 0; }
 .faqList details > p + p { margin-top: 20px; }
 
-.finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)) 149px; border-bottom: 1px solid var(--offwhite); background: var(--blue); color: var(--offwhite); }
+.finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)) 149px; background: var(--blue); color: var(--offwhite); }
 .finalMarker { color: var(--sun); }
 .finalCta .finalMarker + h2 { margin-top: 55px; }
 .finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--offwhite); font-size: clamp(68px, 8vw, 116px); line-height: .8; }

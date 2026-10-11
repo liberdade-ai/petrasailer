@@ -25,19 +25,26 @@
 }
 
 :root {
-  --offwhite: #FFFDF8;
-  --green: #31452D;
-  --green-rgb: 49 69 45;
-  --terracotta: #EF6A57;
+  /* Leinen — Grundfläche und helle Schrift auf dunklem Grund */
+  --offwhite: #F3EDE3;
+  /* Warmes Dunkelbraun — Schrift auf hellem Grund und Seiten-Footer */
+  --green: #2E201A;
+  --green-rgb: 46 32 26;
+  /* Rot-Orange — Akzent für Buttons, einzelne Wörter, Punkte und Linien */
+  --terracotta: #C24426;
   --terracotta-dark: var(--terracotta);
-  --terracotta-rgb: 239 106 87;
-  --gold: #F4E39B;
-  --gold-rgb: 244 227 155;
-  --navy: #0B4663;
-  --navy-rgb: 11 70 99;
-  --ink: var(--navy);
-  --sage: #C9DED5;
-  --muted: var(--navy);
+  --terracotta-rgb: 194 68 38;
+  /* Senfgold — Akzent auf dunklem Grund */
+  --gold: #D9A02B;
+  --gold-rgb: 217 160 43;
+  /* Tannengrün — dunkle Flächen */
+  --navy: #1F3A35;
+  --navy-rgb: 31 58 53;
+  /* Helles Salbei — ruhige Flächen */
+  --sage: #E4E0CC;
+  /* Textvarianten auf hellem Grund */
+  --ink: var(--green);
+  --muted: var(--green);
   --line: rgb(var(--green-rgb) / 0.2);
   --display: "Cormorant Garamond";
   --sans: "DM Sans";
@@ -164,7 +171,7 @@ footer nav .offer-name__deins { font-family: var(--sans) !important; font-size: 
 .klarheit-page main > .hero {
   min-height:100vh;
   padding:0;
-  background:var(--terracotta);
+  background:var(--navy);
   color:var(--offwhite);
 }
 .klarheit-page main > .hero::before,.klarheit-page main > .hero::after { display:none; }
@@ -378,7 +385,7 @@ footer nav .offer-name__deins { font-family: var(--sans) !important; font-size: 
 
 .klarheit-page .results {
   padding:130px 0;
-  background:var(--terracotta);
+  background:var(--navy);
   color:var(--offwhite);
 }
 .klarheit-page .results-grid { display:grid; grid-template-columns:.75fr 1.25fr; gap:8vw; }

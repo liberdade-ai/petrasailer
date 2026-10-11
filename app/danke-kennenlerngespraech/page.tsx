@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BrandLogo from "../(website)/BrandLogo";
 import OfferName from "../(website)/OfferName";
 import { pageMetadata } from "../seo";
 import shell from "../(website)/base.module.css";
@@ -22,13 +23,7 @@ export default function DankeKennenlerngespraech() {
 
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <Link
-            className={shell.brand}
-            href="/"
-            aria-label="Petra Sailer – Dem Eigenen folgen"
-          >
-            <img src="/petra-sailer-logo.svg" alt="" />
-          </Link>
+          <BrandLogo className={shell.brand} variant="header" />
           <Link className={styles.backLink} href="/">
             Zur Website<span aria-hidden="true">↗</span>
           </Link>
@@ -72,9 +67,7 @@ export default function DankeKennenlerngespraech() {
       </main>
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <Link className={shell.footerBrand} href="/">
-          <img src="/petra-sailer-footer-logo.svg" alt="" />
-        </Link>
+        <BrandLogo className={shell.footerBrand} variant="footer" />
         <nav aria-label="Footer-Navigation">
           <a href="/ueber-mich/">ÜBER MICH</a>
           <a href="/klarheitssitzung/">KLARHEITSSITZUNG</a>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BrandLogo from "../BrandLogo";
 import OfferName from "../OfferName";
 import JsonLd from "../../JsonLd";
 import { pageMetadata, REALLY_YOURS_SOCIAL_IMAGE, serviceGraph } from "../../seo";
@@ -59,7 +60,7 @@ export default function ReallyYoursPage() {
       <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
       <header className={shell.header}>
         <div className={shell.headerInner}>
-          <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><img src="/petra-sailer-logo.svg" alt="" /></Link>
+          <BrandLogo className={shell.brand} variant="header" />
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={shell.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>
@@ -162,7 +163,7 @@ export default function ReallyYoursPage() {
         <section className={styles.finalCta}><Marker number="11" round>LASS UNS KENNENLERNEN</Marker><h2>Erzähl mir, <em>was du vorhast.</em></h2><div><p>Im Kennenlerngespräch sprechen wir über das, was du verändern, aufbauen oder verwirklichen möchtest. Du kannst deine Fragen stellen, und wir schauen in Ruhe, ob <OfferName tone="terracotta" quoted /> auch wirklich deins ist.</p><ActionLink href="/kennenlerngespraech/wirklich_deins/" light tracking={{ cta: "kennenlerngespraech_anfragen", location: "wirklich_deins_abschluss" }}>Kennenlerngespräch buchen</ActionLink></div><p className={styles.contact}>Du möchtest lieber direkt schreiben? <a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="wirklich_deins_abschluss">kontakt@petrasailer.com</a></p></section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><Link className={shell.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="#top">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><BrandLogo className={shell.footerBrand} variant="footer" /><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="#top">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
     </div>
   );
 }

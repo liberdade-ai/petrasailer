@@ -82,15 +82,15 @@
   margin-top: clamp(48px, 6vw, 75px);
 }
 
-.introCopy p { color: var(--blue); font-size: 18px; line-height: 1.68; }
+.introCopy p { color: var(--green); font-size: 18px; line-height: 1.68; }
 
 .booking {
   position: relative;
   width: min(100% - 64px, 1180px);
   margin: 0 auto;
   padding: clamp(58px, 7vw, 92px) 0 clamp(94px, 11vw, 148px);
-  background: var(--sun);
-  box-shadow: 0 0 0 100vmax var(--sun);
+  background: var(--sage);
+  box-shadow: 0 0 0 100vmax var(--sage);
   clip-path: inset(0 -100vmax);
 }
 
@@ -113,7 +113,7 @@
   background: var(--coral);
 }
 
-.bookingNote p { color: var(--blue); font-size: clamp(19px, 2vw, 25px); line-height: 1.35; }
+.bookingNote p { color: var(--green); font-size: clamp(19px, 2vw, 25px); line-height: 1.35; }
 
 .calendar {
   overflow: hidden;
@@ -139,7 +139,7 @@
   max-width: 720px;
   margin: 0 auto;
   padding: 76px clamp(30px, 7vw, 94px);
-  color: var(--blue);
+  color: var(--green);
 }
 
 .calendarLabel {
@@ -163,7 +163,7 @@
 .calendarConsent > p:not(.calendarLabel) {
   max-width: 510px;
   margin: 30px 0 0;
-  color: var(--blue);
+  color: var(--green);
   font-size: 18px;
   line-height: 1.6;
 }
@@ -171,7 +171,7 @@
 .calendarConsent > a {
   margin-top: 16px;
   border-bottom: 1px solid currentColor;
-  color: var(--blue);
+  color: var(--green);
   font-size: 14px;
   line-height: 1.5;
   text-decoration: none;
@@ -196,13 +196,13 @@
   transition: background .2s ease, border-color .2s ease, gap .2s ease;
 }
 
-.loadCalendarButton:hover { gap: 45px; border-color: var(--blue); background: var(--blue); }
+.loadCalendarButton:hover { gap: 45px; border-color: var(--green); background: var(--blue); }
 .loadCalendarButton:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
 
 .closing {
   padding: clamp(72px, 8vw, 104px) 32px;
   background: var(--offwhite);
-  color: var(--blue);
+  color: var(--green);
 }
 
 .closingInner {
@@ -214,7 +214,7 @@
 
 .contactClosing {
   margin: 0;
-  color: var(--blue);
+  color: var(--green);
   font-family: "DM Sans";
   font-size: clamp(20px, 2.1vw, 27px);
   font-style: normal;
@@ -232,7 +232,7 @@
 }
 
 .contactLinks a {
-  color: var(--blue);
+  color: var(--green);
   font-size: clamp(20px, 2.1vw, 27px);
   font-weight: 600;
   line-height: 1.42;

@@ -3,7 +3,7 @@
 .content { width: min(calc(100% - 64px), 720px); margin: 0 auto; padding: 120px 0 150px; }
 .eyebrow { margin: 0; color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .15em; }
 .content h1 { margin: 34px 0 0; color: var(--green); font-size: clamp(64px, 8vw, 104px); line-height: .86; }
-.updated { margin: 28px 0 0; color: var(--blue); font-size: 15px; line-height: 1.5; }
+.updated { margin: 28px 0 0; color: var(--green); font-size: 15px; line-height: 1.5; }
 .policy { margin-top: 76px; }
 .policy section { padding: 45px 0 50px; border-top: 1px solid rgb(var(--green-rgb) / .24); }
 .policy section:last-child { border-bottom: 1px solid rgb(var(--green-rgb) / .24); }
@@ -13,14 +13,14 @@
 .policy p + p { margin-top: 17px; }
 .policy ul { margin: 19px 0 0; padding-left: 22px; }
 .policy li + li { margin-top: 9px; }
-.policy a { border-bottom: 1px solid currentColor; color: var(--blue); text-decoration: none; }
+.policy a { border-bottom: 1px solid currentColor; color: var(--green); text-decoration: none; }
 .policy a:hover { color: var(--coral); }
 .policy code { font: 500 .9em/1.5 "DM Sans"; overflow-wrap: anywhere; }
 .revocation { display: inline; }
-.revocation button { padding: 0; border: 0; border-bottom: 1px solid currentColor; background: transparent; color: var(--blue); font: 600 16px/1.2 "DM Sans"; letter-spacing: .07em; cursor: pointer; }
+.revocation button { padding: 0; border: 0; border-bottom: 1px solid currentColor; background: transparent; color: var(--green); font: 600 16px/1.2 "DM Sans"; letter-spacing: .07em; cursor: pointer; }
 .revocation button:hover { color: var(--coral); }
 .revocation button:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
-.revocation span { display: block; margin-top: 13px; color: var(--blue); font-size: 15px; }
+.revocation span { display: block; margin-top: 13px; color: var(--green); font-size: 15px; }
 
 @media (max-width: 700px) {
   .content { width: calc(100% - 36px); padding: 78px 0 96px; }

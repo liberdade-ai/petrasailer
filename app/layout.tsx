@@ -48,10 +48,6 @@ export const metadata: Metadata = {
   creator: "Petra Sailer",
   publisher: "Petra Sailer",
   referrer: "strict-origin-when-cross-origin",
-  icons: {
-    icon: "/petra-sailer-logo.svg",
-    shortcut: "/petra-sailer-logo.svg",
-  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

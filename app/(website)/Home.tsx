@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "./BrandLogo";
 import OfferName from "./OfferName";
 import styles from "./base.module.css";
 
@@ -39,9 +40,7 @@ export default function HomeContent() {
 
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <Link className={styles.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen">
-            <img src="/petra-sailer-logo.svg" alt="" />
-          </Link>
+          <BrandLogo className={styles.brand} variant="header" />
           <nav className={styles.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={styles.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={styles.mobileMenu}>
@@ -221,7 +220,7 @@ export default function HomeContent() {
       </main>
 
       <footer className={styles.footer}>
-        <Link className={styles.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link>
+        <BrandLogo className={styles.footerBrand} variant="footer" />
         <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={styles.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
         <div className={styles.footerBottom}>

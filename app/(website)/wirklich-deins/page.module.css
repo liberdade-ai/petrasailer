@@ -1,7 +1,7 @@
 .followPage { background: var(--offwhite); }
 .followPage p { font-size: 18px; line-height: 1.6; }
 
-.hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "meta meta" "title title" "question intro"; gap: 52px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 90px; overflow: hidden; background: var(--coral); color: var(--offwhite); }
+.hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "meta meta" "title title" "question intro"; gap: 52px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 90px; overflow: hidden; background: var(--navy); color: var(--offwhite); }
 .heroMeta { grid-area: meta; }
 .heroMeta p { font-size: 11px !important; }
 .hero h1 { grid-area: title; position: relative; z-index: 2; max-width: 1280px; color: var(--offwhite); font-size: clamp(67px, 8.2vw, 118px); line-height: .8; }
@@ -9,7 +9,7 @@
 .heroQuestion { grid-area: question; align-self: end; max-width: 630px; padding-left: 7vw; }
 .heroQuestion h2 { color: var(--offwhite); font: italic 500 clamp(36px, 4.3vw, 62px)/.95 "Cormorant Garamond"; letter-spacing: -.035em; }
 .heroQuestion p { margin-top: 16px; color: var(--sun); font-weight: 600; }
-.heroPortrait { grid-area: portrait; align-self: end; min-height: 660px; margin-top: -50px !important; overflow: hidden; background: var(--sun); }
+.heroPortrait { grid-area: portrait; align-self: end; min-height: 660px; margin-top: -50px !important; overflow: hidden; background: var(--sage); }
 .heroPortrait img { object-position: 50% 35%; filter: saturate(.84); }
 .heroIntro { grid-area: intro; align-self: end; justify-self: end; width: 100%; max-width: 650px; padding: 45px 0 0; border-top: 1px solid rgb(from var(--offwhite) r g b / .35); }
 .heroIntro > p:first-child { max-width: 620px; font-size: 21px; line-height: 1.6; }
@@ -40,7 +40,7 @@
 .visionCopy strong { display: block; margin: 45px 0 20px; color: var(--sun); font: italic 500 clamp(30px, 3vw, 44px)/1.05 "Cormorant Garamond"; }
 
 .introCtaSpacer { width: 100%; height: 48px; background: var(--offwhite); }
-.introCta { --hero-grid-inset: max(32px, calc((100vw - 1376px) / 2)); --vision-grid-inset: max(45px, calc((100vw - 1280px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8vw; min-height: 200px; padding: 60px var(--hero-grid-inset); background: var(--terracotta); }
+.introCta { --hero-grid-inset: max(32px, calc((100vw - 1376px) / 2)); --vision-grid-inset: max(45px, calc((100vw - 1280px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8vw; min-height: 200px; padding: 60px var(--hero-grid-inset); background: var(--navy); }
 .introCta p { max-width: 650px; margin: 0 0 0 calc(var(--vision-grid-inset) - var(--hero-grid-inset)); color: var(--offwhite); font-size: clamp(23px, 2.1vw, 30px); line-height: 1.25; }
 .introCta p > span { display: block; }
 .heroIntro :global(a), .introCta :global(a) { width: min(100%, 431px); }
@@ -54,10 +54,10 @@
 .processIntro h2 em { color: var(--coral); }
 .processIntro > div:last-child { align-self: end; }
 .processIntro > div:last-child p + p { margin-top: 20px; font-weight: 600; }
-.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; border: 1px solid rgb(var(--green-rgb) / .25); background: var(--sun); color: var(--green); }
+.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; border: 1px solid rgb(var(--green-rgb) / .25); background: var(--sage); color: var(--green); }
 .processList li { display: grid; grid-template-columns: 90px 1fr .7fr; gap: 6vw; align-items: center; min-height: 230px; padding: 40px max(32px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid rgb(var(--green-rgb) / .25); transition: background .25s ease, color .25s ease; }
 .processList li:last-child { border-bottom: 0; }
-.processList li:hover { background: var(--sun); }
+.processList li:hover { background: var(--sage); }
 .processList li > span { color: var(--coral); font: italic 500 43px/1 "Cormorant Garamond"; }
 .processList h3 { color: inherit; font-size: clamp(40px, 4.5vw, 65px); line-height: .9; }
 .processClosing { display: grid; grid-template-columns: .8fr 1.2fr; background: var(--blue); color: var(--offwhite); }
@@ -93,7 +93,7 @@
 .voicesHeading { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; align-items: end; }
 .voicesHeading h2 { color: var(--green); font-size: clamp(57px, 6vw, 87px); line-height: .86; }
 .voicesHeading h2 em { color: var(--coral); }
-.voicesHeading > p { color: var(--blue); }
+.voicesHeading > p { color: var(--green); }
 .voiceList { display: grid; grid-template-columns: 1fr 1fr; margin-top: 85px; border-top: 1px solid rgb(var(--green-rgb) / .25); }
 .voiceList figure { display: flex; flex-direction: column; gap: 34px; padding: 55px clamp(28px, 4vw, 58px) 62px; border-bottom: 1px solid rgb(var(--green-rgb) / .25); }
 .voiceList figure:nth-child(2) { border-left: 1px solid rgb(var(--green-rgb) / .25); }
@@ -103,9 +103,9 @@
 .voiceList blockquote p + p { margin-top: 25px; }
 .voiceList figcaption { order: -1; display: flex; flex-direction: column; gap: 5px; padding-top: 5px; color: var(--coral); font-size: 11px; letter-spacing: .05em; }
 .voiceList figure:last-child figcaption { order: 0; }
-.voiceList figcaption span { color: var(--blue); }
+.voiceList figcaption span { color: var(--green); }
 
-.fit { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--sun); color: var(--green); }
+.fit { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--sage); color: var(--green); }
 .fitIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; align-items: end; }
 .fitIntro h2 { font-size: clamp(59px, 6.3vw, 91px); line-height: .84; }
 .fitIntro h2 > em { display: block; color: var(--coral); }
@@ -128,8 +128,8 @@
 .offerFacts span { color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .12em; }
 .offerFacts strong { display: block; margin-top: 42px; font: italic 500 clamp(20px, 1.8vw, 27px)/1.08 "Cormorant Garamond"; }
 .offerAction { display: grid; grid-template-columns: 1fr .6fr; gap: 7vw; align-items: end; max-width: 900px; margin: 70px 0 0 auto; }
-.offerAction :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); font-size: 16px; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.offerAction :global(a:hover) { border-color: var(--blue); background: var(--blue); color: var(--offwhite); }
+.offerAction :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite); font-size: 16px; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.offerAction :global(a:hover) { border-color: var(--green); background: var(--blue); color: var(--offwhite); }
 
 .faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 9vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
 .faqHeading h2 { margin-top: 62px; font-size: clamp(60px, 6.5vw, 94px); line-height: .84; }
@@ -143,11 +143,12 @@
 .faqList details > p, .faqList details > div { max-width: 690px; padding: 0 65px 32px 0; }
 .faqList details > div p + p { margin-top: 20px; }
 
-.finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)); background: var(--coral); color: var(--offwhite); }
+.finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)); background: var(--navy); color: var(--offwhite); }
 .finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--offwhite); font-size: clamp(70px, 8.4vw, 122px); line-height: .78; }
 .finalCta h2 em { color: var(--sun); }
 .finalCta > h2 + div { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: end; max-width: 900px; margin: 80px 0 0 auto; }
-.heroIntro :global(a), .introCta :global(a), .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--navy); background: var(--navy); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.heroIntro :global(a), .introCta :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--gold); background: var(--gold); color: var(--green); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
+.finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--gold); background: var(--gold); color: var(--green); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .finalCta > h2 + div :global(a) { width: 100%; }
 .finalCta > h2 + div :global(a) { font-size: 16px; }
 .heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: var(--gold); background: var(--gold); color: var(--green); }
@@ -200,7 +201,7 @@
   .visionCopy { padding: 75px 18px; }
   .processList { width: calc(100% - 36px); margin: 0 auto; }
   .processList li { display: block; min-height: 0; padding: 45px 18px 52px; }
-  .processList li:hover { background: var(--sun); }
+  .processList li:hover { background: var(--sage); }
   .processList li > span { display: block; margin-bottom: 48px; font-size: 34px; }
   .processList h3 { font-size: 42px; }
   .processList p { margin-top: 27px !important; }

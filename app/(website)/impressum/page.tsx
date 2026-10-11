@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BrandLogo from "../BrandLogo";
 import shell from "../base.module.css";
 import siteStyles from "../page.module.css";
 import styles from "./page.module.css";
@@ -29,7 +30,7 @@ export default function ImprintPage() {
       <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
       <header className={shell.header}>
         <div className={shell.headerInner}>
-          <Link className={shell.brand} href="/" aria-label="Petra Sailer – Dem Eigenen folgen"><img src="/petra-sailer-logo.svg" alt="" /></Link>
+          <BrandLogo className={shell.brand} variant="header" />
           <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
           <a className={shell.headerCta} href="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
           <details className={shell.mobileMenu}>
@@ -80,7 +81,7 @@ export default function ImprintPage() {
       </main>
 
       <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <Link className={shell.footerBrand} href="/"><img src="/petra-sailer-footer-logo.svg" alt="" /></Link>
+        <BrandLogo className={shell.footerBrand} variant="footer" />
         <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
         <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a>
         <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="/impressum/" aria-current="page">Impressum</a><a href="/datenschutz/">Datenschutz</a></div></div>

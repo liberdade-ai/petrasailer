@@ -21,7 +21,7 @@
   min-height: 42px;
   align-items: center;
   gap: 18px;
-  color: var(--navy);
+  color: var(--green);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -90,7 +90,7 @@
   max-width: 720px;
   padding-top: 28px;
   border-top: 4px solid var(--terracotta);
-  color: var(--navy);
+  color: var(--green);
   font-size: 19px !important;
   line-height: 1.62 !important;
 }
@@ -100,7 +100,7 @@
 }
 
 .preparation {
-  background: var(--gold);
+  background: var(--sage);
   color: var(--green);
   padding: clamp(88px, 11vw, 150px) 32px;
 }
