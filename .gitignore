@@ -15,6 +15,7 @@
 
 # next.js
 /.next/
+/.next-dev/
 /out/
 
 # misc
@@ -50,5 +51,10 @@ service-account*.json
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo
 /outputs/
 /work/
+
+# This project uses npm; ignore pnpm files created by local tooling.
+pnpm-lock.yaml
+pnpm-workspace.yaml
