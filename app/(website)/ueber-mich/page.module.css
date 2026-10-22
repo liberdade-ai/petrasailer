@@ -92,10 +92,10 @@
 .pathGrid h3 em { color: var(--sun); }
 .pathGrid article > span { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
 .pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 12px 20px; border: 1px solid var(--navy); background: var(--navy); color: var(--offwhite); gap: 15px; }
-.pathGrid article:first-child :global(a:hover) { border-color: var(--green); background: var(--gold); color: var(--green); gap: 15px; }
+.pathGrid article:first-child :global(a:hover) { border-color: var(--green); background: var(--offwhite); color: var(--green); gap: 15px; }
 .pathGrid article:last-child :global(a) { border-color: var(--gold); background: var(--gold); color: var(--green); }
 .pathGrid article:last-child :global(a) :global(.offer-name__deins) { font-family: var(--sans); font-size: 1em; font-style: normal; font-weight: inherit; line-height: inherit; vertical-align: 0; }
-.pathGrid article:last-child :global(a:hover) { border-color: var(--offwhite); background: var(--offwhite); color: var(--green); gap: 15px; }
+.pathGrid article:last-child :global(a:hover) { border-color: var(--green); background: var(--offwhite); color: var(--green); gap: 15px; }
 
 @media (max-width: 1050px) {
   .hero { grid-template-columns: 1fr 1fr; }

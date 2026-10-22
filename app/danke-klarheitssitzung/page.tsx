@@ -1,61 +1,22 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import BrandLogo from "../(website)/BrandLogo";
 import { pageMetadata } from "../seo";
-import shell from "../(website)/base.module.css";
-import siteStyles from "../(website)/page.module.css";
-import styles from "./page.module.css";
+import DankeSeite from "./DankeSeite";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Vielen Dank für deine Buchung",
-  description: "Bestätigung deiner Buchung der Klarheitssitzung bei Petra Sailer.",
+  title: "Danke für deine Buchung",
+  description: "Bestätigung deiner Buchung der Klarheitssitzung bei Petra Sailer, mit Terminbuchung.",
   path: "/danke-klarheitssitzung/",
   noIndex: true,
 });
 
 export default function DankeKlarheitssitzung() {
   return (
-    <div className={`${shell.page} ${styles.thanksPage}`}>
-      <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
-
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <BrandLogo className={shell.brand} variant="header" />
-          <Link className={styles.backLink} href="/">
-            Zur Website
-            <span aria-hidden="true">↗</span>
-          </Link>
-        </div>
-      </header>
-
-      <main id="inhalt">
-        <section className={styles.hero}>
-          <div className={styles.heroInner}>
-            <p className={styles.heroMeta}>DEINE KLARHEITSSITZUNG</p>
-            <div className={styles.heroMain}>
-              <h1>Vielen Dank für deine Buchung.</h1>
-              <div className={styles.confirmation}>
-                <p className={styles.lead}>Ich melde mich innerhalb eines Werktages persönlich per E-Mail bei dir, damit wir einen Termin für deine Klarheitssitzung vereinbaren. Den Link für unsere Online-Sitzung erhältst du anschließend ebenfalls per E-Mail.</p>
-              </div>
-            </div>
-            <div className={styles.nextStep}>
-              <h2 className={styles.subheading}>Du musst nichts vorbereiten.</h2>
-              <div className={styles.nextCopy}>
-                <p className={styles.subText}>Es reicht, wenn du den einen Punkt mitbringst, bei dem du gerade nicht weiterkommst.</p>
-                <p className={styles.closing}>Ich freue mich auf unsere gemeinsame Sitzung.</p>
-                <p className={styles.legalNote}>Die Abbuchung erfolgt über Digistore24.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <BrandLogo className={shell.footerBrand} variant="footer" />
-        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
-        <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
-        <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
-      </footer>
-    </div>
+    <DankeSeite
+      label="Deine Klarheitssitzung"
+      location="danke_klarheitssitzung"
+      intro="Alles hat geklappt. Jetzt suchst du dir direkt deinen Termin aus. Nach der Terminbuchung bekommst du die Bestätigung und den Zoom-Link per E-Mail, anschließend die fünf Fragen zu deinem Thema."
+      calendarHeading={<>Such dir deinen <em>Termin aus.</em></>}
+      calendarText="Im Kalender siehst du alle freien Termine. Wähl einfach den, der für dich gut passt."
+    />
   );
 }

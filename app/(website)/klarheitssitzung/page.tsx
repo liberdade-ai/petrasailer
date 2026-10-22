@@ -1,30 +1,24 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import BrandLogo from "../BrandLogo";
 import JsonLd from "../../JsonLd";
 import { CLARITY_SOCIAL_IMAGE, pageMetadata, serviceGraph } from "../../seo";
-import shell from "../base.module.css";
 import styles from "./page.module.css";
-import siteStyles from "../page.module.css";
+import SiteNav from "./SiteNav";
 
+// Digistore24-Produkte, von Petra am 22.10.2026 bestätigt: Einzelsitzung 220 € und Fünferpaket 949 € (3 × 317 €).
 const BOOKING_URL = "https://www.digistore24.com/product/580151";
 const FIVE_SESSIONS_BOOKING_URL = "https://www.digistore24.com/product/735633";
-const NAVIGATION = [
-  { label: "ÜBER MICH", href: "/ueber-mich/" },
-  { label: "KLARHEITSSITZUNG", href: "#top", current: true },
-  { label: "WIRKLICH DEINS.", href: "/wirklich-deins/" },
-  { label: "KONTAKT", href: "/kontakt/" },
-] as const;
+const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
+const EMAIL = "kontakt@petrasailer.com";
 
 const PAGE_DESCRIPTION =
-  "In der Klarheitssitzung schauen wir gemeinsam, was für dich wirklich stimmt, was dich im Moment noch zurückhält und welcher nächste Schritt daraus entsteht.";
+  "Die Klarheitssitzung für alle, die sich mit einer Entscheidung, einem Vorhaben oder ihrer Richtung im Kreis drehen: 75 Minuten 1:1 online, mit Klarheitskarte und deinem nächsten Schritt.";
 
 export const metadata: Metadata = pageMetadata({
   title: "Klarheitssitzung",
   description: PAGE_DESCRIPTION,
   path: "/klarheitssitzung/",
-  socialDescription:
-    "Eine 1:1-Online-Sitzung für ein konkretes Thema, bei dem du gerade nicht weiterkommst.",
+  socialDescription: "Drehst du dich seit Wochen im Kreis? 75 Minuten 1:1 online, für deinen Punkt.",
   socialImage: {
     url: CLARITY_SOCIAL_IMAGE,
     width: 1200,
@@ -33,25 +27,47 @@ export const metadata: Metadata = pageMetadata({
   },
 });
 
-function NavLinks() {
-  return NAVIGATION.map((item) => (
-    <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>
-      {item.label}
-    </a>
-  ));
-}
+const STEPS = [
+  { title: "In die Stille kommen", text: "Wir fahren runter. Der Gedankenstrom wird ruhiger, und deine Aufmerksamkeit wandert nach innen." },
+  { title: "Das Gewünschte erleben", text: "Du tauchst ein in das, was du dir wünschst, und erlebst es, als wäre es schon da. Wie fühlt sich das an, und wie bist du darin?" },
+  { title: "Zurück ins Jetzt", text: "Dann kommst du zurück. Was sagt dein jetziges Ich dazu? Wir sammeln ein, was auftaucht, auch die Zweifel und alles, was dich bisher zurückgehalten hat." },
+  { title: "Den nächsten Schritt holen", text: "Du tauchst noch einmal ein und schaust von dort auf deinen Weg. So entsteht dein nächster Schritt dort, wo dein Wunsch schon Wirklichkeit ist." },
+] as const;
 
-type LinkTracking = {
-  event: "cta_click" | "booking_click";
-  location: string;
-  cta?: string;
-  offer?: string;
-};
+const INCLUDED = [
+  { label: "Dauer", text: "75 Minuten, 1:1 online per Video" },
+  { label: "Vorab", text: "5 Fragen, die du in Ruhe beantwortest" },
+  { label: "Danach", text: "Deine Klarheitskarte: eine Seite mit allem, was sich gezeigt hat, und deinem nächsten Schritt" },
+  { label: "Nach 14 Tagen", text: "melde ich mich noch einmal bei dir, beim Fünferpaket nach der letzten Sitzung" },
+] as const;
 
-function ActionLink({ href, children, light = false, secondary = false, tracking }: { href: string; children: React.ReactNode; light?: boolean; secondary?: boolean; tracking?: LinkTracking }) {
+// Auszüge aus abgesegneten Testimonials (Begleitung über drei Monate); Reinholds Zitat ist zusammengezogen und braucht seine Freigabe
+const VOICES = [
+  { quote: "Die Arbeit mit Petra ist tief, klar und macht Freude.", name: "Antje H.", role: "führende Angestellte" },
+  { quote: "Danke von Herzen, liebe Petra, dafür, dass du mich groß gesehen hast, bevor ich mich selbst so sehen konnte!", name: "Kathi G.", role: "selbstständig" },
+  { quote: "Wann immer ich heute im Alltag getriggert bin, Ängste oder Überforderung erlebe, wende ich das an, was ich bei Petra gelernt habe, und werde wieder frei. Frei zu wählen, was ich gerade möchte und was nicht.", name: "Reinhold S.", role: "führender Angestellter" },
+] as const;
+
+// Für die erste Sitzung zu 150 € gibt es noch keinen Digistore-Link; bis dahin per E-Mail.
+const PRICES = [
+  { title: "Erste Klarheitssitzung", note: "einmalig zum Einstiegspreis", price: "150 €", href: `mailto:${EMAIL}?subject=Erste%20Klarheitssitzung%20(150%20%E2%82%AC)`, offer: "klarheitssitzung_erste" },
+  { title: "Einzelsitzung", note: "wann immer du sie brauchst", price: "220 €", href: BOOKING_URL, offer: "klarheitssitzung" },
+  { title: "Fünferpaket", note: "für fünf Punkte oder ein großes Thema, bei dem du dranbleiben willst", price: "949 €", rate: "oder 3 Raten à 317 €", href: FIVE_SESSIONS_BOOKING_URL, offer: "klarheitssitzung_5er" },
+] as const;
+
+const FAQ = [
+  { q: "Ist das nur für berufliche Themen?", a: "Du kannst mit allem kommen, was dich gerade umtreibt: Job, Business, Beziehung oder ein Projekt, das dir am Herzen liegt. Wichtig ist nur, dass es um einen konkreten Punkt geht." },
+  { q: "Was, wenn ich schon eine Ahnung habe?", a: "Umso besser. Dann schauen wir, was dich bisher zurückgehalten hat, und was jetzt als Nächstes dran ist." },
+  { q: "Wie geht es nach der Buchung weiter?", a: "Du buchst und bezahlst über Digistore24. Direkt danach suchst du dir auf der Danke-Seite deinen Termin aus. Anschließend bekommst du den Zoom-Link und die fünf Fragen zu deinem Thema. Für die Sitzung brauchst du nur einen Raum, in dem du ungestört bist, etwas zu trinken und deine Offenheit." },
+  { q: "Muss ich danach weiter mit dir arbeiten?", a: "Die Klarheitssitzung ist in sich abgeschlossen. Du gehst mit deiner Klarheitskarte selbstständig weiter, und nach 14 Tagen melde ich mich noch einmal bei dir. Ob du danach wieder buchst, entscheidest allein du." },
+] as const;
+
+type Tracking = { event: "cta_click" | "booking_click"; location: string; cta?: string; offer?: string };
+
+function Action({ href, children, className, tracking }: { href: string; children: React.ReactNode; className: string; tracking?: Tracking }) {
   return (
     <a
-      className={`${shell.textLink} ${light ? shell.textLinkLight : ""} ${secondary ? styles.secondaryAction : ""}`}
+      className={className}
       href={href}
       data-umami-event={tracking?.event}
       data-umami-event-cta={tracking?.cta}
@@ -59,18 +75,14 @@ function ActionLink({ href, children, light = false, secondary = false, tracking
       data-umami-event-location={tracking?.location}
       data-umami-event-destination={tracking ? href : undefined}
     >
-      <span>{children}</span><span aria-hidden="true">↗</span>
+      {children}
     </a>
   );
 }
 
-function Marker({ number, children }: { number: string; children: React.ReactNode }) {
-  return <div className={shell.sectionMarker}><span>{number}</span><p>{children}</p></div>;
-}
-
 export default function ClarityPage() {
   return (
-    <div className={`${shell.page} ${styles.clarityPage}`}>
+    <div className={styles.page}>
       <JsonLd
         data={serviceGraph({
           path: "/klarheitssitzung/",
@@ -79,191 +91,203 @@ export default function ClarityPage() {
           serviceType: "1:1 Online-Coaching",
         })}
       />
-      <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
+      <a className={styles.skipLink} href="#inhalt">Zum Inhalt springen</a>
 
-      <header className={shell.header}>
-        <div className={shell.headerInner}>
-          <BrandLogo className={shell.brand} variant="header" />
-          <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={shell.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
-          <details className={shell.mobileMenu}>
-            <summary><span>MENÜ</span><i aria-hidden="true" /></summary>
-            <div className={shell.mobilePanel}>
-              <nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav>
-              <a className={shell.mobileCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
+      <header className={styles.hero}>
+        <div className={styles.wrap}>
+          <SiteNav current="/klarheitssitzung/" ctaHref="#preise" />
+          <div className={styles.heroContent}>
+            <div className={styles.sideNote} aria-hidden="true">
+              <span>Was sagen die anderen?</span>
+              <span>Was wäre vernünftig?</span>
+              <span>Und wenn es schiefgeht?</span>
             </div>
-          </details>
-        </div>
-      </header>
-
-      <main id="inhalt">
-        <section className={styles.hero} id="top">
-          <div className={styles.heroMeta}><Marker number="01">KLARHEITSSITZUNG · 1:1 ONLINE</Marker></div>
-          <h1>Drehst du dich gerade <em>im Kreis?</em></h1>
-          <p className={styles.heroQuestion}>Und willst du klarer sehen, was für dich stimmt und wie du weitergehen kannst? Oder was vielleicht noch möglich ist?</p>
-          <div className={styles.heroIntro}>
-            <p>Du bringst einen konkreten Punkt mit, bei dem du gerade feststeckst. Gemeinsam schauen wir aus einer neuen Perspektive darauf. So kann klarer werden, was für dich wirklich stimmt, welche Möglichkeiten du hast und was du als Nächstes konkret tun kannst.</p>
-            <div className={styles.heroActions}>
-              <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>KLARHEITSSITZUNG BUCHEN</ActionLink>
-              <ActionLink href="/kennenlerngespraech/klarheitssitzung/" light secondary tracking={{ event: "cta_click", cta: "kennenlerngespraech", offer: "klarheitssitzung", location: "klarheitssitzung_hero" }}>15-MINUTIGES KENNENLERNGESPRÄCH</ActionLink>
-            </div>
-          </div>
-          <div className={styles.heroOrbit} aria-hidden="true"><span>?</span></div>
-        </section>
-
-        <section className={styles.recognition}>
-          <Marker number="02">WENN DU FESTSTECKST</Marker>
-          <h2>Es geht um diesen <em>einen Punkt,</em> an dem du jetzt weiterkommen möchtest.</h2>
-          <div className={styles.recognitionCopy}>
-            <p>Vielleicht weißt du nicht, ob du den neuen Job annehmen sollst. Vielleicht geht es um deine Beziehung und um etwas, das du ansprechen, verändern oder entscheiden möchtest. Vielleicht kommst du mit deinem Business, deinen Website-Texten oder einem anderen Vorhaben nicht voran.</p>
-            <p>Vielleicht siehst du auch mehrere Möglichkeiten und weißt nicht, welche wirklich zu dir passt. Oder du spürst, dass es für dein Thema noch einen anderen Weg geben könnte, kannst ihn aber gerade nicht klar sehen.</p>
-            <p>Oder du stehst eigentlich schon kurz vor dem nächsten Schritt. Und irgendetwas hält dich trotzdem zurück.</p>
-            <p className={styles.recognitionClosing}>Es geht nicht darum, in einer Sitzung dein ganzes Leben zu verändern. Es geht um diesen einen Punkt, der im Hintergrund immer wieder auftaucht und Kraft kostet. Du bringst genau dieses eine Thema mit. Und damit arbeiten wir.</p>
-          </div>
-        </section>
-
-        <section className={styles.process} id="prozess">
-          <div className={styles.processIntro}>
-            <Marker number="03">WIE WIR ARBEITEN</Marker>
-            <div className={styles.processContent}>
-              <h2>
-                <span className={styles.processHeadingDesktop}>
-                  <span>Wir verändern</span>
-                  <span className={styles.processHeadingNoBreak}>den <em>Ausgangspunkt,</em></span>
-                  <span>von dem aus</span>
-                  <span>du auf dein</span>
-                  <span>Thema schaust.</span>
-                </span>
-                <span className={styles.processHeadingDefault}>Wir verändern den <em>Ausgangspunkt,</em> von dem aus du auf dein Thema schaust.</span>
-              </h2>
-              <div className={styles.processLead}>
-                <div className={styles.processCopy}>
-                  <p>Solange du innerhalb deines Problems denkst, suchst du auch dort nach einer Lösung. Dabei entstehen häufig immer wieder ähnliche Gedanken, weil der Ausgangspunkt derselbe bleibt.</p>
-                  <p>In der Klarheitssitzung verändern wir diesen Ausgangspunkt.</p>
-                </div>
-                <p className={styles.processPivot}>Du suchst nicht mehr vom Problem aus nach der Lösung, sondern gehst zuerst in das gewünschte Ergebnis hinein und lässt von dort die Antwort oder den nächsten Schritt entstehen.</p>
-                <div className={styles.processCopy}>
-                  <p>Von dort aus wird klarer, was für dich stimmt, was dich bisher zurückgehalten hat und was jetzt möglich ist. Und manchmal wird von dort sogar eine Möglichkeit sichtbar, die du vorher überhaupt nicht im Blick hattest.</p>
-                  <p className={styles.processRole}>Ich begleite dich durch den Prozess, greife auf, was du sagst, frage dort genauer nach, wo etwas noch offen ist, und fasse zusammen, was sich zeigt. Denn deine Antworten sind schon da. Ich helfe dir, sie wieder hörbar zu machen.</p>
-                  <p>Dafür arbeiten wir mit meinem Klarheitsprozess – vier Schritte vom gewünschten Ergebnis zu einer klareren Entscheidung und deinem nächsten konkreten Schritt.</p>
+            <p className={styles.label}>Klarheitssitzung · 1:1 online</p>
+            <h1>Drehst du dich<br /> seit Wochen<br /> <em>im Kreis?</em></h1>
+            <div className={styles.heroBottom}>
+              <p className={styles.heroQuestion}>Stell dir vor, es wird ruhig im&nbsp;Kopf.<br /> Und du weißt, was du willst.<br /> Genau da gehen wir&nbsp;hin.</p>
+              <div className={styles.heroCta}>
+                <div className={styles.heroActions}>
+                  <Action className={styles.btn} href="#preise" tracking={{ event: "cta_click", cta: "zu_preisen", location: "hero" }}>
+                    Klarheit holen
+                  </Action>
+                  <Action className={styles.textLink} href={CONSULTATION_URL} tracking={{ event: "cta_click", cta: "kennenlerngespraech", location: "hero" }}>
+                    15 Minuten kennenlernen
+                  </Action>
                 </div>
               </div>
             </div>
           </div>
-          <ol className={styles.processList}>
-            <li><span>01</span><h3>In die Stille kommen</h3><p>Wir nehmen uns einen Moment der Stille. Dein alltäglicher Gedankenstrom darf ruhiger werden, und du richtest deine Aufmerksamkeit nach innen.</p></li>
-            <li><span>02</span><h3>Das gewünschte Ergebnis erleben</h3><p>Du erlebst innerlich, wie es ist, wenn das, was du dir wünschst, bereits Wirklichkeit ist.</p></li>
-            <li><span>03</span><h3>Zurück in die Jetzt-Realität</h3><p>Du schaust von dieser neuen Perspektive auf das, was heute da ist und erkennst klarer, was dich bisher zurückgehalten hat oder was gerade noch zwischen dir und deinem gewünschten Ergebnis steht.</p></li>
-            <li><span>04</span><h3>Den nächsten Schritt erkennen</h3><p>Du verbindest dich noch einmal mit dem gewünschten Ergebnis. Von dort wird klarer, welche Entscheidung oder welcher konkrete Schritt jetzt wirklich stimmig ist und in deiner Hand liegt.</p></li>
-          </ol>
+        </div>
+      </header>
+
+      <main id="inhalt">
+        <section className={styles.statement}>
+          <div className={styles.wrap}>
+            <h2>Zu viele Stimmen <em>im Kopf.</em></h2>
+            <div className={styles.statementGrid}>
+              <p className={styles.standfirst}>Und die wichtigste, deine eigene, geht darin unter.</p>
+              <div className={styles.statementText}>
+                <p>Der neue Job liegt auf dem Tisch und innerlich hast du schon dreimal zu- und zweimal wieder abgesagt.</p>
+                <p>Das Gespräch mit deinem Partner probst du seit Wochen immer wieder in deinem Kopf und da läuft es jedes Mal großartig.</p>
+                <p>Dein neues Vorhaben steht seit Monaten auf deiner Liste und rutscht jede Woche eine Zeile weiter nach unten.</p>
+                <p className={styles.lead}>Das kostet Kraft. Und die brauchst du doch für etwas ganz anderes!</p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section className={styles.offer} id="angebot">
-          <div className={styles.offerTop}>
-            <Marker number="04">DER RAHMEN</Marker>
-            <h2>Deine Klarheitssitzung</h2>
-            <p className={styles.price}>240 € <span>inkl. MwSt.</span></p>
+        <section className={styles.interlude} aria-label="Leitgedanke">
+          <div className={styles.wrap}>
+            <blockquote>Deine Antwort ist <span className={styles.nowrap}>längst da.</span></blockquote>
           </div>
-          <div className={styles.offerFacts} aria-label="Angebotsinformationen">
-            <div><span>FORMAT</span><strong>1:1 online</strong></div>
-            <div><span>DAUER</span><strong>90 bis 120 Minuten</strong></div>
-            <div><span>FOKUS</span><strong>Ein konkretes Thema</strong></div>
-            <div><span>INKLUSIVE</span><strong>Zusammenfassung</strong></div>
-            <div><span>ERGEBNIS</span><strong>Dein konkreter nächster Schritt</strong></div>
+        </section>
+
+        <section className={styles.process}>
+          <div className={styles.wrap}>
+            <div className={styles.split}>
+              <h2>Wir drehen die<br /> <span className={styles.nowrap}>Blickrichtung <em>um.</em></span></h2>
+              <div>
+                <p className={styles.lead}>Bisher hast du von außen auf dein Thema geschaut.</p>
+                <p>Wer so schaut, läuft im Kreis und kommt immer wieder an derselben Stelle an. In der Sitzung tauchst du ein in das, was du wirklich willst, und schaust von dort aus.</p>
+                <p>Dafür nehmen wir uns Zeit. Wenn es in dir leiser wird, taucht Neues auf, und du siehst, was dran ist. Genau dahin gehen wir, in deinem Tempo.</p>
+              </div>
+            </div>
+            <ol className={styles.steps}>
+              {STEPS.map((step, index) => (
+                <li key={step.title}>
+                  <span className={styles.num} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.text}</p>
+                </li>
+              ))}
+            </ol>
           </div>
-          <div className={styles.offerBottom}>
+        </section>
+
+        <section className={styles.story}>
+          <div className={styles.wrap}>
+            <p className={styles.label}>Aus der Praxis</p>
+            <div className={styles.split}>
+              <h2>Als die Verbindung wieder da war, kamen auch <em>die richtigen Worte.</em></h2>
+              <div>
+                <p>Simona kam zu mir, weil sie bei ihren Website-Texten feststeckte. Sie wusste, was sie anbietet. Aber die richtigen Worte wollten nicht kommen.</p>
+                <p>In der Sitzung ist sie eingetaucht in das, was ihre Arbeit für sie wirklich ist, von innen heraus und ohne die Erwartungen der anderen im Ohr. Von dort floss es.</p>
+                <p className={styles.lead}>Eine halbe Stunde später schickte sie mir die ersten Texte.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.about}>
+          <div className={`${styles.wrap} ${styles.aboutLayout}`}>
             <div>
-              <p>Nach der Sitzung bekommst du eine Zusammenfassung mit dem, was für dich klar geworden ist.</p>
-              <p>Die Klarheitssitzung ist in sich abgeschlossen. Danach kannst du mit deiner Klarheit und deinem nächsten Schritt selbstständig weitergehen.</p>
+              <h2>Ich bin<br /> Petra.</h2>
+              <p className={styles.lead}>Klar geführt, persönlich und <span className={styles.nowrap}>immer zurück zu dir.</span></p>
+              <p>In der Sitzung stelle ich dir genaue Fragen, greife auf, was du sagst, und frage dort nach, wo etwas noch offen ist. Dabei schauen wir immer von dem aus, was du willst. Von dort zeigen sich neue Möglichkeiten und deine nächsten Schritte.</p>
+              <p>Ich lebe in Griechenland und begleite Menschen seit 2021, inzwischen vor allem online.</p>
+              <a className={styles.textLink} href="/ueber-mich/">Mehr über mich</a>
             </div>
-            <ActionLink href={BOOKING_URL} tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_angebot" }}>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>
+            <figure className={styles.aboutPhoto}>
+              <img src="/petra-sailer-hero.jpg" alt="Petra Sailer lächelt in die Kamera" width="1024" height="1024" />
+              <figcaption>Petra Sailer</figcaption>
+            </figure>
+          </div>
+          <div className={`${styles.wrap} ${styles.voices}`}>
+            <h3>So haben Menschen meine Begleitung erlebt</h3>
+            <ul>
+              {VOICES.map((voice) => (
+                <li key={voice.name}>
+                  <blockquote>„{voice.quote}“</blockquote>
+                  <p>{voice.name}, {voice.role}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
-        <section className={styles.sessionPackage} id="5-sitzungen">
-          <Marker number="05">MEHR RAUM</Marker>
-          <div className={styles.sessionPackageIntro}>
-            <h2>5 Sitzungen</h2>
-            <p><em>Wenn du bei einem Thema nicht nur einmal hinschauen möchtest.</em></p>
-          </div>
-          <div className={styles.sessionPackageContent}>
-            <div className={styles.sessionPackageCopy}>
-              <p>Vielleicht gibt es nicht nur diesen einen Punkt. Vielleicht möchtest du dich über einen gewissen Zeitraum begleiten lassen, immer wieder auf das schauen, was gerade ansteht, Entscheidungen klären und deine nächsten Schritte konkret machen.</p>
-              <p>Dann kannst du fünf Sitzungen im Paket buchen.</p>
-              <p>In jeder Sitzung arbeiten wir mit dem Thema, das gerade wichtig ist. Du musst vorher keinen festen Ablauf oder Plan festlegen. Was wir anschauen, ergibt sich aus dem, was du mitbringst und wo du gerade weiterkommen möchtest.</p>
+        <section className={styles.offer} id="preise">
+          <div className={styles.wrap}>
+            <h2>Eine Sitzung. <em>Ein Punkt.</em></h2>
+            <p className={styles.offerText}>In einer Sitzung geht es um genau einen Punkt: den, der im Hintergrund mitläuft und immer wieder auftaucht. Bring ihn mit, den Rest machen wir zusammen.</p>
+            <dl className={styles.facts}>
+              {INCLUDED.map((item) => (
+                <div key={item.label}>
+                  <dt>{item.label}</dt>
+                  <dd>{item.text}</dd>
+                </div>
+              ))}
+            </dl>
+            <h3 className={styles.priceHeading}>Und was <em>kostet das?</em></h3>
+            <div className={styles.priceCards}>
+              {PRICES.map((item) => (
+                <div className={styles.priceCard} key={item.title}>
+                  <h3>{item.title}</h3>
+                  <small>{item.note}</small>
+                  <p className={styles.price}>{item.price}</p>
+                  <p className={styles.rate} aria-hidden={"rate" in item ? undefined : true}>{"rate" in item ? item.rate : "\u00a0"}</p>
+                  <Action className={styles.cardButton} href={item.href} tracking={{ event: "booking_click", offer: item.offer, location: "preise" }}>
+                    Buchen
+                  </Action>
+                </div>
+              ))}
             </div>
-            <div className={styles.sessionPackageInfo}>
-              <div className={styles.sessionPackagePrice}><strong>5 Sitzungen · 997 €</strong><span>statt 1.200 € bei Einzelbuchung</span></div>
-              <div className={styles.sessionPackageInstallments}><p>Oder in <strong>3 Raten à 333 €</strong></p><p><strong>Gesamtpreis bei Ratenzahlung: 999 €</strong></p></div>
-              <p className={styles.sessionPackageValidity}>Die fünf Sitzungen kannst du innerhalb von <strong>drei Monaten ab Kauf</strong> einlösen.</p>
-              <ActionLink href={FIVE_SESSIONS_BOOKING_URL} tracking={{ event: "booking_click", offer: "fuenf_sitzungen", location: "klarheitssitzung_fuenf_sitzungen" }}>5 SITZUNGEN BUCHEN</ActionLink>
-            </div>
+            <p className={styles.priceNote}>Alle Preise inkl. MwSt. Der Einstiegspreis gilt einmal pro Person. Bei Ratenzahlung beträgt der Gesamtpreis&nbsp;951&nbsp;€.<br /> Die 5&nbsp;Sitzungen sind ab Kauf 3&nbsp;Monate&nbsp;gültig.</p>
+            <p className={styles.coachingNote}>Die Klarheitssitzung ist ein Coaching.<br /> Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung.</p>
           </div>
-          <p className={styles.sessionPackageNote}>Die fünf Sitzungen kannst du für ein größeres Thema, mehrere zusammenhängende Fragen oder unterschiedliche Punkte nutzen, bei denen du immer wieder klarer sehen und weiterkommen möchtest.</p>
         </section>
 
-        <section className={styles.practice}>
-          <figure className={styles.practicePortrait}>
-            <img src="/petra-sailer-hero.jpg" alt="Petra Sailer lächelt freundlich in die Kamera" width="1024" height="1024" loading="lazy" />
-          </figure>
-          <div className={styles.practiceStory}>
-            <Marker number="06">AUS DER PRAXIS</Marker>
-            <h2>Als die Verbindung wieder da war, kamen auch <em>die Worte.</em></h2>
+        <section className={styles.faq}>
+          <div className={`${styles.wrap} ${styles.faqGrid}`}>
             <div>
-              <p>Simona kam zu mir, weil sie beim Schreiben ihrer Website-Texte feststeckte. Sie wusste, was sie anbietet – aber die Worte wollten einfach nicht kommen.</p>
-              <p>In der Sitzung hat sie sich wieder mit dem verbunden, was ihre Arbeit wirklich ist: tief, von innen und unabhängig davon, was andere erwarten. Von dort floss es.</p>
-              <p>Eine halbe Stunde später schickte sie mir die ersten Texte.</p>
+              <h2>Noch <em>Fragen?</em></h2>
             </div>
-          </div>
-          <p className={styles.practiceClosing}><span>Manchmal hilft es nicht, noch länger innerhalb des Problems nach einer Lösung zu suchen.</span><span>Manchmal braucht es einen anderen Ausgangspunkt.</span></p>
-        </section>
-
-        <section className={styles.results}>
-          <div className={styles.resultsCopy}>
-            <Marker number="07">WAS DU MITNIMMST</Marker>
-            <h2>Du gehst mit Klarheit über dein Thema – und mit deinem nächsten konkreten Schritt.</h2>
             <div>
-              <p>Du nimmst eine neue Perspektive auf dein Thema ein. Dadurch kann klarer werden, was dich bisher zurückgehalten hat, was du wirklich willst und was für dich stimmt. Vielleicht wird auch eine Möglichkeit sichtbar, die du vorher noch gar nicht im Blick hattest.</p>
-              <p>Und du erkennst, was du heute, morgen oder in den nächsten Tagen konkret tun kannst.</p>
+              {FAQ.map((item) => (
+                <details key={item.q}>
+                  <summary>{item.q}</summary>
+                  <p>{item.a}</p>
+                </details>
+              ))}
+              <details>
+                <summary>Ich bin unsicher, ob es passt.</summary>
+                <p>
+                  Dann <Action className={styles.inlineLink} href={CONSULTATION_URL} tracking={{ event: "cta_click", cta: "kennenlerngespraech", location: "faq" }}>lass uns 15 Minuten sprechen</Action>, kostenfrei und unverbindlich.
+                </p>
+              </details>
             </div>
-          </div>
-          <div className={styles.resultQuote}>
-            <p>Und oft bleibt dieses Gefühl:</p>
-            <strong>Ich habe es<br /><em>in der Hand.</em></strong>
           </div>
         </section>
 
-        <section className={styles.faq} id="faq">
-          <div className={styles.faqHeading}><Marker number="08">NOCH FRAGEN?</Marker><h2>Häufige <em>Fragen</em></h2></div>
-          <div className={styles.faqList}>
-            <details><summary>Was ist, wenn ich schon eine Ahnung habe, aber trotzdem nicht weiterkomme?<span aria-hidden="true">+</span></summary><p>Genau dann kann die Klarheitssitzung passend sein. Vielleicht hast du längst eine Ahnung, was du willst, und kommst trotzdem nicht weiter. Vielleicht hält dich etwas zurück – oder du siehst gerade noch nicht klar, welche Möglichkeiten du eigentlich hast.</p><p>In der Sitzung kann klarer werden, was für dich stimmt und was dein nächster konkreter Schritt sein kann.</p></details>
-            <details><summary>Ist die Klarheitssitzung nur für berufliche Themen?<span aria-hidden="true">+</span></summary><p>Du kannst mit einem beruflichen, persönlichen oder zwischenmenschlichen Thema kommen. Entscheidend ist nicht der Lebensbereich, sondern dass es um einen konkreten Punkt geht, bei dem du klarer sehen möchtest, was für dich stimmt, welche Möglichkeiten du hast oder wie du weitergehen willst.</p></details>
-            <details><summary>Muss ich mich auf die Sitzung vorbereiten?<span aria-hidden="true">+</span></summary><p>Vorbereiten musst du nichts. Es reicht, wenn du den einen Punkt mitbringst, bei dem du gerade klarer sehen möchtest. Alles Weitere zeigt sich in unserer Sitzung.</p></details>
-            <details><summary>Wie geht es nach der Buchung weiter?<span aria-hidden="true">+</span></summary><p>Nach der Buchung über Digistore24 melde ich mich innerhalb eines Werktages persönlich bei dir, damit wir einen Termin für deine Klarheitssitzung vereinbaren. Den Link für unsere Online-Sitzung erhältst du anschließend per E-Mail.</p></details>
-            <details><summary>Muss ich danach weiter mit dir arbeiten?<span aria-hidden="true">+</span></summary><p>Nein. Die Klarheitssitzung ist in sich abgeschlossen. Du musst danach nichts weiter bei mir buchen. In der Sitzung geht es um dein konkretes Thema – und darum, dass du damit selbstständig weitergehen kannst.</p></details>
-          </div>
-        </section>
-
-        <section className={styles.finalCta}>
-          <div className={styles.finalMarker}><Marker number="09">DEIN NÄCHSTER SCHRITT</Marker></div>
-          <h2>Welches Thema soll nicht noch länger <em>im Hintergrund mitlaufen?</em></h2>
-          <div className={styles.finalCopy}>
-            <div className={styles.finalCopyText}>
-              <p>Vielleicht weißt du gerade nicht, was für dich stimmt. Vielleicht siehst du mehrere Möglichkeiten. Oder du drehst dich mit derselben Frage immer wieder im Kreis.</p>
-              <p>Wenn du spürst, dass es Zeit ist, bei diesem einen Thema weiterzukommen, dann bring es mit.</p>
-              <p>Wir schauen gemeinsam, was für dich wirklich stimmt, was vielleicht noch möglich ist und was du als Nächstes konkret tun kannst.</p>
+        <section className={styles.end}>
+          <div className={styles.wrap}>
+            <h2>Genug <em>gekreist?</em></h2>
+            <div className={styles.endBottom}>
+              <p>Du hast es in der Hand. Deine erste Klarheitssitzung gibt es zum Einstiegspreis von 150&nbsp;€.</p>
+              <div className={styles.heroActions}>
+                <Action className={`${styles.btn} ${styles.btnDark}`} href="#preise" tracking={{ event: "cta_click", cta: "zu_preisen", location: "abschluss" }}>
+                  Klarheit holen
+                </Action>
+                <Action className={styles.textLink} href={CONSULTATION_URL} tracking={{ event: "cta_click", cta: "kennenlerngespraech", location: "abschluss" }}>
+                  15 Minuten kennenlernen
+                </Action>
+              </div>
             </div>
-            <ActionLink href={BOOKING_URL} light tracking={{ event: "booking_click", offer: "klarheitssitzung", location: "klarheitssitzung_abschluss" }}>KLARHEITSSITZUNG JETZT BUCHEN</ActionLink>
+            <p className={styles.endContact}>Du hast vor der Buchung noch eine Frage?<br /> Schreib mir einfach: <a href={`mailto:${EMAIL}`} data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="abschluss">{EMAIL}</a></p>
           </div>
-          <p className={styles.contact}>Du hast vor der Buchung noch eine Frage? Dann melde dich gerne persönlich:<br /><a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="klarheitssitzung_abschluss">kontakt@petrasailer.com</a></p>
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <BrandLogo className={shell.footerBrand} variant="footer" />
-        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="#top">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
-        <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a>
-        <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
+      <footer className={styles.footer}>
+        <div className={styles.wrap}>
+          <BrandLogo className={styles.brand} variant="footer" />
+          <nav className={styles.footerLinks} aria-label="Rechtliches">
+            <a href="/impressum/">Impressum</a>
+            <a href="/datenschutz/">Datenschutz</a>
+            <a href="/kontakt/">Kontakt</a>
+          </nav>
+          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
+        </div>
       </footer>
     </div>
   );

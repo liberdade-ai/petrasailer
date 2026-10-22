@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import BrandLogo from "../(website)/BrandLogo";
-import OfferName from "../(website)/OfferName";
 import { pageMetadata } from "../seo";
-import shell from "../(website)/base.module.css";
-import siteStyles from "../(website)/page.module.css";
+// Gestaltung wie auf der Klarheitssitzungs-Seite und den anderen Danke-Seiten.
+import k from "../(website)/klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
+import ThanksNav from "../(website)/klarheitssitzung/ThanksNav";
+
+const EMAIL = "kontakt@petrasailer.com";
 
 export const metadata: Metadata = pageMetadata({
   title: "Dein Termin steht",
@@ -16,80 +17,42 @@ export const metadata: Metadata = pageMetadata({
 
 export default function DankeKennenlerngespraech() {
   return (
-    <div className={`${shell.page} ${styles.thanksPage}`}>
-      <a className={shell.skipLink} href="#inhalt">
-        Zum Inhalt springen
-      </a>
+    <div className={k.page}>
+      <a className={k.skipLink} href="#inhalt">Zum Inhalt springen</a>
 
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <BrandLogo className={shell.brand} variant="header" />
-          <Link className={styles.backLink} href="/">
-            Zur Website<span aria-hidden="true">↗</span>
-          </Link>
+      <header className={styles.hero}>
+        <div className={k.wrap}>
+          <ThanksNav />
+          <div className={styles.heroContent}>
+            <p className={styles.label}>Kennenlerngespräch · <span className={k.nowrap}>15 Minuten</span></p>
+            <h1>Dein Termin <em>steht.</em></h1>
+            <p className={styles.prepare}>Ich freu mich, dich kennenzulernen.</p>
+            <p className={styles.heroText}>Du bekommst eine Bestätigung per E-Mail mit deinem Termin und dem Zoom-Link. Über den Link in dieser E-Mail kannst du den Termin bei Bedarf verschieben.</p>
+          </div>
         </div>
       </header>
 
       <main id="inhalt">
-        <section className={styles.hero}>
-          <div className={styles.heroInner}>
-            <p className={styles.sender}>
-              <OfferName tone="dark" /> · KENNENLERNGESPRÄCH
-            </p>
-            <h1>Dein Termin steht.</h1>
-            <h2>Ich freue mich, dich kennenzulernen.</h2>
-            <p className={styles.confirmation}>
-              Vielen Dank für deine Buchung. Du erhältst eine Bestätigung per
-              E-Mail mit deinem Termin und allen Angaben für unser Gespräch.
-              Über den Link in dieser E-Mail kannst du deinen Termin bei Bedarf
-              verschieben.
-            </p>
-          </div>
-        </section>
-
-        <section className={styles.preparation}>
-          <div className={styles.preparationInner}>
-            <h2>Was du verwirklichen möchtest.</h2>
-            <div className={styles.preparationCopy}>
-              <p>
-                Was du verwirklichen möchtest, ist unser Ausgangspunkt. Und
-                auch das, was dich gerade dazu beschäftigt, hat im Gespräch
-                Platz. Gemeinsam schauen wir, ob <OfferName tone="light" quoted /> zu dir passt
-                und ob wir miteinander arbeiten möchten.
-              </p>
-              <p className={styles.closing}>
-                Ich freue mich auf unser Kennenlernen.
-              </p>
-              <p className={styles.signature}>Petra</p>
+        <section className={styles.booking}>
+          <div className={`${k.wrap} ${styles.bookingTop}`}>
+            <h2>In 15 Minuten <em>schauen wir …</em></h2>
+            <div>
+              <p>… worum es dir geht, was du wissen willst und ob die Klarheitssitzung zu dir passt. Du brauchst dafür nur einen ruhigen Moment und deine Fragen.</p>
+              <p className={styles.small}>Bis bald, Petra</p>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <BrandLogo className={shell.footerBrand} variant="footer" />
-        <nav aria-label="Footer-Navigation">
-          <a href="/ueber-mich/">ÜBER MICH</a>
-          <a href="/klarheitssitzung/">KLARHEITSSITZUNG</a>
-          <a href="/wirklich-deins/">WIRKLICH DEINS.</a>
-          <a href="/kontakt/">KONTAKT</a>
-          <a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a>
-        </nav>
-        <a
-          className={shell.footerEmail}
-          href="mailto:kontakt@petrasailer.com"
-          data-umami-event="contact_click"
-          data-umami-event-method="email"
-          data-umami-event-location="footer"
-        >
-          kontakt@petrasailer.com
-        </a>
-        <div className={shell.footerBottom}>
-          <p>© Petra Sailer 2026</p>
-          <div>
-            <a href="https://petrasailer.com/impressum/">Impressum</a>
-            <a href="https://petrasailer.com/datenschutz/">Datenschutz</a>
-          </div>
+      <footer className={k.footer}>
+        <div className={k.wrap}>
+          <BrandLogo className={k.brand} variant="footer" />
+          <nav className={k.footerLinks} aria-label="Rechtliches">
+            <a href="/impressum/">Impressum</a>
+            <a href="/datenschutz/">Datenschutz</a>
+            <a href="/kontakt/">Kontakt</a>
+          </nav>
+          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
         </div>
       </footer>
     </div>

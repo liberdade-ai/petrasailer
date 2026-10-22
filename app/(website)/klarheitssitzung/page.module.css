@@ -1,252 +1,756 @@
-.clarityPage { background: var(--offwhite); }
-.clarityPage p { font-size: 18px; line-height: 1.6; }
+.page {
+  --ink: #2A1F27;
+  --paper: #F3F0E9;
+  --acid: #EDE548;
+  --lav: #DAE2E6;
+  --lav-tief: #BFCDD5;
+  --sand: #E7E3DB;
+  --muted: #5F555A;
+  --line: #BFB8B2;
+  --serif: "Literata", Georgia, serif;
+  --sans: "Figtree", "Helvetica Neue", Arial, sans-serif;
 
-.hero {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page ::selection { background: var(--acid); color: var(--ink); }
+.page :focus-visible { outline: 3px solid var(--acid); outline-offset: 3px; }
+.page a { color: inherit; text-decoration: none; }
+.page p { margin: 0; }
+.page img { display: block; max-width: 100%; height: auto; }
+
+.page h1,
+.page h2,
+.page h3 {
+  max-width: none;
+  margin: 0;
+  color: inherit;
+  font-family: var(--serif);
+  font-weight: 400;
+}
+.page h1 em,
+.page h2 em { font-weight: 400; font-style: italic; }
+
+.wrap { width: min(1450px, calc(100% - 100px)); margin: 0 auto; }
+
+.skipLink { position: absolute; left: -9999px; }
+.skipLink:focus { left: 16px; top: 16px; z-index: 10; padding: 10px 14px; background: var(--acid); color: var(--ink); }
+
+/* Knöpfe und Textlinks */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding: 18px 22px;
+  background: var(--acid);
+  color: var(--ink) !important;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.btn:hover { transform: translateY(-3px); background: var(--lav-tief); }
+.btnDark { background: var(--ink); color: var(--paper) !important; }
+.btnDark:hover { background: var(--lav-tief); color: var(--ink) !important; }
+.textLink {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid currentColor;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.textLink:hover,
+.inlineLink:hover { box-shadow: inset 0 -8px 0 var(--acid); }
+.hero .textLink:hover { box-shadow: none; color: var(--acid); }
+.end .textLink:hover { box-shadow: inset 0 -8px 0 var(--lav-tief); }
+/* Bei den Preisen (dunkler Grund) gelb, beim Hover ganz hinterlegt, ohne dass sich etwas verschiebt */
+.priceRow .textLink { color: var(--acid); }
+.priceRow .textLink:hover {
+  box-shadow: 0 0 0 8px var(--acid), inset 0 0 0 100px var(--acid);
+  border-bottom-color: transparent;
+  color: var(--ink);
+}
+
+/* Hero */
+.hero { position: relative; display: flex; flex-direction: column; overflow: hidden; min-height: min(100svh, 960px); background: var(--ink); color: var(--paper); }
+.hero > .wrap { display: flex; flex: 1; flex-direction: column; }
+.nav {
   position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  border-bottom: 1px solid rgb(255 255 255 / 0.3);
+}
+.navLinks { display: flex; align-items: center; gap: 36px; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.navDesktop { display: flex; gap: 36px; }
+.navLinks a:not(.navCta):hover,
+.navLinks a[aria-current="page"] { color: var(--acid); }
+.menu { display: none; }
+.ctaShort { display: none; }
+.navCta { white-space: nowrap; padding: 16px 22px; background: var(--acid); color: var(--ink) !important; transition: background-color 0.2s ease; }
+.navCta:hover { background: var(--lav-tief); }
+.navCta:hover { text-decoration: none !important; }
+
+.heroContent { position: relative; z-index: 1; display: flex; flex: 1; flex-direction: column; justify-content: center; padding: clamp(16px, 2vh, 40px) 0 clamp(60px, 9vh, 120px); }
+.hero h1 {
+  max-width: none;
+  margin: 0 0 clamp(70px, 14vh, 190px);
+  font-size: clamp(60px, min(7.6vw, 12.5vh), 146px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+.hero h1 em { color: var(--acid); white-space: nowrap; }
+.heroBottom { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
+.heroQuestion { max-width: 760px; font-family: var(--serif); font-size: clamp(24px, min(2.9vw, 4.4vh), 44px); font-style: italic; line-height: 1.24; }
+.heroActions { display: flex; align-items: center; gap: 28px; }
+.heroCta { display: flex; flex-direction: column; gap: 20px; }
+.sideNote {
+  position: absolute;
+  top: 30%;
+  right: clamp(0px, 6vw, 110px);
+  color: #B1A5A9;
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.5vw, 24px);
+  font-style: italic;
+  line-height: 1.8;
+  text-align: right;
+  rotate: -3deg;
+}
+.sideNote span { display: block; }
+@media (min-width: 1700px) {
+  .sideNote { top: 44%; right: 0; }
+}
+.sideNote span:nth-child(3) { opacity: 0.6; }
+
+/* Aussage, gesetzt wie eine Magazinseite */
+.statement { padding: 160px 0 150px; }
+.statement h2 { margin: 0 0 70px; font-size: clamp(56px, 7.4vw, 118px); line-height: 1.02; letter-spacing: -0.055em; }
+.statement h2 em { color: #4F606C; }
+/* rechte Spalte beginnt auf derselben Kante wie der gelbe Satz darunter (32 %) */
+.statementGrid { display: grid; grid-template-columns: calc(32% - 60px) 1fr; gap: 60px; align-items: start; }
+.standfirst {
+  max-width: 440px;
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.5vw, 38px);
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.statementText { max-width: 640px; }
+.statementText p { margin-bottom: 26px; color: var(--muted); font-size: 19px; line-height: 1.7; }
+.statementText .lead { margin: 44px 0 0; }
+
+/* Größerer Einstiegssatz unter einer Überschrift */
+.page .lead {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.2vw, 34px);
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+}
+.nowrap { white-space: nowrap; }
+
+/* Leitgedanke */
+.interlude { padding: 100px 0; background: var(--acid); }
+.interlude blockquote {
+  margin: 0 0 0 32%;
+  font-family: var(--serif);
+  font-size: clamp(44px, 6.4vw, 104px);
+  font-style: italic;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+/* Vier Schritte */
+.process { padding: 135px 0 145px; background: var(--lav); }
+/* Zweispaltig: Überschrift links, Text rechts */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
+.split h2 { font-size: clamp(52px, 5.8vw, 92px); line-height: 1.04; letter-spacing: -0.05em; }
+.split h2 em { color: #4F606C; }
+.split p { max-width: 600px; margin-bottom: 18px; color: var(--muted); }
+.split .lead { margin-bottom: 26px; }
+.split p:last-child { margin-bottom: 0; }
+.process .split { margin-bottom: 90px; }
+.process .split h2 { font-size: clamp(48px, 5vw, 80px); }
+.steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid #8E9BA3; }
+.steps li {
   display: grid;
-  grid-template-columns: 1.3fr .7fr;
-  grid-template-areas: "meta meta" "title title" "question intro";
-  gap: 52px 8vw;
-  min-height: calc(100vh - 90px);
-  padding: 70px max(32px, calc((100vw - 1376px) / 2)) 78px;
-  overflow: hidden;
-  background: var(--blue);
-  color: var(--offwhite);
+  grid-template-columns: 110px minmax(230px, 1fr) 1.1fr;
+  gap: 35px;
+  align-items: baseline;
+  padding: 35px 0 43px;
+  border-bottom: 1px solid #8E9BA3;
 }
-.heroMeta { grid-area: meta; align-self: start; color: var(--sun); }
-.heroMeta p { font-size: 11px !important; }
-.hero h1 { grid-area: title; position: relative; z-index: 2; max-width: 1120px; color: var(--offwhite); font-size: clamp(76px, 9vw, 132px); line-height: .78; }
-.hero h1 em { color: var(--sun); white-space: nowrap; }
-.heroQuestion { grid-area: question; position: relative; z-index: 2; align-self: end; max-width: 680px; padding-left: 10vw; color: var(--mint); font: italic 500 clamp(29px, 3.3vw, 48px)/1.04 "Cormorant Garamond" !important; }
-.heroIntro { grid-area: intro; position: relative; z-index: 2; align-self: end; justify-self: end; width: 100%; max-width: 480px; }
-.heroIntro > p { margin-bottom: 50px; color: var(--offwhite); font-size: 21px; line-height: 1.6; transform: translateY(-60px); }
-.heroActions { display: grid; gap: 14px; }
-.heroIntro :global(a), .finalCopy :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.heroIntro :global(a:hover), .finalCopy :global(a:hover) { border-color: var(--offwhite); background: var(--offwhite); color: var(--green); }
-.heroIntro :global(a).secondaryAction { border-color: rgb(from var(--offwhite) r g b / .55); background: transparent; color: var(--offwhite); }
-.heroIntro :global(a).secondaryAction:hover { border-color: var(--offwhite); background: rgb(from var(--offwhite) r g b / .12); color: var(--offwhite); }
-.finalCopy :global(a:hover) { gap: 32px; transform: none; scale: none; }
-.heroOrbit { position: absolute; right: -6vw; bottom: -22vw; width: 54vw; height: 54vw; border: 1px solid rgb(from var(--offwhite) r g b / .18); border-radius: 50%; }
-.heroOrbit::before { content: ""; position: absolute; inset: 12%; border: 1px solid rgb(from var(--offwhite) r g b / .12); border-radius: 50%; }
-.heroOrbit span { position: absolute; top: 12%; left: 15%; color: var(--coral); font: 500 25vw/.75 "DM Sans"; letter-spacing: -.1em; transform: translateY(-60px); }
+.num { font-family: var(--serif); font-size: 43px; font-style: italic; }
+.steps h3 { font-size: clamp(26px, 2.8vw, 40px); line-height: 1.1; letter-spacing: -0.03em; }
+.steps p { max-width: 460px; color: var(--muted); font-size: 17px; }
 
-.recognition { display: grid; grid-template-columns: .9fr 1.1fr; gap: 76px 10vw; width: min(100% - 64px, 1280px); margin: 0 auto; padding: 145px 0 160px; }
-.recognition > :first-child { grid-column: 1 / -1; }
-.recognition h2 { max-width: 720px; font-size: clamp(55px, 6vw, 86px); line-height: .88; }
-.recognition h2 em { color: var(--coral); }
-.recognitionCopy { max-width: 590px; }
-.recognitionCopy p + p { margin-top: 25px; }
-.recognitionClosing { margin-top: 45px !important; padding-top: 22px; border-top: 3px solid var(--coral); font-weight: 600; }
+/* Rahmen */
+.offer { padding: 135px 0; background: var(--ink); color: var(--paper); }
+.offer h2 { font-size: clamp(52px, 5.8vw, 90px); line-height: 1.04; letter-spacing: -0.05em; }
+.offer h2 em { color: var(--acid); }
+.offer h2 { margin-bottom: 60px; }
+.offerGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; align-items: start; }
+.offerText { max-width: 520px; margin: 0 !important; color: #DACDD0; }
+.includedHeading { margin: 50px 0 16px !important; color: #CBBFC3; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+.included { max-width: 520px; margin: 0; padding: 0; list-style: none; }
+.included li { position: relative; padding: 0 0 14px 26px; color: var(--paper); line-height: 1.55; }
+.included li::before { content: ""; position: absolute; top: 0.62em; left: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--acid); }
 
-.process { padding-bottom: 130px; background: var(--offwhite); }
-.processIntro { display: grid; grid-template-columns: .55fr 1fr .8fr; gap: 7vw; padding: 120px max(32px, calc((100vw - 1376px) / 2)) 105px; }
-.processContent { display: contents; }
-.processIntro h2 { font-size: clamp(56px, 6.3vw, 92px); line-height: .86; }
-.processIntro h2 em { display: block; color: var(--coral); }
-.processHeadingDesktop { display: none; }
-.processLead { align-self: end; }
-.processLead p + p { margin-top: 20px; }
-.processPivot { margin: 44px 0 !important; color: var(--green); font: italic 500 clamp(30px, 2.8vw, 42px)/1.06 "Cormorant Garamond" !important; }
-.processRole { max-width: 32ch; margin: 48px 0 !important; }
-.processLead p:last-child { font-weight: 600; }
-.processList { width: min(100% - 64px, 1280px); margin: 0 auto; padding: 0; list-style: none; counter-reset: none; border: 1px solid rgb(var(--green-rgb) / .28); background: var(--sage); color: var(--green); }
-.processList li { display: grid; grid-template-columns: 90px minmax(300px, 1fr) minmax(280px, .72fr); gap: 6vw; align-items: center; min-height: 245px; padding: 45px max(32px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid rgb(var(--green-rgb) / .28); }
-.processList li:last-child { border-bottom: 0; }
-.processList li > span { font: italic 500 45px/1 "Cormorant Garamond"; color: var(--coral); }
-.processList h3 { max-width: 720px; color: inherit; font-size: clamp(39px, 4.2vw, 62px); line-height: .92; }
-.processList p { max-width: 460px; }
+/* Geschichte aus der Praxis */
+.story { padding: 170px 0; background: var(--lav); }
+.story .split { gap: 130px; }
+.story .label { margin-bottom: 44px; }
+.story h2 { font-size: clamp(44px, 4.4vw, 72px); line-height: 1.08; }
+.story .lead { margin-top: 34px; }
 
-@media (min-width: 1051px) {
-  .processIntro > :first-child { align-self: start; margin-top: 78px; }
-  .processIntro > :first-child p { white-space: nowrap; }
-  .processIntro h2 { grid-column: 2; grid-row: 1; }
-  .processLead { display: grid; grid-column: 2 / -1; grid-row: 2; grid-template-columns: 25% minmax(560px, 620px) minmax(0, 1fr); align-self: start; }
-  .processLead > .processCopy { grid-column: 2; }
-  .processLead > .processPivot { grid-column: 1 / -1; width: calc((100% - 7vw) / 1.8); }
-  .processHeadingDesktop { display: block; }
-  .processHeadingDesktop > span { display: block; }
-  .processHeadingDefault { display: none; }
-  .processIntro h2 .processHeadingDesktop em { display: inline; }
-  .processHeadingNoBreak { white-space: nowrap; }
+/* Kleine Abschnittsbeschriftung über den Überschriften */
+.page .label {
+  margin-bottom: 26px;
+  color: #4F606C;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.hero .label { color: #CBBFC3; }
+
+/* Über mich */
+.about { padding: 140px 0; }
+.aboutLayout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center; }
+.about h2 { margin: 0 0 30px; font-size: clamp(64px, 7.8vw, 120px); line-height: 0.99; letter-spacing: -0.055em; }
+.about p { max-width: 600px; margin-bottom: 18px; line-height: 1.75; }
+.page .about .lead { margin-bottom: 26px; line-height: 1.28; }
+.about .textLink { margin-top: 14px; }
+.aboutPhoto {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  background: #EDE5D8;
+}
+.aboutPhoto::before { content: ""; position: absolute; inset: 6%; border: 1px solid #BCAE9C; }
+.aboutPhoto img {
+  position: relative;
+  width: 74%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  /* Weiße Sichel wie im Entwurf: rundum fein, rechts breiter */
+  box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5;
+}
+.aboutPhoto figcaption { position: absolute; bottom: 11%; left: 12%; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* Stimmen */
+.voices { margin-top: 120px; padding-top: 55px; border-top: 1px solid var(--line); }
+.voices h3 { margin-bottom: 45px; font-size: clamp(28px, 2.4vw, 36px); letter-spacing: -0.02em; }
+.voices ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; margin: 0; padding: 0; list-style: none; }
+.voices blockquote { margin: 0 0 20px; font-family: var(--serif); font-size: clamp(21px, 1.7vw, 26px); font-style: italic; line-height: 1.35; letter-spacing: -0.01em; }
+.voices li p { color: var(--muted); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* Preise */
+.faq h2 { margin-bottom: 70px; font-size: clamp(50px, 5.8vw, 90px); line-height: 1.04; letter-spacing: -0.05em; }
+.faq h2 { font-size: clamp(46px, 4.6vw, 74px); }
+.faq h2 em { color: #4F606C; }
+.page .priceHeading { margin: 0 0 34px; font-size: clamp(36px, 3.4vw, 54px); line-height: 1.06; letter-spacing: -0.045em; }
+.priceHeading em { color: var(--acid); }
+.priceRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "info price" "info link";
+  gap: 6px 30px;
+  align-items: start;
+  padding: 26px 0;
+  border-top: 1px solid #4A3D46;
+}
+.priceRow:first-child { border-top: 0; padding-top: 0; }
+.priceRow > div { grid-area: info; }
+.priceRow .price { grid-area: price; text-align: right; }
+.priceRow .rate { display: block; margin-top: 8px; color: var(--acid); font-family: var(--sans); font-size: 14px; letter-spacing: 0.02em; }
+.priceRow .textLink { grid-area: link; justify-self: end; margin-top: 14px; }
+.priceRow h3 { margin-bottom: 6px; font-size: 28px; }
+.priceRow small { color: #CBBFC3; font-size: 16px; }
+.price { color: var(--acid); font-family: var(--serif); font-size: 46px; line-height: 1; white-space: nowrap; font-variant-numeric: lining-nums; }
+.priceRow .textLink { justify-self: end; }
+.priceNote { margin-top: 0 !important; padding-top: 20px; border-top: 1px solid #4A3D46; color: #BBAEB2; font-size: 14px; line-height: 1.6; }
+.coachingNote { max-width: 760px; margin-top: 90px !important; color: #DACDD0; font-size: 18px; }
+
+/* Fragen */
+.faq { padding: 120px 0; }
+.faqGrid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 100px; }
+.faq details { padding: 23px 0; border-top: 1px solid #B6AFA9; }
+.faq details:last-child { border-bottom: 1px solid #B6AFA9; }
+.faq summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: var(--serif);
+  font-size: 27px;
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--sans); font-size: 29px; font-weight: 300; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { max-width: 580px; margin: 20px 40px 0 0; color: var(--muted); }
+.inlineLink { color: var(--ink) !important; font-weight: 600; text-decoration: underline !important; text-decoration-color: var(--ink); text-underline-offset: 4px; transition: box-shadow 0.2s ease; }
+
+
+/* Abschluss */
+.end { padding: 145px 0 125px; background: var(--acid); }
+.end h2 { max-width: 1050px; margin: 0 0 55px; font-size: clamp(72px, 9.6vw, 164px); line-height: 0.96; letter-spacing: -0.065em; }
+.endBottom { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+.endBottom > p { max-width: 560px; font-size: 20px; line-height: 1.6; }
+.endContact { margin-top: 60px !important; padding-top: 26px; border-top: 1px solid rgb(42 31 39 / 0.25); font-size: 16px; }
+.endContact a { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Fuß */
+.footer { padding: 42px 0; background: var(--ink); color: #DACDD0; font-size: 15px; }
+.footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px 30px; }
+.footerLinks { display: flex; gap: 25px; }
+.footerLinks a:hover,
+.footer p a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer p { color: #BBAEB2; font-size: 14px; }
+
+@media (max-width: 950px) {
+  .wrap { width: min(100% - 46px, 760px); }
+  .nav { height: 80px; }
+  .navLinks { gap: 15px; }
+  .navDesktop { display: none; }
+  .nav { position: relative; }
+  .menu { display: block; }
+  .menu summary { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin-right: -8px; cursor: pointer; list-style: none; }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menuIcon,
+  .menuIcon::before,
+  .menuIcon::after { display: block; width: 22px; height: 2px; background: var(--paper); transition: transform 0.2s ease, background-color 0.2s ease; }
+  .menuIcon { position: relative; }
+  .menuIcon::before,
+  .menuIcon::after { content: ""; position: absolute; left: 0; }
+  .menuIcon::before { top: -7px; }
+  .menuIcon::after { top: 7px; }
+  .menu[open] .menuIcon { background: transparent; }
+  .menu[open] .menuIcon::before { transform: translateY(7px) rotate(45deg); }
+  .menu[open] .menuIcon::after { transform: translateY(-7px) rotate(-45deg); }
+  .menuPanel {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 26px;
+    border-bottom: 1px solid rgb(255 255 255 / 0.3);
+    background: var(--ink);
+  }
+  .menuPanel a { padding: 14px 0; font-size: 16px; }
+  .hero { min-height: 0; }
+  .heroContent { padding: 90px 0 100px; }
+  .hero h1 { font-size: clamp(60px, 10.5vw, 100px); margin-bottom: 55px; }
+  .heroBottom { flex-direction: column; align-items: start; }
+  .sideNote { display: none; }
+  .statement { padding: 110px 0; }
+  .interlude blockquote { margin-left: 0; }
+  .statementGrid { grid-template-columns: 1fr; gap: 34px; }
+  .statement h2 { margin-bottom: 40px; }
+  .faqGrid { grid-template-columns: 1fr; gap: 10px; }
+  .process, .offer, .about, .faq, .story { padding: 90px 0; }
+  .split { grid-template-columns: 1fr; gap: 30px; }
+  .process .split { margin-bottom: 55px; }
+  .story .lead { margin-top: 26px; }
+  .voices { margin-top: 80px; padding-top: 45px; }
+  .voices h3 { margin-bottom: 30px; }
+  .voices ul { grid-template-columns: 1fr; gap: 36px; }
+  .steps li { grid-template-columns: 50px 1fr; gap: 12px 20px; }
+  .steps p { grid-column: 2; }
+  .offerGrid, .aboutLayout { grid-template-columns: 1fr; gap: 25px; }
+  .offerGrid { gap: 70px; }
+  .aboutPhoto { width: min(100%, 520px); }
+  .end { padding: 100px 0; }
+  .endBottom { flex-direction: column; align-items: start; }
 }
 
-.offer { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
-.offerTop { display: grid; grid-template-columns: .55fr 1.2fr .55fr; gap: 5vw; align-items: end; }
-.offerTop h2 { overflow-wrap: normal; hyphens: auto; font-size: clamp(62px, 7.2vw, 104px); line-height: .82; }
-.price { color: var(--coral); font: 500 clamp(50px, 5.5vw, 78px)/.9 "DM Sans" !important; letter-spacing: -.06em; text-align: right; }
-.price span { display: block; margin-top: 12px; color: var(--ink); font: 600 11px/1.3 "DM Sans"; letter-spacing: .11em; }
-.offerFacts { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 90px; border-top: 1px solid rgb(var(--green-rgb) / .25); border-bottom: 1px solid rgb(var(--green-rgb) / .25); }
-.offerFacts > div { min-height: 155px; padding: 28px 25px; }
-.offerFacts > div + div { border-left: 1px solid rgb(var(--green-rgb) / .25); }
-.offerFacts span { display: block; color: var(--coral); font-size: 11px; font-weight: 600; letter-spacing: .14em; }
-.offerFacts strong { display: block; margin-top: 38px; font: italic 500 clamp(21px, 2vw, 28px)/1.08 "Cormorant Garamond"; }
-.offerBottom { display: grid; grid-template-columns: 1fr .8fr; gap: 9vw; align-items: end; margin-top: 65px; }
-.offerBottom > div { max-width: 620px; }
-.offerBottom p + p { margin-top: 20px; }
-.offerBottom :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.offerBottom :global(a:hover) { border-color: var(--green); background: var(--navy); color: var(--offwhite); }
-
-.sessionPackage { padding: 124px max(32px, calc((100vw - 1280px) / 2)) 132px; background: var(--sage); color: var(--green); }
-.sessionPackageIntro { display: grid; grid-template-columns: .55fr 1.45fr; gap: 7vw; align-items: end; margin-top: 68px; }
-.sessionPackageIntro h2 { font-size: clamp(54px, 6vw, 78px); line-height: .88; }
-.sessionPackageIntro p { max-width: 510px; margin: 0; color: var(--green); font: italic 500 clamp(27px, 2.8vw, 40px)/1.08 "Cormorant Garamond" !important; }
-.sessionPackageContent { display: grid; grid-template-columns: 1.1fr .9fr; gap: 10vw; align-items: start; max-width: 1120px; margin: 76px 0 0 auto; }
-.sessionPackageCopy { max-width: 590px; }
-.sessionPackageCopy p + p { margin-top: 22px; }
-.sessionPackageInfo { padding: 38px 40px 42px; background: var(--offwhite); box-shadow: 14px 14px 0 var(--coral); }
-.sessionPackagePrice strong { display: block; color: var(--coral); font-size: clamp(31px, 3.1vw, 42px); font-weight: 500; letter-spacing: -.05em; line-height: .98; }
-.sessionPackagePrice span { display: block; margin-top: 12px; font-size: 16px; line-height: 1.45; }
-.sessionPackageInstallments { margin-top: 28px; padding-top: 25px; border-top: 1px solid rgb(var(--green-rgb) / .28); }
-.sessionPackageInstallments p { font-size: 17px; line-height: 1.5; }
-.sessionPackageInstallments p + p { margin-top: 8px; }
-.sessionPackageValidity { margin-top: 28px !important; padding-top: 25px; border-top: 1px solid rgb(var(--green-rgb) / .28); font-size: 17px !important; line-height: 1.5 !important; }
-.sessionPackageInfo :global(a) { width: 100%; min-width: 0; margin-top: 34px; padding: 16px 20px; border: 1px solid var(--coral); background: var(--coral); color: var(--offwhite); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.sessionPackageInfo :global(a:hover) { border-color: var(--green); background: var(--navy); color: var(--offwhite); }
-.sessionPackageNote { max-width: 760px; margin: 72px auto 0; padding-top: 22px; border-top: 1px solid rgb(var(--green-rgb) / .35); font: italic 500 clamp(22px, 2.2vw, 30px)/1.14 "Cormorant Garamond" !important; }
-
-.practice { position: relative; display: grid; grid-template-columns: .8fr 1.2fr; grid-template-areas: "photo story" "closing closing"; width: min(100% - 64px, 1280px); margin: 0 auto 130px; background: var(--offwhite); }
-.practicePortrait { grid-area: photo; min-height: 900px; }
-.practicePortrait img { object-position: 50% 30%; filter: saturate(.86); }
-.practiceStory { grid-area: story; padding: 105px clamp(45px, 7vw, 110px) 90px; background: var(--mint); }
-.practiceStory h2 { max-width: 780px; margin-top: 65px; font-size: clamp(57px, 6vw, 88px); line-height: .87; }
-.practiceStory h2 em { color: var(--coral); }
-.practiceStory > div:last-child { max-width: 590px; margin: 65px 0 0 auto; }
-.practiceStory > div:last-child p + p { margin-top: 22px; }
-.practiceClosing { grid-area: closing; display: grid; grid-template-columns: 1fr 1fr; margin: 0 !important; background: var(--blue); color: var(--offwhite); }
-.practiceClosing span { padding: 48px max(32px, calc((100vw - 1280px) / 2)); font: italic 500 clamp(26px, 2.7vw, 39px)/1.08 "Cormorant Garamond"; }
-.practiceClosing span + span { border-left: 1px solid rgb(from var(--offwhite) r g b / .25); color: var(--sun); }
-
-.results { display: grid; grid-template-columns: 1.2fr .8fr; background: var(--offwhite); }
-.resultsCopy { padding: 125px clamp(45px, 8vw, 125px); }
-.resultsCopy h2 { max-width: 860px; margin-top: 70px; font-size: clamp(55px, 6vw, 86px); line-height: .88; }
-.resultsCopy > div:last-child { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; max-width: 750px; margin-top: 65px; }
-.resultQuote { display: flex; flex-direction: column; justify-content: center; padding: 90px clamp(40px, 5vw, 75px); background: var(--navy); color: var(--offwhite); }
-.resultQuote > p { font-size: 20px; font-weight: 600; letter-spacing: .08em; }
-.resultQuote strong { margin-top: 45px; font: 500 clamp(63px, 7.4vw, 108px)/.72 "DM Sans"; letter-spacing: -.07em; }
-.resultQuote em { color: var(--sun); white-space: nowrap; }
-
-.faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 9vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
-.faqHeading h2 { margin-top: 60px; font-size: clamp(60px, 6.5vw, 94px); line-height: .84; }
-.faqHeading h2 em { display: block; color: var(--coral); }
-.faqList { border-top: 1px solid rgb(var(--green-rgb) / .28); }
-.faqList details { border-bottom: 1px solid rgb(var(--green-rgb) / .28); }
-.faqList summary { display: grid; grid-template-columns: 1fr 40px; gap: 25px; align-items: center; padding: 28px 0; cursor: pointer; list-style: none; font: 500 clamp(22px, 2.2vw, 30px)/1.15 "Cormorant Garamond"; }
-.faqList summary::-webkit-details-marker { display: none; }
-.faqList summary span { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid currentColor; border-radius: 50%; font: 400 19px/1 "DM Sans"; transition: transform .2s ease; }
-.faqList details[open] summary span { transform: rotate(45deg); background: var(--coral); border-color: var(--coral); color: var(--offwhite); }
-.faqList details > p { max-width: 680px; padding: 0 65px 32px 0; }
-.faqList details > p:not(:last-child) { padding-bottom: 0; }
-.faqList details > p + p { margin-top: 20px; }
-
-.finalCta { padding: 125px max(32px, calc((100vw - 1280px) / 2)) 149px; background: var(--blue); color: var(--offwhite); }
-.finalMarker { color: var(--sun); }
-.finalCta .finalMarker + h2 { margin-top: 55px; }
-.finalCta h2 { max-width: 1100px; margin-top: 55px; color: var(--offwhite); font-size: clamp(68px, 8vw, 116px); line-height: .8; }
-.finalCta h2 em { color: var(--coral); }
-.finalCopy { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: end; max-width: 900px; margin: 120px 0 0 auto; }
-.finalCopyText { color: var(--offwhite); }
-.finalCopyText p + p { margin-top: 20px; }
-.contact { max-width: 570px; margin: 88px 0 0 auto !important; color: var(--offwhite); }
-.contact a { display: inline-block; border-bottom: 1px solid currentColor; color: var(--sun); }
-
-@media (min-width: 1024px) {
-  .hero { min-height: calc(100vh - 34px); padding-bottom: 134px; }
-  .recognition { padding-top: 201px; }
-  .offer { padding-bottom: 186px; }
-  .practice { margin-bottom: 186px; }
-  .faq { padding-top: 191px; padding-bottom: 191px; }
+@media (max-width: 600px) {
+  .wrap { width: calc(100% - 32px); }
+  .navCta { padding: 12px 16px; font-size: 13px; }
+  .ctaLong { display: none; }
+  .ctaShort { display: inline; }
+  .heroContent { padding: 70px 0 90px; }
+  .hero h1 { font-size: clamp(48px, 12.5vw, 76px); margin-bottom: 44px; }
+  .hero h1 em { white-space: normal; }
+  .heroQuestion { font-size: 26px; }
+  .heroActions { flex-direction: column; align-items: start; gap: 22px; }
+  .statement h2 { font-size: clamp(42px, 11vw, 70px); }
+  .interlude { padding: 75px 0; }
+  .interlude blockquote { font-size: 48px; }
+  .split h2, .offer h2, .faq h2 { font-size: 50px; }
+  .priceHeading { font-size: 38px; }
+  .story h2 { font-size: 44px; }
+  .page .label { margin-bottom: 20px; font-size: 11px; }
+  .process .split h2 { font-size: 44px; }
+  .standfirst { font-size: 25px; }
+  .statementText p { font-size: 17px; margin-bottom: 20px; }
+  .statementText .lead { margin-top: 32px; }
+  .page .lead { font-size: 23px; }
+  .steps h3 { font-size: 27px; }
+  .about h2 { font-size: 72px; }
+  .priceRow { grid-template-columns: 1fr auto; gap: 12px; }
+  .priceRow h3 { font-size: 25px; }
+  .price { font-size: 34px; }
+  .faq summary { font-size: 23px; }
+  .end h2 { font-size: clamp(56px, 14vw, 90px); }
+  .footer .wrap { flex-direction: column; align-items: start; }
 }
 
-@media (max-width: 1050px) {
-  .hero { grid-template-columns: 1fr 1fr; }
-  .processIntro { grid-template-columns: 1fr 1.2fr; }
-  .processIntro > :first-child { grid-column: 1 / -1; }
-  .processList li { grid-template-columns: 60px 1fr; }
-  .processList li p { grid-column: 2; }
-  .offerTop { grid-template-columns: 1fr 1fr; }
-  .offerTop > :first-child { grid-column: 1 / -1; }
-  .offerFacts { grid-template-columns: repeat(3, 1fr); }
-  .offerFacts > div:nth-child(4) { border-left: 0; border-top: 1px solid rgb(var(--green-rgb) / .25); }
-  .offerFacts > div:nth-child(5) { border-top: 1px solid rgb(var(--green-rgb) / .25); }
-  .practice { grid-template-columns: .7fr 1.3fr; }
-  .results { grid-template-columns: 1fr; }
-  .resultQuote { min-height: 560px; }
+@media (prefers-reduced-motion: reduce) {
+  .btn, .navCta, .textLink { transition: none; }
+  .btn:hover { transform: none; }
 }
 
-@media (max-width: 700px) {
-  .clarityPage p { font-size: 16px; line-height: 1.6; }
-  .hero { display: block; min-height: calc(100svh - 72px); padding: 46px 18px 58px; }
-  .heroMeta { max-width: 250px; line-height: 1.5 !important; }
-  .hero h1 { margin-top: 46px; font-size: 63px; line-height: .76; }
-  .hero h1 em { display: block; white-space: normal; color: var(--sun); }
-  .heroQuestion { max-width: 330px; margin: 53px 0 0 35px !important; padding: 0; font-size: 30px !important; }
-  .heroIntro { margin-top: 76px; padding-top: 30px; border-top: 1px solid rgb(from var(--offwhite) r g b / .3); }
-  .heroIntro > p { font-size: 19px; transform: none; }
-  .heroOrbit { right: -180px; bottom: 180px; width: 390px; height: 390px; }
-  .heroOrbit span { top: 13%; left: 16%; font-size: 170px; transform: none; }
-  .recognition { display: block; width: calc(100% - 36px); padding: 92px 0 105px; }
-  .recognition h2 { margin-top: 55px; font-size: 51px; }
-  .recognitionCopy { margin-top: 48px; }
-  .process { padding-bottom: 90px; }
-  .processIntro { display: block; padding: 88px 18px 75px; }
-  .processIntro h2 { margin-top: 55px; font-size: 52px; }
-  .processIntro h2 em { display: inline; }
-  .processLead { margin-top: 48px; }
-  .processPivot { margin: 36px 0 !important; font-size: 30px !important; }
-  .processRole { max-width: none; margin: 36px 0 !important; }
-  .processList { width: calc(100% - 36px); }
-  .processList li { display: block; min-height: 0; padding: 45px 18px 52px; }
-  .processList li > span { display: block; margin-bottom: 50px; font-size: 34px; }
-  .processList h3 { font-size: 42px; }
-  .processList p { margin-top: 28px !important; }
-  .offer { padding: 90px 18px 100px; }
-  .offerTop { display: block; }
-  .offerTop h2 { margin-top: 60px; font-size: 61px; }
-  .price { margin-top: 45px !important; text-align: left; }
-  .price span { display: inline; margin-left: 12px; }
-  .offerFacts { display: block; margin-top: 65px; }
-  .offerFacts > div { min-height: 0; padding: 24px 0; }
-  .offerFacts > div + div, .offerFacts > div:nth-child(4), .offerFacts > div:nth-child(5) { border-top: 1px solid rgb(var(--green-rgb) / .25); border-left: 0; }
-  .offerFacts strong { margin-top: 15px; font-size: 25px; }
-  .offerBottom { display: block; margin-top: 50px; }
-  .offerBottom :global(a) { margin-top: 42px; }
-  .sessionPackage { padding: 90px 18px 100px; }
-  .sessionPackageIntro { display: block; margin-top: 55px; }
-  .sessionPackageIntro h2 { font-size: 58px; }
-  .sessionPackageIntro p { margin-top: 28px; font-size: 30px !important; }
-  .sessionPackageContent { display: block; margin-top: 48px; }
-  .sessionPackageCopy p + p { margin-top: 20px; }
-  .sessionPackageInfo { margin-top: 45px; padding: 28px 22px 32px; box-shadow: 10px 10px 0 var(--coral); }
-  .sessionPackagePrice strong { font-size: 34px; }
-  .sessionPackagePrice span, .sessionPackageInstallments p, .sessionPackageValidity { font-size: 16px !important; }
-  .sessionPackageInfo :global(a) { margin-top: 30px; }
-  .sessionPackageNote { margin-top: 56px; font-size: 25px !important; }
-  .practice { display: flex; flex-direction: column; width: calc(100% - 36px); margin-bottom: 90px; }
-  .practicePortrait { min-height: 0; aspect-ratio: .88; }
-  .practiceStory { padding: 78px 18px 80px; }
-  .practiceStory h2 { margin-top: 55px; font-size: 54px; }
-  .practiceStory > div:last-child { margin-top: 48px; }
-  .practiceClosing { display: block; }
-  .practiceClosing span { display: block; padding: 36px 18px; font-size: 28px; }
-  .practiceClosing span + span { border-top: 1px solid rgb(from var(--offwhite) r g b / .25); border-left: 0; }
-  .results { display: block; }
-  .resultsCopy { padding: 90px 18px 95px; }
-  .resultsCopy h2 { margin-top: 55px; font-size: 52px; }
-  .resultsCopy > div:last-child { display: block; margin-top: 45px; }
-  .resultsCopy > div:last-child p + p { margin-top: 20px; }
-  .resultQuote { min-height: 0; margin: 0 18px; padding: 56px 24px 62px; }
-  .resultQuote > p { font-size: 16px; line-height: 1.6; }
-  .resultQuote strong { font-size: 60px; }
-  .faq { display: block; padding: 90px 18px 100px; }
-  .faqHeading h2 { margin-top: 55px; font-size: 63px; }
-  .faqList { margin-top: 62px; }
-  .faqList summary { grid-template-columns: 1fr 36px; gap: 15px; padding: 23px 0; font-size: 24px; }
-  .faqList details > p { padding: 0 0 28px; }
-  .finalCta { padding: 90px 18px 111px; }
-  .finalCta .finalMarker + h2 { margin-top: 31px; }
-  .finalCta h2 { margin-top: 50px; font-size: 61px; }
-  .finalCopy { display: block; margin-top: 82px; }
-  .finalCopy :global(a) { margin-top: 42px; }
-  .finalCopy :global(a:hover) { gap: 15px; }
-  .contact { margin-top: 72px !important; }
+/* Nach-oben-Knopf (kommt aus dem Layout) auf dieser Seite in der neuen Palette */
+:global(body):has(.page) :global(button[aria-label="Nach oben"]) {
+  border: 1.5px solid rgb(243 240 233 / 0.45);
+  background: var(--ink, #2A1F27);
+  box-shadow: 0 8px 24px rgb(42 31 39 / 0.25);
+  color: #E3EA7C;
+  font-family: "Figtree", sans-serif;
 }
+:global(body):has(.page) :global(button[aria-label="Nach oben"]:hover) {
+  border-color: #BFCDD5;
+  background: #BFCDD5;
+  color: #2A1F27;
+}
+:global(body):has(.page) :global(button[aria-label="Nach oben"]:focus-visible) { outline-color: #E3EA7C; }
+
+/* Logo in der neuen Palette: Papierweiß und Limette auf Aubergine */
+.page .brand > span:first-child { color: var(--paper); }
+.page .brand > span:last-child { color: var(--acid); }
+
+/* Helle, leuchtende Flächen statt Aubergine (Hero und Angebot) */
+.page { --flash: #8FD1F2; --flash-line: rgb(42 31 39 / 0.22); }
+.hero,
+.offer { background: var(--flash); color: var(--ink); }
+.nav { border-bottom-color: var(--flash-line); }
+.hero .brand > span:first-child { color: var(--ink); }
+.hero .brand > span:last-child { color: var(--ink); opacity: 0.7; }
+.navLinks a:not(.navCta):hover,
+.navLinks a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: 6px; }
+.hero h1 em,
+.offer h2 em,
+.priceHeading em { color: var(--ink); }
+.hero .label,
+.sideNote { color: var(--ink); opacity: 0.7; }
+.hero .heroQuestion { color: var(--ink); }
+.hero .textLink:hover { color: var(--ink); box-shadow: inset 0 -8px 0 var(--acid); }
+.offerText,
+.included li,
+.priceRow small,
+.priceNote,
+.coachingNote { color: var(--ink) !important; }
+.offerText, .priceRow small, .priceNote { opacity: 0.8; }
+.includedHeading { color: var(--ink); opacity: 0.7; }
+.included li::before { background: var(--ink); }
+.priceRow { border-top-color: var(--flash-line); }
+.priceNote { border-top-color: var(--flash-line); }
+.price,
+.priceRow .rate,
+.priceRow .textLink { color: var(--ink); }
+.priceRow .textLink:hover { color: var(--ink); }
+@media (max-width: 950px) {
+  .menuPanel { background: var(--flash); border-bottom-color: var(--flash-line); }
+  .menuIcon, .menuIcon::before, .menuIcon::after { background: var(--ink); }
+  .menu[open] .menuIcon { background: transparent; }
+}
+
+/* Versuch: Hero auf Papierweiß, mit einem großen Kreis in Himmelblau für die kreisenden Gedanken */
+.hero { background: var(--paper); }
+.sideNote {
+  top: clamp(10px, 3vh, 40px);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(300px, 29vw, 450px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--flash);
+  color: var(--ink);
+  opacity: 1;
+  font-size: clamp(19px, 1.6vw, 25px);
+  line-height: 1.9;
+  text-align: center;
+  rotate: 0deg;
+  translate: none;
+}
+.sideNote span:nth-child(1) { rotate: -4deg; }
+.sideNote span:nth-child(2) { rotate: 2deg; }
+.sideNote span:nth-child(3) { rotate: -2deg; opacity: 0.65; }
+@media (min-width: 1700px) { .sideNote { top: clamp(10px, 3vh, 40px); right: 4%; } }
+@media (max-width: 950px) {
+  .sideNote {
+    position: static;
+    display: flex;
+    width: 250px;
+    margin: 0 0 40px auto;
+    font-size: 17px;
+    translate: none;
+  }
+  .menuPanel { background: var(--paper); }
+}
+
+/* Versuch: Preise als papierweiße Karten auf Himmelblau, Gelb über die Buttons */
+.offer .priceList { display: flex; flex-direction: column; gap: 14px; }
+.offer .priceRow,
+.offer .priceRow:first-child {
+  padding: 26px 28px;
+  border-top: 0;
+  background: var(--paper);
+  box-shadow: 0 10px 30px rgb(26 60 90 / 0.12);
+}
+.offer .priceRow .textLink {
+  margin-top: 14px;
+  padding: 12px 18px;
+  border-bottom: 0;
+  background: var(--acid);
+  color: var(--ink);
+  font-size: 13px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.offer .priceRow .textLink:hover { box-shadow: none; background: var(--lav-tief); transform: translateY(-2px); }
+.offer .priceNote { margin-top: 26px !important; padding-top: 0; border-top: 0; }
+.offer .included li::before { background: var(--acid); box-shadow: 0 0 0 1px rgb(42 31 39 / 0.3); }
+@media (max-width: 600px) { .offer .priceRow, .offer .priceRow:first-child { padding: 22px 18px; } }
+
+/* Feinschliff der hellen Fassung: frisches Hellblau, Akzentblau, Fuß und Buttons ohne Aubergine */
+.page { --lav: #DDF0FA; --lav-tief: #B5E0F5; --accent: #1F7DB0; }
+.statement h2 em,
+.split h2 em,
+.faq h2 em,
+.hero h1 em { color: var(--accent); }
+.page .label { color: var(--accent); }
+.hero .label { color: var(--accent); opacity: 1; }
+.steps,
+.steps li { border-color: #A9CDE0; }
+.hero .brand > span:last-child { color: var(--accent); opacity: 1; }
+
+/* „kostet das?“ in Gelb: auf Himmelblau als Leuchtmarker hinter der Schrift, damit es lesbar bleibt */
+.offer .priceHeading em { padding: 0 0.12em; color: var(--ink); background: linear-gradient(transparent 55%, var(--acid) 55%); }
+
+/* Abschluss-Button und Nach-oben-Knopf in Himmelblau statt Aubergine */
+.btnDark { background: var(--flash); color: var(--ink) !important; }
+.btnDark:hover { background: var(--paper); color: var(--ink) !important; }
+:global(body):has(.page) :global(button[aria-label="Nach oben"]) { border-color: rgb(42 31 39 / 0.15); background: var(--flash, #8FD1F2); color: var(--ink, #2A1F27); box-shadow: 0 8px 24px rgb(26 60 90 / 0.18); }
+:global(body):has(.page) :global(button[aria-label="Nach oben"]:hover) { border-color: var(--acid, #F3EB1F); background: var(--acid, #F3EB1F); }
+
+/* Fuß in Himmelblau */
+.footer { background: var(--flash); color: var(--ink); }
+.footer p { color: var(--ink); opacity: 0.75; }
+.footer .brand > span:first-child { color: var(--ink); }
+.footer .brand > span:last-child { color: var(--ink); opacity: 0.75; }
+.nav .brand > span:first-child { color: var(--ink); }
+.nav .brand > span:last-child { color: var(--accent); opacity: 1; }
+.nav { border-bottom-color: rgb(42 31 39 / 0.22); }
+
+/* Abschluss: Papierweiß, Gelb als Leuchtmarker und Button */
+.end { background: var(--paper); border-top: 1px solid var(--line); }
+.end h2 em { padding: 0 0.06em; background: linear-gradient(transparent 60%, var(--acid) 60%); }
+.end .btnDark { background: var(--acid); }
+.end .btnDark:hover { background: var(--lav-tief); }
+.endContact { border-top-color: var(--line) !important; }
+
+/* Kursive Wörter und Mini-Überschriften wieder im ruhigen Blaugrau, wie in der edlen Fassung */
+.page { --accent: #4F606C; }
+
+/* Aufzählung beim Angebot: kleine gelbe Rauten statt Punkte */
+.offer .included li::before {
+  top: 0.55em;
+  left: 2px;
+  width: 9px;
+  height: 9px;
+  border-radius: 0;
+  background: var(--acid);
+  box-shadow: 0 0 0 1px var(--ink);
+  rotate: 45deg;
+}
+
+/* Ruhiger, dunkler Fuß als Abschluss */
+.footer { padding: 90px 0 50px; background: #1F4866; color: var(--paper); }
+.footer .wrap { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0 40px; }
+.footer .brand > span:first-child { color: var(--paper); }
+.footer .brand > span:last-child { color: var(--flash); opacity: 1; }
+.footerLinks { gap: 32px; }
+.footerLinks a { color: var(--paper); }
+.footer p { grid-column: 1 / -1; margin-top: 70px !important; padding-top: 24px; border-top: 1px solid rgb(243 240 233 / 0.2); color: rgb(243 240 233 / 0.7); opacity: 1; }
+.footer p a { color: inherit; }
+@media (max-width: 600px) {
+  .footer { padding: 70px 0 40px; }
+  .footer .wrap { grid-template-columns: 1fr; gap: 30px; }
+  .footer p { margin-top: 20px !important; }
+}
+
+/* Tiefblau für die kursiven Wörter; Simona direkt nach den Schritten auf demselben Hellblau */
+.page { --accent: #1F4866; }
+.process { padding-bottom: 60px; }
+.story { padding: 60px 0 150px; }
+
+/* „In jeder Sitzung“ als ruhiges Raster statt Aufzählung */
+.offer .included { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 34px; max-width: 560px; margin: 0; }
+.offer .included > div { padding: 0; }
+.offer .included dt { margin-bottom: 4px; font-family: var(--serif); font-size: clamp(22px, 1.8vw, 27px); line-height: 1.2; letter-spacing: -0.02em; }
+.offer .included dd { margin: 0; font-size: 16px; line-height: 1.5; opacity: 0.8; }
+@media (max-width: 600px) { .offer .included { grid-template-columns: 1fr 1fr; gap: 22px 20px; } .offer .included dt { font-size: 20px; } }
+
+/* Logo: oben Tiefblau, im Fuß Papierweiß und Gelb */
+.nav .brand > span:first-child,
+.nav .brand > span:last-child { color: var(--accent); opacity: 1; }
+.footer .brand > span:first-child { color: var(--paper); }
+.footer .brand > span:last-child { color: var(--acid); }
+
+/* „In jeder Sitzung“ untereinander, als Gegenstück zu „Und was kostet das?“ */
+.offer .offerText { margin-bottom: 50px !important; }
+.offer .included { grid-template-columns: 1fr; gap: 22px; }
+@media (max-width: 600px) { .offer .included { grid-template-columns: 1fr; gap: 18px; } }
+
+/* Preiskarten leichter: halb durchscheinend, ohne Schatten */
+.offer .priceRow,
+.offer .priceRow:first-child { background: rgb(243 240 233 / 0.55); box-shadow: none; }
+
+/* Große Überschriften eine Spur weicher */
+.page h1,
+.page h2 { color: #3D3239; }
+.hero h1, .offer h2, .statement h2, .split h2, .story h2, .about h2, .faq h2, .end h2 { color: #3D3239; }
+.offer .offerText { max-width: 640px; margin: 0 0 70px !important; }
+
+/* Kopf: Logo Tiefblau und Gelb, Menüpunkte Tiefblau */
+.nav .brand > span:first-child { color: #3D3239; }
+.nav .brand > span:last-child { color: var(--accent); }
+.hero .navLinks a:not(.navCta),
+.menuPanel a { color: var(--accent); }
+
+
+/* Abschluss ruhiger: Überschrift so groß wie die anderen großen Überschriften */
+.end { padding: 190px 0 170px; border-top: 0; }
+.end h2 { margin-bottom: 50px; font-size: clamp(56px, 6.4vw, 104px); line-height: 1; }
+@media (max-width: 600px) { .end h2 { font-size: 56px; } }
+
+/* Fuß etwas schmaler */
+.footer { padding: 60px 0 34px; }
+.footer p { margin-top: 44px !important; }
+
+/* Schriftfarbe: tiefblau */
+.page { --ink: #253747; --muted: #5A6672; }
+.page h1, .page h2,
+.hero h1, .offer h2, .statement h2, .split h2, .story h2, .about h2, .faq h2, .end h2,
+.nav .brand > span:first-child { color: #2C4458; }
+/* Logo oben zweifarbig: Name Tiefblau-Grau, Zeile darunter ein klareres Blau */
+.nav .brand > span:last-child { color: #2F7FB0; }
+
+/* Kursives Wort: taubenblau */
+.statement h2 em, .split h2 em, .faq h2 em, .hero h1 em, .about h2 em { color: #4F606C; }
+
+/* Abschluss: etwas mehr Luft vor der Linie, Hover in Gelb */
+.endContact { margin-top: 90px !important; }
+.end .textLink:hover { box-shadow: inset 0 -8px 0 var(--acid); }
+.endContact a { transition: box-shadow 0.2s ease; }
+.endContact a:hover { box-shadow: inset 0 -8px 0 var(--acid); }
+
+/* „In jeder Sitzung“ als Karte, gleich hoch wie die Preisliste */
+.offerGrid { align-items: stretch; }
+.offerGrid > div:first-child { display: flex; flex-direction: column; }
+.offer .included {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+  max-width: none;
+  padding: 10px 28px;
+  background: rgb(243 240 233 / 0.55);
+}
+.offer .included > div { padding: 22px 0; border-top: 1px solid rgb(37 55 71 / 0.12); }
+.offer .included > div:first-child { border-top: 0; }
+.offer .included dt { font-size: clamp(24px, 2vw, 30px); }
+@media (max-width: 950px) { .offer .included { padding: 4px 20px; } .offer .included > div { padding: 18px 0; } }
+
+/* Angebot neu: Eckdaten als Band über die ganze Breite, darunter drei Preiskarten nebeneinander */
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 0 110px; border-top: 1px solid rgb(37 55 71 / 0.25); border-bottom: 1px solid rgb(37 55 71 / 0.25); }
+.facts > div { padding: 30px 28px 34px; border-left: 1px solid rgb(37 55 71 / 0.25); }
+.facts > div:first-child { padding-left: 0; border-left: 0; }
+.facts dt { margin-bottom: 16px; color: var(--ink); font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.75; }
+.facts dd { margin: 0; font-family: var(--serif); font-size: clamp(21px, 1.8vw, 27px); font-style: italic; line-height: 1.3; letter-spacing: -0.01em; }
+.offer .priceHeading { margin-bottom: 36px; }
+.priceCards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.priceCard { display: flex; flex-direction: column; padding: 34px 30px 30px; background: rgb(243 240 233 / 0.55); }
+.priceCard h3 { margin-bottom: 6px; font-size: 27px; line-height: 1.15; }
+.priceCard small { color: var(--muted); font-size: 15px; line-height: 1.5; }
+.priceCard .price { margin-top: auto; padding-top: 34px; color: var(--ink); font-size: 56px; line-height: 1; text-align: left; }
+.priceCard .rate { margin-top: 8px !important; color: var(--ink); font-size: 14px; opacity: 0.8; }
+.cardButton { align-self: flex-start; margin-top: 26px; padding: 14px 22px; background: var(--acid); color: var(--ink) !important; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: transform 0.2s ease, background-color 0.2s ease; }
+.cardButton:hover { background: var(--paper); transform: translateY(-2px); }
+.offer .priceNote { max-width: 760px; margin-top: 24px !important; padding-top: 0; border-top: 0; }
+@media (max-width: 950px) {
+  .facts { grid-template-columns: 1fr 1fr; margin-bottom: 70px; }
+  .facts > div { padding: 22px 18px 24px; }
+  .facts > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .facts > div:nth-child(n+3) { border-top: 1px solid rgb(37 55 71 / 0.25); }
+  .priceCards { grid-template-columns: 1fr; }
+  .priceCard .price { font-size: 46px; padding-top: 22px; }
+}
+
+/* Linien im Angebot im Hellblau der Preiskarten */
+.facts,
+.facts > div,
+.facts > div:nth-child(n+3) { border-color: #C6E2ED !important; }
+
+/* Kontaktzeile im Abschluss: ohne Linie, in der Überschriftenschrift wie die anderen Einstiegssätze */
+.endContact {
+  margin-top: 70px !important;
+  padding-top: 0;
+  border-top: 0 !important;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.6vw, 24px);
+  font-style: italic;
+  line-height: 1.45;
+}
+.endContact a { color: var(--ink); font-style: normal; font-weight: 400; text-decoration: none; box-shadow: inset 0 -2px 0 var(--acid); }
+.endContact a:hover { box-shadow: inset 0 -10px 0 var(--acid); }
+@media (max-width: 600px) { .endContact { font-size: 19px; } }
+.endContact a { box-shadow: none; }
+.endContact a:hover { box-shadow: inset 0 -10px 0 var(--acid); }
+
+/* Kreis im Hero ein Stück zur Mitte, löst sich vom rechten Rand */
+.sideNote { right: 9%; }
+@media (min-width: 1700px) { .sideNote { right: 12%; } }
+@media (max-width: 950px) { .sideNote { right: auto; } }
+.sideNote { top: clamp(40px, 6.5vh, 76px); }
+@media (min-width: 1700px) { .sideNote { top: clamp(40px, 6.5vh, 76px); } }
+@media (max-width: 950px) { .sideNote { top: auto; } }
+/* Kreis schräg nach rechts oben */
+.sideNote { top: clamp(-10px, -1vh, 0px); right: 5%; }
+@media (min-width: 1700px) { .sideNote { top: 0; right: 8%; } }
+@media (max-width: 950px) { .sideNote { top: auto; right: auto; } }
+.sideNote { top: 14px; }
+@media (min-width: 1700px) { .sideNote { top: 14px; } }
+@media (max-width: 950px) { .sideNote { top: auto; } }
+
+/* Danke-Seiten: schlanker Kopf mit „Zur Website“ */
+.thanksLink { color: var(--accent); }
+.thanksLink:hover { box-shadow: inset 0 -8px 0 var(--acid); }

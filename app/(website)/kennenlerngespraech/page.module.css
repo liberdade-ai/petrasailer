@@ -196,7 +196,7 @@
   transition: background .2s ease, border-color .2s ease, gap .2s ease;
 }
 
-.loadCalendarButton:hover { gap: 45px; border-color: var(--green); background: var(--blue); }
+.loadCalendarButton:hover { gap: 45px; border-color: var(--green); background: var(--offwhite); color: var(--green); }
 .loadCalendarButton:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
 
 .closing {

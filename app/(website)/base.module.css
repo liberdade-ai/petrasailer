@@ -30,8 +30,9 @@
 .desktopNav a { position: relative; padding: 36px 0 34px; font-size: 15px; font-weight: 600; letter-spacing: .08em; }
 .desktopNav a::after { content: ""; position: absolute; right: 0; bottom: 25px; left: 0; height: 2px; background: var(--coral); transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
 .desktopNav a:hover::after, .desktopNav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
-.headerCta { display: flex; align-items: center; gap: 18px; padding: 13px 0 13px 18px; border-left: 1px solid rgb(var(--green-rgb) / .3); font-size: 16px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; }
+.headerCta { display: flex; align-items: center; gap: 18px; padding: 13px 0 13px 18px; border-left: 1px solid rgb(var(--green-rgb) / .3); font-size: 16px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; transition: color .25s ease; }
 .headerCta span { display: grid; place-items: center; width: 34px; aspect-ratio: 1; border-radius: 50%; background: var(--coral); color: var(--offwhite); font-size: 15px; transition: transform .25s ease; }
+.headerCta:hover { background: var(--offwhite); color: var(--green); }
 .headerCta:hover span { transform: rotate(45deg); }
 .mobileMenu { display: none; }
 
@@ -52,7 +53,7 @@
 .heroAside { align-self: end; padding: 44px 34px; border-left: 1px solid rgb(var(--green-rgb) / .24); font: italic 500 27px/1.05 "Cormorant Garamond"; }
 .textLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-width: 305px; padding: 11px 0; border-bottom: 1px solid currentColor; font-size: 16px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; transition: gap .2s ease, color .2s ease; }
 .textLink > span:last-child { font-size: 16px; }
-.textLink:hover { color: var(--coral); gap: 45px; }
+.textLink:hover { border-color: var(--green); background: var(--offwhite); color: var(--green); gap: 45px; }
 .textLinkLight { color: var(--offwhite); }
 
 .sectionMarker { --section-marker-size: 42px; --section-marker-gap: 18px; --section-marker-title-leading: 1.76; display: flex; align-items: center; gap: var(--section-marker-gap); }
@@ -153,7 +154,7 @@
 .finalCopy a { border-bottom: 1px solid currentColor; font-weight: 600; }
 .finalActions { display: flex; flex-wrap: wrap; gap: 30px 55px; justify-content: flex-end; }
 .finalActions .textLink:first-child { min-height: 64px; padding: 13px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite); }
-.finalActions .textLink:first-child:hover { border-color: var(--offwhite); background: var(--offwhite); color: var(--green); }
+.finalActions .textLink:first-child:hover { border-color: var(--green); background: var(--offwhite); color: var(--green); }
 .offerTwo :global(a) :global(.offer-name__deins),
 .finalActions :global(a) :global(.offer-name__deins) { font-family: var(--sans); font-size: 1em; font-style: normal; font-weight: inherit; line-height: inherit; vertical-align: 0; }
 .email { display: block; width: max-content; margin: 95px 0 0 auto; font: italic 500 clamp(28px, 3vw, 42px)/1 "Cormorant Garamond"; border-bottom: 1px solid currentColor; }
@@ -180,7 +181,8 @@
   .mobilePanel { position: absolute; top: 90px; right: -32px; left: -32px; padding: 30px 32px 38px; border-top: 1px solid rgb(var(--green-rgb) / .2); background: var(--offwhite); }
   .mobilePanel nav { display: flex; flex-direction: column; }
   .mobilePanel nav a { padding: 15px 0; border-bottom: 1px solid rgb(var(--green-rgb) / .17); font-size: 12px; font-weight: 600; letter-spacing: .08em; }
-  .page .mobileCta { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; padding: 16px 18px; background: var(--coral); color: var(--offwhite); font-size: 15px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; }
+  .page .mobileCta { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; padding: 16px 18px; background: var(--coral); color: var(--offwhite); font-size: 15px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; transition: background-color .2s ease, color .2s ease; }
+  .page .mobileCta:hover { background: var(--offwhite); color: var(--green); }
   .heroStage { grid-template-columns: 1fr 1fr; }
   .heroAside { display: none; }
   .recognition { gap: 70px 6vw; }

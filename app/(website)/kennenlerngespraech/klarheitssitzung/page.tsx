@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import BrandLogo from "../../BrandLogo";
 import JsonLd from "../../../JsonLd";
 import { pageGraph, pageMetadata } from "../../../seo";
-import shell from "../../base.module.css";
-import siteStyles from "../../page.module.css";
-import styles from "../page.module.css";
-import clarityStyles from "./page.module.css";
+// Gestaltung, Farben und Schriften kommen von der Klarheitssitzungs-Seite, damit beide Seiten gleich aussehen.
+import k from "../../klarheitssitzung/page.module.css";
+import styles from "./page.module.css";
+import SiteNav from "../../klarheitssitzung/SiteNav";
 import TidyCalCalendar from "../TidyCalCalendar";
+import { TIDYCAL_CLARITY_SESSION_CONSENT_KEY } from "../../../tidycalConsent";
+
+const EMAIL = "kontakt@petrasailer.com";
+const PHONE = "+4915155348727";
+const PHONE_LABEL = "+49 (0)151 5534 8727";
+
+const STEPS = [
+  { label: "Du erzählst", text: "kurz, worum es dir geht" },
+  { label: "Du fragst", text: "alles, was du vorher wissen willst" },
+  { label: "Wir schauen", text: "gemeinsam, ob die Klarheitssitzung passt" },
+] as const;
 
 const PAGE_DESCRIPTION =
   "Kostenfreies 15-Minuten-Kennenlerngespräch zur Klarheitssitzung mit Petra Sailer.";
@@ -20,7 +30,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function ClarityIntroCallPage() {
   return (
-    <div className={`${shell.page} ${styles.introCallPage}`}>
+    <div className={k.page}>
       <JsonLd
         data={pageGraph({
           path: "/kennenlerngespraech/klarheitssitzung/",
@@ -33,45 +43,74 @@ export default function ClarityIntroCallPage() {
           ],
         })}
       />
-      <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
+      <a className={k.skipLink} href="#inhalt">Zum Inhalt springen</a>
 
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <BrandLogo className={shell.brand} variant="header" />
-          <Link className={styles.backLink} href="/">Zur Website<span aria-hidden="true">↗</span></Link>
+      <header className={styles.hero}>
+        <div className={k.wrap}>
+          <SiteNav />
+          <div className={styles.heroContent}>
+            <div className={`${k.sideNote} ${styles.circle}`} aria-hidden="true">
+              <span>Passt mein Thema?</span>
+              <span>Wie läuft das ab?</span>
+              <span>Bist du die Richtige?</span>
+            </div>
+            <p className={styles.label}>Kennenlerngespräch · <span className={k.nowrap}>15 Minuten · kostenfrei</span></p>
+            <h1>Passt die Klarheitssitzung <em>zu deinem Punkt?</em></h1>
+            <p className={styles.heroText}>Du bist noch unsicher oder möchtest mich erst kennenlernen? Dann lass uns 15 Minuten sprechen. Du erzählst mir kurz, worum es geht, stellst deine Fragen, und wir schauen gemeinsam, ob die Klarheitssitzung für dich passt.</p>
+            <dl className={styles.steps}>
+              {STEPS.map((step) => (
+                <div key={step.label}>
+                  <dt>{step.label}</dt>
+                  <dd>{step.text}</dd>
+                </div>
+              ))}
+            </dl>
+            <a className={`${k.btn} ${styles.heroButton}`} href="#termin" data-umami-event="cta_click" data-umami-event-cta="termin_aussuchen" data-umami-event-location="kennenlerngespraech_hero">Termin aussuchen</a>
+          </div>
         </div>
       </header>
 
       <main id="inhalt">
-        <section className={styles.intro} id="top">
-          <p className={styles.eyebrow}>01 · KLARHEITSSITZUNG · KENNENLERNGESPRÄCH</p>
-          <h1 className={clarityStyles.heroHeadline}><span>Passt die Klarheitssitzung</span><span>zu deinem Thema?</span></h1>
-          <div className={`${styles.introCopy} ${clarityStyles.introCopy}`}>
-            <p>Du bist noch unsicher oder möchtest mich vorher kurz kennenlernen? Dann buch dir ein kostenfreies 15-Minuten-Kennenlerngespräch. Du kannst mir kurz erzählen, worum es geht, deine Fragen stellen und schauen, ob die Klarheitssitzung für dich passt.</p>
+        <section className={styles.booking} id="termin">
+          <div className={k.wrap}>
+            <div className={styles.bookingTop}>
+              <h2>Such dir einen <em>Termin aus.</em></h2>
+              <p>Das Gespräch ist kostenfrei und unverbindlich. Nach der Buchung bekommst du alle Infos per E-Mail.</p>
+            </div>
+            <TidyCalCalendar
+              tidyCalUrl="https://tidycal.com/petrasailer/15-min"
+              label="15-minütiges Kennenlerngespräch"
+              showHeading={false}
+              consentKey={TIDYCAL_CLARITY_SESSION_CONSENT_KEY}
+              classes={{ calendar: styles.calendar, consent: styles.consent, button: `${k.btn} ${styles.loadButton}` }}
+            />
           </div>
-        </section>
-
-        <section className={styles.booking}>
-          <div className={clarityStyles.bookingHeading}>
-            <p>02 · KENNENLERNGESPRÄCH</p>
-            <h2>Finde einen Termin, der für dich passt.</h2>
-          </div>
-          <TidyCalCalendar tidyCalUrl="https://tidycal.com/petrasailer/15-min" label="15-MINUTIGES KENNENLERNGESPRÄCH" showHeading={false} />
         </section>
 
         <section className={styles.closing}>
-          <div className={styles.closingInner}>
-            <p className={clarityStyles.contactClosing}>Du findest keinen passenden Termin?<br />Dann schreib mir gerne persönlich oder ruf mich direkt an.</p>
-            <div className={clarityStyles.contactLinks}><a href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a><a href="tel:+4915155348727">+49 (0)151 5534 8727</a></div>
+          <div className={`${k.wrap} ${styles.closingGrid}`}>
+            <h2>Du findest keinen <em>passenden Termin?</em></h2>
+            <div>
+              <p>Dann schreib mir gern persönlich oder ruf mich direkt an.</p>
+              <div className={styles.contactLinks}>
+                <a href={`mailto:${EMAIL}`} data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="kennenlerngespraech">{EMAIL}</a>
+                <a href={`tel:${PHONE}`} data-umami-event="contact_click" data-umami-event-method="phone" data-umami-event-location="kennenlerngespraech">{PHONE_LABEL}</a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <BrandLogo className={shell.footerBrand} variant="footer" />
-        <nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="/kontakt/">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
-        <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a>
-        <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div>
+      <footer className={k.footer}>
+        <div className={k.wrap}>
+          <BrandLogo className={k.brand} variant="footer" />
+          <nav className={k.footerLinks} aria-label="Rechtliches">
+            <a href="/impressum/">Impressum</a>
+            <a href="/datenschutz/">Datenschutz</a>
+            <a href="/kontakt/">Kontakt</a>
+          </nav>
+          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
+        </div>
       </footer>
     </div>
   );

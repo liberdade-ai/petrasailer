@@ -129,7 +129,7 @@
 .offerFacts strong { display: block; margin-top: 42px; font: italic 500 clamp(20px, 1.8vw, 27px)/1.08 "Cormorant Garamond"; }
 .offerAction { display: grid; grid-template-columns: 1fr .6fr; gap: 7vw; align-items: end; max-width: 900px; margin: 70px 0 0 auto; }
 .offerAction :global(a) { width: 100%; min-width: 0; padding: 16px 20px; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--offwhite); font-size: 16px; transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
-.offerAction :global(a:hover) { border-color: var(--green); background: var(--blue); color: var(--offwhite); }
+.offerAction :global(a:hover) { border-color: var(--green); background: var(--offwhite); color: var(--green); }
 
 .faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 9vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
 .faqHeading h2 { margin-top: 62px; font-size: clamp(60px, 6.5vw, 94px); line-height: .84; }
@@ -151,8 +151,8 @@
 .finalCta > h2 + div :global(a) { min-width: 0; padding: 16px 20px; border: 1px solid var(--gold); background: var(--gold); color: var(--green); transition: gap .2s ease, color .2s ease, background .2s ease, border-color .2s ease; }
 .finalCta > h2 + div :global(a) { width: 100%; }
 .finalCta > h2 + div :global(a) { font-size: 16px; }
-.heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: var(--gold); background: var(--gold); color: var(--green); }
-.introCta :global(a:hover) { border-color: var(--gold); background: var(--gold); color: var(--green); }
+.heroIntro :global(a:hover), .finalCta > h2 + div :global(a:hover) { border-color: var(--green); background: var(--offwhite); color: var(--green); }
+.introCta :global(a:hover) { border-color: var(--green); background: var(--offwhite); color: var(--green); }
 .contact { max-width: 600px; margin: 90px 0 0 auto !important; padding-top: 25px; border-top: 1px solid rgb(from var(--offwhite) r g b / .4); }
 .contact a { border-bottom: 1px solid currentColor; color: var(--sun); }
 

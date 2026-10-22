@@ -24,6 +24,30 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Literata";
+  src: url("/fonts/Literata-Variable-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Literata";
+  src: url("/fonts/Literata-Italic-Variable-latin.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/fonts/Figtree-Variable-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
 :root {
   /* Leinen — Grundfläche und helle Schrift auf dunklem Grund */
   --offwhite: #F3EDE3;
@@ -244,7 +268,7 @@ footer nav .offer-name__deins { font-family: var(--sans) !important; font-size: 
   background:transparent;
   color:var(--offwhite);
 }
-.klarheit-page .hero-copy > .button:hover { background:var(--offwhite); color:var(--terracotta); }
+.klarheit-page .hero-copy > .button:hover { background:var(--offwhite); border-color:var(--green); color:var(--green); }
 
 .klarheit-page .recognition {
   padding:150px 0;
@@ -623,8 +647,9 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
   transition: background 160ms ease, border-color 160ms ease;
 }
 .nav-cta:hover {
-  border-color: var(--terracotta-dark);
-  background: var(--terracotta-dark);
+  border-color: var(--green);
+  background: var(--offwhite);
+  color: var(--green);
 }
 .nav-cta[aria-current="page"] {
   border-color: var(--terracotta-dark);
@@ -658,7 +683,7 @@ p, h1, h2, h3, blockquote { margin-top: 0; }
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 .button span { font-size: 16px; font-weight: 400; transition: transform 180ms ease; }
-.button:hover { background: var(--terracotta-dark); border-color: var(--terracotta-dark); transform: translateY(-1px); }
+.button:hover { background: var(--offwhite); border-color: var(--green); color: var(--green); transform: translateY(-1px); }
 .button:hover span { transform: translate(2px, -2px); }
 .button:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid rgb(var(--gold-rgb) / 0.55); outline-offset: 4px; }
 .hero {

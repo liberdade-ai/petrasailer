@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-.button:hover { background: var(--navy); }
+.button:hover { background: var(--offwhite); color: var(--green); }
 .button:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 4px; }
 .visible { opacity: 1; visibility: visible; pointer-events: auto; }
 
