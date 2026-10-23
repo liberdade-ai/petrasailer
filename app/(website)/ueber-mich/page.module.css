@@ -1,158 +1,157 @@
-.aboutPage { background: var(--offwhite); }
-.aboutPage p { font-size: 18px; line-height: 1.6; }
+/* Über mich, im Design der Klarheitssitzungs-Seite.
+   Farben, Schriften, Navigation, Buttons und Fuß kommen aus ../klarheitssitzung/page.module.css.
+   Ruhige Grundfarben, Pink nur in der Handschrift. Farbflächen als eingerückte Felder statt durchgehender Balken. */
 
-.hero { display: grid; grid-template-columns: 1.2fr .8fr; grid-template-areas: "meta meta" "title portrait" "copy portrait"; gap: 45px 8vw; min-height: calc(100vh - 90px); padding: 70px max(32px, calc((100vw - 1376px) / 2)) 0; background: var(--sage); color: var(--green); }
-.heroMeta { grid-area: meta; color: var(--coral); }
-.heroMeta p { font-size: 11px !important; }
-.hero h1 { grid-area: title; align-self: end; max-width: 880px; font-size: clamp(70px, 8.4vw, 122px); line-height: .78; }
-.hero h1 em { display: block; color: var(--coral); }
-.heroPortrait { grid-area: portrait; min-height: 760px; overflow: hidden; }
-.heroPortrait img { object-position: 50% 28%; }
-.heroCopy { grid-area: copy; max-width: 680px; padding: 35px 0 75px 9vw; border-top: 1px solid rgb(var(--green-rgb) / .28); }
-.heroCopy p { font-size: 21px; line-height: 1.6; }
-.heroCopy strong { display: block; margin-top: 32px; font: italic 500 clamp(27px, 2.8vw, 40px)/1.06 "Cormorant Garamond"; }
-
-.story { background: var(--offwhite); }
-.storyIntro { display: grid; grid-template-columns: .55fr 1.45fr; gap: 8vw; padding: 135px max(32px, calc((100vw - 1280px) / 2)) 45px; background: var(--offwhite); color: var(--ink); }
-.storyIntro > div:first-child { align-self: start; }
-.storyIntro h2 { color: var(--green); font-size: clamp(61px, 7vw, 100px); line-height: .82; }
-.storyIntro h2 em { display: block; color: var(--coral); }
-.storyBody { width: min(100% - 64px, 1120px); margin: 0 auto; padding: 48px 0 140px; }
-.storyChapter { width: min(100%, 700px); margin-left: auto; }
-.storyChapter p + p { margin-top: 27px; }
-.storyPortrait { display: grid; grid-template-columns: .8fr .45fr; gap: 40px; align-items: center; margin: 0; padding: 88px 0; }
-.storyPortrait img { height: auto; aspect-ratio: 3 / 4; object-position: 50% 35%; }
-.storyPortrait figcaption { padding: 25px 0; border-top: 5px solid var(--coral); font: italic 500 33px/1.08 "Cormorant Garamond"; }
-.turning { margin: 80px 0 112px !important; color: var(--coral); font: italic 500 clamp(82px, 12vw, 170px)/.75 "Cormorant Garamond" !important; text-align: center; }
-.storyChapter blockquote { margin: 55px 0; padding: 55px max(25px, 5vw); background: var(--sage); color: var(--green); font: italic 500 clamp(35px, 4.3vw, 62px)/1 "Cormorant Garamond"; }
-.storyClosing { margin-top: 65px !important; padding-top: 25px; border-top: 6px solid var(--coral); font: italic 500 clamp(30px, 3.2vw, 46px)/1.03 "Cormorant Garamond" !important; }
-
-.work { display: grid; grid-template-columns: .75fr 1.25fr; background: var(--navy); color: var(--offwhite); }
-.workIntro { padding: 115px 6vw 100px max(32px, calc((100vw - 1280px) / 2)); }
-.workIntro h2 { position: sticky; top: 55px; margin-top: 75px; color: var(--offwhite); font-size: clamp(64px, 7vw, 100px); line-height: .8; }
-.workIntro h2 em { color: var(--sun); }
-.workBody { padding: 120px max(32px, calc((100vw - 1280px) / 2)) 120px 7vw; border-left: 1px solid rgb(from var(--offwhite) r g b / .28); }
-.workBody p { max-width: 710px; }
-.workBody p + p { margin-top: 28px; }
-.workBody strong { color: var(--sun); font: italic 500 30px/1 "Cormorant Garamond"; }
-.workClosing { margin-top: 65px !important; padding-top: 26px; border-top: 6px solid var(--sun); font: italic 500 clamp(32px, 3.3vw, 48px)/1.03 "Cormorant Garamond" !important; }
-
-.voices { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
-.voicesHeading { display: grid; grid-template-columns: .55fr 1.45fr; gap: 7vw; }
-.voicesHeading h2 { font-size: clamp(60px, 6.7vw, 96px); line-height: .84; }
-.voicesHeading h2 em { display: block; color: var(--coral); }
-.voiceList { margin-top: 105px; padding: 0 clamp(30px, 5vw, 72px); border: 1px solid rgb(var(--green-rgb) / .18); background: var(--mint); }
-.voiceList blockquote { display: grid; grid-template-columns: 1fr 210px; gap: 7vw; padding: 65px 0; border-bottom: 1px solid rgb(var(--green-rgb) / .28); }
-.voiceList blockquote p { grid-column: 1; max-width: 880px; font: italic 500 clamp(25px, 2.5vw, 36px)/1.22 "Cormorant Garamond"; }
-.voiceList blockquote p + p { margin-top: 23px; }
-.voiceList blockquote:first-child { row-gap: 0; }
-.voiceList blockquote:first-child p + p { margin-top: 14px; }
-.voiceList blockquote footer { grid-column: 2; grid-row: 1; color: var(--coral); font-size: 12px; font-weight: 600; letter-spacing: .06em; }
-
-.foundation { padding: 130px max(32px, calc((100vw - 1280px) / 2)); background: var(--offwhite); }
-.foundationIntro { display: grid; grid-template-columns: .55fr 1fr .72fr; gap: 6vw; align-items: end; }
-.foundationIntro h2 { font-size: clamp(57px, 6.1vw, 88px); line-height: .86; }
-.foundationIntro h2 em { display: block; color: var(--coral); }
-.foundationGrid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 100px; border-top: 1px solid rgb(var(--green-rgb) / .28); border-bottom: 1px solid rgb(var(--green-rgb) / .28); }
-.foundationGrid article { min-height: 350px; padding: 35px; }
-.foundationGrid article + article { border-left: 1px solid rgb(var(--green-rgb) / .28); }
-.foundationGrid article > span { color: var(--coral); font-size: 11px; }
-.foundationGrid h3 { margin-top: 75px; font-size: clamp(33px, 3.1vw, 45px); line-height: .92; }
-.foundationGrid p { margin-top: 34px !important; }
-.boundary { max-width: 720px; margin: 70px 0 0 auto !important; padding-top: 24px; border-top: 6px solid var(--blue); font-weight: 600; }
-
-.private { display: grid; grid-template-columns: .65fr 1fr .75fr; grid-template-areas: "heading photos body"; gap: 6vw; padding: 130px max(32px, calc((100vw - 1376px) / 2)); background: var(--sage); color: var(--green); }
-.privateHeading { grid-area: heading; }
-.privateHeading h2 { margin-top: 75px; font-size: clamp(65px, 7vw, 102px); line-height: .8; }
-.privateHeading h2 em { color: var(--coral); }
-.privatePhotos { grid-area: photos; position: relative; min-height: 800px; }
-.privatePhotos figure:first-child { position: absolute; top: 0; right: 12%; left: 0; height: 76%; }
-.privatePhotos figure:last-child { position: absolute; right: 0; bottom: 0; width: 52%; height: 45%; border: 10px solid var(--sun); }
-.privatePhotos img { object-position: center; }
-.privateBody { grid-area: body; align-self: center; }
-.privateBody p + p { margin-top: 24px; }
-
-.paths { background: var(--offwhite); }
-.pathsIntro { display: grid; grid-template-columns: .55fr 1fr .7fr; gap: 6vw; padding: 125px max(32px, calc((100vw - 1376px) / 2)) 95px; }
-.pathsIntro h2 { font-size: clamp(57px, 6.1vw, 88px); line-height: .86; }
-.pathsTitleLead { display: block; }
-.pathsTitleRow { display: grid; grid-template-columns: max-content max-content; column-gap: .12em; align-items: start; }
-.pathsTitleRow > span { white-space: nowrap; }
-.pathsTitleRow em { display: block; color: var(--coral); }
-.pathsTitleRow em span { display: block; white-space: nowrap; }
-.pathsIntro > p { align-self: end; }
-.pathGrid { display: grid; grid-template-columns: 1fr 1fr; }
-.pathGrid article { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); grid-template-areas: "meta meta" "title title" "link text"; gap: 35px 60px; min-height: 650px; padding: 70px clamp(35px, 6vw, 95px); }
-.pathGrid article:first-child { background: var(--mint); }
-.pathGrid article:last-child { background: var(--blue); color: var(--offwhite); }
-.pathGrid article:last-child h3 { color: var(--offwhite); }
-.pathGrid article > p { grid-area: meta; font-size: 11px; font-weight: 600; letter-spacing: .12em; }
-.pathGrid h3 { grid-area: title; align-self: end; font-size: clamp(60px, 6.4vw, 94px); line-height: .8; }
-.pathGrid article:first-child h3 span { display: block; }
-.pathGrid h3 em { color: var(--sun); }
-.pathGrid article > span { grid-area: text; max-width: 620px; font-size: 18px; line-height: 1.6; }
-.pathGrid article :global(a) { grid-area: link; align-self: end; min-width: 0; min-height: 64px; padding: 12px 20px; border: 1px solid var(--navy); background: var(--navy); color: var(--offwhite); gap: 15px; }
-.pathGrid article:first-child :global(a:hover) { border-color: var(--green); background: var(--offwhite); color: var(--green); gap: 15px; }
-.pathGrid article:last-child :global(a) { border-color: var(--gold); background: var(--gold); color: var(--green); }
-.pathGrid article:last-child :global(a) :global(.offer-name__deins) { font-family: var(--sans); font-size: 1em; font-style: normal; font-weight: inherit; line-height: inherit; vertical-align: 0; }
-.pathGrid article:last-child :global(a:hover) { border-color: var(--green); background: var(--offwhite); color: var(--green); gap: 15px; }
-
-@media (max-width: 1050px) {
-  .hero { grid-template-columns: 1fr 1fr; }
-  .foundationIntro, .pathsIntro { grid-template-columns: 1fr 1fr; }
-  .foundationIntro > :first-child, .pathsIntro > :first-child { grid-column: 1 / -1; }
-  .private { grid-template-columns: .6fr 1fr; grid-template-areas: "heading photos" "body photos"; }
-  .pathGrid article { grid-template-columns: 1fr; grid-template-areas: "meta" "title" "text" "link"; }
+@font-face {
+  font-family: "Reenie Beanie";
+  src: url("/fonts/ReenieBeanie-latin.woff2") format("woff2");
+  font-display: swap;
 }
 
-@media (max-width: 700px) {
-  .aboutPage p { font-size: 16px; line-height: 1.6; }
-  .hero { display: flex; flex-direction: column; min-height: 0; padding: 45px 18px 0; }
-  .hero h1 { margin-top: 38px; font-size: 59px; }
-  .heroPortrait { order: 3; width: calc(100% + 36px); min-height: 0; margin: 15px -18px 0 !important; aspect-ratio: .84; }
-  .heroCopy { order: 4; padding: 42px 0 58px; }
-  .heroCopy p { font-size: 19px; }
-  .storyIntro { display: block; padding: 88px 18px 32px; }
-  .storyIntro h2 { margin-top: 55px; font-size: 53px; }
-  .storyBody { width: calc(100% - 36px); padding: 36px 0 95px; }
-  .storyPortrait { display: block; margin: 0; padding: 56px 0; }
-  .storyPortrait figcaption { margin-top: 25px; }
-  .turning { margin: 60px 0 80px !important; font-size: 84px !important; }
-  .storyChapter blockquote { margin: 45px -18px; padding: 48px 18px; font-size: 39px; }
-  .work { display: block; }
-  .workIntro { padding: 82px 18px 70px; }
-  .workIntro h2 { position: static; margin-top: 55px; font-size: 58px; }
-  .workBody { padding: 0 18px 90px; border-left: 0; }
-  .voices { padding: 85px 18px 95px; }
-  .voicesHeading { display: block; }
-  .voicesHeading h2 { margin-top: 55px; font-size: 53px; }
-  .voiceList { margin-top: 70px; }
-  .voiceList { padding: 0 18px; }
-  .voiceList blockquote { display: flex; flex-direction: column; gap: 35px; padding: 50px 0; }
-  .voiceList blockquote:first-child { gap: 0; }
-  .voiceList blockquote:first-child footer { margin-bottom: 32px; }
-  .voiceList blockquote:first-child p + p { margin-top: 12px; }
-  .voiceList blockquote p { font-size: 27px; }
-  .voiceList blockquote footer { order: -1; }
-  .foundation { padding: 88px 18px 95px; }
-  .foundationIntro { display: block; }
-  .foundationIntro h2 { margin-top: 55px; font-size: 52px; }
-  .foundationIntro > p { margin-top: 42px; }
-  .foundationGrid { display: block; margin-top: 70px; }
-  .foundationGrid article { min-height: 0; padding: 35px 0 45px; }
-  .foundationGrid article + article { border-top: 1px solid rgb(var(--green-rgb) / .28); border-left: 0; }
-  .foundationGrid h3 { margin-top: 42px; font-size: 39px; }
-  .private { display: flex; flex-direction: column; padding: 88px 18px 95px; }
-  .privateHeading h2 { margin-top: 55px; font-size: 61px; }
-  .privatePhotos { order: 2; min-height: 590px; margin: 55px 0 65px; }
-  .privateBody { order: 3; }
-  .pathsIntro { display: block; padding: 88px 18px 75px; }
-  .pathsIntro h2 { margin-top: 55px; font-size: 52px; }
-  .pathsTitleRow { display: block; }
-  .pathsIntro > p { margin-top: 40px; }
-  .pathGrid { display: block; }
-  .pathGrid article { display: block; min-height: 0; padding: 52px 18px 65px; }
-  .pathGrid h3 { margin: 80px 0 35px; font-size: 64px; }
-  .pathGrid article > span { display: block; margin-bottom: 45px; }
-  .pathGrid article :global(a) { min-height: 58px; }
+/* Handschrift: Petras Notiz am Rand, sparsam */
+.note {
+  margin: 0 0 40px !important;
+  color: #C93B78;
+  font-family: "Reenie Beanie", cursive;
+  font-size: clamp(50px, 4.6vw, 76px);
+  line-height: 1;
+  transform: rotate(-2deg);
+  transform-origin: left center;
 }
+
+/* Kommt dir das bekannt vor? */
+.known { padding: 120px 0 110px; background: #F3F0E9; }
+.situations { max-width: 1000px; margin: 0 0 0 auto; padding: 0; list-style: none; }
+.situations li { padding: 30px 0; border-top: 1px solid rgb(37 55 71 / 0.15); color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(24px, 2.2vw, 34px); font-style: italic; line-height: 1.3; }
+.situations li:last-child { border-bottom: 1px solid rgb(37 55 71 / 0.15); }
+
+/* Stell dir vor: eingerücktes Feld statt Balken */
+.imagine { padding: 30px 0 60px; background: #F3F0E9; }
+.panel { max-width: 1180px; margin: 0 auto; padding: 100px 110px; border-radius: 28px; background: var(--acid); }
+.panel h2 { max-width: 900px; margin-bottom: 34px !important; font-size: clamp(40px, 4.2vw, 66px); line-height: 1.05; letter-spacing: -0.045em; }
+.panel h2 em { color: #4F606C; }
+.panel p { max-width: 720px; }
+
+/* Und hier komme ich ins Spiel */
+.me { padding: 140px 0 130px; background: #F3F0E9; }
+.meGrid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); gap: 100px; align-items: start; }
+.mePhoto { position: sticky; top: 60px; margin: 30px 0 0; }
+.mePhoto { width: min(100%, 460px); aspect-ratio: 1; }
+.mePhoto img { position: relative; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
+.meText { max-width: 600px; }
+.meText h2 { margin-bottom: 30px !important; font-size: clamp(46px, 5vw, 80px); line-height: 1; letter-spacing: -0.05em; }
+.meText h2 em { color: #4F606C; }
+.meText p + p { margin-top: 22px !important; }
+.meText .meQuote { margin: 40px 0 !important; color: var(--pink); font-family: "Literata", Georgia, serif; font-size: clamp(26px, 2.4vw, 36px); font-style: italic; line-height: 1.25; }
+.wayList { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; margin: 110px 0 0; padding: 0; list-style: none; }
+.wayList li { padding-top: 28px; border-top: 1px solid rgb(37 55 71 / 0.2); }
+.wayList h3 { margin-bottom: 14px !important; font-size: clamp(23px, 1.9vw, 28px); line-height: 1.2; }
+.wayList p { font-size: 17px; }
+
+/* Stimmen */
+.voices { padding: 60px 0 140px; background: #F3F0E9; }
+.voices h2 { margin-bottom: 70px !important; font-size: clamp(40px, 4vw, 64px); line-height: 1.05; letter-spacing: -0.045em; }
+.voices h2 em { color: #4F606C; }
+.voiceList { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin: 0; padding: 0; list-style: none; }
+.voiceList blockquote { margin: 0; color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(22px, 1.9vw, 28px); font-style: italic; line-height: 1.4; }
+.voiceList p { margin-top: 22px !important; color: #5A6672; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* Das Formale: himmelblaues Feld */
+.formal { padding: 0 0 60px; background: #F3F0E9; }
+.panelSky { padding: 90px 80px 80px; border-radius: 28px; background: #8FD1F2; color: #253747; }
+.formalTop { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 60px; }
+.formalTop h2 { font-size: clamp(40px, 4vw, 64px); line-height: 1.05; letter-spacing: -0.045em; }
+.formalTop h2 em { color: #253747; }
+.formalGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+.formalGrid > div { padding-top: 24px; border-top: 1px solid rgb(37 55 71 / 0.25); }
+.formalGrid h3 { margin-bottom: 14px !important; font-size: 25px; line-height: 1.2; }
+.formalGrid p { font-size: 16px; line-height: 1.65; }
+.boundary { margin-top: 50px !important; font-size: 15px; }
+
+/* Mein ganz normales Leben: Fotos überlappend */
+.life { padding: 140px 0; background: #F3F0E9; }
+.lifeGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 90px; align-items: center; }
+.lifeText { max-width: 560px; }
+.lifeList { margin: 34px 0 0; padding: 0; list-style: none; }
+.lifeList li { position: relative; padding: 16px 0 16px 28px; border-top: 1px solid rgb(37 55 71 / 0.15); font-family: "Literata", Georgia, serif; font-size: 21px; }
+.lifeList li::before { content: ""; position: absolute; top: 27px; left: 2px; width: 9px; height: 9px; border-radius: 50%; background: var(--pink); }
+.lifeList li:last-child { border-bottom: 1px solid rgb(37 55 71 / 0.15); }
+
+/* Abschluss */
+.end { padding: 150px 0 130px; background: #F3F0E9; border-top: 1px solid rgb(37 55 71 / 0.12); }
+.end h2 { margin-bottom: 50px !important; font-size: clamp(48px, 5.4vw, 88px); line-height: 1.02; letter-spacing: -0.05em; }
+.end h2 em { color: #4F606C; }
+.endBottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px 60px; }
+.endBottom > p { max-width: 520px; font-size: 19px; }
+.greeting { margin-top: 100px; }
+
+@media (max-width: 950px) {
+  .known, .me, .life { padding: 90px 0; }
+  .panel, .panelSky { padding: 56px 26px; border-radius: 20px; }
+  .meGrid, .wayList, .voiceList, .formalTop, .formalGrid, .lifeGrid { grid-template-columns: 1fr; gap: 44px; }
+  .mePhoto { position: relative; top: auto; width: min(86%, 380px); }
+  .wayList { margin-top: 60px; }
+  .voices { padding: 40px 0 90px; }
+  .collage { aspect-ratio: 1 / 1.25; }
+  .end { padding: 100px 0 90px; }
+  .greeting { margin-top: 70px; }
+}
+.lifeText .note { font-size: clamp(44px, 3.8vw, 62px); white-space: nowrap; }
+@media (max-width: 600px) { .lifeText .note { white-space: normal; } }
+
+/* Und hier komme ich ins Spiel: wer ich bin und wie ich arbeite, die Geschichte folgt kurz danach */
+.meSplit { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: end; }
+.meSplit h2 { margin-bottom: 24px !important; font-size: clamp(46px, 5vw, 80px); line-height: 1; letter-spacing: -0.05em; }
+.meSplit h2 em { color: #4F606C; }
+.descriptor { max-width: 520px; color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(21px, 1.8vw, 26px); font-style: italic; line-height: 1.35; }
+.meIntro { max-width: 560px; }
+.midCta { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 34px; margin-top: 80px; }
+.midCta p { color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(22px, 2vw, 28px); font-style: italic; }
+.why { padding: 40px 0 140px; background: #F3F0E9; }
+.why .meText h2 { font-size: clamp(42px, 4.4vw, 70px); }
+@media (max-width: 950px) {
+  .meSplit { grid-template-columns: 1fr; gap: 30px; }
+  .midCta { margin-top: 50px; }
+  .why { padding: 20px 0 90px; }
+}
+
+
+
+/* Kopf genau nach dem Muster der Klarheitssitzung: Foto an der Stelle des Gedankenkreises.
+   Position und Größe kommen aus k.sideNote, Überschrift und Unterzeile aus k.hero. */
+.label {
+  margin-bottom: 26px !important;
+  color: #1F4866;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.heroPhoto { margin: 0; padding: 0; background: none !important; }
+.heroPhoto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
+.heroLine { color: var(--pink); font-family: "Literata", Georgia, serif; font-size: clamp(24px, min(2.9vw, 4.4vh), 44px); font-style: italic; line-height: 1.24; text-align: right; }
+@media (max-width: 950px) { .heroLine { text-align: left; } }
+@media (max-width: 950px) { .heroIntro br, .heroLine br { display: none; } }
+.hero h1 { font-size: clamp(56px, min(6.8vw, 10.5vh), 128px); margin-bottom: clamp(40px, 7vh, 110px); }
+
+/* Kopf: Text und Kernsatz links, Buttons rechts wie bei der Klarheitssitzung */
+.heroIntro { max-width: 680px; font-size: clamp(21px, min(2.2vw, 3.4vh), 32px); }
+.hero .heroLine { margin-top: 18px !important; font-size: clamp(22px, min(2.4vw, 3.6vh), 36px); text-align: left; }
+.meStyle { margin-top: 22px !important; color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(20px, 1.7vw, 24px); font-style: italic; line-height: 1.4; }
+
+/* Collage „Mein ganz normales Leben“: fünf echte Fotos, leicht überlappend */
+.lifeGrid { align-items: start; }
+.collage { position: relative; aspect-ratio: 1 / 1.25; }
+.collage img { position: absolute; height: auto; object-fit: cover; border: 6px solid #F3F0E9; }
+.collage { position: sticky; top: 60px; }
+.collage img { position: absolute; }
+@media (max-width: 950px) { .collage { position: relative; top: auto; } }
+
+/* Alle Fotos rund, in verschiedenen Größen */
+.collage { aspect-ratio: 1 / 1.1; }
+.collage img { aspect-ratio: 1; border-radius: 50%; border-width: 5px; }
+.c1 { top: 0; left: 4%; width: 54%; }
+.c2 { top: 8%; right: 0; width: 38%; }
+.c3 { top: 46%; left: 44%; z-index: 2; width: 26%; }
+.c4 { bottom: 2%; left: 0; width: 40%; }
+.c5 { bottom: 0; right: 3%; width: 30%; }
