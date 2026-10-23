@@ -6,6 +6,7 @@ import { pageGraph, pageMetadata } from "../../../seo";
 import k from "../../klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
 import SiteNav from "../../klarheitssitzung/SiteNav";
+import Greeting from "../../klarheitssitzung/Greeting";
 import TidyCalCalendar from "../TidyCalCalendar";
 import { TIDYCAL_CLARITY_SESSION_CONSENT_KEY } from "../../../tidycalConsent";
 
@@ -95,6 +96,9 @@ export default function ClarityIntroCallPage() {
               <div className={styles.contactLinks}>
                 <a href={`mailto:${EMAIL}`} data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="kennenlerngespraech">{EMAIL}</a>
                 <a href={`tel:${PHONE}`} data-umami-event="contact_click" data-umami-event-method="phone" data-umami-event-location="kennenlerngespraech">{PHONE_LABEL}</a>
+              </div>
+              <div className={styles.greetingWrap}>
+                <Greeting>Ich freu mich auf unser Gespräch.</Greeting>
               </div>
             </div>
           </div>

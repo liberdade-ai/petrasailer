@@ -5,6 +5,7 @@ import { pageMetadata } from "../seo";
 import k from "../(website)/klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
 import ThanksNav from "../(website)/klarheitssitzung/ThanksNav";
+import Greeting from "../(website)/klarheitssitzung/Greeting";
 
 const EMAIL = "kontakt@petrasailer.com";
 
@@ -38,7 +39,9 @@ export default function DankeKennenlerngespraech() {
             <h2>In 15 Minuten <em>schauen wir …</em></h2>
             <div>
               <p>… worum es dir geht, was du wissen willst und ob die Klarheitssitzung zu dir passt. Du brauchst dafür nur einen ruhigen Moment und deine Fragen.</p>
-              <p className={styles.small}>Bis bald, Petra</p>
+              <div className={styles.greetingWrap}>
+                <Greeting large>Bis bald.</Greeting>
+              </div>
             </div>
           </div>
         </section>

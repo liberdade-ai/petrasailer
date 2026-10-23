@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import BrandLogo from "../BrandLogo";
 import JsonLd from "../../JsonLd";
 import { pageGraph, pageMetadata } from "../../seo";
-import shell from "../base.module.css";
-import ContactForm from "./ContactForm";
+// Gestaltung wie auf der Klarheitssitzungs-Seite. Ein Formular gibt es bewusst nicht;
+// ContactForm.tsx bleibt liegen, falls später ein echter Versand eingerichtet wird.
+import k from "../klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
-import siteStyles from "../page.module.css";
+import SiteNav from "../klarheitssitzung/SiteNav";
+import Greeting from "../klarheitssitzung/Greeting";
 
-const NAVIGATION = [
-  { label: "ÜBER MICH", href: "/ueber-mich/" },
-  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung/" },
-  { label: "WIRKLICH DEINS.", href: "/wirklich-deins/" },
-  { label: "KONTAKT", href: "#top", current: true },
-] as const;
+const EMAIL = "kontakt@petrasailer.com";
+const PHONE = "+4915155348727";
+const PHONE_LABEL = "+49 (0)151 5534 8727";
+const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
 
 const PAGE_DESCRIPTION =
-  "Du hast eine Frage zu Petra Sailers Arbeit oder zu einem ihrer Angebote? Schreib ihr persönlich oder ruf sie direkt an.";
+  "Du hast eine Frage zu Petra Sailers Arbeit oder zur Klarheitssitzung? Schreib ihr persönlich, ruf sie an oder buch dir ein kostenfreies 15-Minuten-Gespräch.";
 
 export const metadata: Metadata = pageMetadata({
   title: "Kontakt",
@@ -24,17 +23,9 @@ export const metadata: Metadata = pageMetadata({
   path: "/kontakt/",
 });
 
-function NavLinks() {
-  return NAVIGATION.map((item) => <a key={item.label} href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>{item.label}</a>);
-}
-
-function ActionLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return <a className={`${shell.textLink} ${shell.textLinkLight}`} href={href}><span>{children}</span><span aria-hidden="true">↓</span></a>;
-}
-
 export default function ContactPage() {
   return (
-    <div className={`${shell.page} ${styles.contactPage}`}>
+    <div className={k.page}>
       <JsonLd
         data={pageGraph({
           path: "/kontakt/",
@@ -47,34 +38,65 @@ export default function ContactPage() {
           ],
         })}
       />
-      <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
-      <header className={shell.header}>
-        <div className={shell.headerInner}>
-          <BrandLogo className={shell.brand} variant="header" />
-          <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={shell.headerCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
-          <details className={shell.mobileMenu}><summary><span>MENÜ</span><i aria-hidden="true" /></summary><div className={shell.mobilePanel}><nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav><a className={shell.mobileCta} href="/arbeite-mit-mir/" data-umami-event="cta_click" data-umami-event-cta="arbeite_mit_mir" data-umami-event-location="mobile_header" data-umami-event-destination="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a></div></details>
+      <a className={k.skipLink} href="#inhalt">Zum Inhalt springen</a>
+
+      <header className={styles.hero}>
+        <div className={k.wrap}>
+          <SiteNav current="/kontakt/" />
+          <div className={styles.heroContent}>
+            <div className={`${k.sideNote} ${styles.circle}`} aria-hidden="true">
+              <span>Passt das zu mir?</span>
+              <span>Wie läuft das ab?</span>
+              <span>Wann geht es los?</span>
+            </div>
+            <p className={styles.label}>Kontakt</p>
+            <h1>Was möchtest du <em>noch wissen?</em></h1>
+            <p className={styles.heroText}>Du hast eine Frage zu meiner Arbeit oder zur Klarheitssitzung? Oder es gibt etwas, das dir vor deiner Entscheidung noch wichtig ist? Dann schreib mir. Ich antworte dir persönlich innerhalb von zwei Werktagen.</p>
+          </div>
         </div>
       </header>
 
       <main id="inhalt">
-        <section className={styles.hero} id="top">
-          <div className={styles.heroMeta}><div className={`${shell.sectionMarker} ${styles.roundMarker}`}><span>01</span><p>KONTAKT</p></div></div>
-          <h1>Was möchtest du <em>noch wissen?</em></h1>
-          <div className={styles.heroCopy}>
-            <div><p>Vielleicht hast du eine Frage zu meiner Arbeit oder zu einem der beiden Angebote. Oder es gibt etwas, das dir vor deiner Entscheidung noch wichtig ist.</p><p>Dann schreib mir. Ich antworte dir persönlich innerhalb von zwei Werktagen.</p></div>
-            <div className={styles.heroAction}><ActionLink href="#kontaktformular">Nachricht schreiben</ActionLink></div>
+        <section className={styles.booking}>
+          <div className={k.wrap}>
+            <div className={styles.contactCards}>
+              <div className={styles.contactCard}>
+                <h3>Schreib mir</h3>
+                <p>Ein paar Sätze genügen.</p>
+                <a className={styles.cardLink} href={`mailto:${EMAIL}`} data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="kontakt">{EMAIL}</a>
+              </div>
+              <div className={styles.contactCard}>
+                <h3>Ruf mich an</h3>
+                <p>Wenn ich gerade in einer Sitzung bin, rufe ich dich zurück.</p>
+                <a className={styles.cardLink} href={`tel:${PHONE}`} data-umami-event="contact_click" data-umami-event-method="phone" data-umami-event-location="kontakt">{PHONE_LABEL}</a>
+              </div>
+              <div className={styles.contactCard}>
+                <h3>Lieber gleich sprechen?</h3>
+                <p>15 Minuten, kostenfrei und unverbindlich.</p>
+                <a className={`${k.btn} ${styles.cardButton}`} href={CONSULTATION_URL} data-umami-event="cta_click" data-umami-event-cta="kennenlerngespraech" data-umami-event-location="kontakt">Zum Kennenlerngespräch</a>
+              </div>
+            </div>
           </div>
-          <div className={styles.messageMark} aria-hidden="true"><span>?</span></div>
         </section>
 
-        <section className={styles.formSection} id="kontaktformular">
-          <div className={styles.formIntro}><div className={styles.formIntroInner}><div className={shell.sectionMarker}><span>02</span><p>DEINE NACHRICHT</p></div><h2><span>Schreib</span><span>mir, <em>worum</em></span><span><em>es geht.</em></span></h2><p className={styles.formLead}>Du brauchst dafür keine lange Nachricht. Ein paar Sätze genügen. Wenn du dich bereits für eines der Angebote interessierst, schreib es gerne dazu.</p><div className={styles.direct}><p className={styles.directLabel}>DU MÖCHTEST LIEBER DIREKT SCHREIBEN ODER ANRUFEN?</p><a href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="kontakt_direktkontakt">kontakt@petrasailer.com</a><a href="tel:+4915155348727" data-umami-event="contact_click" data-umami-event-method="phone" data-umami-event-location="kontakt_direktkontakt">+49 1515 5348727</a></div></div></div>
-          <div className={styles.formShell}><ContactForm /></div>
+        <section className={styles.closing}>
+          <div className={k.wrap}>
+            <Greeting>Ich freu mich, von dir zu hören.</Greeting>
+          </div>
         </section>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}><BrandLogo className={shell.footerBrand} variant="footer" /><nav aria-label="Footer-Navigation"><a href="/ueber-mich/">ÜBER MICH</a><a href="/klarheitssitzung/">KLARHEITSSITZUNG</a><a href="/wirklich-deins/">WIRKLICH DEINS.</a><a href="#top">KONTAKT</a><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav><a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com" data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location="footer">kontakt@petrasailer.com</a><div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="https://petrasailer.com/impressum/">Impressum</a><a href="https://petrasailer.com/datenschutz/">Datenschutz</a></div></div></footer>
+      <footer className={k.footer}>
+        <div className={k.wrap}>
+          <BrandLogo className={k.brand} variant="footer" />
+          <nav className={k.footerLinks} aria-label="Rechtliches">
+            <a href="/impressum/">Impressum</a>
+            <a href="/datenschutz/">Datenschutz</a>
+            <a href="/kontakt/">Kontakt</a>
+          </nav>
+          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -50,7 +50,7 @@ Ablauf der Klarheitssitzung (Stand 19.10.2026):
    - Darf ich den Teil aufnehmen, in dem du dein gewünschtes Ergebnis erlebst?
 3. **Sitzung**: 75 Minuten, 1:1 online (bisher 90 bis 120 Minuten).
 4. **Danach**: die **Klarheitskarte**, eine Seite mit der Entscheidung, was sie wirklich will, was sie bisher zurückgehalten hat, und dem nächsten Schritt. Eine Aufnahme der Sitzung gibt es nicht (Entscheidung vom 22. Oktober 2026).
-5. **Nachklang**: eine kurze Nachricht von Petra nach 14 Tagen.
+5. **Nachklang**: Petra schreibt nach 14 Tagen eine kurze Nachricht, unangekündigt als Überraschung. Steht bewusst nirgends im Angebot.
 
 Kostenfreies 15-minütiges Kennenlerngespräch über TidyCal (mit Einwilligung zum Laden des Kalenders). Bleibt bestehen als Alternative für alle, die Petra vor der Buchung kennenlernen möchten.
 

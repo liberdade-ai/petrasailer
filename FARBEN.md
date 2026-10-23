@@ -14,7 +14,7 @@ Die vorherige Fassung mit Aubergine-Flächen (Himmelblau-Akzent, Gelb `#E3EA7C`)
 | Tiefblau-Grau | `#253747` | Fließtext; Überschriften `#2C4458`; Nebentexte `#5A6672`. Ersetzt das frühere Aubergine `#2A1F27` als Schriftfarbe |
 | Blaugrau | `#4F606C` | Das kursive Wort in Überschriften auf hellem Grund (wie in der Aubergine-Fassung; gedeckt, keine weitere Leuchtfarbe) |
 | Tiefblau als Schrift | `#1F4866` | Mini-Überschriften |
-| Tiefblau | `#1F4866` | Fuß der Seite, als ruhiger Abschluss; Schrift Papierweiß, „DEM EIGENEN FOLGEN“ in Himmelblau |
+| Tiefblau | `#1F4866` | Fuß der Seite, als ruhiger Abschluss; alles darin in Papierweiß |
 | Hellblau | `#DDF0FA` | Fläche der vier Schritte und der Geschichte aus der Praxis |
 
 ## Abstufungen
@@ -43,8 +43,8 @@ Form unverändert, nur neue Farben. Dateien in `upload/`:
 
 | Fassung | „Petra Sailer“ | „DEM EIGENEN FOLGEN“ | Datei |
 | --- | --- | --- | --- |
-| Heller Grund (Kopf) | Tiefblau-Grau `#2C4458` | Blau `#2F7FB0` | `PS_DEF_Logo_tiefblau-blau.svg` |
-| Tiefblau (Fuß) | Papierweiß `#F3F0E9` | Gelb `#EDE548` | `PS_DEF_Logo_papierweiss-gelb.svg` |
+| Heller Grund (Kopf) | Tiefblau-Grau `#2C4458` | Pink `#C93B78` | noch keine Datei (bisherige: `PS_DEF_Logo_tiefblau-blau.svg` mit Blau `#2F7FB0`) |
+| Tiefblau (Fuß) | Papierweiß `#F3F0E9` | Papierweiß `#F3F0E9` | noch keine Datei (bisherige: `PS_DEF_Logo_papierweiss-gelb.svg`) |
 
 Gelb im Logo nur auf Tiefblau, nie auf Papierweiß (nicht lesbar).
 
@@ -53,3 +53,18 @@ Gelb im Logo nur auf Tiefblau, nie auf Papierweiß (nicht lesbar).
 - Überschriften: Literata, eng gesetzt, kursiv nur für das eine farbige Wort.
 - Fließtext, Knöpfe und Menü: Figtree; Knöpfe und Menü in Versalien.
 - Logo: Cormorant Garamond und DM Sans im Logo-Baustein.
+
+## Farbrollen mit Pink (gewählt am 23. Oktober 2026)
+
+| Farbe | Wert | Rolle |
+|---|---|---|
+| Pink (Hutband) | #C93B78 | Petras Farbe: Logo-Unterzeile im Kopf, Unterschrift „Petra“ |
+| Pink für Buttons | #BB3570 | Alle Buttons zum Handeln, mit papierweißer Schrift (einen Hauch dunkler, damit die Schrift gut lesbar ist) |
+| Gelb | #EDE548 | Licht und Fläche: Banner „Deine Antwort ist längst da.“, Markierung bei Textlinks |
+| Tiefblau | #1F4866 | „Sitzung buchen“ im Menü, Hover der pinken Buttons, Fuß (darin alles in Papierweiß: Logo, Links, ©-Zeile) |
+| Warmes Weiß | #FBF9F5 | Sichel um Petras Foto und Linie im Fotorahmen |
+
+Regeln:
+- Im Kopf und Hero höchstens Pink plus Tiefblau. Keine dritte Akzentfarbe.
+- Menülinks: dunkelblaue Unterstreichung. Links im Text: gelbe Markierung. Buttons: Pink, beim Darüberfahren Tiefblau.
+- Kein Pink-Punkt im Gedankenkreis, der Kreis bleibt ganz Himmelblau.

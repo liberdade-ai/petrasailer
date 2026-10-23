@@ -108,3 +108,5 @@
 .booking .bookingTop { align-items: start; margin-bottom: 0; }
 .booking p { color: #253747; }
 .booking .small { margin-top: 30px !important; font-family: "Literata", Georgia, serif; font-size: 22px; font-style: italic; }
+
+.greetingWrap { margin: 44px 0 36px; }

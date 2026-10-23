@@ -754,3 +754,74 @@
 /* Danke-Seiten: schlanker Kopf mit „Zur Website“ */
 .thanksLink { color: var(--accent); }
 .thanksLink:hover { box-shadow: inset 0 -8px 0 var(--acid); }
+
+/* Persönlicher Gruß mit rundem Foto */
+.greeting { display: flex; align-items: center; gap: 28px; }
+.greeting img { flex: none; width: 112px; height: 112px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px #FBF9F5, 6px 1px 0 2px #FBF9F5; }
+.page .greetingText { margin: 0 !important; color: var(--ink) !important; font-family: var(--serif); font-size: clamp(22px, 2vw, 28px); font-style: italic; line-height: 1.3; }
+.page .signature { margin: 6px 0 0 !important; color: var(--accent) !important; font-family: var(--serif); font-size: 20px; font-style: italic; }
+@media (max-width: 600px) { .greeting { gap: 18px; } .greeting img { width: 80px; height: 80px; } .page .greetingText { font-size: 20px; } .page .signature { font-size: 17px; } }
+.greetingLarge { gap: 34px; }
+.greetingLarge img { width: 170px; height: 170px; box-shadow: 0 0 0 3px #FBF9F5, 9px 2px 0 3px #FBF9F5; }
+@media (max-width: 600px) { .greetingLarge img { width: 120px; height: 120px; } }
+/* Rundes Grußfoto ohne Sichel, damit der Ausschnitt ruhig und vollständig wirkt */
+.greeting img,
+.greetingLarge img { box-shadow: none; }
+
+/* Grußfoto weiter gefasst (mehr Meer), dafür etwas größer */
+.greeting img { width: 150px; height: 150px; }
+.greetingLarge img { width: 220px; height: 220px; }
+@media (max-width: 600px) { .greeting img { width: 110px; height: 110px; } .greetingLarge img { width: 150px; height: 150px; } }
+
+/* Ein Hauch Pink wie das Hutband: kleiner Punkt im Gedankenkreis */
+.page { --pink: #C93B78; }
+.sideNote span:nth-child(3)::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background: var(--pink);
+  vertical-align: 0.1em;
+}
+.page .greeting img { flex: none; width: 150px; height: 150px; max-width: none; aspect-ratio: 1; }
+.page .greetingLarge img { width: 220px; height: 220px; }
+@media (max-width: 600px) { .page .greeting img { width: 110px; height: 110px; } .page .greetingLarge img { width: 150px; height: 150px; } }
+/* Punkt in voller Farbe: dritte Zeile über die Schriftfarbe abgeschwächt statt über Deckkraft */
+.sideNote span:nth-child(3) { opacity: 1 !important; color: rgb(37 55 71 / 0.6); }
+
+/* Unterschrift und Name unter dem Foto in Himbeerpink */
+.page .signature,
+.aboutPhoto figcaption { color: var(--pink) !important; }
+
+/* Keine Marker hinter „kostet das?“ und „gekreist?“ */
+.offer .priceHeading em,
+.end h2 em { padding: 0; background: none; }
+
+/* Infoband mit drei Punkten (die Nachricht nach 14 Tagen kommt als Überraschung, ohne Ankündigung) */
+.facts { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 950px) {
+  .facts { grid-template-columns: 1fr; }
+  .facts > div,
+  .facts > div:nth-child(odd) { padding: 22px 0 24px; border-left: 0; }
+  .facts > div + div { border-top: 1px solid #C6E2ED; }
+}
+
+/* Farbrollen (Variante 3, von Petra am 23.10.2026 gewählt):
+   Gelb ist Licht und Fläche, Pink ist Petras Farbe und die Farbe zum Handeln, das Menü bleibt ruhig */
+.page { --pink-button: #BB3570; }
+.page .navCta { background: #1F4866; color: #F3F0E9 !important; }
+.page .navCta:hover { background: var(--pink-button); }
+.page .btn,
+.page .cardButton { background: var(--pink-button); color: #F3F0E9 !important; }
+.page .btn:hover,
+.page .cardButton:hover { background: #1F4866; color: #F3F0E9 !important; }
+.page .nav .brand > span:last-child { color: var(--pink); }
+/* Fuß ganz in Papierweiß */
+.page .footer .brand > span,
+.page .footer .footerLinks a,
+.page .footer p { color: var(--paper); }
+.page .sideNote span:nth-child(3)::after { display: none; }
+/* Fotorahmen: Linie im hellen Weiß der Sichel */
+.page .aboutPhoto::before { border: 2px solid #FBF9F5; }

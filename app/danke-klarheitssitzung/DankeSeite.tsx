@@ -3,6 +3,7 @@ import BrandLogo from "../(website)/BrandLogo";
 import k from "../(website)/klarheitssitzung/page.module.css";
 import styles from "./danke.module.css";
 import ThanksNav from "../(website)/klarheitssitzung/ThanksNav";
+import Greeting from "../(website)/klarheitssitzung/Greeting";
 import TidyCalCalendar from "../(website)/kennenlerngespraech/TidyCalCalendar";
 import { TIDYCAL_CLARITY_SESSION_CONSENT_KEY } from "../tidycalConsent";
 
@@ -61,7 +62,10 @@ export default function DankeSeite({ label, location, intro, calendarHeading, ca
           <div className={`${k.wrap} ${styles.closingGrid}`}>
             <h2>Für die Sitzung <em>brauchst du nur …</em></h2>
             <div>
-              <p className={styles.prepare}>einen Raum, in dem du ungestört bist, etwas zu trinken und deine Offenheit. Ich freu mich auf dich.</p>
+              <p className={styles.prepare}>einen Raum, in dem du ungestört bist, etwas zu trinken und deine Offenheit.</p>
+              <div className={styles.greetingWrap}>
+                <Greeting>Ich freu mich auf dich.</Greeting>
+              </div>
               <p>Du findest keinen passenden Termin? Dann schreib mir oder ruf mich an, wir schauen gemeinsam, was möglich ist.</p>
               <div className={styles.contactLinks}>
                 <a href={`mailto:${EMAIL}`} data-umami-event="contact_click" data-umami-event-method="email" data-umami-event-location={location}>{EMAIL}</a>

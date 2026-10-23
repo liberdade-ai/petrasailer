@@ -38,7 +38,6 @@ const INCLUDED = [
   { label: "Dauer", text: "75 Minuten, 1:1 online per Video" },
   { label: "Vorab", text: "5 Fragen, die du in Ruhe beantwortest" },
   { label: "Danach", text: "Deine Klarheitskarte: eine Seite mit allem, was sich gezeigt hat, und deinem nächsten Schritt" },
-  { label: "Nach 14 Tagen", text: "melde ich mich noch einmal bei dir, beim Fünferpaket nach der letzten Sitzung" },
 ] as const;
 
 // Auszüge aus abgesegneten Testimonials (Begleitung über drei Monate); Reinholds Zitat ist zusammengezogen und braucht seine Freigabe
@@ -59,7 +58,7 @@ const FAQ = [
   { q: "Ist das nur für berufliche Themen?", a: "Du kannst mit allem kommen, was dich gerade umtreibt: Job, Business, Beziehung oder ein Projekt, das dir am Herzen liegt. Wichtig ist nur, dass es um einen konkreten Punkt geht." },
   { q: "Was, wenn ich schon eine Ahnung habe?", a: "Umso besser. Dann schauen wir, was dich bisher zurückgehalten hat, und was jetzt als Nächstes dran ist." },
   { q: "Wie geht es nach der Buchung weiter?", a: "Du buchst und bezahlst über Digistore24. Direkt danach suchst du dir auf der Danke-Seite deinen Termin aus. Anschließend bekommst du den Zoom-Link und die fünf Fragen zu deinem Thema. Für die Sitzung brauchst du nur einen Raum, in dem du ungestört bist, etwas zu trinken und deine Offenheit." },
-  { q: "Muss ich danach weiter mit dir arbeiten?", a: "Die Klarheitssitzung ist in sich abgeschlossen. Du gehst mit deiner Klarheitskarte selbstständig weiter, und nach 14 Tagen melde ich mich noch einmal bei dir. Ob du danach wieder buchst, entscheidest allein du." },
+  { q: "Muss ich danach weiter mit dir arbeiten?", a: "Die Klarheitssitzung ist in sich abgeschlossen. Du gehst mit deiner Klarheitskarte selbstständig weiter. Ob du danach wieder buchst, entscheidest allein du." },
 ] as const;
 
 type Tracking = { event: "cta_click" | "booking_click"; location: string; cta?: string; offer?: string };
@@ -190,7 +189,6 @@ export default function ClarityPage() {
             </div>
             <figure className={styles.aboutPhoto}>
               <img src="/petra-sailer-hero.jpg" alt="Petra Sailer lächelt in die Kamera" width="1024" height="1024" />
-              <figcaption>Petra Sailer</figcaption>
             </figure>
           </div>
           <div className={`${styles.wrap} ${styles.voices}`}>
