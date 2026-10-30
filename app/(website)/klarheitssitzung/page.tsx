@@ -23,7 +23,7 @@ export const metadata: Metadata = pageMetadata({
     url: CLARITY_SOCIAL_IMAGE,
     width: 1200,
     height: 630,
-    alt: "Klarheitssitzung – Petra Sailer vor hellem Hintergrund.",
+    alt: "Petra Sailer lacht. Daneben steht: Drehst du dich seit Wochen im Kreis?",
   },
 });
 

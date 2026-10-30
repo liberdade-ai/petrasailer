@@ -11,20 +11,21 @@ import Greeting from "./klarheitssitzung/Greeting";
 const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
 const ACCOMPANIMENT_URL = "/kennenlerngespraech/wirklich-deins/";
 
+// Mit Petra am 30.10.2026 abgestimmt
+const PAGE_TITLE = "Petra Sailer – Klarheitscoach | Dem Eigenen Folgen";
 const PAGE_DESCRIPTION =
-  "Petra Sailer begleitet eigenverantwortliche Menschen dabei, ihre eigenen Antworten wieder klar zu erleben, bewusst zu wählen und danach zu handeln.";
+  "Du drehst dich im Kreis und willst endlich vorankommen? Coaching, das bei deinem Ziel anfängt: für Klarheit und deinen nächsten Schritt. 1:1 online.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Dem Eigenen folgen",
+  title: PAGE_TITLE,
+  absoluteTitle: true,
   description: PAGE_DESCRIPTION,
   path: "/",
-  socialDescription:
-    "Begleitung für Menschen, die etwas in ihrem Leben verändern, aufbauen oder verwirklichen wollen.",
   socialImage: {
     url: HOME_SOCIAL_IMAGE,
     width: 1200,
     height: 630,
-    alt: "Petra Sailer vor hellem Hintergrund. Daneben steht: Wenn du das, was dir wirklich wichtig ist, auch leben willst.",
+    alt: "Petra Sailer lacht. Daneben steht: Du hast es in der Hand.",
   },
 });
 
@@ -53,7 +54,7 @@ export default function HomePage() {
       <JsonLd
         data={pageGraph({
           path: "/",
-          name: "Petra Sailer – Dem Eigenen folgen",
+          name: PAGE_TITLE,
           description: PAGE_DESCRIPTION,
         })}
       />

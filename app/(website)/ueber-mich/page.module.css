@@ -22,7 +22,7 @@
 /* Kommt dir das bekannt vor? */
 .known { padding: 120px 0 110px; background: #F3F0E9; }
 .situations { max-width: 1000px; margin: 0 0 0 auto; padding: 0; list-style: none; }
-.situations li { padding: 30px 0; border-top: 1px solid rgb(37 55 71 / 0.15); color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(24px, 2.2vw, 34px); font-style: italic; line-height: 1.3; }
+.situations li { padding: 30px 0; border-top: 1px solid rgb(37 55 71 / 0.15); color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(24px, 2.2vw, 34px); font-style: italic; line-height: 1.3; }
 .situations li:last-child { border-bottom: 1px solid rgb(37 55 71 / 0.15); }
 
 /* Stell dir vor: eingerücktes Feld statt Balken */
@@ -42,7 +42,7 @@
 .meText h2 { margin-bottom: 30px !important; font-size: clamp(46px, 5vw, 80px); line-height: 1; letter-spacing: -0.05em; }
 .meText h2 em { color: #4F606C; }
 .meText p + p { margin-top: 22px !important; }
-.meText .meQuote { margin: 40px 0 !important; color: var(--pink); font-family: "Literata", Georgia, serif; font-size: clamp(26px, 2.4vw, 36px); font-style: italic; line-height: 1.25; }
+.meText .meQuote { margin: 40px 0 !important; color: var(--pink); font-family: Georgia, "Gelasio", serif; font-size: clamp(26px, 2.4vw, 36px); font-style: italic; line-height: 1.25; }
 .wayList { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; margin: 110px 0 0; padding: 0; list-style: none; }
 .wayList li { padding-top: 28px; border-top: 1px solid rgb(37 55 71 / 0.2); }
 .wayList h3 { margin-bottom: 14px !important; font-size: clamp(23px, 1.9vw, 28px); line-height: 1.2; }
@@ -53,7 +53,7 @@
 .voices h2 { margin-bottom: 70px !important; font-size: clamp(40px, 4vw, 64px); line-height: 1.05; letter-spacing: -0.045em; }
 .voices h2 em { color: #4F606C; }
 .voiceList { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin: 0; padding: 0; list-style: none; }
-.voiceList blockquote { margin: 0; color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(22px, 1.9vw, 28px); font-style: italic; line-height: 1.4; }
+.voiceList blockquote { margin: 0; color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(22px, 1.9vw, 28px); font-style: italic; line-height: 1.4; }
 .voiceList p { margin-top: 22px !important; color: #5A6672; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
 
 /* Das Formale: himmelblaues Feld */
@@ -73,7 +73,7 @@
 .lifeGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 90px; align-items: center; }
 .lifeText { max-width: 560px; }
 .lifeList { margin: 34px 0 0; padding: 0; list-style: none; }
-.lifeList li { position: relative; padding: 16px 0 16px 28px; border-top: 1px solid rgb(37 55 71 / 0.15); font-family: "Literata", Georgia, serif; font-size: 21px; }
+.lifeList li { position: relative; padding: 16px 0 16px 28px; border-top: 1px solid rgb(37 55 71 / 0.15); font-family: Georgia, "Gelasio", serif; font-size: 21px; }
 .lifeList li::before { content: ""; position: absolute; top: 27px; left: 2px; width: 9px; height: 9px; border-radius: 50%; background: var(--pink); }
 .lifeList li:last-child { border-bottom: 1px solid rgb(37 55 71 / 0.15); }
 
@@ -103,10 +103,10 @@
 .meSplit { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: end; }
 .meSplit h2 { margin-bottom: 24px !important; font-size: clamp(46px, 5vw, 80px); line-height: 1; letter-spacing: -0.05em; }
 .meSplit h2 em { color: #4F606C; }
-.descriptor { max-width: 520px; color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(21px, 1.8vw, 26px); font-style: italic; line-height: 1.35; }
+.descriptor { max-width: 520px; color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(21px, 1.8vw, 26px); font-style: italic; line-height: 1.35; }
 .meIntro { max-width: 560px; }
 .midCta { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 34px; margin-top: 80px; }
-.midCta p { color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(22px, 2vw, 28px); font-style: italic; }
+.midCta p { color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(22px, 2vw, 28px); font-style: italic; }
 .why { padding: 140px 0 40px; background: #F3F0E9; }
 .why .meText h2 { font-size: clamp(42px, 4.4vw, 70px); }
 @media (max-width: 950px) {
@@ -129,13 +129,13 @@
 }
 .heroPhoto { margin: 0; padding: 0; background: none !important; }
 .heroPhoto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
-.heroLine { color: var(--pink); font-family: "Literata", Georgia, serif; font-size: clamp(24px, min(2.9vw, 4.4vh), 44px); font-style: italic; line-height: 1.24; text-align: right; }
+.heroLine { color: var(--pink); font-family: Georgia, "Gelasio", serif; font-size: clamp(24px, min(2.9vw, 4.4vh), 44px); font-style: italic; line-height: 1.24; text-align: right; }
 @media (max-width: 950px) { .heroLine { text-align: left; } }
 @media (max-width: 950px) { .heroIntro br, .heroLine br { display: none; } }
 
 /* Kopf: Text und Kernsatz links, Buttons rechts wie bei der Klarheitssitzung */
 .hero .heroLine { margin-top: 18px !important; font-size: clamp(22px, min(2.4vw, 3.6vh), 36px); text-align: left; }
-.meStyle { margin-top: 22px !important; color: #2C4458; font-family: "Literata", Georgia, serif; font-size: clamp(20px, 1.7vw, 24px); font-style: italic; line-height: 1.4; }
+.meStyle { margin-top: 22px !important; color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(20px, 1.7vw, 24px); font-style: italic; line-height: 1.4; }
 
 /* Collage „Mein ganz normales Leben“: fünf echte Fotos, leicht überlappend */
 .lifeGrid { align-items: start; }
@@ -161,7 +161,7 @@
 .workList h3 { margin-bottom: 16px !important; font-size: clamp(24px, 2.1vw, 32px); line-height: 1.15; letter-spacing: -0.02em; }
 .workList p { color: var(--muted); font-size: 17px; line-height: 1.7; }
 .workCta { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; margin-top: 90px; }
-.workCta p { font-family: "Literata", Georgia, serif; font-size: clamp(22px, 2vw, 28px); font-style: italic; }
+.workCta p { font-family: Georgia, "Gelasio", serif; font-size: clamp(22px, 2vw, 28px); font-style: italic; }
 .workNote { margin-top: 60px !important; color: var(--muted); font-size: 15px; }
 .voicesTop { margin-top: 0 !important; padding-top: 0 !important; border-top: 0 !important; }
 .voicesTop ul { grid-template-columns: 1fr 1fr; gap: 90px; }

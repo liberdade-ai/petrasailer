@@ -50,8 +50,9 @@ Gelb im Logo nur auf Tiefblau, nie auf Papierweiß (nicht lesbar).
 
 ## Schriften
 
-- Überschriften: Literata, eng gesetzt, kursiv nur für das eine farbige Wort.
-- Fließtext, Knöpfe und Menü: Figtree; Knöpfe und Menü in Versalien.
+- Überschriften: Georgia, eng gesetzt, kursiv nur für das eine farbige Wort. Wo Georgia fehlt (Android), springt Gelasio ein.
+- Fließtext, Knöpfe und Menü: Helvetica Neue (Windows: Arial); Knöpfe und Menü in Versalien.
+- Literata und Figtree hat Petra am 30. Oktober 2026 abgewählt (Literata-Kursive wirkte ihr zu abgehackt).
 - Logo: Cormorant Garamond und DM Sans im Logo-Baustein.
 
 ## Farbrollen mit Pink (gewählt am 23. Oktober 2026)

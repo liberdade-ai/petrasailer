@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "../../../JsonLd";
-import { pageGraph, pageMetadata } from "../../../seo";
+import { pageGraph, pageMetadata, REALLY_YOURS_SOCIAL_IMAGE } from "../../../seo";
 // Gleicher Aufbau wie das Kennenlerngespräch zur Klarheitssitzung, Texte von Petra (30.10.2026).
 import k from "../../klarheitssitzung/page.module.css";
 import styles from "../klarheitssitzung/page.module.css";
@@ -21,6 +21,12 @@ export const metadata: Metadata = pageMetadata({
   title: "Kennenlerngespräch zu Wirklich Deins.",
   description: PAGE_DESCRIPTION,
   path: "/kennenlerngespraech/wirklich-deins/",
+  socialImage: {
+    url: REALLY_YOURS_SOCIAL_IMAGE,
+    width: 1200,
+    height: 630,
+    alt: "Petra Sailer lacht. Daneben steht: Du hast etwas Größeres vor?",
+  },
 });
 
 export default function AccompanimentIntroCallPage() {

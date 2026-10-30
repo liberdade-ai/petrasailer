@@ -12,8 +12,9 @@ const publicRoutes = [
 ];
 const noIndexRoutes = ["/danke-klarheitssitzung/", "/danke-kennenlerngespraech/"];
 const socialImages = {
-  "/": `${siteUrl}/home-og.png`,
-  "/klarheitssitzung/": `${siteUrl}/klarheitssitzung-og-v2.png`,
+  "/": `${siteUrl}/og-startseite.png`,
+  "/klarheitssitzung/": `${siteUrl}/og-klarheitssitzung.png`,
+  "/kennenlerngespraech/wirklich-deins/": `${siteUrl}/og-wirklich-deins.png`,
 };
 const out = resolve("out");
 const failures = [];
@@ -76,7 +77,7 @@ for (const route of publicRoutes) {
   const html = readOutput(route);
   if (!html) continue;
   const canonical = `${siteUrl}${route}`;
-  const socialImage = socialImages[route] ?? `${siteUrl}/og.png`;
+  const socialImage = socialImages[route] ?? `${siteUrl}/og-allgemein.png`;
 
   if (count(html, /<title>/g) !== 1) fail(`${route}: erwartet genau einen Titel`);
   if (count(html, /<meta name="description"/g) !== 1) fail(`${route}: erwartet genau eine Beschreibung`);

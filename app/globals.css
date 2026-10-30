@@ -24,26 +24,19 @@
   font-display: swap;
 }
 
+/* Georgia-Doppelgänger, wird nur geladen, wo Georgia fehlt (z. B. Android) */
 @font-face {
-  font-family: "Literata";
-  src: url("/fonts/Literata-Variable-latin.woff2") format("woff2");
+  font-family: "Gelasio";
+  src: url("/fonts/Gelasio-Variable-latin.woff2") format("woff2");
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 400 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Literata";
-  src: url("/fonts/Literata-Italic-Variable-latin.woff2") format("woff2");
+  font-family: "Gelasio";
+  src: url("/fonts/Gelasio-Italic-Variable-latin.woff2") format("woff2");
   font-style: italic;
-  font-weight: 300 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-Variable-latin.woff2") format("woff2");
-  font-style: normal;
   font-weight: 400 700;
   font-display: swap;
 }

@@ -11,10 +11,10 @@ export default function BrandLogo({ className, variant }: BrandLogoProps) {
     <Link
       className={[styles.link, styles[variant], className].filter(Boolean).join(" ")}
       href="/"
-      aria-label="Petra Sailer – Dem Eigenen folgen"
+      aria-label="Petra Sailer – Dem Eigenen Folgen"
     >
       <span className={styles.name}>Petra Sailer</span>
-      <span className={styles.tagline}>Dem Eigenen folgen</span>
+      <span className={styles.tagline}>Dem Eigenen Folgen</span>
     </Link>
   );
 }

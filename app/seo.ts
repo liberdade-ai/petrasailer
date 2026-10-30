@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 
 export const SITE_URL = "https://petrasailer.com";
-export const SITE_NAME = "Petra Sailer – Dem Eigenen folgen";
+export const SITE_NAME = "Petra Sailer – Dem Eigenen Folgen";
 export const PERSON_ID = `${SITE_URL}/#petra-sailer`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
-export const SOCIAL_IMAGE = `${SITE_URL}/og.png`;
-export const HOME_SOCIAL_IMAGE = `${SITE_URL}/home-og.png`;
-export const CLARITY_SOCIAL_IMAGE = `${SITE_URL}/klarheitssitzung-og-v2.png`;
-export const REALLY_YOURS_SOCIAL_IMAGE = `${SITE_URL}/wirklich-deins-og.png`;
+// Vorschaubilder für WhatsApp & Co. (1200 × 630), mit Petra am 30.10.2026 abgestimmt
+export const SOCIAL_IMAGE = `${SITE_URL}/og-allgemein.png`;
+export const HOME_SOCIAL_IMAGE = `${SITE_URL}/og-startseite.png`;
+export const CLARITY_SOCIAL_IMAGE = `${SITE_URL}/og-klarheitssitzung.png`;
+export const REALLY_YOURS_SOCIAL_IMAGE = `${SITE_URL}/og-wirklich-deins.png`;
 
 type PageMetadataOptions = {
   title: string;
+  /** Titel ohne den Zusatz „| Petra Sailer“, etwa für die Startseite. */
+  absoluteTitle?: boolean;
   description: string;
   path: string;
   noIndex?: boolean;
@@ -34,23 +37,24 @@ export function absoluteUrl(path = "/") {
 
 export function pageMetadata({
   title,
+  absoluteTitle = false,
   description,
   path,
   noIndex = false,
   socialDescription,
   socialImage = {
     url: SOCIAL_IMAGE,
-    width: 1536,
-    height: 1024,
-    alt: "Petra Sailer – Dem Eigenen folgen",
+    width: 1200,
+    height: 630,
+    alt: "Petra Sailer lacht. Daneben steht: Dem Eigenen Folgen.",
   },
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
-  const socialTitle = title === "Dem Eigenen folgen" ? SITE_NAME : `${title} | Petra Sailer`;
+  const socialTitle = absoluteTitle ? title : `${title} | Petra Sailer`;
   const resolvedSocialDescription = socialDescription ?? description;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
     openGraph: {

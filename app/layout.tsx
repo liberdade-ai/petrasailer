@@ -20,18 +20,18 @@ export const metadata: Metadata = {
       "Eigene Antworten. Bewusste Wahl. Konkrete Schritte.",
     images: [
       {
-        url: "/og.png",
-        width: 1536,
-        height: 1024,
-        alt: "Petra Sailer – Dem Eigenen folgen",
+        url: "/og-allgemein.png",
+        width: 1200,
+        height: 630,
+        alt: "Petra Sailer lacht. Daneben steht: Dem Eigenen Folgen.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Petra Sailer – Dem Eigenen folgen",
+    title: "Petra Sailer – Dem Eigenen Folgen",
     description: "Eigene Antworten. Bewusste Wahl. Konkrete Schritte.",
-    images: ["/og.png"],
+    images: ["/og-allgemein.png"],
   },
   robots: {
     index: true,

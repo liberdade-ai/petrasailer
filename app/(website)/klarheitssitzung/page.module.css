@@ -7,8 +7,8 @@
   --sand: #E7E3DB;
   --muted: #5F555A;
   --line: #BFB8B2;
-  --serif: "Literata", Georgia, serif;
-  --sans: "Figtree", "Helvetica Neue", Arial, sans-serif;
+  --serif: Georgia, "Gelasio", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   background: var(--paper);
   color: var(--ink);
@@ -430,7 +430,7 @@
   background: var(--ink, #2A1F27);
   box-shadow: 0 8px 24px rgb(42 31 39 / 0.25);
   color: #E3EA7C;
-  font-family: "Figtree", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 :global(body):has(.page) :global(button[aria-label="Nach oben"]:hover) {
   border-color: #BFCDD5;
