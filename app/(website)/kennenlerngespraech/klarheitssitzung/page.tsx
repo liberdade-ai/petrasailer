@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import BrandLogo from "../../BrandLogo";
 import JsonLd from "../../../JsonLd";
 import { pageGraph, pageMetadata } from "../../../seo";
 // Gestaltung, Farben und Schriften kommen von der Klarheitssitzungs-Seite, damit beide Seiten gleich aussehen.
 import k from "../../klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
 import SiteNav from "../../klarheitssitzung/SiteNav";
+import SiteFooter from "../../klarheitssitzung/SiteFooter";
 import Greeting from "../../klarheitssitzung/Greeting";
 import TidyCalCalendar from "../TidyCalCalendar";
 import { TIDYCAL_CLARITY_SESSION_CONSENT_KEY } from "../../../tidycalConsent";
@@ -105,17 +105,7 @@ export default function ClarityIntroCallPage() {
         </section>
       </main>
 
-      <footer className={k.footer}>
-        <div className={k.wrap}>
-          <BrandLogo className={k.brand} variant="footer" />
-          <nav className={k.footerLinks} aria-label="Rechtliches">
-            <a href="/impressum/">Impressum</a>
-            <a href="/datenschutz/">Datenschutz</a>
-            <a href="/kontakt/">Kontakt</a>
-          </nav>
-          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

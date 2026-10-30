@@ -106,3 +106,29 @@
 .small { margin-top: 30px !important; font-size: 14px; }
 
 .greetingWrap { margin: 44px 0 36px; }
+
+/* Gestaltungsregeln (29.10.2026): Größen, Abstände und Raster aus klarheitssitzung/page.module.css.
+   Dieser Block ist auf Kontakt, Kennenlerngespräch und den Danke-Seiten gleich. */
+.hero h1 { font-size: clamp(60px, 7.6vw, 112px); line-height: 0.98; }
+.heroText { font-size: var(--text); line-height: var(--text-lh); color: var(--muted); }
+.prepare { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.28; }
+.booking,
+.closing { padding: var(--space) 0; }
+.booking h2 { font-size: var(--h-l); line-height: 1.04; }
+.closing h2 { font-size: var(--h-m); line-height: 1.06; }
+.circle { top: 14px !important; }
+@media (min-width: 951px) {
+  .hero h1 { max-width: calc((100% - 11 * var(--g)) / 12 * 8 + 7 * var(--g)) !important; }
+  .heroText,
+  .closingNote { max-width: calc(50% - var(--g) / 2); }
+  .hero .prepare { max-width: calc((100% - 11 * var(--g)) / 12 * 7 + 6 * var(--g)); }
+  .steps { max-width: calc((100% - 11 * var(--g)) / 12 * 8 + 7 * var(--g)); }
+  .bookingTop,
+  .closingGrid { gap: var(--g); }
+  .bookingTop p,
+  .closing p { max-width: none; }
+  .contactCards { gap: var(--g); }
+  .circle { right: 0 !important; width: calc((100% - 11 * var(--g)) / 12 * 4 + 3 * var(--g)) !important; }
+}
+@media (max-width: 950px) { .circle { width: 250px !important; } }
+@media (max-width: 600px) { .hero h1 { font-size: clamp(52px, 13.4vw, 76px); } }

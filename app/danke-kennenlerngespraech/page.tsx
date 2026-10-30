@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import BrandLogo from "../(website)/BrandLogo";
 import { pageMetadata } from "../seo";
 // Gestaltung wie auf der Klarheitssitzungs-Seite und den anderen Danke-Seiten.
 import k from "../(website)/klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
 import ThanksNav from "../(website)/klarheitssitzung/ThanksNav";
+import SiteFooter from "../(website)/klarheitssitzung/SiteFooter";
 import Greeting from "../(website)/klarheitssitzung/Greeting";
-
-const EMAIL = "kontakt@petrasailer.com";
 
 export const metadata: Metadata = pageMetadata({
   title: "Dein Termin steht",
@@ -47,17 +45,7 @@ export default function DankeKennenlerngespraech() {
         </section>
       </main>
 
-      <footer className={k.footer}>
-        <div className={k.wrap}>
-          <BrandLogo className={k.brand} variant="footer" />
-          <nav className={k.footerLinks} aria-label="Rechtliches">
-            <a href="/impressum/">Impressum</a>
-            <a href="/datenschutz/">Datenschutz</a>
-            <a href="/kontakt/">Kontakt</a>
-          </nav>
-          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

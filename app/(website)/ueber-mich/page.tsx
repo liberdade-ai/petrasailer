@@ -1,56 +1,23 @@
 import type { Metadata } from "next";
-import BrandLogo from "../BrandLogo";
 import JsonLd from "../../JsonLd";
 import { pageGraph, pageMetadata } from "../../seo";
 // Gestaltung wie auf der Klarheitssitzungs-Seite: Farben, Schriften, Navigation, Buttons und Fuß kommen aus k.
 import k from "../klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
 import SiteNav from "../klarheitssitzung/SiteNav";
+import SiteFooter from "../klarheitssitzung/SiteFooter";
 import Greeting from "../klarheitssitzung/Greeting";
 
-const EMAIL = "kontakt@petrasailer.com";
 const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
 
 const PAGE_DESCRIPTION =
   "Lerne Petra Sailer kennen, ihre Art zu arbeiten und ihr ganz normales Leben in Griechenland.";
 
-// Texte aus Petras eingesprochenen Antworten (23.10.2026), noch in Überarbeitung.
-const SITUATIONS = [
-  "Du schreibst und schreibst, probierst es immer wieder, und langsam bist du verwirrt und ehrlich gesagt auch ein bisschen genervt.",
-  "Eigentlich passt alles zusammen. Und trotzdem zieht’s dich längst woanders hin.",
-  "Da ist dieses eine, das du schon ewig machen willst. Und es wartet immer noch darauf, dass du dich traust.",
-  "Du hast noch deinen Brotjob und fragst dich seit Monaten: Kündige ich, oder bleib ich?",
-] as const;
-
-const WAYS = [
-  { title: "Bei mir darf alles sein.", text: "Egal, was du erzählst. Du kannst dich total fallen lassen, und auch der Skeptiker im Kopf darf mal Pause machen." },
-  { title: "Tief und undramatisch.", text: "Manchmal kommen echt tiefe Sachen ans Licht. Und dann ist das einfach eine Erkenntnis, die dich weiterbringt. Wir lachen auch viel, ehrlich." },
-  { title: "Ich sprech an, was im Hintergrund läuft.", text: "Ich seh die Dinge, die so im Hintergrund mitlaufen, und sprech sie ganz offen an. Dann ist da einfach Klarheit." },
-] as const;
-
-const VOICES = [
-  { quote: "Die Arbeit mit Petra ist tief, klar und macht Freude. Mit ihrer unerschütterlichen Präsenz und ihrem Dranbleiben hat sie mich konsequent und undramatisch begleitet.", name: "Antje H.", role: "führende Angestellte" },
-  { quote: "Die Begleitung war nah, konkret und im Moment. Ihre klaren Worte, die zusammengefasst haben, was ich aussprach, waren ein enormes Geschenk.", name: "Simona P.", role: "selbstständig" },
-] as const;
-
+// Texte aus Petras eingesprochenen Antworten, noch in Überarbeitung. Aufbau nach den Bausteinen der Klarheitssitzung.
 const TRAININGS = [
-  { title: "Körper & Präsenz", text: "Yogalehrerin · Thai-Yoga-Practitioner · Bioenergetik und dynamische Körperarbeit nach Alexander Lowen · über 15 Jahre Yoga und eigene Praxis" },
+  { title: "Körper & Präsenz", text: "Yogalehrerin · Thai-Yoga-Practitioner · Bioenergetik und dynamische Körperarbeit nach Alexander Lowen" },
   { title: "Beratung & Beziehung", text: "Lebens- und Sozialberaterin, Österreich · Systemisches Familienstellen und Astrologie bei Ulrich Böld · Traumaarbeit nach IoPT bei Prof. Dr. Franz Ruppert" },
-  { title: "Erleben & Gestaltung", text: "Coach nach der Magnetic-Mind-Methode bei Christopher Duncan · Curriculum der Natural Success Academy bei William Whitecloud · Mind-Body-Connection bei Dr. Joe Dispenza" },
-] as const;
-
-const LIFE = [
-  "Früh im Meer schwimmen.",
-  "Reisen und unterwegs sein. Wir waren schon in Afrika und auf Hawaii und sind oft unterwegs.",
-  "Krafttraining zu Hause mit meinen Gewichten. Ich lieb das Gefühl danach, und mit 49 noch mal zu sehen, wie sich mein Körper verändert.",
-  "Draußen sein, den freien Himmel über mir. Am liebsten im Wald, wenn ich in Deutschland bin. Da spür ich mich einfach.",
-  "Mit meinem Mann tanzen. Wir lachen dabei total viel. Ich liebe seinen Humor.",
-  "Mit ihm auf der Couch sitzen und einfach nur da sein. Oder ein guter Film.",
-  "Malen, abstrakt und einfach drauflos.",
-  "Ein Buch, in das ich richtig eintauchen kann.",
-  "Im Café sitzen und das Leben draußen beobachten.",
-  "Meine Familie und meine Freunde in Deutschland. Meine Neffen und meine Nichte, die immer größer werden.",
-  "Gute Seminare. Ich lern einfach gern dazu.",
+  { title: "Erleben & Gestaltung", text: "Coach nach der Magnetic-Mind-Methode bei Christopher Duncan · Curriculum der Natural Success Academy bei William Whitecloud" },
 ] as const;
 
 export const metadata: Metadata = pageMetadata({
@@ -82,18 +49,16 @@ export default function AboutPage() {
           <div className={k.heroContent}>
             <figure className={`${k.sideNote} ${styles.heroPhoto}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/petra-sailer-ueber-mich-jeans.jpg" alt="Petra Sailer lacht vor ihrem Bücherregal" width="1000" height="1000" fetchPriority="high" />
+              <img src="/petra-sailer-ueber-mich-wald.jpg" alt="Petra Sailer lächelt im roten Pullover vor grünen Bäumen" width="860" height="860" fetchPriority="high" />
             </figure>
-            <p className={styles.label}>Über mich</p>
-            <h1>Ich stelle<br /> die Fragen.<br /> <em>Du hast<br /> die Antworten.</em></h1>
+            <h1>Hey, ich bin<br /> <em>Petra.</em></h1>
             <div className={k.heroBottom}>
-              <div>
-                <p className={`${k.heroQuestion} ${styles.heroIntro}`}>Ich bin Petra. Ich begleite dich in deine Klarheit und zurück zu dir, sodass du Schritt für Schritt in die Richtung gehen kannst, die für dich stimmt.</p>
-                <p className={styles.heroLine}>Du hast es in der Hand.</p>
-              </div>
-              <div className={k.heroActions}>
-                <a className={k.btn} href="/klarheitssitzung/" data-umami-event="cta_click" data-umami-event-cta="klarheitssitzung" data-umami-event-location="ueber_mich_hero">Zur Klarheitssitzung</a>
-                <a className={k.textLink} href={CONSULTATION_URL} data-umami-event="cta_click" data-umami-event-cta="kennenlerngespraech" data-umami-event-location="ueber_mich_hero">15 Minuten kennenlernen</a>
+              <p className={`${k.heroQuestion} ${styles.heroIntro}`}>Bei mir drehen wir das Stimmengewirr in deinem Kopf mal leiser. Und dann hörst du endlich wieder, was du eigentlich&nbsp;willst.</p>
+              <div className={k.heroCta}>
+                <div className={k.heroActions}>
+                  <a className={k.btn} href="/klarheitssitzung/" data-umami-event="cta_click" data-umami-event-cta="klarheitssitzung" data-umami-event-location="ueber_mich_hero">Zur Klarheitssitzung</a>
+                  <a className={k.textLink} href={CONSULTATION_URL} data-umami-event="cta_click" data-umami-event-cta="kennenlerngespraech" data-umami-event-location="ueber_mich_hero">15 Minuten kennenlernen</a>
+                </div>
               </div>
             </div>
           </div>
@@ -101,138 +66,130 @@ export default function AboutPage() {
       </header>
 
       <main id="inhalt">
-        <section className={styles.known}>
+        <section className={k.statement}>
           <div className={k.wrap}>
-            <p className={styles.note}>Kommt dir das bekannt vor?</p>
-            <ul className={styles.situations}>
-              {SITUATIONS.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-        </section>
-
-        <section className={styles.imagine}>
-          <div className={k.wrap}>
-            <div className={styles.panel}>
-              <h2>Stell dir vor, du weißt genau, <em>wofür du stehst.</em></h2>
-              <p className={k.lead}>Du spürst wieder die Verbindung zu dir und zu dem, was du tust. Du hörst deine innere Stimme und vertraust ihr. Und irgendwann merkst du: Ich hab mein Leben in der Hand. Ich kreiere und gestalte es!</p>
+            <h2>Früher hab ich meine Vergangenheit befragt. <em>Heute meine Zukunft.</em></h2>
+            <div className={k.statementGrid}>
+              <div aria-hidden="true" />
+              <div className={k.statementText}>
+                <p>Jahrelang hab ich mich gefragt: Warum bin ich so? Irgendwann wusste ich unglaublich viel über mich und meine Muster. Leichter wurde es dadurch nicht unbedingt.</p>
+                <p>Dann hab ich angefangen, anders zu fragen: Was will ich? Und wie ist es, das zu leben? Seitdem geht vieles leichter. Und genau da setzt meine Arbeit an.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className={styles.me}>
+        <section className={k.interlude} aria-label="Leitgedanke">
           <div className={k.wrap}>
-            <p className={styles.note}>Und hier komme ich ins Spiel.</p>
-            <div className={styles.meSplit}>
+            {/* „Klarheitscoach, Fragenstellerin, …“ kommt in den Abschnitt „Meine Arbeit“. */}
+            <blockquote>Was willst du <span className={k.nowrap}>wirklich?</span></blockquote>
+          </div>
+        </section>
+
+        <section className={`${k.process} ${styles.work}`}>
+          <div className={k.wrap}>
+            <div className={`${k.split} ${styles.workSplit}`}>
+              <div className={styles.workSide}>
+                <h2>Dem Eigenen <em>Folgen.</em></h2>
+                <div className={`${styles.workCta} ${styles.workCtaColumn}`}>
+                  <p>Du willst wissen, ob das zu dir passt?</p>
+                  <a className={k.btn} href={CONSULTATION_URL} data-umami-event="cta_click" data-umami-event-cta="kennenlerngespraech" data-umami-event-location="ueber_mich_mitte">Lass uns 15 Minuten sprechen</a>
+                </div>
+              </div>
               <div>
-                <h2>Ich bin <em>Petra.</em></h2>
-                <p className={styles.descriptor}>Klarheitscoach, Fragenstellerin, Zwischen-den-Zeilen-Hörerin, Großseherin, Ruhepol und Nährboden für neue Möglichkeiten.</p>
-              </div>
-              <div className={styles.meIntro}>
-                <p>Ich lebe mit meinem Mann in Griechenland am Meer und begleite seit 2021 Menschen online, die etwas Eigenes bewegen wollen. Was für dich stimmt, weißt du im Grunde selbst. Ich stell dir die Fragen, die dich dahin bringen, und du findest deine Antworten in dir.</p>
-                <p className={styles.meStyle}>Erst mal ankommen, durchatmen, ruhig werden. Ich hör dir zu, und wenn’s im Kopf zu laut wird, stopp ich dich auch mal.</p>
-              </div>
-            </div>
-            <ul className={styles.wayList}>
-              {WAYS.map((way) => (
-                <li key={way.title}>
-                  <h3>{way.title}</h3>
-                  <p>{way.text}</p>
-                </li>
-              ))}
-            </ul>
-            <div className={styles.midCta}>
-              <p>Du willst wissen, ob das zu dir passt?</p>
-              <a className={k.btn} href={CONSULTATION_URL} data-umami-event="cta_click" data-umami-event-cta="kennenlerngespraech" data-umami-event-location="ueber_mich_mitte">Lass uns 15 Minuten sprechen</a>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.why}>
-          <div className={k.wrap}>
-            <div className={styles.meGrid}>
-              <figure className={styles.mePhoto}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/petra-sailer-weg-rund.jpg" alt="Petra Sailer lächelt in der Natur" width="520" height="520" loading="lazy" />
-              </figure>
-              <div className={styles.meText}>
-                <h2>Warum ich <em>das mache.</em></h2>
-                <p>15 Jahre war ich Yogalehrerin, und im Grunde geb ich schon immer weiter, was mir guttut. Mein Weg ging über Körperarbeit, Meditation und Traumaarbeit, und ich hab immer tiefer in meiner Vergangenheit gegraben. Irgendwann mochte ich mein Leben nicht mehr.</p>
-                <p>Dann hat mein Mann das Buch „The Magician“ von William Whitecloud gefunden. Ich hab angefangen, jeden Tag neu zu wählen: Ich liebe mein Leben. Nach ungefähr drei Monaten geh ich spazieren, seh auf einmal die Blumen am Weg und denk: Oh mein Gott, ich seh das alles wieder!</p>
-                <p className={styles.meQuote}>Ganz ehrlich: Diese Arbeit hat mir den Arsch gerettet.</p>
-                <p>Und genau das geb ich heute weiter.</p>
+                <p className={k.lead}>Ich bin Klarheitscoach, Fragenstellerin, Zwischen-den-Zeilen-Hörerin, Großseherin, Ruhepol und Nährboden für neue Möglichkeiten.</p>
+                <p>Und ja, auch ich werd mal wütend oder verlier mich in dem, was gerade nicht klappt. Der Unterschied zu früher: Ich merk es schneller. Dann frag ich mich: Was will ich jetzt? Ich tauch darin ein, und ganz schnell kann ich wieder frei wählen.</p>
+                <p>Genau das gehört für mich dazu. Zweifel, alte Gedanken und Gefühle tauchen weiter auf. Sie bestimmen mich nur nicht mehr automatisch.</p>
+                <p>In der Klarheitssitzung tauchst du zuerst in das ein, was du willst. Dann legen wir beides auf den Tisch: wie es sich anfühlt, wenn es schon da ist, und das, was dich bisher bremst.</p>
+                <p className={k.lead}>So hast du eine echte Wahl.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className={styles.voices}>
-          <div className={k.wrap}>
-            <h2>So erleben mich <em>andere.</em></h2>
-            <ul className={styles.voiceList}>
-              {VOICES.map((voice) => (
-                <li key={voice.name}>
-                  <blockquote>„{voice.quote}“</blockquote>
-                  <p>{voice.name}, {voice.role}</p>
-                </li>
-              ))}
+        <section className={`${k.about} ${styles.voicesSection}`}>
+          <div className={`${k.wrap} ${k.voices} ${styles.voicesTop} ${styles.voicesThree}`}>
+            <h2>Wie andere mich erleben</h2>
+            <ul>
+              <li>
+                <blockquote>„Mit ihrer unerschütterlichen Präsenz und ihrem Dranbleiben hat sie mich konsequent und undramatisch begleitet. Ihre entspannte Klarheit und ihr echtes Engagement wirken ermutigend und tragend – man spürt, dass sie das, was sie heute weitergibt, selbst gründlich durchlebt und erarbeitet hat.“</blockquote>
+                <p>Antje H., führende Angestellte</p>
+              </li>
+              <li>
+                <blockquote>„Was dich so besonders macht, ist deine Hartnäckigkeit – du lässt nicht locker und bleibst an meiner Seite. Deine Präzision und dein Einfühlungsvermögen sind genau das, was es braucht. … Du bist die Beste! ❤️“</blockquote>
+                <p>Esma S., selbstständig</p>
+              </li>
+              <li>
+                <blockquote>„Die Begleitung war nah, konkret und im Moment. Für was es brauchte. Ihre klaren Worte, die zusammengefasst haben, was ich aussprach, waren ein enormes Geschenk.“</blockquote>
+                <p>Simona P., selbstständig</p>
+              </li>
             </ul>
           </div>
         </section>
 
-        <section className={styles.formal}>
+        <section className={`${k.process} ${styles.work} ${styles.trainingsPaper}`}>
           <div className={k.wrap}>
-            <div className={styles.panelSky}>
-              <div className={styles.formalTop}>
-                <h2>Das <em>Formale.</em></h2>
-                <p>Über 15 Jahre eigene Praxis und viele Ausbildungen. Menschen begleite ich seit 2021, inzwischen vor allem online.</p>
+            <h2 className={styles.trainingsTitle}>Was meine Arbeit <em>trägt.</em></h2>
+            <div className={k.statementGrid}>
+              <div>
+                <p className={k.standfirst}>Meine eigene Erfahrung ist eine wichtige Quelle meiner Arbeit.</p>
+                <img className={styles.trainingsPhoto} src="/petra-sailer-sofa.jpg" alt="Petra Sailer" width="1100" height="1334" loading="lazy" />
               </div>
-              <div className={styles.formalGrid}>
+              <div className={k.statementText}>
+                <p>Aber nicht die einzige.</p>
+                <p>Seit über 20 Jahren bin ich dem Menschen auf der Spur: seinem Körper, seinem Erleben, seinen Beziehungen. Und vor allem der Frage, wie er sein Leben bewusst gestalten kann. Das fasziniert mich bis heute.</p>
+                <h3 className={styles.flatHeading}>Meine Ausbildungen</h3>
                 {TRAININGS.map((item) => (
-                  <div key={item.title}>
-                    <h3>{item.title}</h3>
-                    <p>{item.text}</p>
+                  <div key={item.title} className={styles.trainingGroup}>
+                    <h4>{item.title}</h4>
+                    <ul className={styles.trainingFlat}>
+                      {item.text.split(" · ").map((training) => <li key={training}>{training}</li>)}
+                    </ul>
                   </div>
                 ))}
-              </div>
-              <p className={styles.boundary}>Meine Arbeit ist Coaching. Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.life}>
-          <div className={k.wrap}>
-            <div className={styles.lifeGrid}>
-              <div className={styles.lifeText}>
-                <p className={styles.note}>Mein ganz normales Leben.</p>
-                <p>Ich bin 49 und lebe mit meinem Mann in Griechenland am Meer. Und was ich liebe:</p>
-                <ul className={styles.lifeList}>
-                  {LIFE.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-              </div>
-              <div className={styles.collage}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className={styles.c1} src="/petra-leben-meer.jpg" alt="Petra Sailer lacht am Strand in der Brandung" width="700" height="700" loading="lazy" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className={styles.c2} src="/petra-leben-afrika.jpg" alt="Petra Sailer und ihr Mann mit bunten Tüchern in Afrika" width="700" height="700" loading="lazy" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className={styles.c3} src="/petra-leben-malen.jpg" alt="Ein abstraktes Blumenbild, gemalt von Petra Sailer" width="500" height="500" loading="lazy" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className={styles.c4} src="/petra-leben-wald.jpg" alt="Petra Sailer auf einem Waldweg in der Sonne" width="500" height="500" loading="lazy" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className={styles.c5} src="/petra-leben-winter.jpg" alt="Petra Sailer in roter Winterjacke mit pinkem Schal" width="500" height="500" loading="lazy" />
+                <p className={styles.workNote}>Meine Arbeit ist Coaching. Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className={styles.end}>
+        <section className={styles.lifeNew}>
           <div className={k.wrap}>
-            <p className={styles.note}>Du überlegst noch?</p>
+            <div className={`${styles.lifeNewGrid} ${styles.lifeCollage}`}>
+              <div className={styles.collageText}>
+                <h2>Ich, <em>ganz privat.</em></h2>
+                <p className={k.lead}>Ich bin 49 und lebe mit meinem Mann in Griechenland am Meer.</p>
+                <div className={styles.lifeNewText}>
+                  <p>Den größten Teil des Jahres genießen wir dort die Sonne, das Meer und das einfache, entspannte Leben. Und trotzdem bin ich im Grunde ein Waldmensch. Sobald wir in Deutschland bei Familie und Freunden sind, zieht es mich raus zwischen die Bäume. Da könnte ich stundenlang bleiben.</p>
+                  <p>Morgens nehme ich mir Zeit für mich. Ich richte mich innerlich aus, auf das Große, das ich gewählt habe, und auf den Tag. Dann mach ich meinen Morning Walk, mein Mobility-Training oder schwitze beim Gewichtheben. Danach bin ich bereit für die Menschen, mit denen ich arbeite. Und an freien Tagen für alles, was kommen mag.</p>
+                  <p>Ich sitze auch gerne mal mit einem guten Cappuccino im Café und beobachte das Leben und die Menschen. Wenn ich Zeit habe, male ich. Ich lasse mich dabei vom Leben inspirieren und male abstrakt, was mich bewegt. Einige meiner Bilder habe ich auch schon verkauft.</p>
+                  <p>Und ich liebe es, Zeit mit meinem Mann zu verbringen. Ob wir reisen, Ausflüge machen oder zusammen tanzen: Wir lachen total viel, er hat einen herrlichen Humor. Und genauso gern sind wir mal einfach auf der Couch. Ein gutes Buch, ein guter Film, nichts weiter.</p>
+                  <p>Und was auf keinen Fall fehlen darf: lange Telefonate mit Familie und Freunden. Oder noch besser: echte Treffen.</p>
+                </div>
+              </div>
+              <div className={styles.seaPhotos}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/petra-leben-meer-vorne.jpg" alt="Petra Sailer geht lachend durch die Brandung" width="1000" height="1176" loading="lazy" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/petra-leben-meer-hinten.jpg" alt="Petra Sailer geht barfuß am Meer entlang, von hinten" width="700" height="933" loading="lazy" />
+              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className={styles.collageAfrika} src="/petra-leben-afrika.jpg" alt="Petra Sailer und ihr Mann in bunten Tüchern auf einer Reise in Afrika" width="1050" height="1400" loading="lazy" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className={styles.collageTanz} src="/petra-leben-tanzen.jpg" alt="Petra Sailer tanzt mit ihrem Mann" width="640" height="960" loading="lazy" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className={`${styles.painting} ${styles.collageAuge}`} src="/petra-bild-auge.jpg" alt="Abstraktes Bild von Petra Sailer: ein tiefblauer Kern mit orangem Rand auf hellem Grund" width="1400" height="991" loading="lazy" />
+            </div>
+          </div>
+        </section>
+
+        <section className={k.end}>
+          <div className={k.wrap}>
             <h2>Deine Antworten <em>warten schon.</em></h2>
-            <div className={styles.endBottom}>
-              <p>In der Klarheitssitzung stelle ich die Fragen, und du findest deine Antworten. 75 Minuten, nur für dich und dein Thema.</p>
+            <div className={k.endBottom}>
+              <p>Jetzt kennst du mich ein bisschen. Wenn dir ein Punkt seit Wochen im Kopf herumgeht, komm in die Klarheitssitzung. In 75 Minuten kannst du herausfinden, was du willst. Und von dort aus holst du dir deinen nächsten Schritt.</p>
               <div className={k.heroActions}>
-                <a className={k.btn} href="/klarheitssitzung/#preise" data-umami-event="cta_click" data-umami-event-cta="zu_preisen" data-umami-event-location="ueber_mich_abschluss">Klarheit holen</a>
+                <a className={k.btn} href="/klarheitssitzung/" data-umami-event="cta_click" data-umami-event-cta="klarheitssitzung" data-umami-event-location="ueber_mich_abschluss">Zur Klarheitssitzung</a>
                 <a className={k.textLink} href={CONSULTATION_URL} data-umami-event="cta_click" data-umami-event-cta="kennenlerngespraech" data-umami-event-location="ueber_mich_abschluss">15 Minuten kennenlernen</a>
               </div>
             </div>
@@ -243,17 +200,7 @@ export default function AboutPage() {
         </section>
       </main>
 
-      <footer className={k.footer}>
-        <div className={k.wrap}>
-          <BrandLogo className={k.brand} variant="footer" />
-          <nav className={k.footerLinks} aria-label="Rechtliches">
-            <a href="/impressum/">Impressum</a>
-            <a href="/datenschutz/">Datenschutz</a>
-            <a href="/kontakt/">Kontakt</a>
-          </nav>
-          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
-        </div>
-      </footer>
+      <SiteFooter current="/ueber-mich/" />
     </div>
   );
 }

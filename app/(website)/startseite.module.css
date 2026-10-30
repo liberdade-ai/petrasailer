@@ -1,0 +1,17 @@
+/* Startseite. Alles Übrige kommt aus klarheitssitzung/page.module.css (k). */
+
+/* Rundes Foto im Kopf wie auf Über mich */
+.heroPhoto { margin: 0; padding: 0; background: none !important; }
+.heroPhoto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
+
+.offerActions { margin-top: 44px; }
+/* Lange Begleitung: leiser Zusatz unter der Klarheitssitzung, ohne eigenen Button */
+.longTerm { max-width: var(--measure); margin-top: 110px; }
+.longTerm h3 { margin: 0 0 18px; font-family: var(--serif); font-size: var(--h-s); font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; }
+.longTerm p { margin-bottom: 22px; font-size: var(--text); line-height: var(--text-lh); }
+
+.greeting { margin-top: 100px; }
+@media (max-width: 950px) { .longTerm { margin-top: 70px; } .greeting { margin-top: 60px; } }
+/* Handy: Foto im Kopf mit demselben Abstand nach unten wie der Gedankenkreis der Klarheitssitzung */
+@media (max-width: 950px) { .heroPhoto { margin-bottom: 40px; } }
+@media (min-width: 951px) { .longTerm { max-width: calc(50% - var(--g) / 2); } }

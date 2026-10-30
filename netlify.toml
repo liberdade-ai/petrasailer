@@ -7,19 +7,41 @@
 
 [[redirects]]
   from = "/kennenlerngespraech/"
-  to = "/kennenlerngespraech/wirklich_deins/"
+  to = "/kennenlerngespraech/klarheitssitzung/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/dem-eigenen-folgen"
-  to = "/wirklich-deins/"
+  to = "/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/dem-eigenen-folgen/"
-  to = "/wirklich-deins/"
+  to = "/"
+  status = 301
+  force = true
+
+# Vorübergehend abgeschaltet, Quelltext liegt in app/(website)/_wirklich-deins,
+# _arbeite-mit-mir und kennenlerngespraech/_wirklich_deins (Unterstrich = keine Seite).
+# Die alte Kennenlern-Adresse mit Unterstrich führt seit 30.10.2026 zur neuen Seite mit Bindestrich.
+# 302, weil die Seiten später zurückkommen können.
+[[redirects]]
+  from = "/wirklich-deins/*"
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/arbeite-mit-mir/*"
+  to = "/kontakt/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/kennenlerngespraech/wirklich_deins/*"
+  to = "/kennenlerngespraech/wirklich-deins/"
   status = 301
   force = true
 

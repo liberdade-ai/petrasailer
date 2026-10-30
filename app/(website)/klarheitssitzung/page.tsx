@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import BrandLogo from "../BrandLogo";
 import JsonLd from "../../JsonLd";
 import { CLARITY_SOCIAL_IMAGE, pageMetadata, serviceGraph } from "../../seo";
 import styles from "./page.module.css";
 import SiteNav from "./SiteNav";
+import SiteFooter from "./SiteFooter";
 
 // Digistore24-Produkte, von Petra am 22.10.2026 bestätigt: Einzelsitzung 220 € und Fünferpaket 949 € (3 × 317 €).
 const BOOKING_URL = "https://www.digistore24.com/product/580151";
@@ -40,7 +40,7 @@ const INCLUDED = [
   { label: "Danach", text: "Deine Klarheitskarte: eine Seite mit allem, was sich gezeigt hat, und deinem nächsten Schritt" },
 ] as const;
 
-// Auszüge aus abgesegneten Testimonials (Begleitung über drei Monate); Reinholds Zitat ist zusammengezogen und braucht seine Freigabe
+// Auszüge aus abgesegneten Testimonials (Begleitung über drei Monate); Petra darf die freigegebenen Zitate kürzen
 const VOICES = [
   { quote: "Die Arbeit mit Petra ist tief, klar und macht Freude.", name: "Antje H.", role: "führende Angestellte" },
   { quote: "Danke von Herzen, liebe Petra, dafür, dass du mich groß gesehen hast, bevor ich mich selbst so sehen konnte!", name: "Kathi G.", role: "selbstständig" },
@@ -276,17 +276,7 @@ export default function ClarityPage() {
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        <div className={styles.wrap}>
-          <BrandLogo className={styles.brand} variant="footer" />
-          <nav className={styles.footerLinks} aria-label="Rechtliches">
-            <a href="/impressum/">Impressum</a>
-            <a href="/datenschutz/">Datenschutz</a>
-            <a href="/kontakt/">Kontakt</a>
-          </nav>
-          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
-        </div>
-      </footer>
+      <SiteFooter current="/klarheitssitzung/" />
     </div>
   );
 }

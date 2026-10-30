@@ -1,8 +1,8 @@
-import BrandLogo from "../(website)/BrandLogo";
 // Gestaltung wie auf der Klarheitssitzungs-Seite; Aufbau wie auf der Kennenlern-Seite.
 import k from "../(website)/klarheitssitzung/page.module.css";
 import styles from "./danke.module.css";
 import ThanksNav from "../(website)/klarheitssitzung/ThanksNav";
+import SiteFooter from "../(website)/klarheitssitzung/SiteFooter";
 import Greeting from "../(website)/klarheitssitzung/Greeting";
 import TidyCalCalendar from "../(website)/kennenlerngespraech/TidyCalCalendar";
 import { TIDYCAL_CLARITY_SESSION_CONSENT_KEY } from "../tidycalConsent";
@@ -78,17 +78,7 @@ export default function DankeSeite({ label, location, intro, calendarHeading, ca
         </section>
       </main>
 
-      <footer className={k.footer}>
-        <div className={k.wrap}>
-          <BrandLogo className={k.brand} variant="footer" />
-          <nav className={k.footerLinks} aria-label="Rechtliches">
-            <a href="/impressum/">Impressum</a>
-            <a href="/datenschutz/">Datenschutz</a>
-            <a href="/kontakt/">Kontakt</a>
-          </nav>
-          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import BrandLogo from "../BrandLogo";
 import styles from "./page.module.css";
 
-const NAVIGATION = [
+export const NAVIGATION = [
   { label: "Klarheitssitzung", href: "/klarheitssitzung/" },
   { label: "Über mich", href: "/ueber-mich/" },
   { label: "Kontakt", href: "/kontakt/" },

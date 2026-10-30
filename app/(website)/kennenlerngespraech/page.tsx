@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function IntroCallPage() {
-  permanentRedirect("/kennenlerngespraech/wirklich_deins/");
+  permanentRedirect("/kennenlerngespraech/klarheitssitzung/");
 
   return (
     <div className={`${shell.page} ${styles.introCallPage}`}>

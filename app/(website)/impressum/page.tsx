@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import BrandLogo from "../BrandLogo";
-import shell from "../base.module.css";
-import siteStyles from "../page.module.css";
-import styles from "./page.module.css";
 import { pageMetadata } from "../../seo";
-
-const NAVIGATION = [
-  { label: "ÜBER MICH", href: "/ueber-mich/" },
-  { label: "KLARHEITSSITZUNG", href: "/klarheitssitzung/" },
-  { label: "WIRKLICH DEINS.", href: "/wirklich-deins/" },
-  { label: "KONTAKT", href: "/kontakt/" },
-] as const;
+// Gestaltung wie auf der Klarheitssitzungs-Seite, Rechtstexte unverändert.
+import k from "../klarheitssitzung/page.module.css";
+import styles from "../rechtliches.module.css";
+import SiteNav from "../klarheitssitzung/SiteNav";
+import SiteFooter from "../klarheitssitzung/SiteFooter";
 
 export const metadata: Metadata = pageMetadata({
   title: "Impressum",
@@ -20,72 +13,62 @@ export const metadata: Metadata = pageMetadata({
   noIndex: true,
 });
 
-function NavLinks() {
-  return NAVIGATION.map((item) => <a key={item.label} href={item.href}>{item.label}</a>);
-}
-
 export default function ImprintPage() {
   return (
-    <div className={`${shell.page} ${styles.imprintPage}`}>
-      <a className={shell.skipLink} href="#inhalt">Zum Inhalt springen</a>
-      <header className={shell.header}>
-        <div className={shell.headerInner}>
-          <BrandLogo className={shell.brand} variant="header" />
-          <nav className={shell.desktopNav} aria-label="Hauptnavigation"><NavLinks /></nav>
-          <a className={shell.headerCta} href="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
-          <details className={shell.mobileMenu}>
-            <summary><span>MENÜ</span><i aria-hidden="true" /></summary>
-            <div className={shell.mobilePanel}>
-              <nav aria-label="Mobile Hauptnavigation"><NavLinks /></nav>
-              <a className={shell.mobileCta} href="/arbeite-mit-mir/">ARBEITE MIT MIR <span aria-hidden="true">↗</span></a>
-            </div>
-          </details>
+    <div className={k.page}>
+      <a className={k.skipLink} href="#inhalt">Zum Inhalt springen</a>
+
+      <header className={styles.hero}>
+        <div className={k.wrap}>
+          <SiteNav />
+          <div className={styles.heroContent}>
+            <p className={styles.label}>Rechtliche Angaben</p>
+            <h1>Impressum</h1>
+          </div>
         </div>
       </header>
 
-      <main id="inhalt">
-        <section className={styles.hero}>
-          <p>RECHTLICHE ANGABEN</p>
-          <h1>Impressum</h1>
-        </section>
-
-        <section className={styles.content} aria-label="Impressum Angaben">
-          <div className={styles.entries}>
-            <section>
-              <h2>Angaben gemäß § 5 DDG</h2>
+      <main id="inhalt" className={styles.legal}>
+        <div className={k.wrap}>
+          <section>
+            <h2>Angaben gemäß § 5 DDG</h2>
+            <div>
               <address>liberdade freedom consulting Ltd.<br />Hemus Street 2<br />1111 Sofia<br />Bulgarien</address>
               <p><strong>Vertreten durch:</strong><br />Petra Sailer</p>
-            </section>
+            </div>
+          </section>
 
-            <section>
-              <h2>Kontakt</h2>
+          <section>
+            <h2>Kontakt</h2>
+            <div>
               <p>E-Mail: <a href="mailto:office@liberdade.ltd">office@liberdade.ltd</a></p>
-            </section>
+            </div>
+          </section>
 
-            <section>
-              <h2>Registereintrag</h2>
+          <section>
+            <h2>Registereintrag</h2>
+            <div>
               <p>Eingetragen im Commercial Register and Register of Non-Profit Legal Entities, geführt durch die Registry Agency, Bulgarien.<br />EIK: 207376199</p>
-            </section>
+            </div>
+          </section>
 
-            <section>
-              <h2>Umsatzsteuer-ID</h2>
+          <section>
+            <h2>Umsatzsteuer-ID</h2>
+            <div>
               <p>Umsatzsteuer-Identifikationsnummer (VAT-ID): BG207376199</p>
-            </section>
+            </div>
+          </section>
 
-            <section>
-              <h2>Verbraucherstreitbeilegung</h2>
+          <section>
+            <h2>Verbraucherstreitbeilegung</h2>
+            <div>
               <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-            </section>
-          </div>
-        </section>
+            </div>
+          </section>
+        </div>
       </main>
 
-      <footer className={`${shell.footer} ${siteStyles.siteFooter}`}>
-        <BrandLogo className={shell.footerBrand} variant="footer" />
-        <nav aria-label="Footer-Navigation"><NavLinks /><a href="/arbeite-mit-mir/">ARBEITE MIT MIR</a></nav>
-        <a className={shell.footerEmail} href="mailto:kontakt@petrasailer.com">kontakt@petrasailer.com</a>
-        <div className={shell.footerBottom}><p>© Petra Sailer 2026</p><div><a href="/impressum/" aria-current="page">Impressum</a><a href="/datenschutz/">Datenschutz</a></div></div>
-      </footer>
+      <SiteFooter current="/impressum/" />
     </div>
   );
 }

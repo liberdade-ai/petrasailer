@@ -6,16 +6,14 @@ const publicRoutes = [
   "/",
   "/ueber-mich/",
   "/klarheitssitzung/",
-  "/wirklich-deins/",
-  "/arbeite-mit-mir/",
   "/kontakt/",
-  "/kennenlerngespraech/wirklich_deins/",
+  "/kennenlerngespraech/klarheitssitzung/",
+  "/kennenlerngespraech/wirklich-deins/",
 ];
 const noIndexRoutes = ["/danke-klarheitssitzung/", "/danke-kennenlerngespraech/"];
 const socialImages = {
   "/": `${siteUrl}/home-og.png`,
   "/klarheitssitzung/": `${siteUrl}/klarheitssitzung-og-v2.png`,
-  "/wirklich-deins/": `${siteUrl}/wirklich-deins-og.png`,
 };
 const out = resolve("out");
 const failures = [];

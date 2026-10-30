@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import BrandLogo from "../BrandLogo";
 import JsonLd from "../../JsonLd";
 import { pageGraph, pageMetadata } from "../../seo";
 // Gestaltung wie auf der Klarheitssitzungs-Seite. Ein Formular gibt es bewusst nicht;
@@ -7,6 +6,7 @@ import { pageGraph, pageMetadata } from "../../seo";
 import k from "../klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
 import SiteNav from "../klarheitssitzung/SiteNav";
+import SiteFooter from "../klarheitssitzung/SiteFooter";
 import Greeting from "../klarheitssitzung/Greeting";
 
 const EMAIL = "kontakt@petrasailer.com";
@@ -86,17 +86,7 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <footer className={k.footer}>
-        <div className={k.wrap}>
-          <BrandLogo className={k.brand} variant="footer" />
-          <nav className={k.footerLinks} aria-label="Rechtliches">
-            <a href="/impressum/">Impressum</a>
-            <a href="/datenschutz/">Datenschutz</a>
-            <a href="/kontakt/">Kontakt</a>
-          </nav>
-          <p>© Petra Sailer {new Date().getFullYear()} · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
-        </div>
-      </footer>
+      <SiteFooter current="/kontakt/" />
     </div>
   );
 }
