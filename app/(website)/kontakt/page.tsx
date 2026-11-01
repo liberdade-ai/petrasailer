@@ -14,8 +14,9 @@ const PHONE = "+4915155348727";
 const PHONE_LABEL = "+49 (0)151 5534 8727";
 const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
 
+// Mit Petra am 01.11.2026 abgestimmt
 const PAGE_DESCRIPTION =
-  "Du hast eine Frage zu Petra Sailers Arbeit oder zur Klarheitssitzung? Schreib ihr persönlich, ruf sie an oder buch dir ein kostenfreies 15-Minuten-Gespräch.";
+  "Du hast eine Frage zu meiner Arbeit oder zur Klarheitssitzung? Schreib mir, ruf mich an oder buch dir ein kostenfreies 15-Minuten-Gespräch.";
 
 export const metadata: Metadata = pageMetadata({
   title: "Kontakt",

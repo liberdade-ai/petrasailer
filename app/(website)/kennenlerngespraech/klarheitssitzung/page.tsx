@@ -20,8 +20,9 @@ const STEPS = [
   { label: "Wir schauen", text: "gemeinsam, ob die Klarheitssitzung passt" },
 ] as const;
 
+// Mit Petra am 01.11.2026 abgestimmt
 const PAGE_DESCRIPTION =
-  "Kostenfreies 15-Minuten-Kennenlerngespräch zur Klarheitssitzung mit Petra Sailer.";
+  "Du willst mich erst kennenlernen? 15 Minuten, kostenfrei per Zoom: Du erzählst kurz, worum es dir geht, und wir schauen, ob die Klarheitssitzung zu dir passt.";
 
 export const metadata: Metadata = pageMetadata({
   title: "Kennenlerngespräch zur Klarheitssitzung",

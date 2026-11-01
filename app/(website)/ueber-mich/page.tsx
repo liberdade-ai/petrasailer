@@ -10,8 +10,9 @@ import Greeting from "../klarheitssitzung/Greeting";
 
 const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
 
+// Mit Petra am 01.11.2026 abgestimmt
 const PAGE_DESCRIPTION =
-  "Lerne Petra Sailer kennen, ihre Art zu arbeiten und ihr ganz normales Leben in Griechenland.";
+  "Früher hab ich meine Vergangenheit befragt, heute meine Zukunft. Hier erzähl ich, wie ich arbeite und wie mein ganz normales Leben in Griechenland aussieht.";
 
 // Texte aus Petras eingesprochenen Antworten, noch in Überarbeitung. Aufbau nach den Bausteinen der Klarheitssitzung.
 const TRAININGS = [
