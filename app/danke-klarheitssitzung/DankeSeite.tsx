@@ -62,7 +62,7 @@ export default function DankeSeite({ label, location, intro, calendarHeading, ca
           <div className={`${k.wrap} ${styles.closingGrid}`}>
             <h2>Für die Sitzung <em>brauchst du nur …</em></h2>
             <div>
-              <p className={styles.prepare}>einen Raum, in dem du ungestört bist, etwas zu trinken und deine Offenheit.</p>
+              <p className={styles.prepare}>einen Raum, in dem du ungestört bist, und deine Offenheit.</p>
               <div className={styles.greetingWrap}>
                 <Greeting>Ich freu mich auf dich.</Greeting>
               </div>
