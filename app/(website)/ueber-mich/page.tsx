@@ -194,7 +194,7 @@ export default function AboutPage() {
           <div className={k.wrap}>
             <h2>Deine Antworten <em>warten schon.</em></h2>
             <div className={k.endBottom}>
-              <p>Jetzt kennst du mich ein bisschen. Wenn dir ein Punkt seit Wochen im Kopf herumgeht, komm in die Klarheitssitzung. In 75 Minuten kannst du herausfinden, was du willst. Und von dort aus holst du dir deinen nächsten Schritt.</p>
+              <p>Jetzt kennst du mich ein bisschen. Wenn dir ein Punkt seit Wochen im Kopf herumgeht, komm in die Klarheitssitzung. In 90 Minuten kannst du herausfinden, was du willst. Und von dort aus holst du dir deinen nächsten Schritt.</p>
               <div className={k.heroActions}>
                 <a className={k.btn} href="/klarheitssitzung/" data-umami-event="cta_click" data-umami-event-cta="klarheitssitzung" data-umami-event-location="ueber_mich_abschluss">Zur Klarheitssitzung</a>
                 <a className={k.textLink} href={CONSULTATION_URL} data-umami-event="cta_click" data-umami-event-cta="kennenlerngespraech" data-umami-event-location="ueber_mich_abschluss">15 Minuten kennenlernen</a>

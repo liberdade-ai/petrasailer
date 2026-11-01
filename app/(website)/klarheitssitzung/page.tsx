@@ -13,13 +13,13 @@ const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
 const EMAIL = "kontakt@petrasailer.com";
 
 const PAGE_DESCRIPTION =
-  "Die Klarheitssitzung für alle, die sich mit einer Entscheidung, einem Vorhaben oder ihrer Richtung im Kreis drehen: 75 Minuten 1:1 online, mit Klarheitskarte und deinem nächsten Schritt.";
+  "Die Klarheitssitzung für alle, die sich mit einer Entscheidung, einem Vorhaben oder ihrer Richtung im Kreis drehen: 90 Minuten 1:1 online, mit Klarheitskarte und deinem nächsten Schritt.";
 
 export const metadata: Metadata = pageMetadata({
   title: "Klarheitssitzung",
   description: PAGE_DESCRIPTION,
   path: "/klarheitssitzung/",
-  socialDescription: "Drehst du dich seit Wochen im Kreis? 75 Minuten 1:1 online, für deinen Punkt.",
+  socialDescription: "Drehst du dich seit Wochen im Kreis? 90 Minuten 1:1 online, für deinen Punkt.",
   socialImage: {
     url: CLARITY_SOCIAL_IMAGE,
     width: 1200,
@@ -36,7 +36,7 @@ const STEPS = [
 ] as const;
 
 const INCLUDED = [
-  { label: "Dauer", text: "75 Minuten, 1:1 online per Video" },
+  { label: "Dauer", text: "90 Minuten, 1:1 online per Video" },
   { label: "Vorab", text: "5 Fragen, die du in Ruhe beantwortest" },
   { label: "Danach", text: "Deine Klarheitskarte: eine Seite mit allem, was sich gezeigt hat, und deinem nächsten Schritt" },
 ] as const;

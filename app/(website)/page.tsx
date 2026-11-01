@@ -38,7 +38,7 @@ const KNOWN = [
 ] as const;
 
 const INCLUDED = [
-  { label: "Dauer", text: "75 Minuten, 1:1 online per Video" },
+  { label: "Dauer", text: "90 Minuten, 1:1 online per Video" },
   { label: "Danach", text: "Deine Klarheitskarte mit deinem nächsten Schritt" },
   { label: "Preis", text: "Deine erste Sitzung für 150\u00a0€" },
 ] as const;
