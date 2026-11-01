@@ -23,8 +23,8 @@
   status = 301
   force = true
 
-# Vorübergehend abgeschaltet, Quelltext liegt in app/(website)/_wirklich-deins,
-# _arbeite-mit-mir und kennenlerngespraech/_wirklich_deins (Unterstrich = keine Seite).
+# Vorübergehend abgeschaltet. Der alte Quelltext von Wirklich Deins., Arbeite mit mir und
+# kennenlerngespraech/_wirklich_deins liegt in der Git-Geschichte (bis Commit d6ccf2a).
 # Die alte Kennenlern-Adresse mit Unterstrich führt seit 30.10.2026 zur neuen Seite mit Bindestrich.
 # 302, weil die Seiten später zurückkommen können.
 [[redirects]]

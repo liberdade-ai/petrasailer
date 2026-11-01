@@ -119,8 +119,7 @@
 .circle { top: 14px !important; }
 @media (min-width: 951px) {
   .hero h1 { max-width: calc((100% - 11 * var(--g)) / 12 * 8 + 7 * var(--g)) !important; }
-  .heroText,
-  .closingNote { max-width: calc(50% - var(--g) / 2); }
+  .heroText { max-width: calc(50% - var(--g) / 2); }
   .hero .prepare { max-width: calc((100% - 11 * var(--g)) / 12 * 7 + 6 * var(--g)); }
   .steps { max-width: calc((100% - 11 * var(--g)) / 12 * 8 + 7 * var(--g)); }
   .bookingTop,

@@ -75,12 +75,6 @@
 .hero .textLink:hover { box-shadow: none; color: var(--acid); }
 .end .textLink:hover { box-shadow: inset 0 -8px 0 var(--lav-tief); }
 /* Bei den Preisen (dunkler Grund) gelb, beim Hover ganz hinterlegt, ohne dass sich etwas verschiebt */
-.priceRow .textLink { color: var(--acid); }
-.priceRow .textLink:hover {
-  box-shadow: 0 0 0 8px var(--acid), inset 0 0 0 100px var(--acid);
-  border-bottom-color: transparent;
-  color: var(--ink);
-}
 
 /* Hero */
 .hero { position: relative; display: flex; flex-direction: column; overflow: hidden; min-height: min(100svh, 960px); background: var(--ink); color: var(--paper); }
@@ -203,12 +197,7 @@
 .offer h2 { font-size: clamp(52px, 5.8vw, 90px); line-height: 1.04; letter-spacing: -0.05em; }
 .offer h2 em { color: var(--acid); }
 .offer h2 { margin-bottom: 60px; }
-.offerGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; align-items: start; }
 .offerText { max-width: 520px; margin: 0 !important; color: #DACDD0; }
-.includedHeading { margin: 50px 0 16px !important; color: #CBBFC3; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
-.included { max-width: 520px; margin: 0; padding: 0; list-style: none; }
-.included li { position: relative; padding: 0 0 14px 26px; color: var(--paper); line-height: 1.55; }
-.included li::before { content: ""; position: absolute; top: 0.62em; left: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--acid); }
 
 /* Geschichte aus der Praxis */
 .story { padding: 170px 0; background: var(--lav); }
@@ -270,24 +259,7 @@
 .faq h2 em { color: #4F606C; }
 .page .priceHeading { margin: 0 0 34px; font-size: clamp(36px, 3.4vw, 54px); line-height: 1.06; letter-spacing: -0.045em; }
 .priceHeading em { color: var(--acid); }
-.priceRow {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas: "info price" "info link";
-  gap: 6px 30px;
-  align-items: start;
-  padding: 26px 0;
-  border-top: 1px solid #4A3D46;
-}
-.priceRow:first-child { border-top: 0; padding-top: 0; }
-.priceRow > div { grid-area: info; }
-.priceRow .price { grid-area: price; text-align: right; }
-.priceRow .rate { display: block; margin-top: 8px; color: var(--acid); font-family: var(--sans); font-size: 14px; letter-spacing: 0.02em; }
-.priceRow .textLink { grid-area: link; justify-self: end; margin-top: 14px; }
-.priceRow h3 { margin-bottom: 6px; font-size: 28px; }
-.priceRow small { color: #CBBFC3; font-size: 16px; }
 .price { color: var(--acid); font-family: var(--serif); font-size: 46px; line-height: 1; white-space: nowrap; font-variant-numeric: lining-nums; }
-.priceRow .textLink { justify-self: end; }
 .priceNote { margin-top: 0 !important; padding-top: 20px; border-top: 1px solid #4A3D46; color: #BBAEB2; font-size: 14px; line-height: 1.6; }
 .coachingNote { max-width: 760px; margin-top: 90px !important; color: #DACDD0; font-size: 18px; }
 
@@ -310,7 +282,6 @@
 .faq details[open] summary::after { content: "−"; }
 .faq details p { max-width: 580px; margin: 20px 40px 0 0; color: var(--muted); }
 .inlineLink { color: var(--ink) !important; font-weight: 600; text-decoration: underline !important; text-decoration-color: var(--ink); text-underline-offset: 4px; transition: box-shadow 0.2s ease; }
-
 
 /* Abschluss */
 .end { padding: 145px 0 125px; background: var(--acid); }
@@ -380,8 +351,7 @@
   .voices ul { grid-auto-flow: row; grid-template-columns: 1fr; gap: 36px; }
   .steps li { grid-template-columns: 50px 1fr; gap: 12px 20px; }
   .steps p { grid-column: 2; }
-  .offerGrid, .aboutLayout { grid-template-columns: 1fr; gap: 25px; }
-  .offerGrid { gap: 70px; }
+  .aboutLayout { grid-template-columns: 1fr; gap: 25px; }
   .aboutPhoto { width: min(100%, 520px); }
   .end { padding: 100px 0; }
   .endBottom { flex-direction: column; align-items: start; }
@@ -411,8 +381,6 @@
   .page .lead { font-size: 23px; }
   .steps h3 { font-size: 27px; }
   .about h2 { font-size: 72px; }
-  .priceRow { grid-template-columns: 1fr auto; gap: 12px; }
-  .priceRow h3 { font-size: 25px; }
   .price { font-size: 34px; }
   .faq summary { font-size: 23px; }
   .end h2 { font-size: clamp(56px, 14vw, 90px); }
@@ -460,19 +428,11 @@
 .hero .heroQuestion { color: var(--ink); }
 .hero .textLink:hover { color: var(--ink); box-shadow: inset 0 -8px 0 var(--acid); }
 .offerText,
-.included li,
-.priceRow small,
 .priceNote,
 .coachingNote { color: var(--ink) !important; }
 /* Fließtext auf Tiefblau immer in voller Schriftfarbe */
-.includedHeading { color: var(--ink); opacity: 0.7; }
-.included li::before { background: var(--ink); }
-.priceRow { border-top-color: var(--flash-line); }
 .priceNote { border-top-color: var(--flash-line); }
-.price,
-.priceRow .rate,
-.priceRow .textLink { color: var(--ink); }
-.priceRow .textLink:hover { color: var(--ink); }
+.price { color: var(--ink); }
 @media (max-width: 950px) {
   .menuPanel { background: var(--flash); border-bottom-color: var(--flash-line); }
   .menuIcon, .menuIcon::before, .menuIcon::after { background: var(--ink); }
@@ -517,27 +477,7 @@
 }
 
 /* Versuch: Preise als papierweiße Karten auf Himmelblau, Gelb über die Buttons */
-.offer .priceList { display: flex; flex-direction: column; gap: 14px; }
-.offer .priceRow,
-.offer .priceRow:first-child {
-  padding: 26px 28px;
-  border-top: 0;
-  background: var(--paper);
-  box-shadow: 0 10px 30px rgb(26 60 90 / 0.12);
-}
-.offer .priceRow .textLink {
-  margin-top: 14px;
-  padding: 12px 18px;
-  border-bottom: 0;
-  background: var(--acid);
-  color: var(--ink);
-  font-size: 13px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-.offer .priceRow .textLink:hover { box-shadow: none; background: var(--lav-tief); transform: translateY(-2px); }
 .offer .priceNote { margin-top: 26px !important; padding-top: 0; border-top: 0; }
-.offer .included li::before { background: var(--acid); box-shadow: 0 0 0 1px rgb(42 31 39 / 0.3); }
-@media (max-width: 600px) { .offer .priceRow, .offer .priceRow:first-child { padding: 22px 18px; } }
 
 /* Feinschliff der hellen Fassung: frisches Hellblau, Akzentblau, Fuß und Buttons ohne Aubergine */
 .page { --lav: #DDF0FA; --lav-tief: #B5E0F5; --accent: #1F7DB0; }
@@ -580,16 +520,6 @@
 .page { --accent: #4F606C; }
 
 /* Aufzählung beim Angebot: kleine gelbe Rauten statt Punkte */
-.offer .included li::before {
-  top: 0.55em;
-  left: 2px;
-  width: 9px;
-  height: 9px;
-  border-radius: 0;
-  background: var(--acid);
-  box-shadow: 0 0 0 1px var(--ink);
-  rotate: 45deg;
-}
 
 /* Ruhiger, dunkler Fuß als Abschluss */
 .footer { padding: 90px 0 50px; background: #1F4866; color: var(--paper); }
@@ -612,11 +542,6 @@
 .story { padding: 60px 0 150px; }
 
 /* „In jeder Sitzung“ als ruhiges Raster statt Aufzählung */
-.offer .included { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 34px; max-width: 560px; margin: 0; }
-.offer .included > div { padding: 0; }
-.offer .included dt { margin-bottom: 4px; font-family: var(--serif); font-size: clamp(22px, 1.8vw, 27px); line-height: 1.2; letter-spacing: -0.02em; }
-.offer .included dd { margin: 0; font-size: 16px; line-height: 1.5; }
-@media (max-width: 600px) { .offer .included { grid-template-columns: 1fr 1fr; gap: 22px 20px; } .offer .included dt { font-size: 20px; } }
 
 /* Logo: oben Tiefblau, im Fuß Papierweiß und Gelb */
 .nav .brand > span:first-child,
@@ -626,12 +551,8 @@
 
 /* „In jeder Sitzung“ untereinander, als Gegenstück zu „Und was kostet das?“ */
 .offer .offerText { margin-bottom: 50px !important; }
-.offer .included { grid-template-columns: 1fr; gap: 22px; }
-@media (max-width: 600px) { .offer .included { grid-template-columns: 1fr; gap: 18px; } }
 
 /* Preiskarten leichter: halb durchscheinend, ohne Schatten */
-.offer .priceRow,
-.offer .priceRow:first-child { background: rgb(243 240 233 / 0.55); box-shadow: none; }
 
 /* Große Überschriften eine Spur weicher */
 .page h1,
@@ -644,7 +565,6 @@
 .nav .brand > span:last-child { color: var(--accent); }
 .hero .navLinks a:not(.navCta),
 .menuPanel a { color: var(--accent); }
-
 
 /* Abschluss ruhiger: Überschrift so groß wie die anderen großen Überschriften */
 .end { padding: 190px 0 170px; border-top: 0; }
@@ -673,22 +593,6 @@
 .endContact a:hover { box-shadow: inset 0 -8px 0 var(--acid); }
 
 /* „In jeder Sitzung“ als Karte, gleich hoch wie die Preisliste */
-.offerGrid { align-items: stretch; }
-.offerGrid > div:first-child { display: flex; flex-direction: column; }
-.offer .included {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0;
-  max-width: none;
-  padding: 10px 28px;
-  background: rgb(243 240 233 / 0.55);
-}
-.offer .included > div { padding: 22px 0; border-top: 1px solid rgb(37 55 71 / 0.12); }
-.offer .included > div:first-child { border-top: 0; }
-.offer .included dt { font-size: clamp(24px, 2vw, 30px); }
-@media (max-width: 950px) { .offer .included { padding: 4px 20px; } .offer .included > div { padding: 18px 0; } }
 
 /* Angebot neu: Eckdaten als Band über die ganze Breite, darunter drei Preiskarten nebeneinander */
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 0 110px; border-top: 1px solid rgb(37 55 71 / 0.25); border-bottom: 1px solid rgb(37 55 71 / 0.25); }

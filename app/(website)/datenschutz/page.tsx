@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <div className={styles.heroContent}>
             <p className={styles.label}>Datenschutz</p>
             <h1>Datenschutz</h1>
-            <p className={styles.heroText}><em>Stand: 1. September 2026</em></p>
+            <p className={styles.heroText}><em>Stand: 1. November 2026</em></p>
           </div>
         </div>
       </header>
@@ -123,7 +123,17 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2>9. Cookies und Einwilligungsverwaltung</h2>
+            <h2>9. Fragen vor der Klarheitssitzung über Tally</h2>
+            <div>
+              <p>Nach der Terminbuchung bekommst du einen Link zu fünf Fragen, die du vor der Klarheitssitzung beantworten kannst. Das Formular wird über Tally bereitgestellt, einen Dienst der Tally BV, Sint-Pietersnieuwstraat 11, 9000 Gent, Belgien.</p>
+              <p>Dabei verarbeiten wir deinen Namen, deine E-Mail-Adresse, den Termin deiner Sitzung und deine Antworten. Die Fragen sind freiwillig, du entscheidest selbst, was du dort teilen möchtest. Tally speichert die Formulardaten nach eigenen Angaben verschlüsselt auf Servern in der Europäischen Union. Tally verarbeitet die Daten in unserem Auftrag auf Grundlage eines Vertrags zur Auftragsverarbeitung.</p>
+              <p>Wir nutzen deine Antworten ausschließlich, um uns auf deine Klarheitssitzung vorzubereiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Wenn du in deinen Antworten von dir aus Angaben zu deiner Gesundheit oder andere besonders geschützte Daten machst, verarbeiten wir diese auf Grundlage deiner ausdrücklichen Einwilligung gemäß Art. 9 Abs. 2 lit. a DSGVO. Du kannst diese Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+              <p>Wir löschen deine Antworten, sobald deine Klarheitskarte fertig ist. Weitere Informationen findest du in den <a href="https://tally.so/help/gdpr">Datenschutzinformationen von Tally</a>.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>10. Cookies und Einwilligungsverwaltung</h2>
             <div>
               <p>Auf den normalen Seiten dieser Website setzen wir keine eigenen Analyse- oder Marketing-Cookies ein.</p>
               <p>Nur wenn du den TidyCal-Kalender aktiv lädst, können TidyCal und die von TidyCal eingesetzten Dienste Cookies oder vergleichbare Technologien verwenden. Deine Entscheidung, den Kalender zu laden, wird ausschließlich dafür auf deinem Gerät gespeichert, den Kalender bis zu einem Widerruf wieder anzeigen zu können.</p>
@@ -131,7 +141,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2>10. Empfängerinnen und Empfänger von Daten</h2>
+            <h2>11. Empfängerinnen und Empfänger von Daten</h2>
             <div>
               <p>Soweit es für die genannten Zwecke erforderlich ist, können Daten an folgende Empfängerinnen und Empfänger übermittelt werden:</p>
               <ul>
@@ -139,13 +149,14 @@ export default function PrivacyPage() {
                 <li>Netcup für das Hosting der Umami-Analyse in Deutschland,</li>
                 <li>ALL-INKL.COM für den Betrieb unserer E-Mail-Postfächer,</li>
                 <li>TidyCal, wenn du den Kalender aktiv lädst oder einen Termin buchst,</li>
-                <li>Digistore24, wenn du den externen Checkout aufrufst.</li>
+                <li>Digistore24, wenn du den externen Checkout aufrufst,</li>
+                <li>Tally, wenn du die Fragen vor deiner Klarheitssitzung beantwortest.</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2>11. Deine Rechte</h2>
+            <h2>12. Deine Rechte</h2>
             <div>
               <p>Du hast im Rahmen der gesetzlichen Vorgaben das Recht:</p>
               <ul>
@@ -162,7 +173,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2>12. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+            <h2>13. Beschwerderecht bei einer Aufsichtsbehörde</h2>
             <div>
               <p>Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Zuständige Aufsichtsbehörde für uns ist:</p>
               <address>Commission for Personal Data Protection<br />2 Prof. Tsvetan Lazarov Blvd.<br />Sofia 1592<br />Bulgarien<br />E-Mail: <a href="mailto:kzld@cpdp.bg">kzld@cpdp.bg</a><br />Website: <a href="https://cpdp.bg/en/contacts/">www.cpdp.bg</a></address>
@@ -171,14 +182,14 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2>13. Sicherheit</h2>
+            <h2>14. Sicherheit</h2>
             <div>
               <p>Diese Website nutzt eine verschlüsselte Verbindung über HTTPS. Wir treffen angemessene technische und organisatorische Maßnahmen, um die von uns verarbeiteten Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen.</p>
             </div>
           </section>
 
           <section>
-            <h2>14. Aktualisierung dieser Datenschutzerklärung</h2>
+            <h2>15. Aktualisierung dieser Datenschutzerklärung</h2>
             <div>
               <p>Wir passen diese Datenschutzerklärung an, wenn sich technische Abläufe, rechtliche Anforderungen oder unsere Datenverarbeitungen ändern.</p>
             </div>

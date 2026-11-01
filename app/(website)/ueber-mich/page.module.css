@@ -20,62 +20,19 @@
 }
 
 /* Kommt dir das bekannt vor? */
-.known { padding: 120px 0 110px; background: #F3F0E9; }
-.situations { max-width: 1000px; margin: 0 0 0 auto; padding: 0; list-style: none; }
-.situations li { padding: 30px 0; border-top: 1px solid rgb(37 55 71 / 0.15); color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(24px, 2.2vw, 34px); font-style: italic; line-height: 1.3; }
-.situations li:last-child { border-bottom: 1px solid rgb(37 55 71 / 0.15); }
 
 /* Stell dir vor: eingerücktes Feld statt Balken */
-.imagine { padding: 30px 0 60px; background: #F3F0E9; }
-.panel { max-width: 1180px; margin: 0 auto; padding: 100px 110px; border-radius: 28px; background: var(--acid); }
-.panel h2 { max-width: 900px; margin-bottom: 34px !important; font-size: clamp(40px, 4.2vw, 66px); line-height: 1.05; letter-spacing: -0.045em; }
-.panel h2 em { color: #4F606C; }
-.panel p { max-width: 720px; }
 
 /* Und hier komme ich ins Spiel */
-.me { padding: 140px 0 130px; background: #F3F0E9; }
-.meGrid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); gap: 100px; align-items: start; }
-.mePhoto { position: sticky; top: 60px; margin: 30px 0 0; }
-.mePhoto { width: min(100%, 460px); aspect-ratio: 1; }
-.mePhoto img { position: relative; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
-.meText { max-width: 600px; }
-.meText h2 { margin-bottom: 30px !important; font-size: clamp(46px, 5vw, 80px); line-height: 1; letter-spacing: -0.05em; }
-.meText h2 em { color: #4F606C; }
-.meText p + p { margin-top: 22px !important; }
-.meText .meQuote { margin: 40px 0 !important; color: var(--pink); font-family: Georgia, "Gelasio", serif; font-size: clamp(26px, 2.4vw, 36px); font-style: italic; line-height: 1.25; }
-.wayList { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; margin: 110px 0 0; padding: 0; list-style: none; }
-.wayList li { padding-top: 28px; border-top: 1px solid rgb(37 55 71 / 0.2); }
-.wayList h3 { margin-bottom: 14px !important; font-size: clamp(23px, 1.9vw, 28px); line-height: 1.2; }
-.wayList p { font-size: 17px; }
 
 /* Stimmen */
 .voices { padding: 60px 0 140px; background: #F3F0E9; }
 .voices h2 { margin-bottom: 70px !important; font-size: clamp(40px, 4vw, 64px); line-height: 1.05; letter-spacing: -0.045em; }
 .voices h2 em { color: #4F606C; }
-.voiceList { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin: 0; padding: 0; list-style: none; }
-.voiceList blockquote { margin: 0; color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(22px, 1.9vw, 28px); font-style: italic; line-height: 1.4; }
-.voiceList p { margin-top: 22px !important; color: #5A6672; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
 
 /* Das Formale: himmelblaues Feld */
-.formal { padding: 0 0 60px; background: #F3F0E9; }
-.panelSky { padding: 90px 80px 80px; border-radius: 28px; background: #8FD1F2; color: #253747; }
-.formalTop { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 60px; }
-.formalTop h2 { font-size: clamp(40px, 4vw, 64px); line-height: 1.05; letter-spacing: -0.045em; }
-.formalTop h2 em { color: #253747; }
-.formalGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
-.formalGrid > div { padding-top: 24px; border-top: 1px solid rgb(37 55 71 / 0.25); }
-.formalGrid h3 { margin-bottom: 14px !important; font-size: 25px; line-height: 1.2; }
-.formalGrid p { font-size: 16px; line-height: 1.65; }
-.boundary { margin-top: 50px !important; font-size: 15px; }
 
 /* Mein ganz normales Leben: Fotos überlappend */
-.life { padding: 140px 0; background: #F3F0E9; }
-.lifeGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 90px; align-items: center; }
-.lifeText { max-width: 560px; }
-.lifeList { margin: 34px 0 0; padding: 0; list-style: none; }
-.lifeList li { position: relative; padding: 16px 0 16px 28px; border-top: 1px solid rgb(37 55 71 / 0.15); font-family: Georgia, "Gelasio", serif; font-size: 21px; }
-.lifeList li::before { content: ""; position: absolute; top: 27px; left: 2px; width: 9px; height: 9px; border-radius: 50%; background: var(--pink); }
-.lifeList li:last-child { border-bottom: 1px solid rgb(37 55 71 / 0.15); }
 
 /* Abschluss */
 .end { padding: 150px 0 130px; background: #F3F0E9; border-top: 1px solid rgb(37 55 71 / 0.12); }
@@ -86,36 +43,12 @@
 .greeting { margin-top: 100px; }
 
 @media (max-width: 950px) {
-  .known, .me, .life { padding: 90px 0; }
-  .panel, .panelSky { padding: 56px 26px; border-radius: 20px; }
-  .meGrid, .wayList, .voiceList, .formalTop, .formalGrid, .lifeGrid { grid-template-columns: 1fr; gap: 44px; }
-  .mePhoto { position: relative; top: auto; width: min(86%, 380px); }
-  .wayList { margin-top: 60px; }
   .voices { padding: 40px 0 90px; }
-  .collage { aspect-ratio: 1 / 1.25; }
   .end { padding: 100px 0 90px; }
   .greeting { margin-top: 70px; }
 }
-.lifeText .note { font-size: clamp(44px, 3.8vw, 62px); white-space: nowrap; }
-@media (max-width: 600px) { .lifeText .note { white-space: normal; } }
 
 /* Und hier komme ich ins Spiel: wer ich bin und wie ich arbeite, die Geschichte folgt kurz danach */
-.meSplit { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: end; }
-.meSplit h2 { margin-bottom: 24px !important; font-size: clamp(46px, 5vw, 80px); line-height: 1; letter-spacing: -0.05em; }
-.meSplit h2 em { color: #4F606C; }
-.descriptor { max-width: 520px; color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(21px, 1.8vw, 26px); font-style: italic; line-height: 1.35; }
-.meIntro { max-width: 560px; }
-.midCta { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 34px; margin-top: 80px; }
-.midCta p { color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(22px, 2vw, 28px); font-style: italic; }
-.why { padding: 140px 0 40px; background: #F3F0E9; }
-.why .meText h2 { font-size: clamp(42px, 4.4vw, 70px); }
-@media (max-width: 950px) {
-  .meSplit { grid-template-columns: 1fr; gap: 30px; }
-  .midCta { margin-top: 50px; }
-  .why { padding: 90px 0 20px; }
-}
-
-
 
 /* Kopf genau nach dem Muster der Klarheitssitzung: Foto an der Stelle des Gedankenkreises.
    Position und Größe kommen aus k.sideNote, Überschrift und Unterzeile aus k.hero. */
@@ -129,37 +62,16 @@
 }
 .heroPhoto { margin: 0; padding: 0; background: none !important; }
 .heroPhoto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
-.heroLine { color: var(--pink); font-family: Georgia, "Gelasio", serif; font-size: clamp(24px, min(2.9vw, 4.4vh), 44px); font-style: italic; line-height: 1.24; text-align: right; }
-@media (max-width: 950px) { .heroLine { text-align: left; } }
-@media (max-width: 950px) { .heroIntro br, .heroLine br { display: none; } }
+@media (max-width: 950px) { .heroIntro br { display: none; } }
 
 /* Kopf: Text und Kernsatz links, Buttons rechts wie bei der Klarheitssitzung */
-.hero .heroLine { margin-top: 18px !important; font-size: clamp(22px, min(2.4vw, 3.6vh), 36px); text-align: left; }
-.meStyle { margin-top: 22px !important; color: #2C4458; font-family: Georgia, "Gelasio", serif; font-size: clamp(20px, 1.7vw, 24px); font-style: italic; line-height: 1.4; }
 
 /* Collage „Mein ganz normales Leben“: fünf echte Fotos, leicht überlappend */
-.lifeGrid { align-items: start; }
-.collage { position: relative; aspect-ratio: 1 / 1.25; }
-.collage img { position: absolute; height: auto; object-fit: cover; border: 6px solid #F3F0E9; }
-.collage { position: sticky; top: 60px; }
-.collage img { position: absolute; }
-@media (max-width: 950px) { .collage { position: relative; top: auto; } }
 
 /* Alle Fotos rund, in verschiedenen Größen */
-.collage { aspect-ratio: 1 / 1.1; }
-.collage img { aspect-ratio: 1; border-radius: 50%; border-width: 5px; }
-.c1 { top: 0; left: 4%; width: 54%; }
-.c2 { top: 8%; right: 0; width: 38%; }
-.c3 { top: 46%; left: 44%; z-index: 2; width: 26%; }
-.c4 { bottom: 2%; left: 0; width: 40%; }
-.c5 { bottom: 0; right: 3%; width: 30%; }
 
 /* Bausteine der Klarheitssitzung, ohne Trennlinien */
-.interludeLong blockquote { max-width: 1100px; font-size: clamp(32px, 3.6vw, 56px) !important; line-height: 1.18 !important; }
 .work .split { margin-bottom: 70px; }
-.workList { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; margin: 0; padding: 0; list-style: none; }
-.workList h3 { margin-bottom: 16px !important; font-size: clamp(24px, 2.1vw, 32px); line-height: 1.15; letter-spacing: -0.02em; }
-.workList p { color: var(--muted); font-size: 17px; line-height: 1.7; }
 .workCta { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; margin-top: 90px; }
 .workCta p { font-family: Georgia, "Gelasio", serif; font-size: clamp(22px, 2vw, 28px); font-style: italic; }
 .workNote { margin-top: 60px !important; color: var(--muted); font-size: 15px; }
@@ -170,13 +82,11 @@
 .lifeNewGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
 .lifeNew h2 { margin-bottom: 30px !important; font-size: clamp(48px, 5vw, 80px); line-height: 1.04; letter-spacing: -0.05em; }
 .lifeNew h2 em { color: #4F606C; }
-.lifeNewList { margin: 34px 0 0; padding: 0; list-style: none; }
-.lifeNewList li { margin-bottom: 14px; color: var(--muted); font-size: 18px; line-height: 1.6; }
 .seaPhotos { display: grid; grid-template-columns: 1fr 1fr; position: sticky; top: 60px; }
 .seaPhotos img { width: 100%; height: auto; border-radius: 28px; }
 .seaPhotos img + img { position: relative; z-index: 1; width: 115%; max-width: none; margin: 110px 0 0 -15%; border: 6px solid #F3F0E9; }
 @media (max-width: 950px) {
-  .workList, .lifeNewGrid { grid-template-columns: 1fr; gap: 40px; }
+  .lifeNewGrid { grid-template-columns: 1fr; gap: 40px; }
   .workCta { margin-top: 60px; }
   .lifeNew { padding: 90px 0; }
   .seaPhotos { position: relative; top: auto; }
@@ -202,8 +112,6 @@
 
 /* Ausbildungen auf Papiergrund; Hellblau bleibt „Dem Eigenen Folgen“ vorbehalten */
 .trainingsPaper.trainingsPaper { padding-top: 40px; background: transparent; }
-.trainingsHeading { margin: 0 0 45px !important; font-size: clamp(28px, 2.4vw, 36px) !important; line-height: 1.2; letter-spacing: -0.02em; }
-@media (max-width: 950px) { .trainingsHeading { margin-bottom: 30px !important; } }
 
 /* Untere Papier-Abschnitte mit mehr Abstand (Stimmen, Ausbildungen, Privat) */
 .voicesSection.voicesSection { padding-bottom: 160px; }
@@ -213,10 +121,6 @@
 .lifeNewText p { margin-bottom: 18px; color: var(--muted); font-size: 18px; line-height: 1.7; }
 
 /* Galerie unter „Ich, ganz privat“: Spaltenbreiten nach Seitenverhältnis, damit alle Bilder gleich hoch sind */
-.lifeGallery { display: grid; grid-template-columns: 0.75fr 0.667fr 1.413fr 0.549fr; gap: 20px; margin-top: 90px; align-items: start; }
-.lifeGallery img { display: block; width: 100%; height: auto; border-radius: 28px; }
-.lifeGallery .painting { border-radius: 4px; }
-@media (max-width: 950px) { .lifeGallery { grid-template-columns: 1fr 1fr; margin-top: 50px; } }
 
 /* Collage „Ich, ganz privat“: Bilder legen sich von rechts und unten um den Text, jedes überlappt seinen Nachbarn */
 .lifeCollage { grid-template-columns: repeat(12, 1fr); gap: 0 20px; align-items: start; }
@@ -241,12 +145,8 @@
 /* Was meine Arbeit trägt: aufgebaut wie "Zu viele Stimmen im Kopf" auf der Klarheitssitzung */
 .trainingsTitle.trainingsTitle { margin: 0 0 70px; font-size: clamp(52px, 5.8vw, 92px); line-height: 1.04; letter-spacing: -0.05em; }
 .trainingsTitle em { color: #4F606C; }
-.trainingsPaper .trainingsHeading { margin-top: 110px !important; }
-@media (max-width: 950px) { .trainingsTitle.trainingsTitle { margin-bottom: 40px; } .trainingsPaper .trainingsHeading { margin-top: 70px !important; } }
+@media (max-width: 950px) { .trainingsTitle.trainingsTitle { margin-bottom: 40px; } }
 /* Ausbildungen untereinander */
-.trainingItems { margin: 0; padding: 0; list-style: none; }
-.trainingItems li { margin-bottom: 12px; color: var(--muted); font-size: 17px; line-height: 1.55; }
-.trainingItems li:last-child { margin-bottom: 0; }
 .flatHeading { margin: 60px 0 30px !important; font-size: clamp(24px, 2vw, 30px); }
 .trainingGroup { margin-bottom: 30px; }
 .trainingGroup h4 { margin: 0 0 10px; font-family: var(--serif); font-size: 21px; font-style: italic; font-weight: 400; line-height: 1.3; color: #4F606C; }
