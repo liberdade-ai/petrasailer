@@ -9,6 +9,7 @@ export const SOCIAL_IMAGE = `${SITE_URL}/og-allgemein.png`;
 export const HOME_SOCIAL_IMAGE = `${SITE_URL}/og-startseite.png`;
 export const CLARITY_SOCIAL_IMAGE = `${SITE_URL}/og-klarheitssitzung.png`;
 export const REALLY_YOURS_SOCIAL_IMAGE = `${SITE_URL}/og-wirklich-deins.png`;
+export const ABOUT_SOCIAL_IMAGE = `${SITE_URL}/og-ueber-mich.png`;
 
 type PageMetadataOptions = {
   title: string;

@@ -5,7 +5,8 @@ import styles from "./page.module.css";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
 
-// Digistore24-Produkte, von Petra am 22.10.2026 bestätigt: Einzelsitzung 220 € und Fünferpaket 949 € (3 × 317 €).
+// Digistore24-Produkte, von Petra am 22.10.2026 bestätigt: Einzelsitzung 220 € und Fünferpaket 949 € (3 × 317 €); erste Sitzung 150 € am 30.10.2026.
+const FIRST_SESSION_BOOKING_URL = "https://www.digistore24.com/product/753250";
 const BOOKING_URL = "https://www.digistore24.com/product/580151";
 const FIVE_SESSIONS_BOOKING_URL = "https://www.digistore24.com/product/735633";
 const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
@@ -47,9 +48,8 @@ const VOICES = [
   { quote: "Wann immer ich heute im Alltag getriggert bin, Ängste oder Überforderung erlebe, wende ich das an, was ich bei Petra gelernt habe, und werde wieder frei. Frei zu wählen, was ich gerade möchte und was nicht.", name: "Reinhold S.", role: "führender Angestellter" },
 ] as const;
 
-// Für die erste Sitzung zu 150 € gibt es noch keinen Digistore-Link; bis dahin per E-Mail.
 const PRICES = [
-  { title: "Erste Klarheitssitzung", note: "einmalig zum Einstiegspreis", price: "150 €", href: `mailto:${EMAIL}?subject=Erste%20Klarheitssitzung%20(150%20%E2%82%AC)`, offer: "klarheitssitzung_erste" },
+  { title: "Erste Klarheitssitzung", note: "einmalig zum Einstiegspreis", price: "150 €", href: FIRST_SESSION_BOOKING_URL, offer: "klarheitssitzung_erste" },
   { title: "Einzelsitzung", note: "wann immer du sie brauchst", price: "220 €", href: BOOKING_URL, offer: "klarheitssitzung" },
   { title: "Fünferpaket", note: "für fünf Punkte oder ein großes Thema, bei dem du dranbleiben willst", price: "949 €", rate: "oder 3 Raten à 317 €", href: FIVE_SESSIONS_BOOKING_URL, offer: "klarheitssitzung_5er" },
 ] as const;

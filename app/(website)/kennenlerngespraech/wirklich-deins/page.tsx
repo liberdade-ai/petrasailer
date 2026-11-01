@@ -14,11 +14,12 @@ const MAIL_SUBJECT = encodeURIComponent("Wirklich Deins.");
 const PHONE = "+4915155348727";
 const PHONE_LABEL = "+49 (0)151 5534 8727";
 
+// Mit Petra am 31.10.2026 abgestimmt
 const PAGE_DESCRIPTION =
-  "Kostenfreies 30-Minuten-Kennenlerngespräch zu Wirklich Deins., der sechsmonatigen 1:1-Begleitung von Petra Sailer.";
+  "Ein eigenes Projekt, ein neuer Lebensabschnitt, ein Wunsch, der lange wartet? Sechs Monate gehen wir den Weg zusammen. Zum Start: 30 Minuten kostenfrei kennenlernen.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Kennenlerngespräch zu Wirklich Deins.",
+  title: "Kennenlerngespräch: sechs Monate 1:1 begleitet",
   description: PAGE_DESCRIPTION,
   path: "/kennenlerngespraech/wirklich-deins/",
   socialImage: {

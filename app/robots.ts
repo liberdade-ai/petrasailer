@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/danke-klarheitssitzung/", "/danke-kennenlerngespraech/"],
+      disallow: ["/danke-klarheitssitzung/", "/danke-fuenferpaket/", "/danke-kennenlerngespraech/", "/danke-kennenlerngespraech-wirklich-deins/"],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

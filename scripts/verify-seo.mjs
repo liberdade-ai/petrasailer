@@ -10,11 +10,12 @@ const publicRoutes = [
   "/kennenlerngespraech/klarheitssitzung/",
   "/kennenlerngespraech/wirklich-deins/",
 ];
-const noIndexRoutes = ["/danke-klarheitssitzung/", "/danke-kennenlerngespraech/"];
+const noIndexRoutes = ["/danke-klarheitssitzung/", "/danke-fuenferpaket/", "/danke-kennenlerngespraech/", "/danke-kennenlerngespraech-wirklich-deins/"];
 const socialImages = {
   "/": `${siteUrl}/og-startseite.png`,
   "/klarheitssitzung/": `${siteUrl}/og-klarheitssitzung.png`,
   "/kennenlerngespraech/wirklich-deins/": `${siteUrl}/og-wirklich-deins.png`,
+  "/ueber-mich/": `${siteUrl}/og-ueber-mich.png`,
 };
 const out = resolve("out");
 const failures = [];
@@ -113,6 +114,9 @@ else {
 const robots = readFileSync(resolve(out, "robots.txt"), "utf8");
 if (!robots.includes(`Sitemap: ${siteUrl}/sitemap.xml`)) fail("robots.txt verweist nicht auf die Sitemap");
 if (!robots.includes("Disallow: /danke-klarheitssitzung/")) fail("robots.txt sperrt die Klarheitssitzung-Dankeseite nicht");
+for (const route of ["/danke-fuenferpaket/", "/danke-kennenlerngespraech-wirklich-deins/"]) {
+  if (!robots.includes(`Disallow: ${route}`)) fail(`robots.txt sperrt ${route} nicht`);
+}
 if (!robots.includes("Disallow: /danke-kennenlerngespraech/")) fail("robots.txt sperrt die Kennenlerngespräch-Dankeseite nicht");
 
 const sitemap = readFileSync(resolve(out, "sitemap.xml"), "utf8");

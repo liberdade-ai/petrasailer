@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "../../JsonLd";
-import { pageGraph, pageMetadata } from "../../seo";
+import { ABOUT_SOCIAL_IMAGE, pageGraph, pageMetadata } from "../../seo";
 // Gestaltung wie auf der Klarheitssitzungs-Seite: Farben, Schriften, Navigation, Buttons und Fuß kommen aus k.
 import k from "../klarheitssitzung/page.module.css";
 import styles from "./page.module.css";
@@ -24,6 +24,12 @@ export const metadata: Metadata = pageMetadata({
   title: "Über mich",
   description: PAGE_DESCRIPTION,
   path: "/ueber-mich/",
+  socialImage: {
+    url: ABOUT_SOCIAL_IMAGE,
+    width: 1200,
+    height: 630,
+    alt: "Petra Sailer lacht. Daneben steht: Hey, ich bin Petra.",
+  },
 });
 
 export default function AboutPage() {
