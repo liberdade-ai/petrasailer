@@ -30,9 +30,9 @@ export const metadata: Metadata = pageMetadata({
 
 const STEPS = [
   { title: "In die Stille kommen", text: "Wir fahren runter. Der Gedankenstrom wird ruhiger, und deine Aufmerksamkeit wandert nach innen." },
-  { title: "Das Gewünschte erleben", text: "Du tauchst ein in das, was du dir wünschst, und erlebst es, als wäre es schon da. Wie fühlt sich das an, und wie bist du darin?" },
+  { title: "Dein Zukunftsbild erleben", text: "Du tauchst ein in das, was du dir wünschst, und erlebst es, als wäre es schon da. Wie fühlt sich das an, und wie bist du darin?" },
   { title: "Zurück ins Jetzt", text: "Dann kommst du zurück. Was sagt dein jetziges Ich dazu? Wir sammeln ein, was auftaucht, auch die Zweifel und alles, was dich bisher zurückgehalten hat." },
-  { title: "Den nächsten Schritt holen", text: "Du tauchst noch einmal ein und schaust von dort auf deinen Weg. So entsteht dein nächster Schritt dort, wo dein Wunsch schon Wirklichkeit ist." },
+  { title: "Den nächsten Schritt holen", text: "Du tauchst noch einmal ein in dein Zukunftsbild und schaust von dort auf deinen Weg. So entsteht dein nächster Schritt dort, wo dein Wunsch schon Wirklichkeit ist." },
 ] as const;
 
 const INCLUDED = [

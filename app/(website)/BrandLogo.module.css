@@ -9,20 +9,21 @@
   white-space: nowrap;
 }
 
+/* Logo in den Website-Schriften, mit Petra am 2.11.2026 abgestimmt */
 .name {
-  font-family: "Cormorant Garamond";
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: -.035em;
-  line-height: .78;
+  font-family: Georgia, "Gelasio", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: .9;
 }
 
 .tagline {
-  margin-top: 4px;
-  font-family: "DM Sans";
-  font-size: 16px;
+  margin-top: 6px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12.3px;
   font-weight: 500;
-  letter-spacing: .08em;
+  letter-spacing: .12em;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -34,6 +35,6 @@
 
 @media (max-width: 700px) {
   .link { width: 182px; }
-  .name { font-size: 25px; }
-  .tagline { margin-top: 4px; font-size: 14px; }
+  .name { font-size: 28px; }
+  .tagline { margin-top: 5px; font-size: 10.8px; }
 }
