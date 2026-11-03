@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import JsonLd from "../../JsonLd";
 import { CLARITY_SOCIAL_IMAGE, pageMetadata, serviceGraph } from "../../seo";
 import styles from "./page.module.css";
@@ -9,6 +10,8 @@ import SiteFooter from "./SiteFooter";
 const FIRST_SESSION_BOOKING_URL = "https://www.digistore24.com/product/753250";
 const BOOKING_URL = "https://www.digistore24.com/product/580151";
 const FIVE_SESSIONS_BOOKING_URL = "https://www.digistore24.com/product/735633";
+// Trust-Badge von Digistore24 (Verkaufsseiten-Badge 49100), für die Produktgenehmigung nötig.
+const DIGISTORE_BADGE_URL = "https://www.digistore24.com/trusted-badge/49100/rbFcZbDO1aZ0SLj/salespage";
 const CONSULTATION_URL = "/kennenlerngespraech/klarheitssitzung/";
 const EMAIL = "kontakt@petrasailer.com";
 
@@ -230,7 +233,7 @@ export default function ClarityPage() {
                 </div>
               ))}
             </div>
-            <p className={styles.priceNote}>Alle Preise inkl. MwSt. Der Einstiegspreis gilt einmal pro Person. Bei Ratenzahlung beträgt der Gesamtpreis&nbsp;951&nbsp;€.<br /> Die 5&nbsp;Sitzungen sind ab Kauf 3&nbsp;Monate&nbsp;gültig.</p>
+            <p className={styles.priceNote}>Alle Preise inkl. MwSt. Die Zahlung wird über Digistore24 durchgeführt.<br /> Der Einstiegspreis gilt einmal pro Person. Bei Ratenzahlung beträgt der Gesamtpreis&nbsp;951&nbsp;€.<br /> Die 5&nbsp;Sitzungen sind ab Kauf 3&nbsp;Monate&nbsp;gültig.</p>
             <p className={styles.coachingNote}>Die Klarheitssitzung ist ein Coaching.<br /> Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung.</p>
           </div>
         </section>
@@ -277,6 +280,7 @@ export default function ClarityPage() {
       </main>
 
       <SiteFooter current="/klarheitssitzung/" />
+      <Script src={DIGISTORE_BADGE_URL} strategy="afterInteractive" />
     </div>
   );
 }

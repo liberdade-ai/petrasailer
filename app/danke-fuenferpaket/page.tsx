@@ -14,7 +14,7 @@ export default function DankeFuenferpaket() {
     <DankeSeite
       label="Dein Fünferpaket Klarheitssitzung"
       location="danke_fuenferpaket"
-      intro="Alles hat geklappt, dein Fünferpaket Klarheitssitzung ist gebucht. Jetzt suchst du dir direkt deine Termine aus. Nach jeder Terminbuchung bekommst du die Bestätigung und den Zoom-Link per E-Mail, vor jeder Sitzung die fünf Fragen zu deinem Thema."
+      intro="Alles hat geklappt, dein Fünferpaket Klarheitssitzung ist gebucht. Jetzt suchst du dir direkt deine Termine aus. Nach jeder Terminbuchung bekommst du die Bestätigung und den Zoom-Link per E-Mail, vor jeder Sitzung die fünf Fragen zu deinem Thema. Nach jeder Sitzung bekommst du deine Klarheitskarte als PDF per E-Mail."
       calendarHeading={<>Such dir deine <em>Termine aus.</em></>}
       calendarText="Im Kalender siehst du alle freien Termine. Du kannst alle fünf auf einmal buchen oder einen nach dem anderen, ganz wie du magst."
       buttonLabel="Termine aussuchen"

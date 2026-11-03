@@ -118,7 +118,8 @@ export default function PrivacyPage() {
             <h2>8. Buchung und Kauf über Digistore24</h2>
             <div>
               <p>Für die Buchung der Klarheitssitzung verlinken wir auf den externen Checkout von Digistore24. Erst wenn du diesen Link anklickst, verlässt du unsere Website und es gelten die Datenschutzbestimmungen von Digistore24.</p>
-              <p>Vor dem Klick werden keine personenbezogenen Daten von unserer Website an Digistore24 übertragen. Die Verarbeitung im Checkout, insbesondere von Bestell- und Zahlungsdaten, erfolgt durch Digistore24 in eigener Verantwortung. Weitere Informationen findest du in der <a href="https://www.digistore24.com/de/datenschutz">Datenschutzerklärung von Digistore24</a>.</p>
+              <p>Auf der Seite Klarheitssitzung und auf unseren Danke-Seiten nach dem Kauf zeigen wir ein Vertrauenssiegel von Digistore24. Dafür lädt dein Browser beim Aufruf dieser Seiten ein Skript von den Servern von Digistore24. Dabei wird deine IP-Adresse an Digistore24 übertragen. Rechtsgrundlage ist unser berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO, den Verkauf über Digistore24 klar zu kennzeichnen. Digistore24 verlangt dieses Siegel als Voraussetzung für den Verkauf.</p>
+              <p>Darüber hinaus werden vor dem Klick auf den Checkout keine personenbezogenen Daten an Digistore24 übertragen. Die Verarbeitung im Checkout, insbesondere von Bestell- und Zahlungsdaten, erfolgt durch Digistore24 in eigener Verantwortung. Weitere Informationen findest du in der <a href="https://www.digistore24.com/de/datenschutz">Datenschutzerklärung von Digistore24</a>.</p>
             </div>
           </section>
 
@@ -149,7 +150,7 @@ export default function PrivacyPage() {
                 <li>Netcup für das Hosting der Umami-Analyse in Deutschland,</li>
                 <li>ALL-INKL.COM für den Betrieb unserer E-Mail-Postfächer,</li>
                 <li>TidyCal, wenn du den Kalender aktiv lädst oder einen Termin buchst,</li>
-                <li>Digistore24, wenn du den externen Checkout aufrufst,</li>
+                <li>Digistore24, wenn du die Seite Klarheitssitzung oder eine Danke-Seite aufrufst (Vertrauenssiegel) und wenn du den externen Checkout aufrufst,</li>
                 <li>Tally, wenn du die Fragen vor deiner Klarheitssitzung beantwortest.</li>
               </ul>
             </div>
