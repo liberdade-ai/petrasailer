@@ -131,7 +131,7 @@
 .lifeCollage img, .lifeCollage .seaPhotos img + img { border: 0; box-shadow: 0 0 0 7px #FBF9F5; }
 .collageAuge { position: relative; z-index: 1; grid-column: 8 / 13; grid-row: 2; margin-top: -90px; border-radius: 4px; }
 .collageTanz { position: relative; z-index: 3; grid-column: 7 / 10; grid-row: 3; margin-top: -110px; border-radius: 28px; }
-.collageAfrika { position: relative; z-index: 4; grid-column: 5 / 8; grid-row: 3; margin-top: 60px; border-radius: 28px; }
+.collageAfrika { position: relative; z-index: 2; grid-column: 5 / 8; grid-row: 3; margin-top: 60px; border-radius: 28px; }
 @media (max-width: 950px) {
   .lifeCollage { grid-template-columns: 1fr 1fr; gap: 24px; }
   .lifeCollage .collageText, .lifeCollage .seaPhotos, .collageAuge { grid-column: 1 / -1; grid-row: auto; }
