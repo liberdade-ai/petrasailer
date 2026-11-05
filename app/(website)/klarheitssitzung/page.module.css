@@ -874,3 +874,10 @@
   .footerNav { flex-direction: column; gap: 12px; }
   .footerBottom { flex-direction: column; margin-top: 20px; }
 }
+
+/* Sehr kleine Handys (unter 360 px): lange Buttons dürfen umbrechen, der Kopf rückt zusammen */
+@media (max-width: 359px) {
+  .page .btn { padding: 16px 18px; white-space: normal; }
+  .page .navLinks { gap: 10px; }
+  .page .navCta { padding: 12px; }
+}

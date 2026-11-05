@@ -123,6 +123,7 @@
 }
 @media (max-width: 950px) { .circle { width: 250px !important; } }
 @media (max-width: 600px) { .hero h1 { font-size: clamp(52px, 13.4vw, 76px); } }
+@media (max-width: 359px) { .hero h1 { font-size: 44px; } }
 
 /* Mehrere Absätze im Kopf (Kennenlerngespräch zu Wirklich Deins.) */
 .heroText p + p { margin-top: 18px; }
