@@ -132,7 +132,5 @@
 @media (max-width: 950px) { .circle { width: 250px !important; } }
 @media (max-width: 600px) { .hero h1 { font-size: clamp(52px, 13.4vw, 76px); } }
 
-/* Das Digistore-Badge bricht auf dem Handy in mehr Zeilen um, als es Platz reserviert, und läge sonst über dem Logo.
-   Der Abstand kann weg, sobald das Badge entfernt wird. */
-@media (max-width: 950px) { .hero { padding-top: 16px; } }
-@media (max-width: 600px) { .hero { padding-top: 50px; } }
+/* Handy: Kalender so hoch, dass der ganze Monat ohne Scrollen im Rahmen zu sehen ist */
+@media (max-width: 600px) { .calendar iframe { min-height: 980px; } }

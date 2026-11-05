@@ -1,7 +1,6 @@
 // Gestaltung wie auf der Klarheitssitzungs-Seite; Aufbau wie auf der Kennenlern-Seite.
 import k from "../(website)/klarheitssitzung/page.module.css";
 import styles from "./danke.module.css";
-import Script from "next/script";
 import ThanksNav from "../(website)/klarheitssitzung/ThanksNav";
 import SiteFooter from "../(website)/klarheitssitzung/SiteFooter";
 import Greeting from "../(website)/klarheitssitzung/Greeting";
@@ -9,8 +8,6 @@ import TidyCalCalendar from "../(website)/kennenlerngespraech/TidyCalCalendar";
 import { TIDYCAL_CLARITY_SESSION_CONSENT_KEY } from "../tidycalConsent";
 
 const BOOKING_CALENDAR_URL = "https://tidycal.com/petrasailer/klarheitssitzung-mit-petra-sailer";
-// Trust-Badge von Digistore24 (Dankeseiten-Badge 49101), für die Produktgenehmigung nötig.
-const DIGISTORE_BADGE_URL = "https://www.digistore24.com/trusted-badge/49101/N8rb8LB4Kt24Xj2/thankyoupage";
 const EMAIL = "kontakt@petrasailer.com";
 const PHONE = "+4915155348727";
 const PHONE_LABEL = "+49 (0)151 5534 8727";
@@ -82,7 +79,6 @@ export default function DankeSeite({ label, location, intro, calendarHeading, ca
       </main>
 
       <SiteFooter />
-      <Script src={DIGISTORE_BADGE_URL} strategy="afterInteractive" />
     </div>
   );
 }
