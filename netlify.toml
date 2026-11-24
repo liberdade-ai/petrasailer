@@ -23,6 +23,31 @@
   status = 301
   force = true
 
+# Alte Adressen, die Google noch kennt (Search Console, 24.11.2026)
+[[redirects]]
+  from = "/ueber"
+  to = "/ueber-mich/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ueber/*"
+  to = "/ueber-mich/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home/*"
+  to = "/"
+  status = 301
+  force = true
+
 # Vorübergehend abgeschaltet. Der alte Quelltext von Wirklich Deins., Arbeite mit mir und
 # kennenlerngespraech/_wirklich_deins liegt in der Git-Geschichte (bis Commit d6ccf2a).
 # Die alte Kennenlern-Adresse mit Unterstrich führt seit 30.10.2026 zur neuen Seite mit Bindestrich.
