@@ -881,3 +881,14 @@
   .page .navLinks { gap: 10px; }
   .page .navCta { padding: 12px; }
 }
+
+/* „Petra.“ in „Ich bin Petra.“ im helleren Petrol, wie die kursiven Wörter (25.11.2026) */
+.page .aboutName { color: #4E7377; }
+
+/* Ruhigerer Hero (25.11.2026): Pink ist die einzige Knopffläche, „Sitzung buchen“ im Menü nur mit Rahmen */
+.page .navCta { background: transparent; color: #124B52 !important; box-shadow: inset 0 0 0 1.5px #124B52; }
+.page .navCta:hover { background: #0E5A63; color: #FBF9F5 !important; box-shadow: inset 0 0 0 1.5px #0E5A63; }
+
+/* Kursive Wörter einheitlich im helleren Petrol, auf Sand im dunklen Petrol (25.11.2026) */
+.page .end h2 em { color: #4E7377; }
+.page .offer h2 em { color: #124B52; }

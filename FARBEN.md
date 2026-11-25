@@ -14,11 +14,11 @@ Leitgedanke: warm, einladend, nicht laut. Die Seite ist oben und unten gleich he
 | Gold | `#D8AE52` | Band „Deine Antwort ist längst da.“, Markierung bei Textlinks |
 | Pink für Buttons | `#BB3570` | Alle Buttons zum Handeln, mit Schrift in warmem Weiß |
 | Pink (Hutband) | `#C93B78` | Petras Farbe: „DEM EIGENEN FOLGEN“ im Logo, Unterschrift „Petra“ |
-| Petrol | `#0E5A63` | Knopf „Sitzung buchen“ im Menü, Fußzeile, Hover der pinken Buttons |
-| Dunkles Petrol | `#124B52` | Überschriften, kursives Wort, „Petra Sailer“ im Logo, Menülinks, Mini-Überschriften |
+| Petrol | `#0E5A63` | Fußzeile, Hover der pinken Buttons und des Menüknopfs |
+| Dunkles Petrol | `#124B52` | Überschriften, „Petra Sailer“ im Logo, Menülinks, Rahmen und Schrift des Menüknopfs „Sitzung buchen“, Mini-Überschriften, kursives Wort auf Sand |
 | Text | `#263B3F` | Fließtext |
 | Nebentext | `#4A5A5C` | Kleinere, leisere Texte |
-| Kursiv-Akzent | `#4E7377` | Gedämpftes kursives Wort, wo es leiser sein soll |
+| Helleres Petrol | `#4E7377` | Das kursive Wort in Überschriften auf hellem Grund und „Petra.“ in „Ich bin Petra.“ |
 
 ## Abstufungen
 
@@ -36,6 +36,7 @@ Leitgedanke: warm, einladend, nicht laut. Die Seite ist oben und unten gleich he
 
 - Jede Akzentfarbe hat eine feste Aufgabe: Pink zum Handeln (Knöpfe), Petrol für Halt (Schrift, Menüknopf, Fußzeile), Gold für das eine Band und die Markierung bei Links. So bleiben drei Akzente ruhig.
 - Im Kopf und Hero höchstens Pink plus Petrol. Kein Gold im Hero.
+- Pink ist die einzige Knopffläche. Der Menüknopf „Sitzung buchen“ hat nur einen feinen Rahmen in dunklem Petrol und füllt sich beim Darüberfahren mit Petrol.
 - Gold nie als Schrift (zu wenig Kontrast), nur als Fläche oder Markierung.
 - Auf Sand, heller Sand und Gold ist alle Schrift dunkel (Text `#263B3F`, Überschriften `#124B52`).
 - Auf Petrol ist alle Schrift warmes Weiß.
@@ -43,7 +44,7 @@ Leitgedanke: warm, einladend, nicht laut. Die Seite ist oben und unten gleich he
 - Keine große dunkle Fläche in der Seitenmitte. Dunkel ist nur die Fußzeile.
 - Nie zwei Sandtöne in derselben Stärke direkt hintereinander, und nach dem Goldband kommt der helle Sand, nicht der kräftige.
 - Fotos direkt auf dem Grund bekommen einen reinweißen Ring, sonst verschwindet er auf dem warmen Weiß.
-- Pro Überschrift höchstens ein kursives Wort.
+- Pro Überschrift höchstens ein kursives Wort, auf hellem Grund im helleren Petrol, auf Sand im dunklen Petrol.
 - Keine Pfeile in Buttons.
 - Menülinks: Unterstreichung in Petrol. Links im Text: Gold-Markierung. Buttons: Pink, beim Darüberfahren Petrol.
 

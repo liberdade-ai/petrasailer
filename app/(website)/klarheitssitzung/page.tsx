@@ -187,7 +187,7 @@ export default function ClarityPage() {
         <section className={styles.about}>
           <div className={`${styles.wrap} ${styles.aboutLayout}`}>
             <div>
-              <h2>Ich bin<br /> Petra.</h2>
+              <h2>Ich bin<br /> <span className={styles.aboutName}>Petra.</span></h2>
               <p className={styles.lead}>Klar geführt, persönlich und <span className={styles.nowrap}>immer zurück zu dir.</span></p>
               <p>In der Sitzung stelle ich dir genaue Fragen, greife auf, was du sagst, und frage dort nach, wo etwas noch offen ist. Dabei schauen wir immer von dem aus, was du willst. Von dort zeigen sich neue Möglichkeiten und deine nächsten Schritte.</p>
               <p>Ich lebe in Griechenland und begleite Menschen seit 2021, inzwischen vor allem online.</p>
