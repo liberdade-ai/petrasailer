@@ -117,7 +117,6 @@ export const siteGraph = {
       telephone: "+49 1515 5348727",
       jobTitle: "Klarheitscoach",
       knowsLanguage: "de",
-      areaServed: GERMAN_SPEAKING_COUNTRIES,
     },
     {
       "@type": "WebSite",
