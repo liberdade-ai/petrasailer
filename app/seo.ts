@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 
 export const SITE_URL = "https://petrasailer.com";
 export const SITE_NAME = "Petra Sailer – Dem Eigenen Folgen";
+// Petra arbeitet online für alle Deutschsprachigen (Entscheidung 1.11.2026)
+const GERMAN_SPEAKING_COUNTRIES = [
+  { "@type": "Country", name: "Deutschland" },
+  { "@type": "Country", name: "Österreich" },
+  { "@type": "Country", name: "Schweiz" },
+];
+
 export const PERSON_ID = `${SITE_URL}/#petra-sailer`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 // Vorschaubilder für WhatsApp & Co. (1200 × 630), mit Petra am 30.10.2026 abgestimmt
@@ -108,7 +115,9 @@ export const siteGraph = {
       image: absoluteUrl("/petra-sailer-portrait.jpg"),
       email: "kontakt@petrasailer.com",
       telephone: "+49 1515 5348727",
-      jobTitle: "Coach für Lebensgestaltung",
+      jobTitle: "Klarheitscoach",
+      knowsLanguage: "de",
+      areaServed: GERMAN_SPEAKING_COUNTRIES,
     },
     {
       "@type": "WebSite",
@@ -171,11 +180,14 @@ export function serviceGraph({
   name,
   description,
   serviceType,
+  offers = [],
 }: {
   path: string;
   name: string;
   description: string;
   serviceType: string;
+  /** Preise in Euro inkl. MwSt., so wie sie auf der Seite stehen */
+  offers?: Array<{ name: string; price: number; url: string }>;
 }) {
   const url = absoluteUrl(path);
 
@@ -201,6 +213,20 @@ export function serviceGraph({
         serviceType,
         url,
         provider: { "@id": PERSON_ID },
+        areaServed: GERMAN_SPEAKING_COUNTRIES,
+        availableChannel: { "@type": "ServiceChannel", serviceUrl: url, name: "Online per Video" },
+        ...(offers.length
+          ? {
+              offers: offers.map((offer) => ({
+                "@type": "Offer",
+                name: offer.name,
+                price: offer.price.toFixed(2),
+                priceCurrency: "EUR",
+                url: offer.url,
+                availability: "https://schema.org/InStock",
+              })),
+            }
+          : {}),
       },
       breadcrumbGraph([
         { name: "Startseite", path: "/" },

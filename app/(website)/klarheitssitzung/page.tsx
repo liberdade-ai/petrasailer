@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "../../JsonLd";
-import { CLARITY_SOCIAL_IMAGE, pageMetadata, serviceGraph } from "../../seo";
+import { CLARITY_SOCIAL_IMAGE, faqGraph, pageMetadata, serviceGraph } from "../../seo";
 import styles from "./page.module.css";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
@@ -88,8 +88,14 @@ export default function ClarityPage() {
           name: "Klarheitssitzung",
           description: PAGE_DESCRIPTION,
           serviceType: "1:1 Online-Coaching",
+          offers: [
+            { name: "Erste Klarheitssitzung (Einstiegspreis, einmal pro Person)", price: 150, url: FIRST_SESSION_BOOKING_URL },
+            { name: "Klarheitssitzung, Einzelsitzung", price: 220, url: BOOKING_URL },
+            { name: "Fünferpaket Klarheitssitzung", price: 949, url: FIVE_SESSIONS_BOOKING_URL },
+          ],
         })}
       />
+      <JsonLd data={faqGraph(FAQ.map((item) => ({ question: item.q, answer: item.a })))} />
       <a className={styles.skipLink} href="#inhalt">Zum Inhalt springen</a>
 
       <header className={styles.hero}>
