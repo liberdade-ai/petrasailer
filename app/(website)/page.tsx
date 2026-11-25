@@ -67,7 +67,7 @@ export default function HomePage() {
           <div className={k.heroContent}>
             <figure className={`${k.sideNote} ${styles.heroPhoto}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/petra-sailer-start.jpg" alt="Petra Sailer lacht im hellen Blazer" width="1100" height="1100" fetchPriority="high" />
+              <img src="/petra-sailer-hero.jpg" alt="Petra Sailer lächelt in die Kamera" width="1024" height="1024" fetchPriority="high" />
             </figure>
             <h1>Du hast es<br /> <em>in der Hand.</em></h1>
             <div className={k.heroBottom}>

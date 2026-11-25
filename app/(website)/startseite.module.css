@@ -2,7 +2,7 @@
 
 /* Rundes Foto im Kopf wie auf Über mich */
 .heroPhoto { margin: 0; padding: 0; background: none !important; }
-.heroPhoto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
+.heroPhoto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; box-shadow: 0 0 0 2px #FFFFFF, clamp(9px, 1.1vw, 16px) 2px 0 2px #FFFFFF; }
 
 .offerActions { margin-top: 44px; }
 /* Lange Begleitung: leiser Zusatz unter der Klarheitssitzung, ohne eigenen Button */

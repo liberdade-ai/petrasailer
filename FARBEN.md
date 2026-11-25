@@ -1,71 +1,84 @@
 # Farben
 
-Stand: 22. Oktober 2026 (Gelb weicher gewählt, Akzente wieder Blaugrau, Abschluss auf Papierweiß). Helle Fassung der Klarheitssitzungs-Seite (`app/(website)/klarheitssitzung/page.module.css`) und der Kennenlern-Seite. Leitfrage: „Gibt mir das mehr von dem, was ich haben will?“ Die Seite soll leuchten, strahlen und Tiefe haben. Die Tiefe kommt aus dunkler Schrift auf Papierweiß, nicht aus dunklen Flächen.
+Stand: 25. November 2026. Neues, warmes Farbschema für alle Seiten. Es kommt aus Petras Sofafoto auf „Über mich“: Das Sofa ist der Sand, der Blazer das warme Weiß und das Bild dahinter das Petrol. Dazu kommen Petras Pink und ein Gold statt des früheren Knallgelbs.
 
-Die vorherige Fassung mit Aubergine-Flächen (Himmelblau-Akzent, Gelb `#E3EA7C`) ist gesichert; welche Fassung veröffentlicht wird, ist noch offen.
+Leitgedanke: warm, einladend, nicht laut. Die Seite ist oben und unten gleich hell. Sand im Kreis oben kommt bei den Preisen wieder. Dunkel ist nur die Fußzeile.
 
 ## Hauptfarben
 
 | Name | Hex | Einsatz |
 | --- | --- | --- |
-| Papierweiß | `#F3F0E9` | Grundfläche, auch der Hero |
-| Himmelblau | `#8FD1F2` | Leuchtende Flächen: Kreis im Hero, Angebot und Preise, Kalender-Bereich, Nach-oben-Knopf |
-| Gelb | `#EDE548` | Buttons, Leitgedanke („Deine Antwort ist längst da.“) als Fläche, Leuchtmarker hinter „kostet das?“ und „gekreist.“; der Abschluss steht auf Papierweiß |
-| Tiefblau-Grau | `#253747` | Fließtext; Überschriften `#2C4458`; Nebentexte `#5A6672`. Ersetzt das frühere Aubergine `#2A1F27` als Schriftfarbe |
-| Blaugrau | `#4F606C` | Das kursive Wort in Überschriften auf hellem Grund (wie in der Aubergine-Fassung; gedeckt, keine weitere Leuchtfarbe) |
-| Tiefblau als Schrift | `#1F4866` | Mini-Überschriften |
-| Tiefblau | `#1F4866` | Fuß der Seite, als ruhiger Abschluss; alles darin in Papierweiß |
-| Hellblau | `#DDF0FA` | Fläche der vier Schritte und der Geschichte aus der Praxis |
+| Warmes Weiß | `#FBF9F5` | Grund aller Seiten, Preiskarten, Kontaktkarten, Schrift auf Pink und Petrol |
+| Sand | `#EBD7AE` | Kreis im Hero, Abschnitt mit den Preisen, Bereich mit dem Kalender, Knopf „Nach oben“ |
+| Heller Sand | `#F6EEE2` | „Wir drehen die Blickrichtung um“ mit den vier Schritten und die Geschichte danach |
+| Gold | `#D8AE52` | Band „Deine Antwort ist längst da.“, Markierung bei Textlinks |
+| Pink für Buttons | `#BB3570` | Alle Buttons zum Handeln, mit Schrift in warmem Weiß |
+| Pink (Hutband) | `#C93B78` | Petras Farbe: „DEM EIGENEN FOLGEN“ im Logo, Unterschrift „Petra“ |
+| Petrol | `#0E5A63` | Knopf „Sitzung buchen“ im Menü, Fußzeile, Hover der pinken Buttons |
+| Dunkles Petrol | `#124B52` | Überschriften, kursives Wort, „Petra Sailer“ im Logo, Menülinks, Mini-Überschriften |
+| Text | `#263B3F` | Fließtext |
+| Nebentext | `#4A5A5C` | Kleinere, leisere Texte |
+| Kursiv-Akzent | `#4E7377` | Gedämpftes kursives Wort, wo es leiser sein soll |
 
 ## Abstufungen
 
 | Hex | Einsatz |
 | --- | --- |
-| `#B5E0F5` | Hover von Buttons |
-| `#A9CDE0` | Linien bei den vier Schritten |
-| `#EDE5D8` | Kasten um das Foto, mit Linie `#BCAE9C` |
-| `#FBF9F5` | Weiße Sichel um das runde Foto |
-| `#BFB8B2` | Feine Linien auf Papierweiß |
+| `#EFE3CF` | Hover-Fläche, wo früher Hellblau-Hover war |
+| `#DCCBB5` | Linien bei den vier Schritten |
+| `#CDB68C` | Linien bei Dauer, Vorab, Danach im Preisabschnitt |
+| `#EDE5D8` | Kasten um das Foto bei „Ich bin Petra.“ (unverändert), Linie `#BCAE9C` |
+| `#FFFFFF` | Ring um runde Fotos, die direkt auf dem Grund stehen (Startseite, Über mich, Kennenlernen, kleines Foto im Gruß) |
+| `#FBF9F5` | Ring um das Foto im Kasten auf der Seite Klarheitssitzung |
+| warmes Weiß mit 82 % Deckkraft | Kleine Schrift in der Fußzeile (©-Zeile, Impressum, Datenschutz) |
 
 ## Regeln
 
-- Gelb nie als Schrift, weder auf Papierweiß noch auf Himmelblau (zu wenig Kontrast). Auf Himmelblau erscheint Gelb als Fläche: Buttons, Aufzählungspunkte, Leuchtmarker.
-- Auf Himmelblau und Gelb ist alle Schrift dunkel (Tiefblau-Grau).
-- Die Preise stehen auf papierweißen Karten, damit sie sich vom Himmelblau abheben.
-- „In jeder Sitzung“ steht als 2 × 2-Raster mit Stichwort und einer Zeile, ohne Aufzählungszeichen.
-- Hellblau nur für die vier Schritte und die Geschichte aus der Praxis direkt danach; nie zwei verschiedene Blautöne direkt hintereinander.
-- Pro Überschrift höchstens ein farbiges, kursives Wort.
+- Jede Akzentfarbe hat eine feste Aufgabe: Pink zum Handeln (Knöpfe), Petrol für Halt (Schrift, Menüknopf, Fußzeile), Gold für das eine Band und die Markierung bei Links. So bleiben drei Akzente ruhig.
+- Im Kopf und Hero höchstens Pink plus Petrol. Kein Gold im Hero.
+- Gold nie als Schrift (zu wenig Kontrast), nur als Fläche oder Markierung.
+- Auf Sand, heller Sand und Gold ist alle Schrift dunkel (Text `#263B3F`, Überschriften `#124B52`).
+- Auf Petrol ist alle Schrift warmes Weiß.
+- Die Preise stehen auf warmweißen Karten, damit sie sich vom Sand abheben.
+- Keine große dunkle Fläche in der Seitenmitte. Dunkel ist nur die Fußzeile.
+- Nie zwei Sandtöne in derselben Stärke direkt hintereinander, und nach dem Goldband kommt der helle Sand, nicht der kräftige.
+- Fotos direkt auf dem Grund bekommen einen reinweißen Ring, sonst verschwindet er auf dem warmen Weiß.
+- Pro Überschrift höchstens ein kursives Wort.
 - Keine Pfeile in Buttons.
+- Menülinks: Unterstreichung in Petrol. Links im Text: Gold-Markierung. Buttons: Pink, beim Darüberfahren Petrol.
+
+## Lesbarkeit (gemessen am 25. November 2026)
+
+| Kombination | Kontrast |
+| --- | --- |
+| Text auf warmem Weiß | 11,2 : 1 |
+| Nebentext auf warmem Weiß | 6,9 : 1 |
+| Überschrift auf warmem Weiß | 9,3 : 1 |
+| Text auf Sand | 8,4 : 1 |
+| Text auf Gold | 5,7 : 1 |
+| Warmes Weiß auf Pink | 5,2 : 1 |
+| Warmes Weiß auf Petrol | 7,5 : 1 |
+| Kleine Fußzeilenschrift auf Petrol | 5,6 : 1 |
+
+Alles liegt über dem üblichen Mindestwert von 4,5 : 1.
+
+## Fotos
+
+- Startseite oben: `petra-sailer-hero.jpg` (dasselbe Foto wie bei „Ich bin Petra.“ auf der Seite Klarheitssitzung). Das frühere Foto `petra-sailer-start.jpg` hat eine Freundin als etwas überfordernd empfunden.
 
 ## Logo
 
-Form unverändert, nur neue Farben. Dateien in `upload/`:
-
-| Fassung | „Petra Sailer“ | „DEM EIGENEN FOLGEN“ | Datei |
-| --- | --- | --- | --- |
-| Heller Grund (Kopf) | Tiefblau-Grau `#2C4458` | Pink `#C93B78` | noch keine Datei (bisherige: `PS_DEF_Logo_tiefblau-blau.svg` mit Blau `#2F7FB0`) |
-| Tiefblau (Fuß) | Papierweiß `#F3F0E9` | Papierweiß `#F3F0E9` | noch keine Datei (bisherige: `PS_DEF_Logo_papierweiss-gelb.svg`) |
-
-Gelb im Logo nur auf Tiefblau, nie auf Papierweiß (nicht lesbar).
+Form unverändert. „Petra Sailer“ in Dunkles Petrol `#124B52`, „DEM EIGENEN FOLGEN“ in Pink `#C93B78`. In der Fußzeile alles in warmem Weiß.
 
 ## Schriften
 
-- Überschriften: Georgia, eng gesetzt, kursiv nur für das eine farbige Wort. Wo Georgia fehlt (Android), springt Gelasio ein.
+- Überschriften: Georgia, eng gesetzt, kursiv nur für das eine Wort. Wo Georgia fehlt (Android), springt Gelasio ein.
 - Fließtext, Knöpfe und Menü: Helvetica Neue (Windows: Arial); Knöpfe und Menü in Versalien.
-- Literata und Figtree hat Petra am 30. Oktober 2026 abgewählt (Literata-Kursive wirkte ihr zu abgehackt).
+- Literata und Figtree hat Petra am 30. Oktober 2026 abgewählt.
 - Logo: Cormorant Garamond und DM Sans im Logo-Baustein.
 
-## Farbrollen mit Pink (gewählt am 23. Oktober 2026)
+## Frühere Fassungen
 
-| Farbe | Wert | Rolle |
-|---|---|---|
-| Pink (Hutband) | #C93B78 | Petras Farbe: Logo-Unterzeile im Kopf, Unterschrift „Petra“ |
-| Pink für Buttons | #BB3570 | Alle Buttons zum Handeln, mit papierweißer Schrift (einen Hauch dunkler, damit die Schrift gut lesbar ist) |
-| Gelb | #EDE548 | Licht und Fläche: Banner „Deine Antwort ist längst da.“, Markierung bei Textlinks |
-| Tiefblau | #1F4866 | „Sitzung buchen“ im Menü, Hover der pinken Buttons, Fuß (darin alles in Papierweiß: Logo, Links, ©-Zeile) |
-| Warmes Weiß | #FBF9F5 | Sichel um Petras Foto und Linie im Fotorahmen |
-
-Regeln:
-- Im Kopf und Hero höchstens Pink plus Tiefblau. Keine dritte Akzentfarbe.
-- Menülinks: dunkelblaue Unterstreichung. Links im Text: gelbe Markierung. Buttons: Pink, beim Darüberfahren Tiefblau.
-- Kein Pink-Punkt im Gedankenkreis, der Kreis bleibt ganz Himmelblau.
+- Oktober 2026: Papierweiß `#F3F0E9`, Himmelblau `#8FD1F2`, Hellblau `#DDF0FA`, Gelb `#EDE548`, Tiefblau `#1F4866`, Schrift Tiefblau-Grau `#253747`. Steht in der Git-Geschichte (bis Commit 54db6aa).
+- Davor: Fassung mit Aubergine-Flächen, ebenfalls in der Git-Geschichte.
+- Ausprobiert und verworfen am 25. November 2026: Nachtblau `#283153` aus dem LinkedIn-Banner, Espresso, Rosé oder Flieder nach dem Goldband, Preise auf dunkler Fläche (Seite wirkte oben hell und unten schwer).

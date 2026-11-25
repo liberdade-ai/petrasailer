@@ -5,7 +5,7 @@
 .heroContent { padding: 110px 0 var(--space-band); }
 .label {
   margin-bottom: 26px !important;
-  color: #1F4866;
+  color: #124B52;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -17,8 +17,8 @@
 
 /* Rechtstexte: Überschrift links, Text rechts in Spalte 7 bis 12 */
 .legal { padding: 0 0 var(--space-end); }
-.legal section { display: grid; grid-template-columns: 1fr 1fr; gap: 24px var(--g); padding: 50px 0 56px; border-top: 1px solid rgb(37 55 71 / 0.2); }
-.legal section:last-child { border-bottom: 1px solid rgb(37 55 71 / 0.2); }
+.legal section { display: grid; grid-template-columns: 1fr 1fr; gap: 24px var(--g); padding: 50px 0 56px; border-top: 1px solid rgb(38 59 63 / 0.2); }
+.legal section:last-child { border-bottom: 1px solid rgb(38 59 63 / 0.2); }
 .legal h2 { font-size: var(--h-s); line-height: 1.2; letter-spacing: -0.02em; }
 .legal p,
 .legal address,

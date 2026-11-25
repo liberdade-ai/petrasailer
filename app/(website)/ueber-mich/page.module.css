@@ -26,18 +26,18 @@
 /* Und hier komme ich ins Spiel */
 
 /* Stimmen */
-.voices { padding: 60px 0 140px; background: #F3F0E9; }
+.voices { padding: 60px 0 140px; background: #FBF9F5; }
 .voices h2 { margin-bottom: 70px !important; font-size: clamp(40px, 4vw, 64px); line-height: 1.05; letter-spacing: -0.045em; }
-.voices h2 em { color: #4F606C; }
+.voices h2 em { color: #4E7377; }
 
 /* Das Formale: himmelblaues Feld */
 
 /* Mein ganz normales Leben: Fotos überlappend */
 
 /* Abschluss */
-.end { padding: 150px 0 130px; background: #F3F0E9; border-top: 1px solid rgb(37 55 71 / 0.12); }
+.end { padding: 150px 0 130px; background: #FBF9F5; border-top: 1px solid rgb(38 59 63 / 0.12); }
 .end h2 { margin-bottom: 50px !important; font-size: clamp(48px, 5.4vw, 88px); line-height: 1.02; letter-spacing: -0.05em; }
-.end h2 em { color: #4F606C; }
+.end h2 em { color: #4E7377; }
 .endBottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px 60px; }
 .endBottom > p { max-width: 520px; font-size: 19px; }
 .greeting { margin-top: 100px; }
@@ -54,14 +54,14 @@
    Position und Größe kommen aus k.sideNote, Überschrift und Unterzeile aus k.hero. */
 .label {
   margin-bottom: 26px !important;
-  color: #1F4866;
+  color: #124B52;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 .heroPhoto { margin: 0; padding: 0; background: none !important; }
-.heroPhoto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px #FBF9F5, clamp(9px, 1.1vw, 16px) 2px 0 2px #FBF9F5; }
+.heroPhoto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px #FFFFFF, clamp(9px, 1.1vw, 16px) 2px 0 2px #FFFFFF; }
 @media (max-width: 950px) { .heroIntro br { display: none; } }
 
 /* Kopf: Text und Kernsatz links, Buttons rechts wie bei der Klarheitssitzung */
@@ -81,10 +81,10 @@
 .lifeNew { padding: 150px 0; }
 .lifeNewGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
 .lifeNew h2 { margin-bottom: 30px !important; font-size: clamp(48px, 5vw, 80px); line-height: 1.04; letter-spacing: -0.05em; }
-.lifeNew h2 em { color: #4F606C; }
+.lifeNew h2 em { color: #4E7377; }
 .seaPhotos { display: grid; grid-template-columns: 1fr 1fr; position: sticky; top: 60px; }
 .seaPhotos img { width: 100%; height: auto; border-radius: 28px; }
-.seaPhotos img + img { position: relative; z-index: 1; width: 115%; max-width: none; margin: 110px 0 0 -15%; border: 6px solid #F3F0E9; }
+.seaPhotos img + img { position: relative; z-index: 1; width: 115%; max-width: none; margin: 110px 0 0 -15%; border: 6px solid #FBF9F5; }
 @media (max-width: 950px) {
   .lifeNewGrid { grid-template-columns: 1fr; gap: 40px; }
   .workCta { margin-top: 60px; }
@@ -128,7 +128,7 @@
 .lifeCollage .seaPhotos { position: relative; z-index: 2; top: auto; grid-column: 8 / 13; grid-row: 1; }
 .lifeCollage img { display: block; width: 100%; height: auto; }
 /* schmaler papierweißer Rand rundherum, wie Fotoabzüge */
-.lifeCollage img, .lifeCollage .seaPhotos img + img { border: 0; box-shadow: 0 0 0 7px #FBF9F5; }
+.lifeCollage img, .lifeCollage .seaPhotos img + img { border: 0; box-shadow: 0 0 0 7px #FFFFFF; }
 .collageAuge { position: relative; z-index: 1; grid-column: 8 / 13; grid-row: 2; margin-top: -90px; border-radius: 4px; }
 .collageTanz { position: relative; z-index: 3; grid-column: 7 / 10; grid-row: 3; margin-top: -110px; border-radius: 28px; }
 .collageAfrika { position: relative; z-index: 2; grid-column: 5 / 8; grid-row: 3; margin-top: 60px; border-radius: 28px; }
@@ -144,16 +144,16 @@
 
 /* Was meine Arbeit trägt: aufgebaut wie "Zu viele Stimmen im Kopf" auf der Klarheitssitzung */
 .trainingsTitle.trainingsTitle { margin: 0 0 70px; font-size: clamp(52px, 5.8vw, 92px); line-height: 1.04; letter-spacing: -0.05em; }
-.trainingsTitle em { color: #4F606C; }
+.trainingsTitle em { color: #4E7377; }
 @media (max-width: 950px) { .trainingsTitle.trainingsTitle { margin-bottom: 40px; } }
 /* Ausbildungen untereinander */
 .flatHeading { margin: 60px 0 30px !important; font-size: clamp(24px, 2vw, 30px); }
 .trainingGroup { margin-bottom: 30px; }
-.trainingGroup h4 { margin: 0 0 10px; font-family: var(--serif); font-size: 21px; font-style: italic; font-weight: 400; line-height: 1.3; color: #4F606C; }
+.trainingGroup h4 { margin: 0 0 10px; font-family: var(--serif); font-size: 21px; font-style: italic; font-weight: 400; line-height: 1.3; color: #4E7377; }
 .trainingFlat { margin: 0; padding: 0; list-style: none; }
 .trainingFlat li { margin-bottom: 8px; color: var(--ink); font-size: 17px; line-height: 1.5; }
 .trainingsPaper .workNote { margin-top: 50px !important; font-size: 15px; line-height: 1.6; }
-.trainingsPhoto { display: block; width: 100%; height: auto; margin-top: 60px; border-radius: 28px; box-shadow: 0 0 0 7px #FBF9F5; }
+.trainingsPhoto { display: block; width: 100%; height: auto; margin-top: 60px; border-radius: 28px; box-shadow: 0 0 0 7px #FFFFFF; }
 @media (max-width: 950px) { .trainingsPhoto { margin-top: 34px; } }
 
 /* Gestaltungsregeln (29.10.2026): Größen und Abstände kommen aus den gemeinsamen Werten in klarheitssitzung/page.module.css */
