@@ -153,8 +153,8 @@ export default function ClarityPage() {
             <div className={styles.split}>
               <h2>Wir drehen die<br /> <span className={styles.nowrap}>Blickrichtung <em>um.</em></span></h2>
               <div>
-                <p className={styles.lead}>Bisher hast du von außen auf dein Thema geschaut.</p>
-                <p>Wer so schaut, läuft im Kreis und kommt immer wieder an derselben Stelle an. In der Sitzung tauchst du ein in das, was du wirklich willst, und schaust von dort aus.</p>
+                <p className={styles.lead}>Bisher hast du auf das geschaut, was gerade schwierig ist.</p>
+                <p>Wer so schaut, läuft im Kreis und kommt immer wieder an derselben Stelle an. In der Sitzung schaust du von dem aus, was du wirklich willst: wie es für dich am Ende sein soll.</p>
                 <p>Dafür nehmen wir uns Zeit. Wenn es in dir leiser wird, taucht Neues auf, und du siehst, was dran ist. Genau dahin gehen wir, in deinem Tempo.</p>
               </div>
             </div>
